@@ -68,6 +68,11 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        {/* Google Site Verification */}
+        <meta
+          name="google-site-verification"
+          content="CE8FiNrAxto-aZ7qmzq5tVQciSZD2mR-GEpraM_K57w"
+        />
       </head>
       <body className="antialiased font-primary bg-white text-gray-900">
         {children}
