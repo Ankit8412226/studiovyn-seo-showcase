@@ -11,6 +11,7 @@ import FAQ from "./home-sections/FAQ";
 import Industries from "./home-sections/Industries";
 import Pricing from "./home-sections/Pricing";
 import Process from "./home-sections/Process";
+import PromoBanners from "./home-sections/PromoBanners";
 import TechStack from "./home-sections/TechStack";
 import Transform from "./home-sections/Transform";
 import TrustBadges from "./home-sections/TrustBadges";
@@ -18,6 +19,7 @@ import WhyUs from "./home-sections/WhyUs";
 import Portfolio from "./Portfolio";
 import Services from "./Services";
 import Testimonials from "./Testimonials";
+import PromoCTABanners from "./home-sections/PromoCTABanners";
 
 export const metadata = {
   title: 'StudioVyn - Professional Web Development & Digital Solutions',
@@ -37,6 +39,8 @@ export default function Home() {
       <div className="animate-fade-in-up"><Process /></div>
       <div className="animate-fade-in-up"><Industries /></div>
       <div className="animate-fade-in-up"><Banner /></div>
+      <div className="animate-fade-in-up"><PromoCTABanners /></div>
+      <div className="animate-fade-in-up"><PromoBanners /></div>
       <div className="animate-fade-in-up"><TechStack /></div>
       <div className="animate-fade-in-up"><CodeGallery /></div>
       <div className="animate-fade-in-up"><Pricing /></div>

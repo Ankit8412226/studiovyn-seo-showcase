@@ -13,6 +13,7 @@ export default function sitemap() {
     '/portfolio',
     '/testimonials',
     '/contact',
+    '/offers',
     '/terms',
     '/transform',
     '/case-studies',

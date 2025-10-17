@@ -46,7 +46,10 @@ export default function Footer() {
         </div>
         <div className="border-t border-white/10 mt-10 pt-6 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="font-primary">© {new Date().getFullYear()} StudioVyn. All rights reserved.</p>
+          <div className="flex gap-4">
 
+            <a href="/offers" className="hover:text-white transition-colors">Offers</a>
+          </div>
         </div>
       </div>
     </footer>
