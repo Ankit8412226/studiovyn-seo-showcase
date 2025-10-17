@@ -24,11 +24,11 @@ const Header = () => {
   };
 
   const navigationLinks = [
-    { id: 'home', label: 'Home', ariaLabel: 'Navigate to home section' },
-    { id: 'services', label: 'Services', ariaLabel: 'Navigate to services section' },
-    { id: 'about', label: 'About', ariaLabel: 'Navigate to about section' },
-    { id: 'portfolio', label: 'Portfolio', ariaLabel: 'Navigate to portfolio section' },
-    { id: 'testimonials', label: 'Testimonials', ariaLabel: 'Navigate to testimonials section' },
+    { id: 'home', label: 'Home', ariaLabel: 'Navigate to home section', href: '/' },
+    { id: 'services', label: 'Services', ariaLabel: 'Navigate to services section', href: '/services' },
+    { id: 'about', label: 'About', ariaLabel: 'Navigate to about page', href: '/about' },
+    { id: 'portfolio', label: 'Portfolio', ariaLabel: 'Navigate to portfolio page', href: '/portfolio' },
+    { id: 'blog', label: 'Blog', ariaLabel: 'Navigate to blog index', href: '/blog' },
   ];
 
   return (
@@ -59,23 +59,37 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">
-            {navigationLinks.map((link) => (
-              <button
-                key={link.id}
-                onClick={() => scrollToSection(link.id)}
-                className="text-gray-700 hover:text-blue-600 transition-colors font-medium font-primary text-base"
-                aria-label={link.ariaLabel}
-              >
-                {link.label}
-              </button>
-            ))}
-            <button
-              onClick={() => scrollToSection('contact')}
+            {navigationLinks.map((link) => {
+              if (link.href?.startsWith('/')) {
+                return (
+                  <a
+                    key={link.id}
+                    href={link.href}
+                    className="text-gray-700 hover:text-blue-600 transition-colors font-medium font-primary text-base"
+                    aria-label={link.ariaLabel}
+                  >
+                    {link.label}
+                  </a>
+                );
+              }
+              return (
+                <button
+                  key={link.id}
+                  onClick={() => scrollToSection(link.id)}
+                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium font-primary text-base"
+                  aria-label={link.ariaLabel}
+                >
+                  {link.label}
+                </button>
+              );
+            })}
+            <a
+              href="/contact"
               className="btn-primary"
-              aria-label="Navigate to contact section"
+              aria-label="Navigate to contact page"
             >
-              Contact Us
-            </button>
+              Request Project
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -101,16 +115,30 @@ const Header = () => {
             className="lg:hidden mt-4 pb-4 animate-fade-in-up"
           >
             <div className="flex flex-col space-y-4">
-              {navigationLinks.map((link) => (
-                <button
-                  key={link.id}
-                  onClick={() => scrollToSection(link.id)}
-                  className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left py-2 px-4 rounded-lg hover:bg-gray-50 font-primary"
-                  aria-label={link.ariaLabel}
-                >
-                  {link.label}
-                </button>
-              ))}
+              {navigationLinks.map((link) => {
+                if (link.href?.startsWith('/')) {
+                  return (
+                    <a
+                      key={link.id}
+                      href={link.href}
+                      className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left py-2 px-4 rounded-lg hover:bg-gray-50 font-primary"
+                      aria-label={link.ariaLabel}
+                    >
+                      {link.label}
+                    </a>
+                  );
+                }
+                return (
+                  <button
+                    key={link.id}
+                    onClick={() => scrollToSection(link.id)}
+                    className="text-gray-700 hover:text-blue-600 transition-colors font-medium text-left py-2 px-4 rounded-lg hover:bg-gray-50 font-primary"
+                    aria-label={link.ariaLabel}
+                  >
+                    {link.label}
+                  </button>
+                );
+              })}
               <button
                 onClick={() => scrollToSection('contact')}
                 className="btn-primary text-center"

@@ -1,6 +1,13 @@
-import Header from "./Header";
+import Contact from "./Contact";
 import Hero from "./hero";
 import Services from "./Services";
+import About from "./About";
+import Portfolio from "./Portfolio";
+import Testimonials from "./Testimonials";
+import Process from "./home-sections/Process";
+import Industries from "./home-sections/Industries";
+import FAQ from "./home-sections/FAQ";
+import Transform from "./home-sections/Transform";
 
 export const metadata = {
   title: 'StudioVyn - Professional Web Development & Digital Solutions',
@@ -11,10 +18,16 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Header />
       <Hero />
       <Services />
-      {/* Add other sections here: Services, About, Portfolio, Testimonials, Contact */}
+      <About />
+      <Process />
+      <Industries />
+      <Transform />
+      <Portfolio />
+      <Testimonials />
+      <FAQ />
+      <Contact />
     </main>
   );
 }

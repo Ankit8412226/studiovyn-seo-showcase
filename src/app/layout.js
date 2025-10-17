@@ -1,5 +1,7 @@
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -68,14 +70,88 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         {/* Google Site Verification */}
         <meta
           name="google-site-verification"
           content="CE8FiNrAxto-aZ7qmzq5tVQciSZD2mR-GEpraM_K57w"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Organization',
+              name: 'StudioVyn',
+              url: 'https://studiovyn.com',
+              logo: 'https://studiovyn.com/favicon.ico',
+              sameAs: [],
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'StudioVyn',
+              url: 'https://studiovyn.com',
+              areaServed: [
+                { '@type': 'State', name: 'Bihar' },
+                { '@type': 'State', name: 'West Bengal' },
+                { '@type': 'State', name: 'Delhi' },
+                { '@type': 'Country', name: 'India' }
+              ],
+              address: {
+                '@type': 'PostalAddress',
+                addressCountry: 'IN'
+              },
+              sameAs: [],
+              priceRange: '$$'
+            }),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'FAQPage',
+              mainEntity: [
+                {
+                  '@type': 'Question',
+                  name: 'Do you provide services in Bihar and West Bengal?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. We serve clients across India with strong focus on Bihar, West Bengal (Kolkata), and Delhi NCR.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'How fast can you deliver a website?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Typical timeline is 2–6 weeks depending on scope and content readiness.'
+                  }
+                },
+                {
+                  '@type': 'Question',
+                  name: 'Do you handle SEO and performance?',
+                  acceptedAnswer: {
+                    '@type': 'Answer',
+                    text: 'Yes. We build with performance, Core Web Vitals, and technical SEO best practices from day one.'
+                  }
+                }
+              ]
+            }),
+          }}
+        />
       </head>
       <body className="antialiased font-primary bg-white text-gray-900">
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

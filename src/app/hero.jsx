@@ -4,11 +4,7 @@ import { ArrowRight, Code2, Palette, Smartphone, Zap } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 const Hero = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
+  const [isVisible] = useState(true);
 
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
@@ -47,12 +43,8 @@ const Hero = () => {
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float"></div>
-        <div className="absolute top-40 right-10 w-72 h-72 bg-purple-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-pink-200 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-float" style={{ animationDelay: '4s' }}></div>
-      </div>
+      {/* Minimal subtle background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -105,14 +97,14 @@ const Hero = () => {
                 <div className="text-sm sm:text-base text-gray-600 font-primary">Client Satisfaction</div>
               </div>
               <div className="text-center lg:text-left">
-                <div className="text-3xl sm:text-4xl font-bold gradient-text font-secondary">5+</div>
-                <div className="text-sm sm:text-base text-gray-600 font-primary">Years Experience</div>
+              <div className="text-3xl sm:text-4xl font-bold gradient-text font-secondary">3+</div>
+              <div className="text-sm sm:text-base text-gray-600 font-primary">Years in Market</div>
               </div>
             </div>
           </div>
 
           {/* Right Content - Feature Cards */}
-          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6`}>
             {features.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -136,12 +128,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
-          <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex items-start justify-center p-2">
-            <div className="w-1 h-3 bg-gray-400 rounded-full"></div>
-          </div>
-        </div>
+        {/* Subtle single-site animation: fade-in on load applied via body */}
       </div>
     </section>
   );
