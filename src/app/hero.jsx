@@ -39,7 +39,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 sm:pt-24 pb-16 sm:pb-20 mt-10"
+      className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16 sm:pt-20 pb-12 sm:pb-16 mt-8"
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >
@@ -47,7 +47,7 @@ const Hero = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           {/* Left Content */}
           <div className={`text-center lg:text-left transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
             {/* Badge */}
@@ -68,10 +68,10 @@ const Hero = () => {
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-12">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start mb-10">
               <button
                 onClick={() => scrollToSection('contact')}
-                className="btn-primary inline-flex items-center justify-center space-x-2 text-base sm:text-lg group"
+                className="btn-primary inline-flex items-center justify-center space-x-2 text-base sm:text-lg group w-full sm:w-auto"
                 aria-label="Get started with StudioVyn services"
               >
                 <span>Get Started</span>
@@ -79,7 +79,7 @@ const Hero = () => {
               </button>
               <button
                 onClick={() => scrollToSection('portfolio')}
-                className="btn-secondary inline-flex items-center justify-center text-base sm:text-lg"
+                className="btn-secondary inline-flex items-center justify-center text-base sm:text-lg w-full sm:w-auto"
                 aria-label="View StudioVyn portfolio"
               >
                 View Our Work
@@ -103,7 +103,7 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Content - Feature Cards */}
+          {/* Right Content - Feature Cards only */}
           <div className={`grid grid-cols-1 sm:grid-cols-2 gap-6`}>
             {features.map((feature, index) => {
               const Icon = feature.icon;

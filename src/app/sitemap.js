@@ -9,6 +9,7 @@ export default function sitemap() {
   const routes = [
     '',
     '/about',
+    '/privacy',
     '/portfolio',
     '/testimonials',
     '/contact',

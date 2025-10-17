@@ -1,32 +1,46 @@
-import nodemailer from 'nodemailer';
+import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
     const body = await request.json();
     const { name, email, company, phone, message } = body;
 
+    // ✅ Direct SMTP configuration (Hostinger)
     const transporter = nodemailer.createTransport({
-      host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT || 587),
-      secure: !!(process.env.SMTP_SECURE === 'true' || process.env.SMTP_PORT === '465'),
+      host: "smtp.hostinger.com",
+      port: 465,
+      secure: true, // true for port 465
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: "tech@studiovyn.in", // your Hostinger email
+        pass: "W8jD5:np@^m", // ⚠️ Replace with the new app password (not your login password)
       },
     });
 
-    const mail = await transporter.sendMail({
-      from: `StudioVyn Website <${process.env.SMTP_FROM || process.env.SMTP_USER}>`,
-      to: process.env.CONTACT_TO,
-      subject: `New inquiry from ${name || 'Website'}`,
+    // ✅ Define email details
+    await transporter.sendMail({
+      from: `"Studio Vyn" <tech@studiovyn.in>`, // sender name and email
+      to: "yourdestination@email.com", // where you want to receive inquiries
+      subject: `New inquiry from ${name || "Website"}`,
       replyTo: email,
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone || '-'}\nCompany: ${company || '-'}\n\nMessage:\n${message}`,
+      text: `
+Name: ${name}
+Email: ${email}
+Phone: ${phone || "-"}
+Company: ${company || "-"}
+Message:
+${message}
+      `,
     });
 
-    return new Response(JSON.stringify({ ok: true }), { status: 200 });
+    // ✅ Success response
+    return new Response(JSON.stringify({ ok: true, message: "Email sent successfully" }), {
+      status: 200,
+    });
   } catch (err) {
-    return new Response(JSON.stringify({ ok: false, error: 'Email failed' }), { status: 500 });
+    console.error("Email send failed:", err);
+    return new Response(
+      JSON.stringify({ ok: false, error: "Email failed to send", details: err.message }),
+      { status: 500 }
+    );
   }
 }
-
-

@@ -1,13 +1,23 @@
+import About from "./About";
 import Contact from "./Contact";
 import Hero from "./hero";
-import Services from "./Services";
-import About from "./About";
-import Portfolio from "./Portfolio";
-import Testimonials from "./Testimonials";
-import Process from "./home-sections/Process";
-import Industries from "./home-sections/Industries";
+import Banner from "./home-sections/Banner";
+import BlogHighlights from "./home-sections/BlogHighlights";
+import CaseSpotlight from "./home-sections/CaseSpotlight";
+import ClientsLogos from "./home-sections/ClientsLogos";
+import CodeGallery from "./home-sections/CodeGallery";
+import ContactMicro from "./home-sections/ContactMicro";
 import FAQ from "./home-sections/FAQ";
+import Industries from "./home-sections/Industries";
+import Pricing from "./home-sections/Pricing";
+import Process from "./home-sections/Process";
+import TechStack from "./home-sections/TechStack";
 import Transform from "./home-sections/Transform";
+import TrustBadges from "./home-sections/TrustBadges";
+import WhyUs from "./home-sections/WhyUs";
+import Portfolio from "./Portfolio";
+import Services from "./Services";
+import Testimonials from "./Testimonials";
 
 export const metadata = {
   title: 'StudioVyn - Professional Web Development & Digital Solutions',
@@ -18,16 +28,26 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      <Services />
-      <About />
-      <Process />
-      <Industries />
-      <Transform />
-      <Portfolio />
-      <Testimonials />
-      <FAQ />
-      <Contact />
+      <div className="animate-fade-in-up"><Hero /></div>
+      <div className="animate-fade-in-up"><ClientsLogos /></div>
+      <div className="animate-fade-in-up"><Services /></div>
+      <div className="animate-fade-in-up"><WhyUs /></div>
+      <div className="animate-fade-in-up"><About /></div>
+      <div className="animate-fade-in-up"><CaseSpotlight /></div>
+      <div className="animate-fade-in-up"><Process /></div>
+      <div className="animate-fade-in-up"><Industries /></div>
+      <div className="animate-fade-in-up"><Banner /></div>
+      <div className="animate-fade-in-up"><TechStack /></div>
+      <div className="animate-fade-in-up"><CodeGallery /></div>
+      <div className="animate-fade-in-up"><Pricing /></div>
+      <div className="animate-fade-in-up"><BlogHighlights /></div>
+      <div className="animate-fade-in-up"><TrustBadges /></div>
+      <div className="animate-fade-in-up"><ContactMicro /></div>
+      <div className="animate-fade-in-up"><Transform /></div>
+      <div className="animate-fade-in-up"><Portfolio /></div>
+      <div className="animate-fade-in-up"><Testimonials /></div>
+      <div className="animate-fade-in-up"><FAQ /></div>
+      <div className="animate-fade-in-up"><Contact /></div>
     </main>
   );
 }

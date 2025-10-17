@@ -4,10 +4,17 @@ export default function Footer() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           <div>
-            <h3 className="text-white text-xl font-semibold font-secondary mb-3">StudioVyn</h3>
+            <div className="flex items-center gap-3 mb-3">
+              <img src="/logo.svg" alt="StudioVyn" className="w-8 h-8 rounded" />
+              <h3 className="text-white text-xl font-semibold font-secondary">StudioVyn</h3>
+            </div>
             <p className="text-sm font-primary leading-relaxed text-gray-400">
               Professional web development and digital solutions to grow your business online.
             </p>
+            <div className="mt-4 space-y-1 text-sm font-primary">
+              <a className="hover:text-white transition-colors block" href="tel:+918529747613">+91 8529747613</a>
+              <a className="hover:text-white transition-colors block" href="mailto:tech@studiovyn.in">tech@studiovyn.in</a>
+            </div>
           </div>
           <div>
             <h4 className="text-white font-semibold mb-3 font-secondary">Services</h4>
@@ -27,6 +34,8 @@ export default function Footer() {
               <li><a className="hover:text-white transition-colors" href="/#portfolio">Portfolio</a></li>
               <li><a className="hover:text-white transition-colors" href="/#testimonials">Testimonials</a></li>
               <li><a className="hover:text-white transition-colors" href="/#contact">Contact</a></li>
+              <li><a className="hover:text-white transition-colors" href="/privacy">Privacy Policy</a></li>
+              <li><a className="hover:text-white transition-colors" href="/terms">Terms & Conditions</a></li>
             </ul>
           </div>
           <div>
@@ -35,12 +44,9 @@ export default function Footer() {
             <a href="/#contact" className="btn-primary inline-block">Start a Project</a>
           </div>
         </div>
-        <div className="border-t border-white/10 mt-10 pt-6 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="border-t border-white/10 mt-10 pt-6 text-sm text-gray-400 flex flex-col sm:flex-row items-center justify-center gap-4">
           <p className="font-primary">© {new Date().getFullYear()} StudioVyn. All rights reserved.</p>
-          <div className="flex gap-4">
-            <a href="/sitemap.xml" className="hover:text-white transition-colors">Sitemap</a>
-            <a href="/robots.txt" className="hover:text-white transition-colors">Robots</a>
-          </div>
+
         </div>
       </div>
     </footer>

@@ -1,7 +1,8 @@
 import { Inter, Poppins } from "next/font/google";
+import Footer from "./Footer";
 import "./globals.css";
 import Header from "./Header";
-import Footer from "./Footer";
+import RequestProjectModal from "./request-modal";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,7 +30,7 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://studiovyn.com"),
+  metadataBase: new URL("https://studiovyn.in"),
   alternates: {
     canonical: "/",
   },
@@ -69,7 +70,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         {/* Google Site Verification */}
         <meta
@@ -83,8 +84,9 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'StudioVyn',
-              url: 'https://studiovyn.com',
-              logo: 'https://studiovyn.com/favicon.ico',
+              url: 'https://studiovyn.in',
+              logo: 'https://studiovyn.in/favicon.svg',
+              contactPoint: [{ '@type': 'ContactPoint', telephone: '+91-8529747613', contactType: 'sales', email: 'tech@studiovyn.in' }],
               sameAs: [],
             }),
           }}
@@ -96,7 +98,7 @@ export default function RootLayout({ children }) {
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'StudioVyn',
-              url: 'https://studiovyn.com',
+              url: 'https://studiovyn.in',
               areaServed: [
                 { '@type': 'State', name: 'Bihar' },
                 { '@type': 'State', name: 'West Bengal' },
@@ -148,9 +150,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased font-primary bg-white text-gray-900">
+      <body className="antialiased font-primary bg-white text-gray-900 text-center sm:text-left">
         <Header />
         {children}
+        <RequestProjectModal />
         <Footer />
       </body>
     </html>

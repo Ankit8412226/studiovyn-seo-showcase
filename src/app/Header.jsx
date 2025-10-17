@@ -45,17 +45,12 @@ const Header = () => {
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2 sm:space-x-3">
-            <div
-              className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center shadow-md"
-              aria-hidden="true"
-            >
-              <Code className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
-            </div>
+          <a href="/" className="flex items-center space-x-2 sm:space-x-3">
+            <img src="/logo.svg" alt="StudioVyn" className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-md" />
             <span className="text-xl sm:text-2xl font-bold font-secondary gradient-text">
               StudioVyn
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">

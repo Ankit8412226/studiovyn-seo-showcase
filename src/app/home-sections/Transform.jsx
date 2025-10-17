@@ -6,9 +6,9 @@ export default function Transform() {
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-4">Transform Your Business</h2>
             <p className="text-gray-700 font-primary mb-4">We deliver outcomes: more traffic, more leads, more revenue. Our approach blends product thinking, high‑performance web, and SEO content engines tailored for Indian markets.</p>
-            <div className="flex gap-3">
-              <a href="/transform" className="btn-secondary">Learn how</a>
-              <a href="/contact" className="btn-primary">Request proposal</a>
+            <div className="flex flex-col sm:flex-row gap-3 items-center sm:items-start">
+              <a href="/transform" className="btn-secondary w-full sm:w-auto inline-flex justify-center">Learn how</a>
+              <a href="/contact" className="btn-primary w-full sm:w-auto inline-flex justify-center">Request proposal</a>
             </div>
           </div>
           <div className="p-6 rounded-2xl border border-gray-100 shadow-sm bg-white">
