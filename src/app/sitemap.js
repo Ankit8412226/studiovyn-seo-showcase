@@ -1,9 +1,9 @@
-import { services } from './services/data';
-import { cities } from './locations/data';
 import { posts } from './blog/data';
+import { cities } from './locations/data';
+import { services } from './services/data';
 
 export default function sitemap() {
-  const baseUrl = 'https://studiovyn.com';
+  const baseUrl = 'https://studiovyn.in';
   const now = new Date().toISOString();
   const routes = [
     '',

@@ -1,5 +1,5 @@
 export default function robots() {
-  const siteUrl = 'https://studiovyn.com';
+  const siteUrl = 'https://studiovyn.in';
   return {
     rules: [
       { userAgent: '*', allow: '/' },
