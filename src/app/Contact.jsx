@@ -33,7 +33,7 @@ export default function Contact() {
     } catch (error) {
       setStatus('idle');
       console.error('Contact form error:', error);
-      alert('Unable to send message. Please email tech@studiovyn.in');
+
     }
   };
 
