@@ -17,15 +17,22 @@ export default function Contact() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
-      if (!res.ok) throw new Error('Failed');
+
+      const data = await res.json();
+
+      if (!res.ok || !data.ok) {
+        throw new Error(data.message || 'Failed to send message');
+      }
+
       setStatus('success');
       setShowModal(true);
       e.currentTarget.reset();
       setTimeout(() => {
         setStatus('idle');
       }, 3000);
-    } catch (e) {
+    } catch (error) {
       setStatus('idle');
+      console.error('Contact form error:', error);
       alert('Unable to send message. Please email tech@studiovyn.in');
     }
   };
@@ -33,7 +40,7 @@ export default function Contact() {
   return (
     <>
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 p-4" onClick={() => setShowModal(false)}>
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-opacity-50 p-4" onClick={() => setShowModal(false)}>
           <div className="bg-white rounded-2xl p-8 max-w-md w-full shadow-2xl transform transition-all" onClick={(e) => e.stopPropagation()}>
             <div className="text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

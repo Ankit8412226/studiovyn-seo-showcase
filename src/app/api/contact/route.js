@@ -11,8 +11,8 @@ export async function POST(request) {
       port: 465,
       secure: true, // true for port 465
       auth: {
-        user: "tech@studiovyn.in", // your Hostinger email
-        pass: "W8jD5:np@^m", // ⚠️ Replace with the new app password (not your login password)
+        user: "tech@studiovyn.in",
+        pass: "W8jD5:np@^m",
       },
     });
 
