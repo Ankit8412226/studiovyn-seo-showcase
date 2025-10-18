@@ -1,14 +1,37 @@
 export default function Transform() {
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-white">
+    <section
+      className="py-20 sm:py-24 lg:py-32 bg-white"
+      role="region"
+      aria-labelledby="transform-heading"
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-4">Transform Your Business</h2>
-            <p className="text-gray-700 font-primary mb-4">We deliver outcomes: more traffic, more leads, more revenue. Our approach blends product thinking, high‑performance web, and SEO content engines tailored for Indian markets.</p>
+            <h2
+              id="transform-heading"
+              className="text-3xl sm:text-4xl font-bold font-secondary mb-4"
+            >
+              Transform Your Business
+            </h2>
+            <p className="text-gray-700 font-primary mb-4">
+              We deliver outcomes: more traffic, more leads, more revenue. Our approach blends product thinking, high‑performance web, and SEO content engines tailored for Indian markets.
+            </p>
             <div className="flex flex-col sm:flex-row gap-3 items-center sm:items-start">
-              <a href="/transform" className="btn-secondary w-full sm:w-auto inline-flex justify-center">Learn how</a>
-              <a href="/contact" className="btn-primary w-full sm:w-auto inline-flex justify-center">Request proposal</a>
+              <a
+                href="/transform"
+                className="btn-secondary w-full sm:w-auto inline-flex justify-center"
+                title="Learn how StudioVyn transforms businesses"
+              >
+                Learn how
+              </a>
+              <a
+                href="/contact"
+                className="btn-primary w-full sm:w-auto inline-flex justify-center"
+                title="Request a proposal from StudioVyn"
+              >
+                Request proposal
+              </a>
             </div>
           </div>
           <div className="p-6 rounded-2xl border border-gray-100 shadow-sm bg-white">
@@ -36,5 +59,3 @@ export default function Transform() {
     </section>
   );
 }
-
-
