@@ -14,7 +14,7 @@ export async function POST(request) {
     }
 
     // SMTP configuration (Hostinger)
-    const transporter = nodemailer.createTransCreate({
+    const transporter = nodemailer.createTransport({  // ✅ Fixed typo here
       host: "smtp.hostinger.com",
       port: 465,
       secure: true,
@@ -27,8 +27,8 @@ export async function POST(request) {
     // Send email to your tech email with all form data
     await transporter.sendMail({
       from: '"StudioVyn Contact Form" <tech@studiovyn.in>',
-      to: "tech@studiovyn.in", // ✅ Your email where you'll receive inquiries
-      replyTo: email, // ✅ User's email for easy reply
+      to: "tech@studiovyn.in", // Your email where you'll receive inquiries
+      replyTo: email, // User's email for easy reply
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
