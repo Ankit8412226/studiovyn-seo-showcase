@@ -45,8 +45,8 @@ const Header = () => {
       >
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <a href="/" className="flex items-center space-x-2 sm:space-x-3">
-            <img src="/logo.svg" alt="StudioVyn" className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-md" />
+          <a href="/" className="flex items-center space-x-2 sm:space-x-3" aria-label="StudioVyn - Website Development Company India Home">
+            <img src="/logo.svg" alt="StudioVyn - Best Website Development Company in India" className="w-10 h-10 sm:w-12 sm:h-12 rounded-lg shadow-md" width="48" height="48" />
             <span className="text-xl sm:text-2xl font-bold font-secondary gradient-text">
               StudioVyn
             </span>
@@ -81,9 +81,9 @@ const Header = () => {
             <a
               href="/contact"
               className="btn-primary"
-              aria-label="Navigate to contact page"
+              aria-label="Request website development project quote"
             >
-              Request Project
+              Get Free Quote
             </a>
           </div>
 

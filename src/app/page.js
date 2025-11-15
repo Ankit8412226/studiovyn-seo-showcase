@@ -22,9 +22,19 @@ import Testimonials from "./Testimonials";
 import PromoCTABanners from "./home-sections/PromoCTABanners";
 
 export const metadata = {
-  title: 'StudioVyn - Professional Web Development & Digital Solutions',
-  description: 'Transform your digital presence with StudioVyn. Expert web development, custom software solutions, and innovative design services to elevate your business online.',
-  keywords: 'web development, software development, digital solutions, custom websites, mobile apps, UI/UX design, e-commerce development, business software, responsive design, frontend development, backend development',
+  title: 'Best Website Development Company in India | Custom Web Design & Digital Solutions',
+  description: 'Top website development company in India offering custom web design, e-commerce development, mobile apps & digital marketing. Serving Delhi, Kolkata, Bihar & PAN India. 150+ projects | 98% satisfaction | Free consultation. Get expert web developers today!',
+  keywords: 'website development company India, best web development company India, website design company, web development services India, custom website development, e-commerce development, mobile app development India, professional web developers, UI/UX design India, digital marketing services, SEO services India, website company Delhi, web development Kolkata, website development Bihar, affordable website design, responsive web design India',
+  openGraph: {
+    title: 'Best Website Development Company in India - StudioVyn',
+    description: 'Leading website development services across India. Custom web design, e-commerce solutions & mobile apps. 150+ projects delivered with 98% client satisfaction.',
+    images: [{
+      url: 'https://studiovyn.in/og-image.svg',
+      width: 1200,
+      height: 630,
+      alt: 'StudioVyn - Professional Website Development Company in India'
+    }]
+  }
 };
 
 export default function Home() {
