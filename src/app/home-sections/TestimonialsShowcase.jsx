@@ -57,18 +57,18 @@ export default function TestimonialsShowcase() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 font-bold text-sm mb-4 sm:mb-6">
                <Quote className="w-4 h-4" /> Client Success
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 sm:mb-6 leading-tight">Real Results from <span className="text-blue-500">Real People</span></h2>
-            <p className="text-lg sm:text-xl text-gray-400 font-primary mb-8 leading-relaxed px-2 sm:px-0">
+            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 sm:mb-6 leading-tight text-white">Real Results from <span className="text-blue-500">Real People</span></h2>
+            <p className="text-lg sm:text-xl text-white font-primary mb-8 leading-relaxed px-2 sm:px-0">
                Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
             </p>
             <div className="grid grid-cols-2 lg:flex lg:flex-col gap-4">
               <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                  <div className="text-2xl sm:text-3xl font-bold text-blue-500 mb-1">4.9 / 5.0</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Avg Rating</div>
+                 <div className="text-[10px] sm:text-sm font-medium text-gray-200 uppercase tracking-wider">Avg Rating</div>
               </div>
               <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
                  <div className="text-2xl sm:text-3xl font-bold text-purple-500 mb-1">150+</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Success Stories</div>
+                 <div className="text-[10px] sm:text-sm font-medium text-gray-200 uppercase tracking-wider">Success Stories</div>
               </div>
             </div>
           </div>
@@ -82,7 +82,7 @@ export default function TestimonialsShowcase() {
                           <Star key={idx} className="w-4 h-4 text-yellow-500 fill-current" />
                         ))}
                      </div>
-                     <p className="text-base sm:text-lg text-gray-300 font-primary italic mb-6 sm:mb-8 leading-relaxed">
+                     <p className="text-base sm:text-lg text-gray-100 font-primary italic mb-6 sm:mb-8 leading-relaxed">
                         "{t.content}"
                      </p>
                      <div className="flex items-center gap-4 pt-6 border-t border-white/10">

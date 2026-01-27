@@ -10,22 +10,21 @@ export default function RequestProjectModal({ delayMs = 5000 }) {
   const pathname = usePathname();
 
   useEffect(() => {
-    // Reset dismissal on mount (reload)
-    setIsDismissed(false);
+    if (isDismissed) return;
 
     const timer = setTimeout(() => {
-      if (!isDismissed) setOpen(true);
+      setOpen(true);
     }, delayMs);
 
     const handleExitIntent = (e) => {
-      if (e.clientY <= 0 && !isDismissed) {
+      if (e.clientY <= 0) {
         setOpen(true);
       }
     };
 
     const handleScroll = () => {
       const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-      if (scrollPercent > 25 && !isDismissed) {
+      if (scrollPercent > 25) {
         setOpen(true);
       }
     };
