@@ -51,12 +51,12 @@ export default function Footer() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* CTA Section */}
-        <div className="py-16 lg:py-20 border-b border-blue-800/30">
+        <div className="py-12 sm:py-16 lg:py-20 border-b border-blue-800/30">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4" style={{ color: '#ffffff !important' }}>
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 leading-tight sm:leading-tight px-2" style={{ color: '#ffffff !important' }}>
               Ready to Build Something Amazing?
             </h2>
-            <p className="text-lg text-blue-100 font-primary mb-8 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-blue-100 font-primary mb-8 max-w-2xl mx-auto px-4">
               Let's transform your digital presence with a high-performance website that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -83,24 +83,24 @@ export default function Footer() {
         <div className="py-16 lg:py-20">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
             {/* Brand Column - Spans 4 columns */}
-            <div className="lg:col-span-4">
-              <div className="flex items-center gap-3 mb-6">
+            <div className="lg:col-span-4 text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
                 <img
                   src="/logo.jpeg"
                   alt="StudioVyn - IT Service Provider"
-                  className="w-auto h-16 sm:h-20 rounded-xl shadow-lg border border-white/5"
+                  className="w-auto h-12 sm:h-20 rounded-xl shadow-lg border border-white/5"
                   width="120"
                   height="80"
                 />
               </div>
-              <p className="text-sm font-primary leading-relaxed text-blue-100 mb-8">
+              <p className="text-sm font-primary leading-relaxed text-blue-100 mb-8 max-w-sm mx-auto md:mx-0">
                 India's leading web development agency. We build high-performance websites and digital solutions that drive real business results.
               </p>
 
               {/* Social Media */}
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider mb-4 font-primary" style={{ color: '#93c5fd' }}>Connect With Us</p>
-                <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center md:justify-start gap-3">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
                     return (

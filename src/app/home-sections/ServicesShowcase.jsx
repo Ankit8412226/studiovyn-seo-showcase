@@ -4,14 +4,14 @@ import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 import {
-  ArrowRight,
-  Code2,
-  Database,
-  Globe,
-  Palette,
-  ShoppingCart,
-  Smartphone,
-  Sparkles
+    ArrowRight,
+    Code2,
+    Database,
+    Globe,
+    Palette,
+    ShoppingCart,
+    Smartphone,
+    Sparkles
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -78,7 +78,7 @@ export default function ServicesShowcase() {
   return (
     <section
       id="services"
-      className="py-24 sm:py-28 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden"
+      className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden"
       aria-label="Our professional services"
     >
       {/* Background Decoration */}
@@ -90,22 +90,22 @@ export default function ServicesShowcase() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 mb-6">
-            <Sparkles className="w-8 h-8 text-blue-600" aria-hidden="true" />
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
+          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 mb-4 sm:mb-6">
+            <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" aria-hidden="true" />
           </div>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-gray-900">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-4 sm:mb-6 text-gray-900">
             Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Services</span>
           </h2>
 
-          <p className="text-xl text-gray-600 font-primary leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-primary leading-relaxed">
             Comprehensive digital solutions tailored to your business needs. From concept to deployment, we deliver excellence at every step.
           </p>
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
           {services.map((service, index) => {
             const Icon = service.icon;
             const isHovered = hoveredIndex === index;

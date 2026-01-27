@@ -104,9 +104,14 @@
   background: linear-gradient(180deg, #2563eb, #7c3aed);
 }
 
-/* Smooth Scrolling */
+/* Smooth Scrolling & Overflow Prevention */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 /* Base Styles */
@@ -183,7 +188,8 @@ p.lead {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.8;
-  color: #6b7280;
+  color: #374151;
+  /* Darkened for better contrast */
 }
 
 /* Strong/Bold Text */
@@ -419,12 +425,27 @@ small {
   animation: blob 7s infinite;
 }
 
-.animation-delay-2000 {
-  animation-delay: 2s;
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
 }
 
-.animation-delay-4000 {
-  animation-delay: 4s;
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scroll-fast {
+  animation: scroll 20s linear infinite;
+}
+
+.pause-on-hover:hover .animate-scroll,
+.pause-on-hover:hover .animate-scroll-fast {
+  animation-play-state: paused;
 }
 
 /* Card Styles */

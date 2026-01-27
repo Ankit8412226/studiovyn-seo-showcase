@@ -8,19 +8,19 @@ export default function BlogHighlights() {
 
   return (
     <section
-      className="py-24 sm:py-32 bg-gray-50"
+      className="py-16 sm:py-24 lg:py-32 bg-gray-50"
       aria-labelledby="blog-highlights-heading"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+        <div className="flex flex-col md:flex-row items-center justify-between mb-10 sm:mb-16 gap-6">
           <div className="text-center md:text-left">
             <h2
               id="blog-highlights-heading"
-              className="text-4xl sm:text-5xl font-bold font-secondary mb-4"
+              className="text-3xl sm:text-5xl font-bold font-secondary mb-3"
             >
               Latest <span className="text-blue-600">Insights</span>
             </h2>
-            <p className="text-gray-600 font-primary">Expert guides on web development, SEO, and business growth in India.</p>
+            <p className="text-gray-600 font-primary text-base sm:text-lg">Expert guides on web development, SEO, and business growth in India.</p>
           </div>
           <Link
             href="/blog"
@@ -53,9 +53,9 @@ export default function BlogHighlights() {
                     </span>
                  </div>
               </div>
-              <div className="p-8 flex flex-col flex-1">
-                <div className="flex items-center gap-2 text-gray-500 text-xs font-medium mb-4">
-                  <Calendar className="w-4 h-4" />
+              <div className="p-6 sm:p-8 flex flex-col flex-1">
+                <div className="flex items-center gap-2 text-gray-500 text-[10px] sm:text-xs font-medium mb-3 sm:mb-4">
+                  <Calendar className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   <span>Jan 27, 2026</span>
                 </div>
                 <h3 className="text-xl font-bold font-secondary mb-4 text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">

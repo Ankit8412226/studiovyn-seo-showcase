@@ -1,8 +1,8 @@
 'use client';
 
-import { Search, Palette, Code, TrendingUp, ArrowRight } from 'lucide-react';
 import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
+import { ArrowRight, Code, Palette, Search, TrendingUp } from 'lucide-react';
 
 export default function Process() {
   const steps = [
@@ -41,7 +41,7 @@ export default function Process() {
   ];
 
   return (
-    <section className="py-24 sm:py-28 lg:py-32 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full filter blur-3xl"></div>
@@ -50,11 +50,11 @@ export default function Process() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-gray-900">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
+          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-4 sm:mb-6 text-gray-900">
             Our <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Process</span>
           </h2>
-          <p className="text-xl text-gray-600 font-primary leading-relaxed">
+          <p className="text-lg sm:text-xl text-gray-600 font-primary leading-relaxed px-4">
             A proven methodology that delivers results. From discovery to growth, we guide you every step of the way.
           </p>
         </div>
@@ -74,8 +74,8 @@ export default function Process() {
               >
                 {/* Image */}
                 <div className={`${!isEven ? 'lg:order-2' : ''}`}>
-                  <Card variant="elevated" padding="none" className="overflow-hidden group">
-                    <div className="relative h-64 lg:h-80">
+                  <Card variant="elevated" padding="none" className="overflow-hidden group rounded-3xl">
+                    <div className="relative h-48 sm:h-64 lg:h-80">
                       <OptimizedImage
                         src={step.image}
                         alt={step.title}

@@ -123,18 +123,12 @@ const Header = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center space-x-4">
-            <a
-              href="/contact"
-              className="text-gray-700 hover:text-blue-600 font-medium font-primary text-sm transition-colors"
-            >
-              Contact
-            </a>
+          {/* Desktop CTA - Consolidated to single primary action */}
+          <div className="hidden lg:flex items-center">
             <Button
               href="/contact"
               size="md"
-              className="shadow-md hover:shadow-lg"
+              className="shadow-md hover:shadow-lg bg-blue-800 hover:bg-blue-900 text-white"
               aria-label="Get free website development consultation"
             >
               Get Free Quote
@@ -164,14 +158,14 @@ const Header = () => {
             isMobileMenuOpen ? 'max-h-[600px] opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="flex flex-col space-y-1 pt-4 border-t border-gray-200">
+          <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
             {navigationLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
-                className={`px-4 py-3 rounded-lg font-medium font-primary text-base transition-colors ${
+                className={`px-4 py-3 rounded-xl font-medium font-primary text-base transition-colors ${
                   link.isActive
-                    ? 'text-blue-800 bg-blue-50 border border-blue-200'
+                    ? 'text-blue-800 bg-blue-50 border border-blue-100'
                     : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
@@ -180,18 +174,12 @@ const Header = () => {
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 space-y-2">
-              <a
-                href="/contact"
-                className="block px-4 py-3 text-center text-gray-700 hover:text-blue-600 font-medium font-primary text-base transition-colors"
-              >
-                Contact
-              </a>
+            <div className="pt-4 px-2">
               <Button
                 href="/contact"
                 fullWidth
-                size="md"
-                className="mx-4"
+                size="lg"
+                className="shadow-md"
                 aria-label="Get free website development consultation"
               >
                 Get Free Quote

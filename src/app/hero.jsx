@@ -64,7 +64,7 @@ const Hero = () => {
               </div>
 
               {/* Main Heading - Professional Typography */}
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-extrabold font-secondary leading-[1.1] tracking-tight text-gray-900">
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold font-secondary leading-[1.1] tracking-tight text-gray-900">
                 Build Websites That{' '}
                 <span className="relative inline-block">
                   <span className="bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent">
@@ -117,18 +117,18 @@ const Hero = () => {
               </div>
 
               {/* Trust Stats - Better Mobile Layout */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 lg:gap-10 pt-8 border-t border-gray-200/50">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-10 pt-8 border-t border-gray-200/50">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
-                    <div key={index} className="text-center lg:text-left group min-w-[120px]">
+                    <div key={index} className="text-center lg:text-left group min-w-[100px] sm:min-w-[120px]">
                       <div className="flex items-center justify-center lg:justify-start gap-2 mb-1">
-                        <Icon className="w-5 h-5 text-blue-800" />
-                        <div className="text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent font-secondary">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-800" />
+                        <div className="text-xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent font-secondary">
                           {stat.value}
                         </div>
                       </div>
-                      <div className="text-[10px] lg:text-xs text-gray-600 font-bold font-primary uppercase tracking-widest">
+                      <div className="text-[9px] lg:text-xs text-gray-600 font-bold font-primary uppercase tracking-widest leading-none">
                         {stat.label}
                       </div>
                     </div>

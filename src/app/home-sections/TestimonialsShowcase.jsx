@@ -44,7 +44,7 @@ export default function TestimonialsShowcase() {
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-gray-900 text-white relative overflow-hidden">
+    <section className="py-16 sm:py-24 lg:py-32 bg-gray-900 text-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.1),transparent)]"></div>
@@ -52,37 +52,37 @@ export default function TestimonialsShowcase() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
           <div className="lg:w-1/3 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 font-bold text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 font-bold text-sm mb-4 sm:mb-6">
                <Quote className="w-4 h-4" /> Client Success
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold font-secondary mb-6">Real Results from <span className="text-blue-500">Real People</span></h2>
-            <p className="text-xl text-gray-400 font-primary mb-8 leading-relaxed">
-              Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
+            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 sm:mb-6 leading-tight">Real Results from <span className="text-blue-500">Real People</span></h2>
+            <p className="text-lg sm:text-xl text-gray-400 font-primary mb-8 leading-relaxed px-2 sm:px-0">
+               Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
             </p>
-            <div className="flex flex-col gap-4">
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                 <div className="text-3xl font-bold text-blue-500 mb-1">4.9 / 5.0</div>
-                 <div className="text-sm font-medium text-gray-400">Average Client Rating</div>
+            <div className="grid grid-cols-2 lg:flex lg:flex-col gap-4">
+              <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                 <div className="text-2xl sm:text-3xl font-bold text-blue-500 mb-1">4.9 / 5.0</div>
+                 <div className="text-[10px] sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Avg Rating</div>
               </div>
-              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                 <div className="text-3xl font-bold text-purple-500 mb-1">150+</div>
-                 <div className="text-sm font-medium text-gray-400">Success Stories Delivered</div>
+              <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                 <div className="text-2xl sm:text-3xl font-bold text-purple-500 mb-1">150+</div>
+                 <div className="text-[10px] sm:text-sm font-medium text-gray-400 uppercase tracking-wider">Success Stories</div>
               </div>
             </div>
           </div>
 
-          <div className="lg:w-2/3">
+          <div className="lg:w-2/3 w-full">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {testimonials.map((t, i) => (
-                  <div key={i} className="group p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                     <div className="flex items-center gap-1 mb-6">
+                  <div key={i} className="group p-6 sm:p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                     <div className="flex items-center gap-1 mb-4 sm:mb-6">
                         {[...Array(5)].map((_, idx) => (
                           <Star key={idx} className="w-4 h-4 text-yellow-500 fill-current" />
                         ))}
                      </div>
-                     <p className="text-lg text-gray-300 font-primary italic mb-8 leading-relaxed">
+                     <p className="text-base sm:text-lg text-gray-300 font-primary italic mb-6 sm:mb-8 leading-relaxed">
                         "{t.content}"
                      </p>
                      <div className="flex items-center gap-4 pt-6 border-t border-white/10">

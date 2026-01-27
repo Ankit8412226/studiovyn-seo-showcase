@@ -1,29 +1,58 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
+import { useEffect, useState } from 'react';
 
-export default function RequestProjectModal({ delayMs = 8000 }) {
+export default function RequestProjectModal({ delayMs = 5000 }) {
   const [open, setOpen] = useState(false);
+  const [isDismissed, setIsDismissed] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
+    // Reset dismissal on mount (reload)
+    setIsDismissed(false);
+
     const timer = setTimeout(() => {
-      // Show on homepage and services pages primarily
-      if (pathname === '/' || pathname?.startsWith('/services')) {
+      if (!isDismissed) setOpen(true);
+    }, delayMs);
+
+    const handleExitIntent = (e) => {
+      if (e.clientY <= 0 && !isDismissed) {
         setOpen(true);
       }
-    }, delayMs);
-    return () => clearTimeout(timer);
-  }, [delayMs, pathname]);
+    };
 
-  if (!open) return null;
+    const handleScroll = () => {
+      const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+      if (scrollPercent > 25 && !isDismissed) {
+        setOpen(true);
+      }
+    };
+
+    if (pathname === '/' || pathname?.startsWith('/services')) {
+      document.addEventListener('mouseleave', handleExitIntent);
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    return () => {
+      clearTimeout(timer);
+      document.removeEventListener('mouseleave', handleExitIntent);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [pathname, delayMs, isDismissed]);
+
+  const handleClose = () => {
+    setOpen(false);
+    setIsDismissed(true);
+  };
+
+  if (!open || isDismissed) return null;
 
   return (
     <div className="fixed inset-0 z-[100] flex items-end sm:items-center justify-center bg-black/40 p-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-6 relative animate-fade-in-up">
-        <button aria-label="Close" onClick={() => setOpen(false)} className="absolute right-3 top-3 p-2 rounded-lg hover:bg-gray-100">
+        <button aria-label="Close" onClick={handleClose} className="absolute right-3 top-3 p-2 rounded-lg hover:bg-gray-100">
           <X className="w-5 h-5 text-gray-600" />
         </button>
         <h3 className="text-2xl font-bold font-secondary mb-2">Start Your Project</h3>

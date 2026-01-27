@@ -17,16 +17,21 @@ export default function ClientsLogos() {
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', alt: 'GitHub' },
   ];
   return (
-    <section className="py-10 sm:py-12 bg-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-xl sm:text-2xl font-secondary font-semibold text-gray-700 mb-6">Trusted by teams using modern web</h2>
-        <div className="grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-8 gap-6 items-center">
-          {logos.map((l, i) => (
-            <div key={i} className="flex items-center justify-center">
+    <section className="py-12 bg-white overflow-hidden border-y border-gray-100">
+      <div className="container mx-auto px-4 mb-8">
+        <h2 className="text-center text-sm font-bold font-primary uppercase tracking-[0.2em] text-gray-500">
+          Trusted by Industry Leaders
+        </h2>
+      </div>
+
+      <div className="relative flex overflow-x-hidden group pause-on-hover">
+        <div className="animate-scroll flex whitespace-nowrap min-w-full items-center">
+          {[...logos, ...logos].map((l, i) => (
+            <div key={i} className="flex items-center justify-center px-8 lg:px-12 shrink-0">
               <img
                 src={l.src}
                 alt={l.alt}
-                className="h-8 sm:h-10 max-w-[120px] object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition"
+                className="h-7 sm:h-9 lg:h-10 w-auto object-contain grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
               />
             </div>
           ))}

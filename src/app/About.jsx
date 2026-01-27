@@ -19,21 +19,21 @@ export default function About() {
               />
             </div>
 
-            <div className="absolute -bottom-10 left-10 right-10 bg-white shadow-xl rounded-2xl p-6 border border-gray-100 z-20 hidden sm:block">
-               <div className="flex items-center justify-around gap-4 text-center">
+            <div className="absolute -bottom-10 left-4 right-4 sm:left-10 sm:right-10 bg-white shadow-xl rounded-2xl p-4 sm:p-6 border border-gray-100 z-20">
+               <div className="flex items-center justify-around gap-2 sm:gap-4 text-center">
                   <div>
-                    <div className="text-2xl font-bold font-secondary text-blue-600">150+</div>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Projects</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-blue-600">150+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Projects</div>
                   </div>
                   <div className="h-10 w-px bg-gray-100"></div>
                   <div>
-                    <div className="text-2xl font-bold font-secondary text-purple-600">98%</div>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Happy Clients</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-purple-600">98%</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Happy Clients</div>
                   </div>
                   <div className="h-10 w-px bg-gray-100"></div>
                   <div>
-                    <div className="text-2xl font-bold font-secondary text-green-600">300+</div>
-                    <div className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Locations</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-green-600">300+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Locations</div>
                   </div>
                </div>
             </div>
@@ -82,20 +82,20 @@ export default function About() {
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h3 className="text-3xl font-bold font-secondary mb-4">Why We <span className="text-blue-400">Win in Search</span></h3>
-              <p className="text-gray-400 font-primary text-lg mb-8">We don't just build websites; we build marketing machines optimized for the Google search algorithm.</p>
+              <p className="text-gray-300 font-primary text-lg mb-8">We don't just build websites; we build marketing machines optimized for the Google search algorithm.</p>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="flex gap-4">
                   <Zap className="w-6 h-6 text-blue-400 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Core Web Vitals</h4>
-                    <p className="text-sm text-gray-500">Optimized LCP, CLS, and INP scores by default.</p>
+                    <p className="text-sm text-gray-400">Optimized LCP, CLS, and INP scores by default.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
                   <Shield className="w-6 h-6 text-blue-400 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Tech SEO</h4>
-                    <p className="text-sm text-gray-500">Clean architecture and automated schema injection.</p>
+                    <p className="text-sm text-gray-400">Clean architecture and automated schema injection.</p>
                   </div>
                 </div>
               </div>

@@ -1,8 +1,8 @@
 'use client';
 
-import { Check, Sparkles } from 'lucide-react';
-import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import { Check, Sparkles } from 'lucide-react';
 
 export default function Pricing() {
   const tiers = [
@@ -92,16 +92,16 @@ export default function Pricing() {
         </div>
 
         {/* Pricing Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-stretch">
           {tiers.map((tier) => (
             <Card
               key={tier.name}
               variant={tier.highlight ? 'gradient' : 'elevated'}
               hover
               padding="lg"
-              className={`relative ${
+              className={`relative flex flex-col h-full ${
                 tier.popular
-                  ? 'ring-2 ring-blue-500 ring-offset-2 scale-105 lg:scale-110'
+                  ? 'ring-2 ring-blue-500 ring-offset-2 scale-[1.02] lg:scale-105 z-10'
                   : ''
               } transition-all duration-300`}
             >
