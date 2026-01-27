@@ -1,12 +1,13 @@
-import Image from 'next/image';
-import { posts } from '../../blog/data';
-import Link from 'next/link';
 import SeoFaq from '@/components/seo/SeoFaq';
 import SeoProse from '@/components/seo/SeoProse';
+import Image from 'next/image';
+import Link from 'next/link';
+import { posts } from '../../blog/data';
 const map = Object.fromEntries(posts.map((p) => [p.slug, p]));
 
 export async function generateMetadata({ params }) {
-  const post = map[params.slug];
+  const { slug } = await params;
+  const post = map[slug];
   if (!post) return {};
   return {
     title: `${post.title} | StudioVyn`,
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function BlogPost({ params }) {
-  const post = map[params.slug];
+export default async function BlogPost({ params }) {
+  const { slug } = await params;
+  const post = map[slug];
   if (!post) return null;
   const faqs = [
     {

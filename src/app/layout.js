@@ -126,7 +126,7 @@ export default function RootLayout({ children }) {
                 bestRating: '5',
                 worstRating: '1'
               },
-              award: 'Top Website Development Company in India 2024'
+              award: 'Top Website Development Company in India 2026'
             }),
           }}
         />

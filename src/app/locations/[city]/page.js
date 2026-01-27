@@ -11,7 +11,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const city = findCityParam(params.city);
+  const { city: cityParam } = await params;
+  const city = findCityParam(cityParam);
   if (!city) return {};
   const title = `Web Development in ${city} | StudioVyn`;
   const description = `Fast, SEO-optimized web development services in ${city}. Modern sites and apps that rank and convert.`;
@@ -22,8 +23,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function CityPage({ params }) {
-  const city = findCityParam(params.city);
+export default async function CityPage({ params }) {
+  const { city: cityParam } = await params;
+  const city = findCityParam(cityParam);
   if (!city) return notFound();
   return (
     <main className="min-h-screen pt-24 pb-16">
