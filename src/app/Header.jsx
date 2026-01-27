@@ -1,9 +1,9 @@
 'use client';
 
-import { Menu, X, ChevronDown } from 'lucide-react';
-import { useEffect, useState, useRef } from 'react';
-import { usePathname } from 'next/navigation';
 import Button from '@/components/ui/Button';
+import { Menu, X } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { useEffect, useRef, useState } from 'react';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -95,7 +95,7 @@ const Header = () => {
             aria-label="StudioVyn - Website Development Company India Home"
           >
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 rounded-xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
               <img
                 src="/logo.svg"
                 alt="StudioVyn Logo"
@@ -104,7 +104,7 @@ const Header = () => {
                 height="48"
               />
             </div>
-            <span className="text-xl sm:text-2xl font-extrabold font-secondary bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent group-hover:from-blue-700 group-hover:via-purple-700 group-hover:to-pink-700 transition-all duration-300">
+            <span className="text-xl sm:text-2xl font-extrabold font-secondary bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent group-hover:from-blue-900 group-hover:via-teal-800 group-hover:to-cyan-700 transition-all duration-300">
               StudioVyn
             </span>
           </a>
@@ -117,8 +117,8 @@ const Header = () => {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg font-medium font-primary text-sm transition-all duration-200 ${
                   link.isActive
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-blue-800 bg-blue-50 border border-blue-200'
+                    : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={link.isActive ? 'page' : undefined}
@@ -138,7 +138,7 @@ const Header = () => {
             </a>
             <Button
               href="/contact"
-              size="sm"
+              size="md"
               className="shadow-md hover:shadow-lg"
               aria-label="Get free website development consultation"
             >
@@ -176,8 +176,8 @@ const Header = () => {
                 href={link.href}
                 className={`px-4 py-3 rounded-lg font-medium font-primary text-base transition-colors ${
                   link.isActive
-                    ? 'text-blue-600 bg-blue-50'
-                    : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+                    ? 'text-blue-800 bg-blue-50 border border-blue-200'
+                    : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={link.isActive ? 'page' : undefined}

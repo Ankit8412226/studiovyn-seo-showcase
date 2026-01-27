@@ -1,7 +1,7 @@
 'use client';
 
-import { forwardRef, useState } from 'react';
 import { cn } from '@/lib/utils';
+import { forwardRef, useId, useState } from 'react';
 
 /**
  * Premium Textarea Component
@@ -23,8 +23,8 @@ const Textarea = forwardRef(
   ) => {
     const [focused, setFocused] = useState(false);
     const [charCount, setCharCount] = useState(0);
-
-    const inputId = props.id || `textarea-${Math.random().toString(36).substr(2, 9)}`;
+    const generatedId = useId();
+    const inputId = props.id || generatedId;
 
     const baseStyles =
       'w-full px-4 py-3 rounded-xl border transition-all duration-200 font-primary text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-0 resize-y';

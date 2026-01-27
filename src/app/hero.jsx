@@ -1,11 +1,10 @@
 'use client';
 
-import { ArrowRight, CheckCircle2, Sparkles, TrendingUp, Users, Award, Play } from 'lucide-react';
-import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
+import { ArrowRight, Award, CheckCircle2, Sparkles, TrendingUp, Users } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,19 +36,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/30 to-purple-50/30 pt-32 pb-20"
+      className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/20 to-teal-50/20 pt-32 pb-20"
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >
-      {/* Premium Background Pattern */}
+      {/* Professional Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        {/* Gradient Mesh */}
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/20 via-transparent to-purple-100/20"></div>
+        {/* Subtle Gradient Mesh */}
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/10 via-transparent to-teal-100/10"></div>
 
-        {/* Animated Blobs */}
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-purple-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
-        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-pink-200/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob" style={{ animationDelay: '4s' }}></div>
+        {/* Subtle Animated Blobs */}
+        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-96 h-96 bg-teal-200/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 w-96 h-96 bg-cyan-200/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob" style={{ animationDelay: '4s' }}></div>
 
         {/* Grid Pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -64,20 +63,20 @@ const Hero = () => {
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
               }`}
             >
-              {/* Premium Badge */}
-              <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+              {/* Professional Badge */}
+              <div className="inline-flex items-center space-x-2 bg-blue-800 text-white px-6 py-3 rounded-full font-semibold text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-blue-700">
                 <Sparkles className="w-4 h-4" aria-hidden="true" />
                 <span>India's Leading Website Development Company</span>
               </div>
 
-              {/* Main Heading - Premium Typography */}
+              {/* Main Heading - Professional Typography */}
               <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold font-secondary leading-[1.05] tracking-tight text-gray-900">
                 Build Websites That{' '}
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  <span className="bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent">
                     Convert & Scale
                   </span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 via-purple-200 to-pink-200 opacity-30 blur-xl"></span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 via-teal-200 to-cyan-200 opacity-20 blur-xl"></span>
                 </span>
               </h1>
 
@@ -90,17 +89,17 @@ const Hero = () => {
 
               {/* Key Benefits */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
-                <div className="flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full border border-green-200">
+                <div className="flex items-center gap-2 px-4 py-2 bg-green-50 rounded-full border-2 border-green-600">
                   <CheckCircle2 className="w-5 h-5 text-green-600" />
                   <span className="text-sm font-semibold text-green-700 font-primary">2-6 Week Delivery</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border border-blue-200">
-                  <CheckCircle2 className="w-5 h-5 text-blue-600" />
-                  <span className="text-sm font-semibold text-blue-700 font-primary">SEO Optimized</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-blue-50 rounded-full border-2 border-blue-700">
+                  <CheckCircle2 className="w-5 h-5 text-blue-700" />
+                  <span className="text-sm font-semibold text-blue-800 font-primary">SEO Optimized</span>
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 bg-purple-50 rounded-full border border-purple-200">
-                  <CheckCircle2 className="w-5 h-5 text-purple-600" />
-                  <span className="text-sm font-semibold text-purple-700 font-primary">24/7 Support</span>
+                <div className="flex items-center gap-2 px-4 py-2 bg-teal-50 rounded-full border-2 border-teal-700">
+                  <CheckCircle2 className="w-5 h-5 text-teal-700" />
+                  <span className="text-sm font-semibold text-teal-800 font-primary">24/7 Support</span>
                 </div>
               </div>
 
@@ -109,9 +108,9 @@ const Hero = () => {
                 {features.map((feature, index) => (
                   <div
                     key={index}
-                    className="flex items-center space-x-3 text-gray-700 group hover:bg-white/50 p-3 rounded-lg transition-all duration-200"
+                    className="flex items-center space-x-3 text-gray-700 group hover:bg-white/50 p-3 rounded-lg transition-all duration-200 border border-transparent hover:border-blue-200"
                   >
-                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
+                    <div className="flex-shrink-0 w-7 h-7 rounded-full bg-gradient-to-br from-blue-800 to-teal-700 flex items-center justify-center shadow-md group-hover:scale-110 transition-transform">
                       <CheckCircle2 className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-sm font-semibold font-primary">{feature}</span>
@@ -142,17 +141,17 @@ const Hero = () => {
                 </Button>
               </div>
 
-              {/* Trust Stats - Premium Design */}
+              {/* Trust Stats - Professional Design */}
               <div className="flex items-center justify-center lg:justify-start gap-8 pt-8 border-t border-gray-200/50">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
                     <div key={index} className="text-center lg:text-left group">
                       <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
-                        <div className="p-2 rounded-lg bg-gradient-to-br from-blue-50 to-purple-50 group-hover:scale-110 transition-transform">
-                          <Icon className="w-5 h-5 text-blue-600" />
+                        <div className="p-2 rounded-lg bg-gradient-to-br from-blue-50 to-teal-50 group-hover:scale-110 transition-transform border border-blue-200">
+                          <Icon className="w-5 h-5 text-blue-800" />
                         </div>
-                        <div className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent font-secondary">
+                        <div className="text-4xl sm:text-5xl font-extrabold bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent font-secondary">
                           {stat.value}
                         </div>
                       </div>
@@ -170,7 +169,7 @@ const Hero = () => {
               {/* Main Hero Image Container */}
               <div className="relative">
                 {/* Glow Effect */}
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/20 via-purple-400/20 to-pink-400/20 rounded-3xl blur-3xl transform rotate-6"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-400/10 via-teal-400/10 to-cyan-400/10 rounded-3xl blur-3xl transform rotate-6"></div>
 
                 {/* Image Container */}
                 <div className="relative rounded-3xl overflow-hidden shadow-2xl border-8 border-white/50">
@@ -209,14 +208,14 @@ const Hero = () => {
                 {/* Floating Service Cards */}
                 <div className="absolute -bottom-8 -left-8 grid grid-cols-2 gap-4 w-64">
                   {[
-                    { title: 'Web Dev', gradient: 'from-blue-500 to-cyan-500' },
-                    { title: 'Mobile', gradient: 'from-purple-500 to-pink-500' },
+                    { title: 'Web Dev', gradient: 'from-blue-800 to-blue-600' },
+                    { title: 'Mobile', gradient: 'from-teal-700 to-cyan-600' },
                   ].map((service, index) => (
                     <Card
                       key={index}
                       variant="elevated"
                       padding="sm"
-                      className="group relative overflow-hidden backdrop-blur-sm bg-white/95 border border-white/50 shadow-xl hover:scale-105 transition-transform duration-300"
+                      className="group relative overflow-hidden backdrop-blur-sm bg-white/95 border-2 border-gray-200 shadow-xl hover:scale-105 transition-transform duration-300"
                     >
                       <div
                         className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}

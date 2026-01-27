@@ -1,7 +1,7 @@
 'use client';
 
 import Button from '@/components/ui/Button';
-import { ArrowRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin, Phone, Twitter } from 'lucide-react';
+import { ArrowRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -39,74 +39,73 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gray-950 text-gray-100 mt-24 border-t border-gray-800 relative overflow-hidden"
+      className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white mt-24 relative overflow-hidden border-t border-blue-900/20"
       role="contentinfo"
       aria-label="Site footer"
     >
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:24px_24px] opacity-20 pointer-events-none" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a_1px,transparent_1px)] bg-[size:32px_32px] opacity-10 pointer-events-none" aria-hidden="true"></div>
+
+      {/* Accent gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 via-transparent to-teal-900/5 pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* CTA Section */}
+        <div className="py-16 lg:py-20 border-b border-blue-800/30">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4" style={{ color: '#ffffff !important' }}>
+              Ready to Build Something Amazing?
+            </h2>
+            <p className="text-lg text-blue-100 font-primary mb-8 max-w-2xl mx-auto">
+              Let's transform your digital presence with a high-performance website that drives real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button
+                href="/contact"
+                size="lg"
+                icon={<ArrowRight className="w-5 h-5" />}
+                iconPosition="right"
+              >
+                Start Your Project
+              </Button>
+              <Button
+                href="/portfolio"
+                variant="secondary"
+                size="lg"
+              >
+                View Our Work
+              </Button>
+            </div>
+          </div>
+        </div>
+
         {/* Main Footer Content */}
         <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-16">
-            {/* Brand Column - Enhanced */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center gap-3 mb-6 group">
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300"></div>
-                  <img
-                    src="/logo.svg"
-                    alt="StudioVyn Logo"
-                    className="relative w-14 h-14 rounded-xl shadow-xl group-hover:scale-105 transition-transform duration-300"
-                    width="56"
-                    height="56"
-                  />
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+            {/* Brand Column - Spans 4 columns */}
+            <div className="lg:col-span-4">
+              <div className="flex items-center gap-3 mb-6">
+                <img
+                  src="/logo.svg"
+                  alt="StudioVyn Logo"
+                  className="w-12 h-12 rounded-xl"
+                  width="48"
+                  height="48"
+                />
                 <div>
-                  <h3 className="text-2xl font-bold font-secondary bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl font-bold font-secondary bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
                     StudioVyn
                   </h3>
-                  <p className="text-xs text-gray-300 font-primary mt-1 font-medium">Premium Web Development</p>
+                  <p className="text-xs font-primary font-medium" style={{ color: '#93c5fd' }}>Web Development Excellence</p>
                 </div>
               </div>
-              <p className="text-sm font-primary leading-relaxed text-gray-200 mb-8 max-w-md">
-                India's leading web development agency. We build high-performance websites and digital solutions that drive real business results. Serving clients across India with excellence.
+              <p className="text-sm font-primary leading-relaxed text-blue-100 mb-8">
+                India's leading web development agency. We build high-performance websites and digital solutions that drive real business results.
               </p>
-
-              {/* Contact Info */}
-              <div className="space-y-4 mb-8">
-                <a
-                  href="tel:+918529747613"
-                  className="flex items-center gap-3 text-sm text-gray-200 hover:text-white transition-colors font-primary group"
-                  aria-label="Call StudioVyn at +91 8529747613"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-gray-800/80 border border-gray-700 flex items-center justify-center group-hover:bg-blue-600 group-hover:border-blue-500 transition-all duration-200">
-                    <Phone className="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" />
-                  </div>
-                  <span className="font-semibold text-gray-100">+91 8529747613</span>
-                </a>
-                <a
-                  href="mailto:tech@studiovyn.in"
-                  className="flex items-center gap-3 text-sm text-gray-200 hover:text-white transition-colors font-primary group"
-                  aria-label="Email StudioVyn at tech@studiovyn.in"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-gray-800/80 border border-gray-700 flex items-center justify-center group-hover:bg-purple-600 group-hover:border-purple-500 transition-all duration-200">
-                    <Mail className="w-4 h-4 text-gray-300 group-hover:text-white transition-colors" />
-                  </div>
-                  <span className="font-semibold text-gray-100">tech@studiovyn.in</span>
-                </a>
-                <div className="flex items-start gap-3 text-sm text-gray-200 font-primary">
-                  <div className="w-11 h-11 rounded-xl bg-gray-800/80 border border-gray-700 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 text-gray-300" />
-                  </div>
-                  <span className="font-medium text-gray-100 pt-2">Delhi NCR, India</span>
-                </div>
-              </div>
 
               {/* Social Media */}
               <div>
-                <p className="text-xs text-gray-300 font-semibold uppercase tracking-wider mb-4 font-primary">Follow Us</p>
+                <p className="text-xs font-semibold uppercase tracking-wider mb-4 font-primary" style={{ color: '#93c5fd' }}>Connect With Us</p>
                 <div className="flex items-center gap-3">
                   {socialLinks.map((social, index) => {
                     const Icon = social.icon;
@@ -115,9 +114,9 @@ export default function Footer() {
                         key={index}
                         href={social.href}
                         aria-label={social.label}
-                        className="w-11 h-11 rounded-xl bg-gray-800/80 border border-gray-700 hover:bg-gradient-to-br hover:from-blue-600 hover:to-purple-600 hover:border-transparent flex items-center justify-center transition-all duration-200 hover:scale-110 hover:shadow-lg group"
+                        className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 hover:bg-blue-800 hover:border-blue-700 flex items-center justify-center transition-all duration-200 hover:scale-110 group"
                       >
-                        <Icon className="w-5 h-5 text-gray-300 group-hover:text-white transition-colors" />
+                        <Icon className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
                       </a>
                     );
                   })}
@@ -125,91 +124,107 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* Services Column */}
-            <div>
-              <h4 className="text-white font-bold mb-6 font-secondary text-sm uppercase tracking-wider">Services</h4>
+            {/* Services Column - Spans 2 columns */}
+            <div className="lg:col-span-2">
+              <h4 className="font-bold mb-6 font-secondary text-sm uppercase tracking-wider" style={{ color: '#ffffff' }}>Services</h4>
               <ul className="space-y-3">
                 {services.map((service) => (
                   <li key={service.href}>
                     <a
                       href={service.href}
-                      className="text-sm text-gray-200 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
+                      className="text-sm text-blue-100 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
                     >
+                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       <span>{service.label}</span>
-                      <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Company Column */}
-            <div>
-              <h4 className="text-white font-bold mb-6 font-secondary text-sm uppercase tracking-wider">Company</h4>
+            {/* Company Column - Spans 2 columns */}
+            <div className="lg:col-span-2">
+              <h4 className="font-bold mb-6 font-secondary text-sm uppercase tracking-wider" style={{ color: '#ffffff' }}>Company</h4>
               <ul className="space-y-3">
                 {company.map((item) => (
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="text-sm text-gray-200 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
+                      className="text-sm text-blue-100 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
                     >
+                      <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       <span>{item.label}</span>
-                      <ArrowRight className="w-3.5 h-3.5 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                     </a>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* CTA Column */}
-            <div>
-              <h4 className="text-white font-bold mb-6 font-secondary text-sm uppercase tracking-wider">Get Started</h4>
-              <p className="text-sm text-gray-200 font-primary mb-6 leading-relaxed">
-                Ready to transform your digital presence? Let's build something amazing together.
-              </p>
-              <Button
-                href="/contact"
-                variant="primary"
-                size="sm"
-                className="w-full mb-8 shadow-xl hover:shadow-2xl"
-                icon={<ArrowRight className="w-4 h-4" />}
-                iconPosition="right"
-              >
-                Start a Project
-              </Button>
+            {/* Contact Column - Spans 4 columns */}
+            <div className="lg:col-span-4">
+              <h4 className="font-bold mb-6 font-secondary text-sm uppercase tracking-wider" style={{ color: '#ffffff' }}>Get In Touch</h4>
 
-              {/* Newsletter Signup */}
-              <div className="pt-6 border-t border-gray-800">
-                <p className="text-xs text-gray-300 font-semibold uppercase tracking-wider mb-2 font-primary">Newsletter</p>
-                <p className="text-xs text-gray-200 font-primary mb-4 leading-relaxed">
-                  Get web development tips and insights delivered to your inbox.
+              {/* Contact Info */}
+              <div className="space-y-4 mb-8">
+                <a
+                  href="tel:+918529747613"
+                  className="flex items-center gap-3 text-sm text-blue-100 hover:text-white transition-colors font-primary group"
+                  aria-label="Call StudioVyn at +91 8529747613"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center group-hover:bg-blue-800 group-hover:border-blue-700 transition-all duration-200">
+                    <Phone className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="font-semibold text-white">+91 8529747613</span>
+                </a>
+                <a
+                  href="mailto:tech@studiovyn.in"
+                  className="flex items-center gap-3 text-sm text-blue-100 hover:text-white transition-colors font-primary group"
+                  aria-label="Email StudioVyn at tech@studiovyn.in"
+                >
+                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center group-hover:bg-blue-800 group-hover:border-blue-700 transition-all duration-200">
+                    <Mail className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
+                  </div>
+                  <span className="font-semibold text-white">tech@studiovyn.in</span>
+                </a>
+                <div className="flex items-start gap-3 text-sm text-blue-100 font-primary">
+                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 text-blue-200" />
+                  </div>
+                  <span className="font-medium text-white pt-2">Delhi NCR, India</span>
+                </div>
+              </div>
+
+              {/* Newsletter */}
+              <div className="bg-blue-900/20 border-2 border-blue-800/40 rounded-xl p-6">
+                <p className="text-sm font-semibold font-primary mb-2" style={{ color: '#ffffff' }}>Newsletter</p>
+                <p className="text-xs font-primary mb-4" style={{ color: '#bfdbfe' }}>
+                  Get web development tips delivered to your inbox.
                 </p>
-                <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
+                <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
                   <input
                     type="email"
-                    placeholder="Enter your email"
-                    className="w-full px-4 py-2.5 bg-gray-800/80 border border-gray-700 rounded-xl text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all duration-200 font-primary"
+                    placeholder="Your email"
+                    className="flex-1 px-4 py-2.5 bg-blue-950/50 border-2 border-blue-800/50 rounded-lg text-sm text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-all duration-200 font-primary"
                     aria-label="Email address for newsletter"
                   />
-                  <Button
+                  <button
                     type="submit"
-                    variant="secondary"
-                    size="sm"
-                    className="w-full"
+                    className="px-4 py-2.5 bg-blue-800 border-2 border-blue-800 text-white rounded-lg hover:bg-blue-900 hover:border-blue-900 transition-all duration-200 flex items-center justify-center"
+                    aria-label="Subscribe to newsletter"
                   >
-                    Subscribe
-                  </Button>
+                    <Send className="w-4 h-4" />
+                  </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar - Premium Design */}
-        <div className="border-t border-gray-800 py-8">
+        {/* Bottom Bar */}
+        <div className="border-t border-blue-800/30 py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-              <p className="text-sm text-gray-200 font-primary">
+              <p className="text-sm text-blue-200 font-primary">
                 © {currentYear} StudioVyn. All rights reserved.
               </p>
               <div className="flex items-center gap-4 md:gap-6">
@@ -217,20 +232,20 @@ export default function Footer() {
                   <span key={item.href} className="flex items-center gap-4">
                     <a
                       href={item.href}
-                      className="text-xs text-gray-300 hover:text-white transition-colors font-primary"
+                      className="text-xs text-blue-300 hover:text-white transition-colors font-primary"
                     >
                       {item.label}
                     </a>
                     {index < resources.length - 1 && (
-                      <span className="text-gray-700" aria-hidden="true">•</span>
+                      <span className="text-blue-800" aria-hidden="true">•</span>
                     )}
                   </span>
                 ))}
               </div>
             </div>
             <div className="flex items-center gap-2">
-              <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse" aria-hidden="true"></div>
-              <p className="text-xs text-gray-200 font-primary">
+              <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></div>
+              <p className="text-xs text-blue-200 font-primary">
                 Made with <span className="text-red-400">❤️</span> in India
               </p>
             </div>
@@ -240,5 +255,4 @@ export default function Footer() {
     </footer>
   );
 }
-
 

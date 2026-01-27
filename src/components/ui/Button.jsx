@@ -1,8 +1,8 @@
 'use client';
 
-import { forwardRef } from 'react';
-import Link from 'next/link';
 import { cn } from '@/lib/utils';
+import Link from 'next/link';
+import { forwardRef } from 'react';
 
 /**
  * Premium Button Component
@@ -27,13 +27,13 @@ const Button = forwardRef(
     },
     ref
   ) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden';
+    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border-2';
 
     const variants = {
-      primary: 'bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl active:scale-[0.98]',
-      secondary: 'bg-white text-blue-600 border-2 border-blue-600 hover:bg-blue-50 focus:ring-blue-500 shadow-sm hover:shadow-md active:scale-[0.98]',
-      ghost: 'bg-transparent text-gray-700 hover:bg-gray-100 focus:ring-gray-500',
-      link: 'bg-transparent text-blue-600 hover:text-blue-700 underline-offset-4 hover:underline focus:ring-blue-500 p-0',
+      primary: 'bg-blue-800 border-blue-800 text-white hover:bg-blue-900 hover:border-blue-900 focus:ring-blue-600 shadow-md hover:shadow-lg active:scale-[0.98]',
+      secondary: 'bg-white border-blue-800 text-blue-800 hover:bg-blue-50 hover:border-blue-900 focus:ring-blue-600 shadow-sm hover:shadow-md active:scale-[0.98]',
+      ghost: 'bg-transparent border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 focus:ring-gray-500',
+      link: 'bg-transparent border-transparent text-blue-800 hover:text-blue-900 underline-offset-4 hover:underline focus:ring-blue-600 p-0',
     };
 
     const sizes = {
