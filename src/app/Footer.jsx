@@ -86,7 +86,7 @@ export default function Footer() {
             <div className="lg:col-span-4">
               <div className="flex items-center gap-3 mb-6">
                 <img
-                  src="/logo.svg"
+                  src="/logo.jpeg"
                   alt="StudioVyn Logo"
                   className="w-12 h-12 rounded-xl"
                   width="48"

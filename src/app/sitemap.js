@@ -21,7 +21,7 @@ export default function sitemap() {
     '/locations',
     '/services',
     ...services.map((s) => `/services/${s.slug}`),
-    ...cities.map((c) => `/locations/${c.toLowerCase().replace(/\s+/g,'-')}`),
+    ...cities.map((c) => `/locations/${c.toLowerCase().replace(/\s+/g, '-')}`),
     ...posts.map((p) => `/blog/${p.slug}`),
     ...projects.map((p) => `/case-studies/${p.slug}`)
   ];
@@ -46,11 +46,11 @@ export default function sitemap() {
       changeFrequency = 'monthly';
       priority = 0.7;
     } else if (route === '/locations') {
-      changeFrequency = 'monthly';
-      priority = 0.6;
+      changeFrequency = 'weekly';
+      priority = 0.8;
     } else if (route.startsWith('/locations/')) {
-      changeFrequency = 'monthly';
-      priority = 0.5;
+      changeFrequency = 'weekly';
+      priority = 0.8;
     } else if (route === '/case-studies') {
       changeFrequency = 'monthly';
       priority = 0.7;

@@ -1,10 +1,10 @@
 import {
   Code2,
-  Smartphone,
-  Palette,
-  ShoppingCart,
   Database,
   Globe,
+  Palette,
+  ShoppingCart,
+  Smartphone,
 } from 'lucide-react';
 
 export const services = [
@@ -15,7 +15,7 @@ export const services = [
     color: 'from-blue-500 to-cyan-500',
     description:
       'Custom websites and web applications built with React, Next.js, and Node.js for performance and scalability.',
-    image: '/window.svg',
+    image: '/web_development_premium_1769518207985.png',
   },
   {
     slug: 'mobile-app-development',
@@ -24,7 +24,7 @@ export const services = [
     color: 'from-purple-500 to-pink-500',
     description:
       'Native and cross-platform apps that deliver seamless experiences on iOS and Android.',
-    image: '/globe.svg',
+    image: '/mobile_app_development_premium_1769518249733.png',
   },
   {
     slug: 'ui-ux-design',
@@ -33,7 +33,7 @@ export const services = [
     color: 'from-orange-500 to-red-500',
     description:
       'Beautiful, intuitive designs that convert and delight across web and mobile.',
-    image: '/next.svg',
+    image: '/ui_ux_design_premium_1769518278516.png',
   },
   {
     slug: 'e-commerce',
@@ -42,7 +42,7 @@ export const services = [
     color: 'from-green-500 to-emerald-500',
     description:
       'Feature-rich e-commerce platforms with payments, inventory, and analytics.',
-    image: '/vercel.svg',
+    image: '/ecommerce_solutions_premium_1769518314027.png',
   },
   {
     slug: 'backend-development',
@@ -51,7 +51,7 @@ export const services = [
     color: 'from-indigo-500 to-blue-500',
     description:
       'Secure, scalable APIs and infrastructure to power your applications.',
-    image: '/file.svg',
+    image: '/backend_infrastructure_premium_1769518360170.png',
   },
   {
     slug: 'digital-marketing',
@@ -60,7 +60,7 @@ export const services = [
     color: 'from-yellow-500 to-orange-500',
     description:
       'SEO, content, and social strategies that grow your audience and revenue.',
-    image: '/window.svg',
+    image: '/digital_marketing_seo_premium_1769518403220.png',
   },
 ];
 

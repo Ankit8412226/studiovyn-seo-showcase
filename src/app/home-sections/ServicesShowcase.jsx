@@ -1,23 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import Button from '@/components/ui/Button';
+import Card from '@/components/ui/Card';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import {
   ArrowRight,
-  Check,
   Code2,
   Database,
   Globe,
   Palette,
   ShoppingCart,
   Smartphone,
-  Sparkles,
-  TrendingUp,
-  Zap,
+  Sparkles
 } from 'lucide-react';
-import Image from 'next/image';
-import Card from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
-import OptimizedImage from '@/components/ui/OptimizedImage';
+import { useState } from 'react';
 
 export default function ServicesShowcase() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -29,7 +25,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Custom websites and web applications built with modern technologies for optimal performance and scalability.',
       features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure & Scalable'],
       color: 'from-blue-500 to-cyan-500',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=800&h=600&fit=crop',
+      image: '/web_development_premium_1769518207985.png',
       gradient: 'from-blue-500/10 to-cyan-500/10',
     },
     {
@@ -38,7 +34,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Native and cross-platform mobile applications that deliver seamless user experiences on iOS and Android devices.',
       features: ['Cross-Platform', 'Native Performance', 'Offline Support', 'Push Notifications'],
       color: 'from-purple-500 to-pink-500',
-      image: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=600&fit=crop',
+      image: '/mobile_app_development_premium_1769518249733.png',
       gradient: 'from-purple-500/10 to-pink-500/10',
     },
     {
@@ -47,7 +43,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Beautiful, intuitive designs that prioritize user experience and drive engagement with your brand.',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Brand Identity'],
       color: 'from-orange-500 to-red-500',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=600&fit=crop',
+      image: '/ui_ux_design_premium_1769518278516.png',
       gradient: 'from-orange-500/10 to-red-500/10',
     },
     {
@@ -56,7 +52,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Complete e-commerce platforms with payment integration, inventory management, and analytics to grow your online business.',
       features: ['Payment Gateway', 'Inventory System', 'Analytics', 'Multi-vendor'],
       color: 'from-green-500 to-emerald-500',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop',
+      image: '/ecommerce_solutions_premium_1769518314027.png',
       gradient: 'from-green-500/10 to-emerald-500/10',
     },
     {
@@ -65,7 +61,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Robust backend systems and APIs that power your applications with security, reliability, and performance.',
       features: ['RESTful APIs', 'Database Design', 'Cloud Integration', 'Authentication'],
       color: 'from-indigo-500 to-blue-500',
-      image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&h=600&fit=crop',
+      image: '/backend_infrastructure_premium_1769518360170.png',
       gradient: 'from-indigo-500/10 to-blue-500/10',
     },
     {
@@ -74,7 +70,7 @@ export default function ServicesShowcase() {
       shortDescription: 'Strategic digital marketing solutions including SEO, content marketing, and social media to expand your reach.',
       features: ['SEO Strategy', 'Content Marketing', 'Social Media', 'Analytics'],
       color: 'from-yellow-500 to-orange-500',
-      image: 'https://images.unsplash.com/photo-1432888622747-4eb9a8f2c92d?w=800&h=600&fit=crop',
+      image: '/digital_marketing_seo_premium_1769518403220.png',
       gradient: 'from-yellow-500/10 to-orange-500/10',
     },
   ];

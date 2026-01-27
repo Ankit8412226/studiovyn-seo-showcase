@@ -1,3 +1,5 @@
+import OptimizedImage from '@/components/ui/OptimizedImage';
+import { ArrowRight, Calendar } from 'lucide-react';
 import Link from 'next/link';
 import { posts } from '../../app/blog/data';
 
@@ -6,36 +8,66 @@ export default function BlogHighlights() {
 
   return (
     <section
-      className="py-14 sm:py-16 bg-gray-50"
+      className="py-24 sm:py-32 bg-gray-50"
       aria-labelledby="blog-highlights-heading"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-end justify-between mb-6">
-          <h2
-            id="blog-highlights-heading"
-            className="text-2xl sm:text-3xl font-bold font-secondary"
-          >
-            From the blog
-          </h2>
+        <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-4">
+          <div className="text-center md:text-left">
+            <h2
+              id="blog-highlights-heading"
+              className="text-4xl sm:text-5xl font-bold font-secondary mb-4"
+            >
+              Latest <span className="text-blue-600">Insights</span>
+            </h2>
+            <p className="text-gray-600 font-primary">Expert guides on web development, SEO, and business growth in India.</p>
+          </div>
           <Link
             href="/blog"
-            className="text-blue-600 font-medium"
+            className="flex items-center gap-2 text-blue-600 font-bold font-secondary group"
             title="View all blog posts on StudioVyn"
           >
-            View all
+            Explore All Articles
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>
-        <div className="grid sm:grid-cols-3 gap-5">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {top.map((p) => (
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
-              className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition"
+              className="group flex flex-col h-full rounded-3xl bg-white overflow-hidden border border-gray-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
               title={`Read "${p.title}" blog post`}
             >
-              <div className="font-semibold font-secondary mb-1">{p.title}</div>
-              <div className="text-sm text-gray-600 font-primary line-clamp-2">
-                {p.body.replace(/\n/g, ' ').slice(0, 160)}…
+              <div className="relative h-56 overflow-hidden">
+                 <OptimizedImage
+                   src={p.image}
+                   alt={p.title}
+                   fill
+                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                 />
+                 <div className="absolute top-4 left-4">
+                    <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-sm text-blue-700 text-xs font-bold uppercase tracking-wider shadow-sm">
+                       SEO & Tech
+                    </span>
+                 </div>
+              </div>
+              <div className="p-8 flex flex-col flex-1">
+                <div className="flex items-center gap-2 text-gray-500 text-xs font-medium mb-4">
+                  <Calendar className="w-4 h-4" />
+                  <span>Jan 27, 2026</span>
+                </div>
+                <h3 className="text-xl font-bold font-secondary mb-4 text-gray-900 group-hover:text-blue-600 transition-colors line-clamp-2">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-gray-600 font-primary line-clamp-3 mb-6 flex-1">
+                  {p.body.replace(/\n+/g, ' ').slice(0, 150)}...
+                </p>
+                <div className="flex items-center gap-2 text-blue-600 font-bold text-sm">
+                  Read Full Article
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
               </div>
             </Link>
           ))}

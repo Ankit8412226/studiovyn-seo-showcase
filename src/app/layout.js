@@ -96,7 +96,7 @@ export default function RootLayout({ children }) {
               url: 'https://studiovyn.in',
               logo: {
                 '@type': 'ImageObject',
-                url: 'https://studiovyn.in/logo.svg',
+                url: 'https://studiovyn.in/logo.jpeg',
                 width: 250,
                 height: 60
               },

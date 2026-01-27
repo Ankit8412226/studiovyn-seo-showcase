@@ -97,7 +97,7 @@ const Header = () => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 rounded-xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
               <img
-                src="/logo.svg"
+                src="/logo.jpeg"
                 alt="StudioVyn Logo"
                 className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105"
                 width="48"

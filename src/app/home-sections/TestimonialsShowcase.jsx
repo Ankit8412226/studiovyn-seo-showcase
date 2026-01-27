@@ -1,8 +1,7 @@
 'use client';
 
-import { Quote, Star, Linkedin } from 'lucide-react';
-import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
+import { Linkedin, Quote, Star } from 'lucide-react';
 
 export default function TestimonialsShowcase() {
   const testimonials = [
@@ -38,133 +37,72 @@ export default function TestimonialsShowcase() {
       role: 'Marketing Director, GrowthCo',
       company: 'GrowthCo',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces',
-      content: 'StudioVyn\'s digital marketing services helped us achieve 250% ROI in the first quarter. Their data-driven approach and creative strategies are exceptional.',
+      content: "StudioVyn's digital marketing services helped us achieve 250% ROI in the first quarter. Their data-driven approach and creative strategies are exceptional.",
       rating: 5,
       result: '250% ROI',
-    },
-    {
-      name: 'Vikram Singh',
-      role: 'Founder, HealthCare Plus',
-      company: 'HealthCare Plus',
-      image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=faces',
-      content: 'From design to deployment, StudioVyn handled everything seamlessly. Our website now ranks on the first page of Google, and patient bookings have increased by 180%.',
-      rating: 5,
-      result: '180% booking increase',
-    },
-    {
-      name: 'Anjali Mehta',
-      role: 'Product Manager, EduTech Innovations',
-      company: 'EduTech',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop&crop=faces',
-      content: 'The UI/UX design they created for our learning platform received overwhelming positive feedback. User engagement increased by 400%, and our retention rate doubled.',
-      rating: 5,
-      result: '400% engagement increase',
-    },
+    }
   ];
 
   return (
-    <section className="py-24 sm:py-28 lg:py-32 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+    <section className="py-24 sm:py-32 bg-gray-900 text-white relative overflow-hidden">
       {/* Background Decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-purple-100/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-100/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.1),transparent)]"></div>
+        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(147,51,234,0.1),transparent)]"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-100 to-pink-100 mb-6">
-            <Quote className="w-8 h-8 text-purple-600" aria-hidden="true" />
+        <div className="flex flex-col lg:flex-row gap-16 items-center">
+          <div className="lg:w-1/3 text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 text-blue-400 font-bold text-sm mb-6">
+               <Quote className="w-4 h-4" /> Client Success
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-bold font-secondary mb-6">Real Results from <span className="text-blue-500">Real People</span></h2>
+            <p className="text-xl text-gray-400 font-primary mb-8 leading-relaxed">
+              Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
+            </p>
+            <div className="flex flex-col gap-4">
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                 <div className="text-3xl font-bold text-blue-500 mb-1">4.9 / 5.0</div>
+                 <div className="text-sm font-medium text-gray-400">Average Client Rating</div>
+              </div>
+              <div className="p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+                 <div className="text-3xl font-bold text-purple-500 mb-1">150+</div>
+                 <div className="text-sm font-medium text-gray-400">Success Stories Delivered</div>
+              </div>
+            </div>
           </div>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-gray-900">
-            What Our <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Clients Say</span>
-          </h2>
-          <p className="text-xl text-gray-600 font-primary leading-relaxed">
-            Don't just take our word for it. Here's what our clients have to say about working with StudioVyn.
-          </p>
-        </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {testimonials.map((testimonial, index) => (
-            <Card
-              key={index}
-              variant="elevated"
-              hover
-              padding="lg"
-              className="group relative overflow-hidden"
-            >
-              {/* Quote Icon */}
-              <div className="absolute top-6 right-6 opacity-10 group-hover:opacity-20 transition-opacity">
-                <Quote className="w-16 h-16 text-purple-600" />
-              </div>
-
-              {/* Rating */}
-              <div className="flex items-center gap-1 mb-4">
-                {[...Array(testimonial.rating)].map((_, i) => (
-                  <Star
-                    key={i}
-                    className="w-5 h-5 text-yellow-400 fill-current"
-                    aria-hidden="true"
-                  />
+          <div className="lg:w-2/3">
+             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {testimonials.map((t, i) => (
+                  <div key={i} className="group p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
+                     <div className="flex items-center gap-1 mb-6">
+                        {[...Array(5)].map((_, idx) => (
+                          <Star key={idx} className="w-4 h-4 text-yellow-500 fill-current" />
+                        ))}
+                     </div>
+                     <p className="text-lg text-gray-300 font-primary italic mb-8 leading-relaxed">
+                        "{t.content}"
+                     </p>
+                     <div className="flex items-center gap-4 pt-6 border-t border-white/10">
+                        <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/20">
+                           <OptimizedImage src={t.image} alt={t.name} fill className="object-cover" />
+                        </div>
+                        <div>
+                           <div className="font-bold font-secondary text-white">{t.name}</div>
+                           <div className="text-xs text-blue-400 font-semibold uppercase tracking-wider">{t.role}</div>
+                        </div>
+                        <div className="ml-auto w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                           <Linkedin className="w-4 h-4" />
+                        </div>
+                     </div>
+                  </div>
                 ))}
-              </div>
-
-              {/* Content */}
-              <p className="text-gray-700 font-primary leading-relaxed mb-6 relative z-10">
-                "{testimonial.content}"
-              </p>
-
-              {/* Result Badge */}
-              <div className="inline-flex items-center px-3 py-1.5 rounded-full bg-gradient-to-r from-green-50 to-emerald-50 border border-green-200 mb-6">
-                <span className="text-sm font-semibold text-green-700 font-primary">
-                  {testimonial.result}
-                </span>
-              </div>
-
-              {/* Author */}
-              <div className="flex items-center gap-4 pt-6 border-t border-gray-100">
-                <div className="relative w-14 h-14 rounded-full overflow-hidden ring-2 ring-gray-200 group-hover:ring-purple-300 transition-all">
-                  <OptimizedImage
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="flex-1">
-                  <div className="font-semibold text-gray-900 font-secondary">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-gray-600 font-primary">
-                    {testimonial.role}
-                  </div>
-                  <div className="text-xs text-gray-500 font-primary mt-1">
-                    {testimonial.company}
-                  </div>
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
-
-        {/* Trust Badge */}
-        <div className="text-center">
-          <div className="inline-flex items-center gap-4 px-8 py-6 bg-white rounded-2xl shadow-xl border border-gray-100">
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent font-secondary">
-              4.9/5.0
-            </div>
-            <div className="h-12 w-px bg-gray-200"></div>
-            <div className="text-left">
-              <div className="text-sm text-gray-500 font-primary mb-1">Average Rating</div>
-              <div className="text-lg font-bold text-gray-900 font-secondary">
-                150+ Happy Clients
-              </div>
-            </div>
+             </div>
           </div>
         </div>
       </div>
     </section>
   );
 }
-
