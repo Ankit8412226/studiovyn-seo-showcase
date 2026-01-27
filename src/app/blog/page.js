@@ -1,7 +1,8 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
 import { posts } from './data';
+import SeoProse from '@/components/seo/SeoProse';
+import SeoFaq from '@/components/seo/SeoFaq';
 
 export const metadata = {
   title: 'Blog | StudioVyn',
@@ -17,10 +18,10 @@ export const metadata = {
     siteName: 'StudioVyn',
     images: [
       {
-        url: 'https://studiovyn.in/og-blog.jpg',
+        url: 'https://studiovyn.in/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'StudioVyn Blog - Insights & Guides',
+        alt: 'StudioVyn Blog - Web Development & SEO Insights',
       },
     ],
   },
@@ -29,57 +30,28 @@ export const metadata = {
     title: 'StudioVyn Blog | Web Design & SEO Insights',
     description:
       'Latest web development and digital marketing guides by StudioVyn.',
-    images: ['https://studiovyn.in/og-blog.jpg'],
+    images: ['https://studiovyn.in/og-image.svg'],
   },
 };
 
 export default function BlogIndex() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Blog',
-    name: 'StudioVyn Blog',
-    description:
-      'StudioVyn Blog features articles about web design, SEO, and digital growth strategies for businesses in India.',
-    url: 'https://studiovyn.in/blog',
-    publisher: {
-      '@type': 'Organization',
-      name: 'StudioVyn',
-      url: 'https://studiovyn.in',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://studiovyn.in/logo.png',
-      },
+  const faqs = [
+    {
+      q: 'What does StudioVyn write about?',
+      a: 'We publish practical guides on website development, technical SEO, Core Web Vitals, conversion optimization, and digital growth for businesses in India.',
     },
-    blogPost: posts.map((p) => ({
-      '@type': 'BlogPosting',
-      headline: p.title,
-      image: p.image,
-      url: `https://studiovyn.in/blog/${p.slug}`,
-      description: (p.body || '').slice(0, 140),
-      author: {
-        '@type': 'Organization',
-        name: 'StudioVyn',
-      },
-      datePublished: p.date || '2025-01-01',
-    })),
-  };
+    {
+      q: 'Do these guides apply to small businesses and startups?',
+      a: 'Yes. We focus on actionable frameworks, checklists, and examples that work for startups, SMEs, and growing teams.',
+    },
+    {
+      q: 'Can StudioVyn implement these recommendations for us?',
+      a: 'Absolutely. If you want a done-for-you build or SEO growth plan, book a free consultation and we’ll recommend the fastest path to ROI.',
+    },
+  ];
 
   return (
     <main className="min-h-screen pt-24 pb-16">
-      <Head>
-        <link rel="canonical" href="https://studiovyn.in/blog" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="StudioVyn" />
-        <meta
-          name="keywords"
-          content="StudioVyn blog, web development India, SEO guides, website performance, digital marketing, StudioVyn Noida"
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
-
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
           <h1 className="text-4xl font-bold font-secondary mb-3">
@@ -100,7 +72,7 @@ export default function BlogIndex() {
               <div className="w-full h-40 relative rounded-xl mb-4 overflow-hidden">
                 <Image
                   src={p.image}
-                  alt={p.title}
+                  alt={`${p.title} - StudioVyn blog`}
                   fill
                   className="object-contain bg-gray-100"
                 />
@@ -115,7 +87,26 @@ export default function BlogIndex() {
             </Link>
           ))}
         </div>
+
+        <SeoProse>
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+            SEO + Web Development Guides for Businesses in India
+          </h2>
+          <p>
+            If you’re searching for <strong>website development tips</strong>, <strong>technical SEO</strong>, or a
+            <strong> Core Web Vitals</strong> playbook that actually moves rankings, you’re in the right place.
+            We share proven strategies we use across real projects—so you can rank higher, load faster, and convert more.
+          </p>
+          <p>
+            Looking for implementation help? Explore our{' '}
+            <Link className="text-blue-600 underline" href="/services">services</Link>, browse{' '}
+            <Link className="text-blue-600 underline" href="/portfolio">portfolio</Link>, or{' '}
+            <Link className="text-blue-600 underline" href="/contact">request a free consultation</Link>.
+          </p>
+        </SeoProse>
       </section>
+
+      <SeoFaq title="Blog FAQs" faqs={faqs} pageUrl="https://studiovyn.in/blog" />
     </main>
   );
 }

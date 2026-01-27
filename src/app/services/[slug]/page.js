@@ -2,14 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { serviceBySlug } from '../data';
+import SeoFaq from '@/components/seo/SeoFaq';
+import SeoProse from '@/components/seo/SeoProse';
+import Button from '@/components/ui/Button';
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
   const service = serviceBySlug(slug);
   if (!service) return {};
-  const title = `${service.title} Services | StudioVyn`;
-  const description = service.description;
-  const url = `https://studiovyn.com/services/${service.slug}`;
+  const title = `${service.title} Services in India | StudioVyn`;
+  const description = `${service.description} Fast delivery, SEO-ready, and conversion-focused. Get a free consultation from StudioVyn.`;
+  const url = `https://studiovyn.in/services/${service.slug}`;
   return {
     title,
     description,
@@ -24,6 +27,20 @@ export default async function ServicePage({ params }) {
   const service = serviceBySlug(slug);
   if (!service) return notFound();
   const Icon = service.icon;
+  const faqs = [
+    {
+      q: `How much do ${service.title.toLowerCase()} services cost in India?`,
+      a: 'Pricing depends on scope, timelines, and integrations. We provide a clear proposal with milestones after a free consultation and requirement review.',
+    },
+    {
+      q: `How long does ${service.title.toLowerCase()} take?`,
+      a: 'Most projects ship in 2–6 weeks for typical scopes. Complex builds may take 8–12 weeks. We align timelines with business priorities and deliver in milestones.',
+    },
+    {
+      q: 'Do you build SEO into every project?',
+      a: 'Yes. We ship with semantic structure, performance best practices, internal linking, and technical SEO foundations so your pages can rank and convert.',
+    },
+  ];
 
   return (
     <main className="min-h-screen pt-28 pb-16 bg-white">
@@ -39,7 +56,28 @@ export default async function ServicePage({ params }) {
           </div>
           <h1 className="text-4xl font-bold font-secondary mb-4">{service.title}</h1>
           <p className="text-gray-700 font-primary mb-8">{service.description}</p>
-          <Link href="/contact" className="btn-primary">Get a free proposal</Link>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <Button href="/contact" size="md">Get a free proposal</Button>
+            <Button href="/portfolio" variant="secondary" size="md">See recent work</Button>
+          </div>
+
+          <SeoProse>
+            <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+              {service.title} that ranks, loads fast, and converts
+            </h2>
+            <p>
+              We don’t just “build pages”—we craft a performance-first foundation that helps you win organic traffic and
+              turn visitors into leads. Expect crisp UX, clean information architecture, and measurable outcomes.
+            </p>
+            <ul className="list-disc ml-5 space-y-2">
+              <li><strong>SEO foundations:</strong> semantic HTML, internal linking, sitemaps, and schema where relevant.</li>
+              <li><strong>Performance:</strong> Core Web Vitals best practices to improve rankings and user experience.</li>
+              <li><strong>Conversion UX:</strong> strong CTAs, trust proof, and copy designed to reduce friction.</li>
+            </ul>
+            <p>
+              Want a tailored plan? <Link className="text-blue-600 underline" href="/contact">Book a free consultation</Link>.
+            </p>
+          </SeoProse>
         </div>
       </section>
 
@@ -57,7 +95,7 @@ export default async function ServicePage({ params }) {
           <div className="p-6 rounded-2xl border border-gray-100 shadow-sm">
             <h2 className="text-2xl font-semibold font-secondary mb-3">Why StudioVyn</h2>
             <ul className="list-disc ml-5 space-y-2 text-gray-700 font-primary">
-              <li>5+ years experience across industries</li>
+              <li>150+ projects delivered with 98% client satisfaction</li>
               <li>Modern stack: Next.js, React, Node, cloud</li>
               <li>Proven results and happy clients</li>
               <li>Scalable engagement models</li>
@@ -65,6 +103,8 @@ export default async function ServicePage({ params }) {
           </div>
         </div>
       </section>
+
+      <SeoFaq title={`${service.title} FAQs`} faqs={faqs} pageUrl={`https://studiovyn.in/services/${service.slug}`} />
     </main>
   );
 }

@@ -1,7 +1,11 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { projects } from '../data';
+import Script from 'next/script';
+import Link from 'next/link';
+import Button from '@/components/ui/Button';
+import SeoFaq from '@/components/seo/SeoFaq';
+import SeoProse from '@/components/seo/SeoProse';
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -72,24 +76,25 @@ export default async function CaseStudyPage({ params }) {
     },
   };
 
+  const faqs = [
+    {
+      q: 'What was the measurable result?',
+      a: `${p.result}. We focus on outcomes like performance, organic traffic growth, conversion improvements, and operational efficiency.`,
+    },
+    {
+      q: 'Can StudioVyn replicate this for my business?',
+      a: 'Yes. We start with discovery, define success metrics, then ship in milestones. Book a free consultation to get a tailored plan.',
+    },
+  ];
+
   return (
     <main className="min-h-screen pt-24 pb-16">
-      <Head>
-        <link
-          rel="canonical"
-          href={`https://studiovyn.in/case-studies/${p.slug}`}
-        />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="StudioVyn" />
-        <meta
-          name="keywords"
-          content={`${p.title}, ${p.stack}, web design, development, StudioVyn case study`}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
+      <Script
+        id="case-study-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
         <h1 className="text-4xl font-bold font-secondary mb-4">{p.title}</h1>
@@ -98,23 +103,31 @@ export default async function CaseStudyPage({ params }) {
         <div className="w-full h-64 relative rounded-2xl overflow-hidden mb-6">
           <Image
             src={p.image}
-            alt={p.title}
+            alt={`${p.title} - StudioVyn case study`}
             fill
-            className="object-contain bg-gray-100"
+            className="object-cover bg-gray-100"
           />
         </div>
-        <p className="text-gray-800 font-primary leading-7 whitespace-pre-line">
+        <article className="text-gray-800 font-primary leading-7 whitespace-pre-line">
           {p.body}
-        </p>
+        </article>
         <div className="mt-6 flex gap-3">
-          <a href="/contact" className="btn-primary">
-            Start your project
-          </a>
-          <a href="/portfolio" className="btn-secondary">
-            Back to portfolio
-          </a>
+          <Button href="/contact">Start your project</Button>
+          <Button href="/case-studies" variant="secondary">More case studies</Button>
         </div>
+
+        <SeoProse>
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+            Want similar results?
+          </h2>
+          <p>
+            Explore our <Link className="text-blue-600 underline" href="/services">services</Link> or{' '}
+            <Link className="text-blue-600 underline" href="/contact">book a free consultation</Link>.
+          </p>
+        </SeoProse>
       </section>
+
+      <SeoFaq title="Case Study FAQs" faqs={faqs} pageUrl={`https://studiovyn.in/case-studies/${p.slug}`} />
     </main>
   );
 }

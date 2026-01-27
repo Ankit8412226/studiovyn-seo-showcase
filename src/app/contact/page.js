@@ -1,24 +1,36 @@
-import Head from 'next/head';
 import Contact from '../Contact';
+import Script from 'next/script';
+import SeoFaq from '@/components/seo/SeoFaq';
+import SeoProse from '@/components/seo/SeoProse';
+import Link from 'next/link';
 
 export const metadata = {
-  title: 'Contact Us | StudioVyn - Web Design & Development Agency',
+  title: 'Contact StudioVyn | Free Web Development Consultation (India)',
   description:
-    'Get in touch with StudioVyn for website design, development, SEO, and digital branding. Request a free consultation or project proposal today!',
+    'Contact StudioVyn for website development, UI/UX, SEO, e-commerce, and mobile apps in India. Get a free consultation and a clear project proposal in 24 hours.',
   alternates: { canonical: '/contact' },
   openGraph: {
-    title: 'Contact StudioVyn | Web Design & Development Agency',
+    title: 'Contact StudioVyn | Free Consultation',
     description:
       'Reach out to StudioVyn for web development, SEO, and creative digital solutions. Let’s build something great together!',
     url: 'https://studiovyn.in/contact',
     type: 'website',
     siteName: 'StudioVyn',
+    images: [
+      {
+        url: 'https://studiovyn.in/og-image.svg',
+        width: 1200,
+        height: 630,
+        alt: 'Contact StudioVyn',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Contact StudioVyn | Web Design & Development Agency',
+    title: 'Contact StudioVyn | Free Consultation',
     description:
       'Let’s collaborate to create your next website or brand identity. Contact StudioVyn today.',
+    images: ['https://studiovyn.in/og-image.svg'],
   },
 };
 
@@ -45,49 +57,59 @@ export default function ContactPage() {
     },
   };
 
+  const faqs = [
+    {
+      q: 'How quickly will you respond?',
+      a: 'We typically respond within 24 hours with next steps, questions to clarify scope, and a timeline estimate.',
+    },
+    {
+      q: 'What information should I share for an accurate quote?',
+      a: 'Share your goals, examples you like, pages/features needed, target city/market, and any integrations (payments, CRM, analytics).',
+    },
+    {
+      q: 'Do you offer ongoing support?',
+      a: 'Yes. We offer maintenance retainers for updates, monitoring, SEO iterations, and performance optimization.',
+    },
+  ];
+
   return (
     <main className="min-h-screen pt-24 bg-white text-gray-900">
-      <Head>
-        <link rel="canonical" href="https://studiovyn.in/contact" />
-        <meta name="robots" content="index, follow" />
-        <meta
-          name="keywords"
-          content="contact studiovyn, web design company India, website development, SEO services, StudioVyn Noida"
-        />
-        <meta property="og:image" content="https://studiovyn.in/og-image.jpg" />
-        <meta property="og:locale" content="en_IN" />
-        <meta name="author" content="StudioVyn" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </Head>
+      <Script
+        id="contact-jsonld"
+        type="application/ld+json"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
 
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
         <header className="text-center mb-10">
-          <h1 className="text-4xl font-bold text-green-700 mb-3">
-            Get in Touch with StudioVyn
+          <h1 className="text-4xl sm:text-5xl font-bold font-secondary mb-3 text-gray-900">
+            Get a Free Consultation
           </h1>
-          <p className="text-gray-600 text-lg">
-            Have a project in mind? Fill out the form below and our team will
-            get back to you within 24 hours.
+          <p className="text-gray-600 text-lg font-primary max-w-2xl mx-auto">
+            Tell us what you’re building—website, e-commerce, app, or SEO growth. We’ll reply within 24 hours with a clear plan and timeline.
           </p>
         </header>
 
         <Contact />
 
-        <footer className="mt-16 text-center text-sm text-gray-500">
+        <SeoProse>
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+            What happens after you submit?
+          </h2>
+          <ol className="list-decimal ml-5 space-y-2">
+            <li>We review your goals and reply with clarifying questions (if needed).</li>
+            <li>We share a recommended plan: scope, timeline, and milestones.</li>
+            <li>If it’s a fit, we start with discovery and ship in milestones.</li>
+          </ol>
           <p>
-            StudioVyn | Building Digital Experiences That Inspire |{' '}
-            <a
-              href="https://studiovyn.in"
-              className="text-green-600 hover:underline"
-            >
-              studiovyn.in
-            </a>
+            Prefer exploring first? See <Link className="text-blue-600 underline" href="/services">services</Link> or browse{' '}
+            <Link className="text-blue-600 underline" href="/portfolio">portfolio</Link>.
           </p>
-        </footer>
+        </SeoProse>
       </section>
+
+      <SeoFaq title="Contact FAQs" faqs={faqs} pageUrl="https://studiovyn.in/contact" />
     </main>
   );
 }

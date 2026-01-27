@@ -17,8 +17,8 @@ import Transform from "./home-sections/Transform";
 import TrustBadges from "./home-sections/TrustBadges";
 import WhyUs from "./home-sections/WhyUs";
 import Portfolio from "./Portfolio";
-import Services from "./Services";
-import Testimonials from "./Testimonials";
+import ServicesShowcase from "./home-sections/ServicesShowcase";
+import TestimonialsShowcase from "./home-sections/TestimonialsShowcase";
 import PromoCTABanners from "./home-sections/PromoCTABanners";
 
 export const metadata = {
@@ -40,28 +40,28 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <div className="animate-fade-in-up"><Hero /></div>
-      <div className="animate-fade-in-up"><ClientsLogos /></div>
-      <div className="animate-fade-in-up"><Services /></div>
-      <div className="animate-fade-in-up"><WhyUs /></div>
-      <div className="animate-fade-in-up"><About /></div>
-      <div className="animate-fade-in-up"><CaseSpotlight /></div>
-      <div className="animate-fade-in-up"><Process /></div>
-      <div className="animate-fade-in-up"><Industries /></div>
-      <div className="animate-fade-in-up"><Banner /></div>
-      <div className="animate-fade-in-up"><PromoCTABanners /></div>
-      <div className="animate-fade-in-up"><PromoBanners /></div>
-      <div className="animate-fade-in-up"><TechStack /></div>
-      <div className="animate-fade-in-up"><CodeGallery /></div>
-      <div className="animate-fade-in-up"><Pricing /></div>
-      <div className="animate-fade-in-up"><BlogHighlights /></div>
-      <div className="animate-fade-in-up"><TrustBadges /></div>
-      <div className="animate-fade-in-up"><ContactMicro /></div>
-      <div className="animate-fade-in-up"><Transform /></div>
-      <div className="animate-fade-in-up"><Portfolio /></div>
-      <div className="animate-fade-in-up"><Testimonials /></div>
-      <div className="animate-fade-in-up"><FAQ /></div>
-      <div className="animate-fade-in-up"><Contact /></div>
+      <Hero />
+      <ClientsLogos />
+      <ServicesShowcase />
+      <WhyUs />
+      <About />
+      <CaseSpotlight />
+      <Process />
+      <Industries />
+      <Banner />
+      <PromoCTABanners />
+      <PromoBanners />
+      <TechStack />
+      <CodeGallery />
+      <Pricing />
+      <BlogHighlights />
+      <TrustBadges />
+      <ContactMicro />
+      <Transform />
+      <Portfolio />
+      <TestimonialsShowcase />
+      <FAQ />
+      <Contact />
     </main>
   );
 }
