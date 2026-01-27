@@ -87,26 +87,21 @@ const Header = () => {
         role="navigation"
         aria-label="Main navigation"
       >
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-24 lg:h-32">
           {/* Logo - Premium Integration */}
           <a
             href="/"
             className="flex items-center space-x-3 group"
             aria-label="StudioVyn - Website Development Company India Home"
           >
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 rounded-xl opacity-0 group-hover:opacity-20 blur-sm transition-opacity duration-300"></div>
+            <div className="relative flex items-center">
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 rounded-xl opacity-0 group-hover:opacity-10 blur-sm transition-opacity duration-300"></div>
               <img
                 src="/logo.jpeg"
-                alt="StudioVyn Logo"
-                className="relative w-10 h-10 sm:w-12 sm:h-12 rounded-xl shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105"
-                width="48"
-                height="48"
+                alt="StudioVyn - IT Service Provider"
+                className="relative w-auto h-16 lg:h-24 rounded-lg transition-all duration-300 group-hover:scale-105"
               />
             </div>
-            <span className="text-xl sm:text-2xl font-extrabold font-secondary bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent group-hover:from-blue-900 group-hover:via-teal-800 group-hover:to-cyan-700 transition-all duration-300">
-              StudioVyn
-            </span>
           </a>
 
           {/* Desktop Navigation */}

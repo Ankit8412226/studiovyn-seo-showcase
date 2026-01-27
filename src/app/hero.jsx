@@ -36,7 +36,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/20 to-teal-50/20 pt-28 pb-16 lg:pt-32 lg:pb-20"
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/20 to-teal-50/20 pt-36 pb-16 lg:pt-48 lg:pb-20"
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >

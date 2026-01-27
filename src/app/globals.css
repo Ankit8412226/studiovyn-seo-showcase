@@ -266,7 +266,7 @@ small {
 /* Primary Button Styles */
 .btn-primary {
   background: linear-gradient(90deg, var(--brand-from), var(--brand-via), var(--brand-to));
-  color: white;
+  color: white !important;
   padding: 0.75rem 1.5rem;
   border-radius: var(--radius-btn);
   font-weight: 600;
@@ -276,17 +276,20 @@ small {
   font-family: var(--font-inter), sans-serif;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
 }
 
 .btn-primary::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  inset: 0;
   background: linear-gradient(90deg, var(--brand-from-hover), var(--brand-via-hover), var(--brand-to-hover));
   opacity: 0;
+  z-index: -1;
   transition: opacity var(--dur-slow) var(--ease);
 }
 
@@ -297,11 +300,7 @@ small {
 .btn-primary:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
-}
-
-.btn-primary>* {
-  position: relative;
-  z-index: 1;
+  color: white !important;
 }
 
 /* Secondary Button Styles */
@@ -317,18 +316,21 @@ small {
   font-family: var(--font-inter), sans-serif;
   position: relative;
   overflow: hidden;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  isolation: isolate;
 }
 
 .btn-secondary::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 0;
-  height: 100%;
   background: linear-gradient(90deg, var(--brand-from), var(--brand-via), var(--brand-to));
   transition: width var(--dur-slow) var(--ease);
-  z-index: 0;
+  z-index: -1;
 }
 
 .btn-secondary:hover::before {
@@ -336,15 +338,10 @@ small {
 }
 
 .btn-secondary:hover {
-  color: white;
+  color: white !important;
   border-color: transparent;
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-}
-
-.btn-secondary>* {
-  position: relative;
-  z-index: 1;
 }
 
 /* Animation Classes */

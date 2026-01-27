@@ -87,17 +87,11 @@ export default function Footer() {
               <div className="flex items-center gap-3 mb-6">
                 <img
                   src="/logo.jpeg"
-                  alt="StudioVyn Logo"
-                  className="w-12 h-12 rounded-xl"
-                  width="48"
-                  height="48"
+                  alt="StudioVyn - IT Service Provider"
+                  className="w-auto h-16 sm:h-20 rounded-xl shadow-lg border border-white/5"
+                  width="120"
+                  height="80"
                 />
-                <div>
-                  <h3 className="text-xl font-bold font-secondary bg-gradient-to-r from-blue-400 via-teal-400 to-cyan-400 bg-clip-text text-transparent">
-                    StudioVyn
-                  </h3>
-                  <p className="text-xs font-primary font-medium" style={{ color: '#93c5fd' }}>Web Development Excellence</p>
-                </div>
               </div>
               <p className="text-sm font-primary leading-relaxed text-blue-100 mb-8">
                 India's leading web development agency. We build high-performance websites and digital solutions that drive real business results.
