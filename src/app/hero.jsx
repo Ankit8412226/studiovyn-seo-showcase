@@ -1,7 +1,6 @@
 'use client';
 
 import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 import { ArrowRight, Award, CheckCircle2, Sparkles, TrendingUp, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
@@ -168,30 +167,7 @@ const Hero = () => {
                   </div>
 
                   {/* Floating Service Cards - Now responsive and won't overflow */}
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mt-6 lg:absolute lg:mt-0 lg:-bottom-10 lg:-left-10 lg:w-full lg:max-w-[450px]">
-                    {[
-                      { title: 'Web Dev', gradient: 'from-blue-800 to-blue-600' },
-                      { title: 'Mobile App', gradient: 'from-purple-700 to-pink-600' },
-                      { title: 'SEO & Marketing', gradient: 'from-teal-700 to-cyan-600' },
-                    ].map((service, index) => (
-                      <Card
-                        key={index}
-                        variant="elevated"
-                        padding="sm"
-                        className="group relative overflow-hidden bg-white/95 border-2 border-gray-100 shadow-xl hover:scale-105 transition-transform duration-300"
-                      >
-                        <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-10 transition-opacity`} />
-                        <div className="relative flex items-center gap-3 lg:block">
-                          <div className={`w-8 h-8 lg:w-10 lg:h-10 bg-gradient-to-br ${service.gradient} rounded-lg flex items-center justify-center shrink-0 lg:mb-2 shadow-md`}>
-                            <Sparkles className="w-4 h-4 lg:w-5 lg:h-5 text-white" />
-                          </div>
-                          <h3 className="text-[10px] lg:text-xs font-bold font-secondary text-gray-900">
-                            {service.title}
-                          </h3>
-                        </div>
-                      </Card>
-                    ))}
-                  </div>
+
                </div>
             </div>
           </div>
