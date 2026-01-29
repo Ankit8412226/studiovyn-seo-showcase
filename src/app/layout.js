@@ -297,6 +297,19 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body className="antialiased font-primary bg-white text-gray-900 text-center sm:text-left">
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5LDXVGQYYJ"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-5LDXVGQYYJ');
+          `}
+        </Script>
         <Header />
         {children}
         <RequestProjectModal />
