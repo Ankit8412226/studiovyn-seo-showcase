@@ -20,7 +20,7 @@ export async function POST(request) {
       secure: true,
       auth: {
         user: "tech@studiovyn.in",
-        pass: "W8jD5:np@^m",
+        pass: "Ankit%45@123",
       },
     });
 

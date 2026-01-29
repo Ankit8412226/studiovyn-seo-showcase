@@ -1,5 +1,17 @@
 export const posts = [
   {
+    slug: 'ai-driven-web-development-trends-2026',
+    title: 'AI-Driven Web Development: Top Trends for 2026',
+    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop',
+    body: `Artificial Intelligence is no longer just a buzzword; it's the core of modern web development. In 2026, we're seeing a shift from simple AI integrations to "AI-Native" web applications.\n\n**Key Trends for 2026**:\n\n1. **Generative UI**: Interfaces that adapt in real-time based on user intent and historical behavior. No more static layouts; the UI itself is context-aware.\n\n2. **AI-Powered Personalization**: Hyper-personalized shopping and content experiences driven by local LLMs (Large Language Models) running directly in the browser for privacy and speed.\n\n3. **Automated SEO Content**: AI tools that don't just write content, but optimize technical SEO, internal linking, and schema markup automatically as you publish.\n\n4. **Voice & Multi-modal Search**: With the rise of AI assistants, websites must be optimized for voice and visual queries. Natural language processing is a must.\n\nStudioVyn is at the forefront of AI integration, building future-proof websites that leverage these technologies today.`,
+  },
+  {
+    slug: 'nextjs-16-performance-optimization-guide',
+    title: 'Next.js 16 Performance Optimization: The Ultimate Guide',
+    image: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=1200&q=80&auto=format&fit=crop',
+    body: `Next.js 16 has brought revolutionary changes to how we think about web performance and developer experience. From React Server Components to advanced streaming, here's how to optimize your apps.\n\n**Optimizing for Next.js 16**:\n\n**1. Server Actions 2.0**: Enhanced security and streaming capabilities make form handling and data mutations faster than ever.\n\n**2. Partial Prerendering (PPR)**: Delivering the static parts of your shell instantly while streaming dynamic content as it becomes ready. This is the ultimate "best of both worlds".\n\n**3. Turbopack for Everything**: With Turbopack now being the default for both dev and build, compilation times have dropped by 80%, allowing for faster iteration and deployment.\n\n**4. Advanced Image Optimization**: Next/image in 2026 supports auto-generation of multi-size assets and AI-driven focal point detection.\n\nAt StudioVyn, we specialize in high-performance Next.js builds that score 100 on PageSpeed Insights. Let us help you upgrade your digital presence.`,
+  },
+  {
     slug: 'best-website-development-company-india-guide',
     title: 'Best Website Development Company in India: Complete Guide 2024',
     image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop',

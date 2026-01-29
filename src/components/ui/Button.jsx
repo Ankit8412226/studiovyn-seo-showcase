@@ -27,7 +27,7 @@ const Button = forwardRef(
     },
     ref
   ) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border-2';
+    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border-2 cursor-pointer';
 
     const variants = {
       primary: 'bg-blue-800 border-blue-800 text-white hover:bg-blue-900 hover:border-blue-900 focus:ring-blue-600 shadow-md hover:shadow-lg active:scale-[0.98]',

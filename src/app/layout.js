@@ -1,4 +1,5 @@
 import { Inter, Poppins } from "next/font/google";
+import Script from "next/script";
 import Footer from "./Footer";
 import "./globals.css";
 import Header from "./Header";

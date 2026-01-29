@@ -269,6 +269,13 @@ small {
   outline-offset: 2px;
 }
 
+button,
+input[type="button"],
+input[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
 /* Primary Button Styles */
 .btn-primary {
   background: linear-gradient(90deg, var(--brand-from), var(--brand-via), var(--brand-to));

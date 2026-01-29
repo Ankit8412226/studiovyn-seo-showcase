@@ -8,7 +8,7 @@ export default function BlogHighlights() {
 
   return (
     <section
-      className="py-16 sm:py-24 lg:py-32 bg-gray-50"
+      className="py-16 sm:py-24 lg:py-32 mt-20 sm:mt-24 lg:mt-32 bg-gray-50"
       aria-labelledby="blog-highlights-heading"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
