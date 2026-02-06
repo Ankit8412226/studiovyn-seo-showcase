@@ -1,7 +1,7 @@
 'use client';
 
 import Button from '@/components/ui/Button';
-import { ArrowRight, Facebook, Github, Instagram, Linkedin, Mail, MapPin, Phone, Send, Twitter } from 'lucide-react';
+import { ArrowRight, Mail, MapPin, Phone, Send } from 'lucide-react';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -29,13 +29,7 @@ export default function Footer() {
     { label: 'Offers', href: '/offers' },
   ];
 
-  const socialLinks = [
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Twitter, href: '#', label: 'Twitter' },
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Facebook, href: '#', label: 'Facebook' },
-    { icon: Instagram, href: '#', label: 'Instagram' },
-  ];
+
 
   return (
     <footer
@@ -97,25 +91,7 @@ export default function Footer() {
                 India's leading web development agency. We build high-performance websites and digital solutions that drive real business results.
               </p>
 
-              {/* Social Media */}
-              <div>
-                <p className="text-xs font-semibold uppercase tracking-wider mb-4 font-primary" style={{ color: '#93c5fd' }}>Connect With Us</p>
-                <div className="flex items-center justify-center md:justify-start gap-3">
-                  {socialLinks.map((social, index) => {
-                    const Icon = social.icon;
-                    return (
-                      <a
-                        key={index}
-                        href={social.href}
-                        aria-label={social.label}
-                        className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 hover:bg-blue-800 hover:border-blue-700 flex items-center justify-center transition-all duration-200 hover:scale-110 group"
-                      >
-                        <Icon className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
-                      </a>
-                    );
-                  })}
-                </div>
-              </div>
+
             </div>
 
             {/* Services Column - Spans 2 columns */}
