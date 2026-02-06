@@ -92,8 +92,9 @@ export default function RootLayout({ children }) {
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
+              '@id': 'https://studiovyn.in/#organization',
               name: 'StudioVyn - Website Development Company India',
-              alternateName: 'StudioVyn Web Solutions',
+              alternateName: ['StudioVyn', 'Studio Vyn', 'StudioVeyn', 'Studio Veyn', 'Veyn Studio', 'Vyn Studio'],
               url: 'https://studiovyn.in',
               logo: {
                 '@type': 'ImageObject',
