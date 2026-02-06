@@ -296,6 +296,100 @@ export default function RootLayout({ children }) {
             }),
           }}
         />
+        {/* WebSite Schema with Sitelinks Search Box */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'WebSite',
+              '@id': 'https://studiovyn.in/#website',
+              name: 'StudioVyn',
+              alternateName: 'StudioVyn - Website Development Company India',
+              url: 'https://studiovyn.in',
+              description: 'Leading website development company in India offering custom web design, e-commerce development, mobile apps & digital marketing services.',
+              publisher: {
+                '@id': 'https://studiovyn.in/#organization'
+              },
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: {
+                  '@type': 'EntryPoint',
+                  urlTemplate: 'https://studiovyn.in/search?q={search_term_string}'
+                },
+                'query-input': 'required name=search_term_string'
+              },
+              inLanguage: 'en-IN'
+            }),
+          }}
+        />
+        {/* SiteNavigationElement Schema - Helps Google understand navigation for sitelinks */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@graph': [
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-contact',
+                  name: 'Contact Us',
+                  description: 'Get in Touch with StudioVyn. Have a project in mind? Fill out the form for a free consultation.',
+                  url: 'https://studiovyn.in/contact'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-services',
+                  name: 'Our Services',
+                  description: 'StudioVyn. Professional web development and digital marketing services.',
+                  url: 'https://studiovyn.in/services'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-webdev',
+                  name: 'Web Development in Patna',
+                  description: 'StudioVyn. Professional web development and digital solutions for businesses in Patna, Bihar.',
+                  url: 'https://studiovyn.in/locations/patna'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-about',
+                  name: 'About Us',
+                  description: 'About StudioVyn. We are a results-driven web and software studio.',
+                  url: 'https://studiovyn.in/about'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-digital',
+                  name: 'Digital Marketing Services',
+                  description: 'Why StudioVyn - 5+ years experience across industries.',
+                  url: 'https://studiovyn.in/services/digital-marketing'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-ecommerce',
+                  name: 'E-Commerce Solutions',
+                  description: 'Why StudioVyn - 5+ years experience across industries.',
+                  url: 'https://studiovyn.in/services/ecommerce-development'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-portfolio',
+                  name: 'Portfolio',
+                  description: 'View our recent projects and case studies.',
+                  url: 'https://studiovyn.in/portfolio'
+                },
+                {
+                  '@type': 'SiteNavigationElement',
+                  '@id': 'https://studiovyn.in/#nav-blog',
+                  name: 'Blog',
+                  description: 'Latest insights on web development, SEO, and digital marketing.',
+                  url: 'https://studiovyn.in/blog'
+                }
+              ]
+            }),
+          }}
+        />
       </head>
       <body className="antialiased font-primary bg-white text-gray-900 text-center sm:text-left">
         <Script
