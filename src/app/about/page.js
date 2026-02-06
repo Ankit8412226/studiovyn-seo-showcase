@@ -1,8 +1,8 @@
-import About from '../About';
-import Script from 'next/script';
-import SeoProse from '@/components/seo/SeoProse';
 import SeoFaq from '@/components/seo/SeoFaq';
+import SeoProse from '@/components/seo/SeoProse';
 import Link from 'next/link';
+import Script from 'next/script';
+import About from '../About';
 
 export const metadata = {
   title: 'About Us | StudioVyn - Web Development & Digital Agency in India',
@@ -48,7 +48,7 @@ export default function AboutPage() {
       url: 'https://studiovyn.in',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://studiovyn.in/logo.png',
+        url: 'https://studiovyn.in/logo.jpeg',
       },
       contactPoint: {
         '@type': 'ContactPoint',

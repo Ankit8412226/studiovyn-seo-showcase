@@ -1,8 +1,8 @@
-import Contact from '../Contact';
-import Script from 'next/script';
 import SeoFaq from '@/components/seo/SeoFaq';
 import SeoProse from '@/components/seo/SeoProse';
 import Link from 'next/link';
+import Script from 'next/script';
+import Contact from '../Contact';
 
 export const metadata = {
   title: 'Contact StudioVyn | Free Web Development Consultation (India)',
@@ -46,7 +46,7 @@ export default function ContactPage() {
       '@type': 'Organization',
       name: 'StudioVyn',
       url: 'https://studiovyn.in',
-      logo: 'https://studiovyn.in/logo.png',
+      logo: 'https://studiovyn.in/logo.jpeg',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+91-8529747613',

@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import { notFound } from 'next/navigation';
-import { projects } from '../data';
-import Script from 'next/script';
-import Link from 'next/link';
-import Button from '@/components/ui/Button';
 import SeoFaq from '@/components/seo/SeoFaq';
 import SeoProse from '@/components/seo/SeoProse';
+import Button from '@/components/ui/Button';
+import Image from 'next/image';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import Script from 'next/script';
+import { projects } from '../data';
 
 export async function generateStaticParams() {
   return projects.map((p) => ({ slug: p.slug }));
@@ -67,7 +67,7 @@ export default async function CaseStudyPage({ params }) {
       name: 'StudioVyn',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://studiovyn.in/logo.png',
+        url: 'https://studiovyn.in/logo.jpeg',
       },
     },
     mainEntityOfPage: {
