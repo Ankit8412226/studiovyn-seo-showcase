@@ -32,7 +32,7 @@ export async function POST(request) {
       subject: `New Contact Form Submission from ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333; border-bottom: 2px solid #3b82f6; padding-bottom: 10px;">
+          <h2 style="color: #333; border-bottom: 2px solid #10b981; padding-bottom: 10px;">
             New Contact Form Submission
           </h2>
 

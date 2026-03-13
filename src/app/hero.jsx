@@ -35,16 +35,15 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-blue-50/20 to-teal-50/20 pt-36 pb-16 lg:pt-48 lg:pb-20"
+      className="relative min-h-[90vh] lg:min-h-screen flex items-center overflow-hidden bg-[radial-gradient(circle_at_top_left,#1a2235,transparent_55%),radial-gradient(circle_at_bottom_right,#0f172a,transparent_55%)] pt-36 pb-16 lg:pt-48 lg:pb-20"
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >
       {/* Professional Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100/10 via-transparent to-teal-100/10"></div>
-        <div className="absolute top-20 left-10 w-96 h-96 bg-blue-200/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
-        <div className="absolute top-40 right-10 w-96 h-96 bg-teal-200/10 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob animation-delay-2000"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        <div className="absolute top-10 right-0 w-96 h-96 bg-[#1f3b8a]/30 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob"></div>
+        <div className="absolute bottom-10 left-10 w-96 h-96 bg-[#2dd4bf]/20 rounded-full mix-blend-multiply filter blur-3xl opacity-60 animate-blob animation-delay-2000"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b26_1px,transparent_1px),linear-gradient(to_bottom,#1e293b26_1px,transparent_1px)] bg-[size:28px_28px]"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -57,38 +56,37 @@ const Hero = () => {
               }`}
             >
               {/* Professional Badge */}
-              <div className="inline-flex items-center space-x-2 bg-blue-800 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full font-semibold text-xs lg:text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-blue-700">
+              <div className="inline-flex items-center space-x-2 bg-[#121723] text-[#e5e7eb] px-4 py-2 lg:px-6 lg:py-3 rounded-full font-semibold text-xs lg:text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 border-2 border-[#1f2937]">
                 <Sparkles className="w-3 h-3 lg:w-4 h-4" aria-hidden="true" />
-                <span>India's Leading Website Development Company</span>
+                <span>StudioVyn — Performance-First Web Development Agency</span>
               </div>
 
               {/* Main Heading - Professional Typography */}
-              <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold font-secondary leading-[1.1] tracking-tight text-gray-900">
-                Build Websites That{' '}
+              <h1 className="text-4xl sm:text-6xl lg:text-7xl xl:text-8xl font-extrabold font-secondary leading-[1.05] tracking-tight text-white">
+                Build a Website Brand That{' '}
                 <span className="relative inline-block">
-                  <span className="bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent">
-                    Convert & Scale
+                  <span className="bg-gradient-to-r from-[#10b981] via-[#2dd4bf] to-[#84cc16] bg-clip-text text-transparent">
+                    Ranks & Converts
                   </span>
-                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-blue-200 via-teal-200 to-cyan-200 opacity-20 blur-xl"></span>
+                  <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-[#10b981]/30 via-[#2dd4bf]/30 to-[#84cc16]/30 opacity-70 blur-xl"></span>
                 </span>
               </h1>
 
               {/* Subheading - Strong Value Proposition */}
-              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-gray-700 max-w-2xl mx-auto lg:mx-0 font-primary leading-relaxed font-medium">
-                We're India's leading web development agency. We build{' '}
-                <span className="font-bold text-gray-900 text-blue-800">high-performance websites</span> that{' '}
-                <span className="font-bold text-gray-900">drive real business results.</span>
+              <p className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-[#cbd5f5] max-w-2xl mx-auto lg:mx-0 font-primary leading-relaxed font-medium">
+                StudioVyn builds high-performance websites and AI-ready experiences for brands across India.
+                <span className="font-bold text-white"> Faster pages, stronger rankings, and measurable growth.</span>
               </p>
 
               {/* Key Benefits - Mobile Optimized */}
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 lg:gap-4 pt-2">
-                <div className="flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-green-50 rounded-full border border-green-200 shadow-sm">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
-                  <span className="text-xs lg:text-sm font-semibold text-green-700 font-primary">2-6 Week Delivery</span>
+                <div className="flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-[#121723] rounded-full border border-[#1f2937] shadow-sm">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <span className="text-xs lg:text-sm font-semibold text-emerald-300 font-primary">2-6 Week Delivery</span>
                 </div>
-                <div className="flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-blue-50 rounded-full border border-blue-200 shadow-sm">
-                  <CheckCircle2 className="w-4 h-4 text-blue-700" />
-                  <span className="text-xs lg:text-sm font-semibold text-blue-800 font-primary">SEO Optimized</span>
+                <div className="flex items-center gap-2 px-3 py-1.5 lg:px-4 lg:py-2 bg-[#121723] rounded-full border border-[#1f2937] shadow-sm">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-300" />
+                  <span className="text-xs lg:text-sm font-semibold text-emerald-200 font-primary">SEO + AI Search Ready</span>
                 </div>
               </div>
 
@@ -99,7 +97,7 @@ const Hero = () => {
                   size="lg"
                   icon={<ArrowRight className="w-5 h-5" />}
                   iconPosition="right"
-                  className="group shadow-2xl hover:shadow-blue-500/30 hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
+                  className="group shadow-2xl hover:shadow-[#10b981]/30 hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
                   aria-label="Get free website development consultation"
                 >
                   Get Free Consultation
@@ -116,18 +114,18 @@ const Hero = () => {
               </div>
 
               {/* Trust Stats - Better Mobile Layout */}
-              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-10 pt-8 border-t border-gray-200/50">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 lg:gap-10 pt-8 border-t border-[#1f2937]">
                 {stats.map((stat, index) => {
                   const Icon = stat.icon;
                   return (
                     <div key={index} className="text-center lg:text-left group min-w-[100px] sm:min-w-[120px]">
                       <div className="flex items-center justify-center lg:justify-start gap-2 mb-1">
-                        <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-800" />
-                        <div className="text-xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-800 via-teal-700 to-cyan-600 bg-clip-text text-transparent font-secondary">
+                        <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-[#cbd5f5]" />
+                        <div className="text-xl sm:text-3xl font-extrabold bg-gradient-to-r from-[#10b981] via-[#2dd4bf] to-[#84cc16] bg-clip-text text-transparent font-secondary">
                           {stat.value}
                         </div>
                       </div>
-                      <div className="text-[9px] lg:text-xs text-gray-600 font-bold font-primary uppercase tracking-widest leading-none">
+                      <div className="text-[9px] lg:text-xs text-[#94a3b8] font-bold font-primary uppercase tracking-widest leading-none">
                         {stat.label}
                       </div>
                     </div>
@@ -139,11 +137,11 @@ const Hero = () => {
             {/* Right Content - Premium Visual Showcase (Simplified for Mobile) */}
             <div className="relative mt-12 lg:mt-0">
                {/* Mobile Showcase Backdrop */}
-               <div className="absolute inset-x-0 -top-10 bottom-0 bg-blue-500/5 rounded-3xl blur-3xl lg:hidden"></div>
+               <div className="absolute inset-x-0 -top-10 bottom-0 bg-[#1f2937] rounded-3xl blur-3xl lg:hidden"></div>
 
                <div className="relative max-w-[500px] lg:max-w-none mx-auto lg:mx-0">
                   {/* Floating Elements - Adjusted for Responsiveness */}
-                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white">
+                  <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 lg:border-8 border-[#1f2937] bg-[#121723]">
                     <OptimizedImage
                       src="/web_development_premium_1769518207985.png"
                       alt="Modern web development dashboard and code"
@@ -154,7 +152,7 @@ const Hero = () => {
                     />
 
                     {/* Floating Rating Badge */}
-                    <div className="absolute top-4 right-4 bg-white/95 backdrop-blur-sm rounded-xl p-3 shadow-xl border border-white/50">
+                    <div className="absolute top-4 right-4 bg-[#0f1320]/95 backdrop-blur-sm rounded-xl p-3 shadow-xl border border-[#1f2937]">
                       <div className="flex items-center gap-1 mb-1">
                         {[...Array(5)].map((_, i) => (
                           <svg key={i} className="w-3 h-3 text-yellow-400 fill-current" viewBox="0 0 20 20">
@@ -162,7 +160,7 @@ const Hero = () => {
                           </svg>
                         ))}
                       </div>
-                      <div className="text-sm font-extrabold text-blue-600 font-secondary text-center">4.9/5.0</div>
+                      <div className="text-sm font-extrabold text-emerald-200 font-secondary text-center">4.9/5.0</div>
                     </div>
                   </div>
 

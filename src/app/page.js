@@ -3,6 +3,7 @@ import Contact from "./Contact";
 import Hero from "./hero";
 import Banner from "./home-sections/Banner";
 import BlogHighlights from "./home-sections/BlogHighlights";
+import BrandPositioning from "./home-sections/BrandPositioning";
 import CaseSpotlight from "./home-sections/CaseSpotlight";
 import ClientsLogos from "./home-sections/ClientsLogos";
 import ContactMicro from "./home-sections/ContactMicro";
@@ -19,31 +20,44 @@ import Transform from "./home-sections/Transform";
 import TrustBadges from "./home-sections/TrustBadges";
 import WhyUs from "./home-sections/WhyUs";
 import Portfolio from "./Portfolio";
+import FounderSection from "@/components/FounderSection";
 
 export const metadata = {
-  title: 'Top Website Development Company in India | Custom Web & SEO Solutions',
-  description: 'Boost your business with the best website development company in India. We deliver high-performance web design, e-commerce, and mobile apps that rank and convert. 150+ projects, 98% satisfaction. Get a free proposal!',
+  title: 'StudioVyn | Top Website Development Company in India',
+  description: 'StudioVyn builds high-performance websites, e-commerce, and apps that rank and convert. 150+ projects, 98% satisfaction. Get a free proposal.',
   keywords: 'website development company India, best web development company India, website design company, web development services India, custom website development, e-commerce development, mobile app development India, professional web developers, UI/UX design India, digital marketing services, SEO services India, website company Delhi, web development Kolkata, website development Bihar, affordable website design, responsive web design India',
+  alternates: { canonical: '/' },
   openGraph: {
-    title: 'Top Website Development Company in India - StudioVyn',
+    title: 'StudioVyn | Top Website Development Company in India',
     description: 'Leading website development services across India. Custom web design, e-commerce solutions & mobile apps that scale your business.',
+    url: 'https://studiovyn.in',
+    type: 'website',
+    siteName: 'StudioVyn',
     images: [{
       url: 'https://studiovyn.in/og-image.svg',
       width: 1200,
       height: 630,
       alt: 'StudioVyn - Professional Website Development Company in India'
     }]
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'StudioVyn | Top Website Development Company in India',
+    description: 'High-performance websites, e-commerce, and mobile apps built by StudioVyn.',
+    images: ['https://studiovyn.in/og-image.svg']
+  },
 };
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+      <BrandPositioning />
       <ClientsLogos />
       <ServicesShowcase />
       <WhyUs />
       <About />
+      <FounderSection />
       <CaseSpotlight />
       <Process />
       <Industries />

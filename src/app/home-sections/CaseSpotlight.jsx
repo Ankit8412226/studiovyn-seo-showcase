@@ -21,20 +21,21 @@ export default function CaseSpotlight() {
 
   return (
     <section
-      className="py-14 sm:py-16 bg-gray-50"
+      className="py-14 sm:py-16 bg-[#0b0d12] relative overflow-hidden"
       aria-labelledby="case-spotlight-heading"
     >
+      <div className="absolute inset-0 bg-accent-glow opacity-40" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-6">
           <h2
             id="case-spotlight-heading"
-            className="text-2xl sm:text-3xl font-bold font-secondary"
+            className="text-2xl sm:text-3xl font-bold font-secondary text-white"
           >
             Case Study Spotlight
           </h2>
           <Link
             href="/case-studies"
-            className="text-blue-600 font-medium"
+            className="text-emerald-200 font-medium"
             title="View all case studies at StudioVyn"
           >
             View all
@@ -45,11 +46,11 @@ export default function CaseSpotlight() {
             <Link
               key={it.slug}
               href={`/case-studies/${it.slug}`}
-              className="p-5 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md transition"
+              className="p-5 rounded-xl bg-[#121723] border border-[#1f2937] shadow-sm hover:shadow-md transition"
               title={`Read case study: ${it.title}`}
             >
-              <div className="font-semibold font-secondary mb-1">{it.title}</div>
-              <div className="text-sm text-gray-600 font-primary">{it.metric}</div>
+              <div className="font-semibold font-secondary mb-1 text-white">{it.title}</div>
+              <div className="text-sm text-[#94a3b8] font-primary">{it.metric}</div>
             </Link>
           ))}
         </div>

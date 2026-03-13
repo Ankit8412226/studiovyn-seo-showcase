@@ -3,11 +3,19 @@ import SeoProse from '@/components/seo/SeoProse';
 import Link from 'next/link';
 import Script from 'next/script';
 import About from '../About';
+import FounderSection from '@/components/FounderSection';
 
 export const metadata = {
-  title: 'About Us | StudioVyn - Web Development & Digital Agency in India',
+  title: 'About StudioVyn | Web Development & Digital Agency in India',
   description:
-    'Learn more about StudioVyn — a creative web design, development, and digital marketing agency in India. We build websites, apps, and SEO-driven digital experiences for businesses.',
+    'Learn more about StudioVyn — a web design, development, and digital marketing agency in India. We build websites, apps, and SEO-driven digital experiences.',
+  keywords: [
+    'About StudioVyn',
+    'web development agency India',
+    'digital marketing agency India',
+    'web design company',
+    'StudioVyn'
+  ],
   alternates: { canonical: '/about' },
   openGraph: {
     title: 'About StudioVyn | Web Development & Digital Agency',
@@ -58,6 +66,17 @@ export default function AboutPage() {
         availableLanguage: ['English', 'Hindi'],
       },
     },
+    mainEntity: {
+      '@type': 'Person',
+      name: 'Ankit Kumar',
+      jobTitle: 'Founder & Lead Engineer',
+      worksFor: {
+        '@type': 'Organization',
+        name: 'StudioVyn',
+        url: 'https://studiovyn.in',
+      },
+      nationality: 'Indian',
+    },
   };
 
   const faqs = [
@@ -76,33 +95,37 @@ export default function AboutPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-24">
+    <main className="min-h-screen pt-24 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-15" aria-hidden="true"></div>
       <Script
         id="about-jsonld"
         type="application/ld+json"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <About />
+      <div className="relative z-10">
+        <About />
+        <FounderSection />
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pb-16">
-        <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
-            Our approach: performance + SEO + conversion UX
-          </h2>
-          <p>
-            We build premium digital experiences that are engineered to rank and convert. That means clean information
-            architecture, fast load times, accessibility, and content structures that match search intent.
-          </p>
-          <p>
-            Explore <Link className="text-blue-600 underline" href="/services">our services</Link>, review{' '}
-            <Link className="text-blue-600 underline" href="/portfolio">portfolio</Link>, or contact us for a{' '}
-            <Link className="text-blue-600 underline" href="/contact">free consultation</Link>.
-          </p>
-        </SeoProse>
-      </section>
+        <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pb-16">
+          <SeoProse>
+            <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
+              Our approach: performance + SEO + conversion UX
+            </h2>
+            <p>
+              We build premium digital experiences that are engineered to rank and convert. That means clean information
+              architecture, fast load times, accessibility, and content structures that match search intent.
+            </p>
+            <p>
+              Explore <Link className="text-emerald-200 underline" href="/services">our services</Link>, review{' '}
+              <Link className="text-emerald-200 underline" href="/portfolio">portfolio</Link>, or contact us for a{' '}
+              <Link className="text-emerald-200 underline" href="/contact">free consultation</Link>.
+            </p>
+          </SeoProse>
+        </section>
 
-      <SeoFaq title="About StudioVyn FAQs" faqs={faqs} pageUrl="https://studiovyn.in/about" />
+        <SeoFaq title="About StudioVyn FAQs" faqs={faqs} pageUrl="https://studiovyn.in/about" />
+      </div>
     </main>
   );
 }

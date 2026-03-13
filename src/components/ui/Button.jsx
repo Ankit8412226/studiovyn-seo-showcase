@@ -30,10 +30,10 @@ const Button = forwardRef(
     const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border-2 cursor-pointer';
 
     const variants = {
-      primary: 'bg-blue-800 border-blue-800 text-white hover:bg-blue-900 hover:border-blue-900 focus:ring-blue-600 shadow-md hover:shadow-lg active:scale-[0.98]',
-      secondary: 'bg-white border-blue-800 text-blue-800 hover:bg-blue-50 hover:border-blue-900 focus:ring-blue-600 shadow-sm hover:shadow-md active:scale-[0.98]',
-      ghost: 'bg-transparent border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400 focus:ring-gray-500',
-      link: 'bg-transparent border-transparent text-blue-800 hover:text-blue-900 underline-offset-4 hover:underline focus:ring-blue-600 p-0',
+      primary: 'bg-[var(--brand-primary)] border-[var(--brand-primary)] text-[#f2f4f3] hover:bg-[var(--brand-primary-hover)] hover:border-[var(--brand-primary-hover)] focus:ring-[var(--brand-accent)] shadow-md hover:shadow-lg active:scale-[0.98]',
+      secondary: 'bg-[#0f172a] border-[var(--brand-primary)] text-[var(--brand-primary)] hover:bg-[#111827] hover:border-[var(--brand-primary-hover)] focus:ring-[var(--brand-accent)] shadow-sm hover:shadow-md active:scale-[0.98]',
+      ghost: 'bg-transparent border-[#1f2937] text-[#cbd5f5] hover:bg-[#0f1320] hover:border-[#334155] focus:ring-[var(--brand-accent)]',
+      link: 'bg-transparent border-transparent text-[var(--brand-primary)] hover:text-[var(--brand-primary-hover)] underline-offset-4 hover:underline focus:ring-[var(--brand-accent)] p-0',
     };
 
     const sizes = {
@@ -121,4 +121,3 @@ const Button = forwardRef(
 Button.displayName = 'Button';
 
 export default Button;
-

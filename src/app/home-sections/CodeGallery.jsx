@@ -20,14 +20,15 @@ export default function CodeGallery() {
 
   return (
     <section
-      className="py-14 sm:py-16 bg-white"
+      className="py-14 sm:py-16 bg-[#0b0d12] relative overflow-hidden"
       aria-labelledby="code-gallery-heading"
       role="region"
     >
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="code-gallery-heading"
-          className="text-2xl sm:text-3xl font-bold font-secondary mb-6"
+          className="text-2xl sm:text-3xl font-bold font-secondary mb-6 text-white"
         >
           Built by engineers, for growth
         </h2>

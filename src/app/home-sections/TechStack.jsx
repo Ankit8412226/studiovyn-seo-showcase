@@ -17,14 +17,15 @@ export default function TechStack() {
     { name: 'Algolia', logo: 'https://www.vectorlogo.zone/logos/algolia/algolia-icon.svg' },
   ];
   return (
-    <section className="py-12 sm:py-16 bg-gray-50 border-y border-gray-100">
+    <section className="py-12 sm:py-16 bg-[#0b0d12] border-y border-[#1f2937] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-25" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-xl sm:text-3xl font-bold font-secondary mb-8 text-center sm:text-left">Tech Stack We Love</h2>
+        <h2 className="text-xl sm:text-3xl font-bold font-secondary mb-8 text-center sm:text-left text-white">Tech Stack We Love</h2>
         <div className="grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-6">
           {tools.map((t) => (
-            <div key={t.name} className="p-3 sm:p-5 rounded-2xl bg-white border border-gray-100 shadow-sm flex flex-col items-center justify-center gap-2 sm:gap-3 hover:border-blue-200 hover:shadow-md transition-all duration-300">
+            <div key={t.name} className="p-3 sm:p-5 rounded-2xl bg-[#121723] border border-[#1f2937] shadow-sm flex flex-col items-center justify-center gap-2 sm:gap-3 hover:border-emerald-400/40 hover:shadow-md transition-all duration-300">
               <img src={t.logo} alt={t.name} className="h-8 sm:h-12 object-contain" />
-              <div className="text-[10px] sm:text-sm font-semibold text-gray-700 font-primary text-center leading-tight">{t.name}</div>
+              <div className="text-[10px] sm:text-sm font-semibold text-[#cbd5f5] font-primary text-center leading-tight">{t.name}</div>
             </div>
           ))}
         </div>
@@ -32,5 +33,4 @@ export default function TechStack() {
     </section>
   );
 }
-
 

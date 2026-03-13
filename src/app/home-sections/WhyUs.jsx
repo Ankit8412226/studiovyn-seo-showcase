@@ -9,34 +9,34 @@ export default function WhyUs() {
       icon: Zap,
       title: 'Lightning Fast',
       description: 'Core Web Vitals and SSR for speed and SEO. Optimized performance that keeps users engaged.',
-      gradient: 'from-yellow-400 to-orange-500',
-      bgGradient: 'from-yellow-50 to-orange-50',
+      gradient: 'from-[#10b981] to-[#2dd4bf]',
+      bgGradient: 'from-[#0f1320] to-[#151b2b]',
     },
     {
       icon: Search,
       title: 'SEO Ready',
       description: 'Sitemaps, schema, internal linking, programmatic pages. Built for search engine success.',
-      gradient: 'from-blue-400 to-cyan-500',
-      bgGradient: 'from-blue-50 to-cyan-50',
+      gradient: 'from-[#2dd4bf] to-[#84cc16]',
+      bgGradient: 'from-[#0f1320] to-[#151b2b]',
     },
     {
       icon: Shield,
       title: 'Secure & Scalable',
       description: 'Modern stack, CI/CD, observability. Enterprise-grade security and infrastructure.',
-      gradient: 'from-green-400 to-emerald-500',
-      bgGradient: 'from-green-50 to-emerald-50',
+      gradient: 'from-[#84cc16] to-[#10b981]',
+      bgGradient: 'from-[#0f1320] to-[#151b2b]',
     },
     {
       icon: Target,
       title: 'Conversion Focused',
       description: 'Clear UX, proof, and performance to drive leads. Every element optimized for conversions.',
-      gradient: 'from-purple-400 to-pink-500',
-      bgGradient: 'from-purple-50 to-pink-50',
+      gradient: 'from-[#10b981] to-[#2dd4bf]',
+      bgGradient: 'from-[#0f1320] to-[#151b2b]',
     },
   ];
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50/50 relative overflow-hidden">
+    <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-[#0b0d12] to-[#0f1320] relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
@@ -45,10 +45,10 @@ export default function WhyUs() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-gray-900">
-            Why Choose <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">StudioVyn</span>
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-white">
+            Why Choose <span className="bg-gradient-to-r from-[#10b981] to-[#2dd4bf] bg-clip-text text-transparent">StudioVyn</span>
           </h2>
-          <p className="text-xl text-gray-600 font-primary leading-relaxed">
+          <p className="text-xl text-[#94a3b8] font-primary leading-relaxed">
             We combine cutting-edge technology with proven strategies to deliver exceptional results.
           </p>
         </div>
@@ -71,10 +71,10 @@ export default function WhyUs() {
                 </div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold font-secondary mb-3 text-gray-900">
+                <h3 className="text-xl font-bold font-secondary mb-3 text-white">
                   {point.title}
                 </h3>
-                <p className="text-gray-700 font-primary leading-relaxed text-sm">
+                <p className="text-[#cbd5f5] font-primary leading-relaxed text-sm">
                   {point.description}
                 </p>
               </Card>
@@ -85,5 +85,3 @@ export default function WhyUs() {
     </section>
   );
 }
-
-

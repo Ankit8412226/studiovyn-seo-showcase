@@ -17,9 +17,10 @@ export default function ClientsLogos() {
     { src: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg', alt: 'GitHub' },
   ];
   return (
-    <section className="py-12 bg-white overflow-hidden border-y border-gray-100">
+    <section className="py-12 bg-[#0b0d12] overflow-hidden border-y border-[#1f2937] relative">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <div className="container mx-auto px-4 mb-8">
-        <h2 className="text-center text-sm font-bold font-primary uppercase tracking-[0.2em] text-gray-500">
+        <h2 className="text-center text-sm font-bold font-primary uppercase tracking-[0.2em] text-[#94a3b8]">
           Trusted by Industry Leaders
         </h2>
       </div>
@@ -40,5 +41,4 @@ export default function ClientsLogos() {
     </section>
   );
 }
-
 

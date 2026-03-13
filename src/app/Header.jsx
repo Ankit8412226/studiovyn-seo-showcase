@@ -77,8 +77,8 @@ const Header = () => {
       ref={navRef}
       className={`fixed w-full top-0 z-[1030] transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100'
-          : 'bg-white/80 backdrop-blur-sm'
+          ? 'bg-[#0b0d12]/90 backdrop-blur-md shadow-md border-b border-[#1f2937]'
+          : 'bg-[#0b0d12]/70 backdrop-blur-sm'
       }`}
       role="banner"
     >
@@ -95,12 +95,10 @@ const Header = () => {
             aria-label="StudioVyn - Website Development Company India Home"
           >
             <div className="relative flex items-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-800 to-teal-700 rounded-xl opacity-0 group-hover:opacity-10 blur-sm transition-opacity duration-300"></div>
-              <img
-                src="/logo.jpeg"
-                alt="StudioVyn - IT Service Provider"
-                className="relative w-auto h-16 lg:h-24 rounded-lg transition-all duration-300 group-hover:scale-105"
-              />
+              <div className="absolute inset-0 bg-gradient-to-r from-[#10b981] to-[#2dd4bf] rounded-xl opacity-0 group-hover:opacity-15 blur-sm transition-opacity duration-300"></div>
+              <span className="relative text-xl sm:text-2xl lg:text-3xl font-secondary font-bold tracking-tight text-white">
+                StudioVyn
+              </span>
             </div>
           </a>
 
@@ -112,8 +110,8 @@ const Header = () => {
                 href={link.href}
                 className={`px-4 py-2 rounded-lg font-medium font-primary text-sm transition-all duration-200 ${
                   link.isActive
-                    ? 'text-blue-800 bg-blue-50 border border-blue-200'
-                    : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
+                    ? 'text-[#e5e7eb] bg-[#121723] border border-[#1f2937]'
+                    : 'text-[#cbd5f5] hover:text-white hover:bg-[#121723]'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={link.isActive ? 'page' : undefined}
@@ -128,7 +126,7 @@ const Header = () => {
             <Button
               href="/contact"
               size="md"
-              className="shadow-md hover:shadow-lg bg-blue-800 hover:bg-blue-900 text-white"
+              className="shadow-md hover:shadow-lg"
               aria-label="Get free website development consultation"
             >
               Get Free Quote
@@ -138,15 +136,15 @@ const Header = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="lg:hidden p-2 rounded-lg hover:bg-[#121723] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)]"
             aria-label={isMobileMenuOpen ? 'Close mobile menu' : 'Open mobile menu'}
             aria-expanded={isMobileMenuOpen}
             aria-controls="mobile-menu"
           >
             {isMobileMenuOpen ? (
-              <X className="w-6 h-6 text-gray-700" aria-hidden="true" />
+              <X className="w-6 h-6 text-white" aria-hidden="true" />
             ) : (
-              <Menu className="w-6 h-6 text-gray-700" aria-hidden="true" />
+              <Menu className="w-6 h-6 text-white" aria-hidden="true" />
             )}
           </button>
         </div>
@@ -158,15 +156,15 @@ const Header = () => {
             isMobileMenuOpen ? 'max-h-[600px] opacity-100 pb-4' : 'max-h-0 opacity-0'
           }`}
         >
-          <div className="flex flex-col space-y-2 pt-4 border-t border-gray-200">
+          <div className="flex flex-col space-y-2 pt-4 border-t border-[#1f2937]">
             {navigationLinks.map((link) => (
               <a
                 key={link.id}
                 href={link.href}
                 className={`px-4 py-3 rounded-xl font-medium font-primary text-base transition-colors ${
                   link.isActive
-                    ? 'text-blue-800 bg-blue-50 border border-blue-100'
-                    : 'text-gray-700 hover:text-blue-800 hover:bg-gray-50'
+                    ? 'text-[#e5e7eb] bg-[#121723] border border-[#1f2937]'
+                    : 'text-[#cbd5f5] hover:text-white hover:bg-[#121723]'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={link.isActive ? 'page' : undefined}
@@ -193,4 +191,3 @@ const Header = () => {
 };
 
 export default Header;
-

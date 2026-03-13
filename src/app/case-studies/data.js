@@ -250,7 +250,7 @@ We chose React Native for true cross-platform development with native performanc
     stack: 'Node.js, GraphQL, React, AWS',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1200&q=80',
     category: 'SaaS Platform',
-    summary: 'Enterprise-grade analytics dashboard with real-time data processing, role-based access control, and automated workflows that slashed operational overhead.',
+    summary: 'Enterprise analytics dashboard with real-time data, RBAC, and automation that cut operations time by 60%.',
     challenge: 'A B2B SaaS company was spending hundreds of hours monthly on manual data reconciliation, reporting, and operational tasks across multiple systems.',
     solution: 'Developed a unified dashboard with GraphQL API, real-time WebSocket updates, automated workflows, and comprehensive RBAC system. Integrated with 12+ third-party services.',
     results: [

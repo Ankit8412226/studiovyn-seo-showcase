@@ -34,13 +34,14 @@ export default function CaseStudiesIndexPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-24 pb-16 bg-white">
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen pt-24 pb-16 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold font-secondary text-gray-900 mb-4">
+          <h1 className="text-4xl sm:text-5xl font-bold font-secondary text-white mb-4">
             Case Studies
           </h1>
-          <p className="text-gray-600 font-primary text-lg">
+          <p className="text-slate-300 font-primary text-lg">
             Proof over promises. Explore real outcomes from websites and products we’ve shipped.
           </p>
         </div>
@@ -49,7 +50,7 @@ export default function CaseStudiesIndexPage() {
           {top.map((p) => (
             <Link key={p.slug} href={`/case-studies/${p.slug}`} className="group">
               <Card variant="elevated" hover padding="none" className="overflow-hidden h-full">
-                <div className="relative h-56 bg-gray-100">
+                <div className="relative h-56 bg-[#0f172a]">
                   <OptimizedImage
                     src={p.image}
                     alt={`${p.title} case study`}
@@ -60,12 +61,12 @@ export default function CaseStudiesIndexPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
                 <div className="p-6">
-                  <h2 className="text-xl font-bold font-secondary text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h2 className="text-xl font-bold font-secondary text-white group-hover:text-emerald-200 transition-colors">
                     {p.title}
                   </h2>
-                  <p className="text-green-700 font-primary font-semibold mt-2">{p.result}</p>
-                  <p className="text-sm text-gray-600 font-primary mt-2">{p.summary}</p>
-                  <div className="mt-4 text-blue-600 font-semibold font-primary">Read case study →</div>
+                  <p className="text-emerald-300 font-primary font-semibold mt-2">{p.result}</p>
+                  <p className="text-sm text-slate-300 font-primary mt-2">{p.summary}</p>
+                  <div className="mt-4 text-emerald-200 font-semibold font-primary">Read case study →</div>
                 </div>
               </Card>
             </Link>
@@ -79,7 +80,7 @@ export default function CaseStudiesIndexPage() {
         </div>
 
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
             Results-driven web development & SEO execution
           </h2>
           <p>
@@ -87,8 +88,8 @@ export default function CaseStudiesIndexPage() {
             drive outcomes—traffic growth, conversion rate improvements, and faster operations.
           </p>
           <p>
-            Next step: explore <Link className="text-blue-600 underline" href="/services">services</Link> or{' '}
-            <Link className="text-blue-600 underline" href="/contact">request a proposal</Link>.
+            Next step: explore <Link className="text-emerald-200 underline" href="/services">services</Link> or{' '}
+            <Link className="text-emerald-200 underline" href="/contact">request a proposal</Link>.
           </p>
         </SeoProse>
       </section>
@@ -97,5 +98,3 @@ export default function CaseStudiesIndexPage() {
     </main>
   );
 }
-
-

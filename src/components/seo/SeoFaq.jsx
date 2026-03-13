@@ -28,7 +28,8 @@ export default function SeoFaq({ title = 'Frequently Asked Questions', faqs = []
       : null;
 
   return (
-    <section className="py-16 sm:py-20 border-t border-gray-200 bg-white" aria-label="Frequently asked questions">
+    <section className="py-16 sm:py-20 border-t border-[#1f2937] bg-[#0b0d12] relative overflow-hidden" aria-label="Frequently asked questions">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       {jsonLd && (
         <Script
           id="faq-jsonld"
@@ -37,8 +38,8 @@ export default function SeoFaq({ title = 'Frequently Asked Questions', faqs = []
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       )}
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <h2 className="text-3xl sm:text-4xl font-bold font-secondary text-gray-900 mb-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
+        <h2 className="text-3xl sm:text-4xl font-bold font-secondary text-white mb-6">
           {title}
         </h2>
         <Accordion items={items} allowMultiple={false} />
@@ -46,5 +47,4 @@ export default function SeoFaq({ title = 'Frequently Asked Questions', faqs = []
     </section>
   );
 }
-
 

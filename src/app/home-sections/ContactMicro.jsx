@@ -3,20 +3,21 @@ import { ArrowRight, Mail, Phone } from 'lucide-react';
 export default function ContactMicro() {
   return (
     <section
-      className="py-20 bg-blue-600 relative overflow-hidden"
+      className="py-20 bg-[#0b0d12] relative overflow-hidden"
       role="region"
       aria-labelledby="contact-micro-heading"
     >
       {/* Abstract Background Shapes */}
-      <div className="absolute top-0 left-0 w-64 h-64 bg-white/10 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-black/10 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+      <div className="absolute inset-0 bg-accent-glow opacity-30" aria-hidden="true"></div>
+      <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-500/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-emerald-500/20 rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <h2
           id="contact-micro-heading"
           className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-6 text-white"
         >
-          Have a project in mind? <br className="hidden sm:block" /> Let's build something <span className="text-blue-200">extraordinary.</span>
+          Have a project in mind? <br className="hidden sm:block" /> Let's build something <span className="text-emerald-200">extraordinary.</span>
         </h2>
 
         <div className="flex flex-wrap justify-center gap-6 lg:gap-12 mb-10 text-white/90 font-medium">
@@ -36,7 +37,7 @@ export default function ContactMicro() {
 
         <a
           href="/contact"
-          className="group inline-flex items-center gap-3 bg-white text-blue-600 px-10 py-5 rounded-2xl font-bold font-secondary transition-all hover:bg-gray-100 shadow-2xl active:scale-95 text-lg"
+          className="group inline-flex items-center gap-3 bg-gradient-to-r from-[#10b981] via-[#2dd4bf] to-[#84cc16] text-white px-10 py-5 rounded-2xl font-bold font-secondary transition-all shadow-2xl active:scale-95 text-lg"
           title="Request a project from StudioVyn"
         >
           <span>Request Project Proposal</span>

@@ -38,17 +38,18 @@ export default function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" className="py-20 sm:py-24 lg:py-32 bg-white">
+    <section id="testimonials" className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-25" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-3">Client Testimonials</h2>
-          <p className="text-gray-600 font-primary">What partners across Bihar, West Bengal, and Delhi say about us.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-3 text-white">Client Testimonials</h2>
+          <p className="text-[#94a3b8] font-primary">What partners across Bihar, West Bengal, and Delhi say about us.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {quotes.map((q, i) => (
-            <blockquote key={i} className="p-6 rounded-2xl border border-gray-100 shadow-sm bg-gray-50">
-              <p className="text-gray-800 font-primary mb-4">“{q.text}”</p>
-              <div className="text-sm text-gray-600 font-primary">— {q.name}, {q.role}</div>
+            <blockquote key={i} className="p-6 rounded-2xl border border-[#1f2937] shadow-sm bg-[#121723]">
+              <p className="text-[#e5e7eb] font-primary mb-4">“{q.text}”</p>
+              <div className="text-sm text-[#94a3b8] font-primary">— {q.name}, {q.role}</div>
             </blockquote>
           ))}
         </div>
@@ -56,5 +57,4 @@ export default function Testimonials() {
     </section>
   );
 }
-
 

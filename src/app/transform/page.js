@@ -1,12 +1,13 @@
 export default function TransformPage() {
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-24 pb-16 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       {/* Hero Section */}
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           <div>
-            <h1 className="text-5xl font-bold font-secondary mb-6">Transform Your Business</h1>
-            <p className="text-xl text-gray-700 font-primary mb-8">We combine product strategy, design, and engineering to build platforms that grow with you. From fast websites to scalable apps and SEO content engines, we deliver outcomes—not just code.</p>
+            <h1 className="text-5xl font-bold font-secondary mb-6 text-white">Transform Your Business</h1>
+            <p className="text-xl text-slate-300 font-primary mb-8">We combine product strategy, design, and engineering to build platforms that grow with you. From fast websites to scalable apps and SEO content engines, we deliver outcomes—not just code.</p>
             <a href="/contact" className="btn-primary inline-block">Start your transformation</a>
           </div>
           <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl">
@@ -20,45 +21,45 @@ export default function TransformPage() {
 
         {/* Core Pillars */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold font-secondary mb-10 text-center">Our Transformation Framework</h2>
+          <h2 className="text-3xl font-bold font-secondary mb-10 text-center text-white">Our Transformation Framework</h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="p-8 rounded-2xl border border-gray-100 shadow-sm bg-white hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 rounded-2xl border border-[#1f2937] shadow-sm bg-[#0f172a] hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-emerald-500/15 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <div className="font-semibold font-secondary text-lg mb-3">Growth Strategy</div>
-              <p className="text-gray-700 font-primary mb-4">ICP definition, messaging, and conversion journeys mapped to outcomes.</p>
-              <ul className="text-sm text-gray-600 space-y-2">
+              <div className="font-semibold font-secondary text-lg mb-3 text-white">Growth Strategy</div>
+              <p className="text-slate-300 font-primary mb-4">ICP definition, messaging, and conversion journeys mapped to outcomes.</p>
+              <ul className="text-sm text-slate-300 space-y-2">
                 <li>• Market positioning & competitive analysis</li>
                 <li>• Customer journey mapping</li>
                 <li>• Value proposition refinement</li>
               </ul>
             </div>
-            <div className="p-8 rounded-2xl border border-gray-100 shadow-sm bg-white hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 rounded-2xl border border-[#1f2937] shadow-sm bg-[#0f172a] hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-emerald-500/15 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <div className="font-semibold font-secondary text-lg mb-3">High‑Performance Web</div>
-              <p className="text-gray-700 font-primary mb-4">Core Web Vitals, accessibility, and SEO by default for sustainable traffic.</p>
-              <ul className="text-sm text-gray-600 space-y-2">
+              <div className="font-semibold font-secondary text-lg mb-3 text-white">High‑Performance Web</div>
+              <p className="text-slate-300 font-primary mb-4">Core Web Vitals, accessibility, and SEO by default for sustainable traffic.</p>
+              <ul className="text-sm text-slate-300 space-y-2">
                 <li>• Sub-second load times</li>
                 <li>• Mobile-first responsive design</li>
                 <li>• Technical SEO optimization</li>
               </ul>
             </div>
-            <div className="p-8 rounded-2xl border border-gray-100 shadow-sm bg-white hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="p-8 rounded-2xl border border-[#1f2937] shadow-sm bg-[#0f172a] hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-emerald-500/15 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <div className="font-semibold font-secondary text-lg mb-3">Data & Iteration</div>
-              <p className="text-gray-700 font-primary mb-4">Analytics, A/B testing, and roadmaps that evolve with your market.</p>
-              <ul className="text-sm text-gray-600 space-y-2">
+              <div className="font-semibold font-secondary text-lg mb-3 text-white">Data & Iteration</div>
+              <p className="text-slate-300 font-primary mb-4">Analytics, A/B testing, and roadmaps that evolve with your market.</p>
+              <ul className="text-sm text-slate-300 space-y-2">
                 <li>• Real-time performance dashboards</li>
                 <li>• Conversion rate optimization</li>
                 <li>• Continuous deployment pipeline</li>
@@ -68,43 +69,43 @@ export default function TransformPage() {
         </div>
 
         {/* Process Section */}
-        <div className="mb-20 bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-12">
-          <h2 className="text-3xl font-bold font-secondary mb-12 text-center">How We Work</h2>
+        <div className="mb-20 bg-[#0f172a] rounded-3xl p-12 border border-[#1f2937]">
+          <h2 className="text-3xl font-bold font-secondary mb-12 text-center text-white">How We Work</h2>
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl font-bold text-blue-600">1</span>
+              <div className="w-16 h-16 bg-[#111827] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md border border-[#1f2937]">
+                <span className="text-2xl font-bold text-emerald-300">1</span>
               </div>
-              <h3 className="font-semibold font-secondary mb-2">Discovery</h3>
-              <p className="text-sm text-gray-600">Deep dive into your business goals, audience, and competitive landscape</p>
+              <h3 className="font-semibold font-secondary mb-2 text-white">Discovery</h3>
+              <p className="text-sm text-slate-300">Deep dive into your business goals, audience, and competitive landscape</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl font-bold text-green-600">2</span>
+              <div className="w-16 h-16 bg-[#111827] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md border border-[#1f2937]">
+                <span className="text-2xl font-bold text-emerald-300">2</span>
               </div>
-              <h3 className="font-semibold font-secondary mb-2">Strategy</h3>
-              <p className="text-sm text-gray-600">Craft a roadmap with clear milestones, KPIs, and success metrics</p>
+              <h3 className="font-semibold font-secondary mb-2 text-white">Strategy</h3>
+              <p className="text-sm text-slate-300">Craft a roadmap with clear milestones, KPIs, and success metrics</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl font-bold text-purple-600">3</span>
+              <div className="w-16 h-16 bg-[#111827] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md border border-[#1f2937]">
+                <span className="text-2xl font-bold text-emerald-300">3</span>
               </div>
-              <h3 className="font-semibold font-secondary mb-2">Build</h3>
-              <p className="text-sm text-gray-600">Design and develop with weekly sprints and continuous feedback loops</p>
+              <h3 className="font-semibold font-secondary mb-2 text-white">Build</h3>
+              <p className="text-sm text-slate-300">Design and develop with weekly sprints and continuous feedback loops</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
-                <span className="text-2xl font-bold text-orange-600">4</span>
+              <div className="w-16 h-16 bg-[#111827] rounded-full flex items-center justify-center mx-auto mb-4 shadow-md border border-[#1f2937]">
+                <span className="text-2xl font-bold text-emerald-300">4</span>
               </div>
-              <h3 className="font-semibold font-secondary mb-2">Optimize</h3>
-              <p className="text-sm text-gray-600">Launch, measure, iterate based on real user data and market signals</p>
+              <h3 className="font-semibold font-secondary mb-2 text-white">Optimize</h3>
+              <p className="text-sm text-slate-300">Launch, measure, iterate based on real user data and market signals</p>
             </div>
           </div>
         </div>
 
         {/* Results Section */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold font-secondary mb-10 text-center">Real Impact</h2>
+          <h2 className="text-3xl font-bold font-secondary mb-10 text-center text-white">Real Impact</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="relative rounded-2xl overflow-hidden shadow-xl">
               <img
@@ -137,32 +138,32 @@ export default function TransformPage() {
 
         {/* Technologies */}
         <div className="mb-20">
-          <h2 className="text-3xl font-bold font-secondary mb-10 text-center">Built with Modern Tech</h2>
+          <h2 className="text-3xl font-bold font-secondary mb-10 text-center text-white">Built with Modern Tech</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow">
+            <div className="bg-[#0f172a] p-6 rounded-xl border border-[#1f2937] text-center hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-2">⚛️</div>
-              <div className="font-semibold text-sm">React & Next.js</div>
+              <div className="font-semibold text-sm text-white">React & Next.js</div>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow">
+            <div className="bg-[#0f172a] p-6 rounded-xl border border-[#1f2937] text-center hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-2">🎨</div>
-              <div className="font-semibold text-sm">Tailwind CSS</div>
+              <div className="font-semibold text-sm text-white">Tailwind CSS</div>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow">
+            <div className="bg-[#0f172a] p-6 rounded-xl border border-[#1f2937] text-center hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-2">📱</div>
-              <div className="font-semibold text-sm">React Native</div>
+              <div className="font-semibold text-sm text-white">React Native</div>
             </div>
-            <div className="bg-white p-6 rounded-xl border border-gray-100 text-center hover:shadow-lg transition-shadow">
+            <div className="bg-[#0f172a] p-6 rounded-xl border border-[#1f2937] text-center hover:shadow-lg transition-shadow">
               <div className="text-3xl mb-2">☁️</div>
-              <div className="font-semibold text-sm">Cloud Infrastructure</div>
+              <div className="font-semibold text-sm text-white">Cloud Infrastructure</div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-12 text-white">
+        <div className="text-center bg-gradient-to-r from-emerald-500/80 to-teal-500/80 rounded-3xl p-12 text-white border border-emerald-400/30">
           <h2 className="text-3xl font-bold font-secondary mb-4">Ready to Transform?</h2>
           <p className="text-xl mb-8 opacity-90">Let's build something extraordinary together</p>
-          <a href="/contact" className="inline-block bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-shadow">
+          <a href="/contact" className="inline-block bg-[#0b0d12] text-emerald-200 px-8 py-3 rounded-full font-semibold hover:shadow-xl transition-shadow border border-emerald-300/40">
             Schedule a consultation
           </a>
         </div>

@@ -23,38 +23,39 @@
 /* Professional color palette for corporate web development agency             */
 /* -------------------------------------------------------------------------- */
 :root {
-  /* Professional Brand Colors - Navy & Teal */
-  --brand-primary: #1e40af;
-  /* blue-800 - Professional navy */
-  --brand-primary-hover: #1e3a8a;
-  /* blue-900 - Darker navy */
-  --brand-secondary: #0f766e;
-  /* teal-700 - Professional teal */
-  --brand-secondary-hover: #115e59;
-  /* teal-800 */
-  --brand-accent: #0891b2;
-  /* cyan-600 - Accent color */
+  /* Dark Neon Theme */
+  --brand-primary: #10b981;
+  /* emerald-500 */
+  --brand-primary-hover: #059669;
+  /* emerald-600 */
+  --brand-secondary: #34d399;
+  /* emerald-400 */
+  --brand-secondary-hover: #10b981;
+  /* emerald-500 */
+  --brand-accent: #14b8a6;
+  /* teal-500 */
 
-  /* Legacy gradient support (now more subtle) */
-  --brand-from: #1e40af;
-  /* blue-800 */
-  --brand-via: #0f766e;
-  /* teal-700 */
-  --brand-to: #0891b2;
-  /* cyan-600 */
-  --brand-from-hover: #1e3a8a;
-  /* blue-900 */
-  --brand-via-hover: #115e59;
-  /* teal-800 */
-  --brand-to-hover: #0e7490;
-  /* cyan-700 */
+  /* Gradient accents */
+  --brand-from: #10b981;
+  /* emerald-500 */
+  --brand-via: #2dd4bf;
+  /* teal-400 */
+  --brand-to: #84cc16;
+  /* lime-500 */
+  --brand-from-hover: #059669;
+  /* emerald-600 */
+  --brand-via-hover: #14b8a6;
+  /* teal-500 */
+  --brand-to-hover: #65a30d;
+  /* lime-600 */
+  --accent-glow-strong: #10b981;
 
   /* Neutrals */
-  --surface: #ffffff;
-  --surface-muted: #f9fafb;
-  --border: #e5e7eb;
-  --text: #111827;
-  --text-muted: #4b5563;
+  --surface: #121723;
+  --surface-muted: #0f1320;
+  --border: #1f2937;
+  --text: #e5e7eb;
+  --text-muted: #94a3b8;
 
   /* Radius */
   --radius-btn: 0.75rem;
@@ -92,22 +93,23 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #0b0d12;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(180deg, #10b981, #0ea5e9);
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(180deg, #2563eb, #7c3aed);
+  background: linear-gradient(180deg, #059669, #14b8a6);
 }
 
 /* Smooth Scrolling & Overflow Prevention */
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-padding-top: 120px;
 }
 
 body {
@@ -117,8 +119,8 @@ body {
 /* Base Styles */
 body {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
-  background: #ffffff;
-  color: #111827;
+  background: radial-gradient(ellipse, var(--accent-glow-strong) 0%, transparent 70%), #0b0d12;
+  color: #e5e7eb;
   line-height: 1.6;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
@@ -135,7 +137,7 @@ h6 {
   font-family: var(--font-poppins), system-ui, -apple-system, sans-serif;
   font-weight: 700;
   line-height: 1.2;
-  color: #111827;
+  color: #e5e7eb;
   letter-spacing: -0.02em;
 }
 
@@ -180,7 +182,7 @@ p {
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   font-weight: 400;
   line-height: 1.75;
-  color: #4b5563;
+  color: #94a3b8;
   margin-bottom: 1rem;
 }
 
@@ -188,7 +190,7 @@ p.lead {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.8;
-  color: #374151;
+  color: #cbd5f5;
   /* Darkened for better contrast */
 }
 
@@ -196,7 +198,7 @@ p.lead {
 strong,
 b {
   font-weight: 600;
-  color: #111827;
+  color: #e5e7eb;
 }
 
 /* Links */
@@ -259,13 +261,13 @@ small {
 
 /* Selection */
 ::selection {
-  background-color: #3b82f6;
-  color: #ffffff;
+  background-color: #38bdf8;
+  color: #0b0d12;
 }
 
 /* Focus Visible */
 *:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 2px solid #38bdf8;
   outline-offset: 2px;
 }
 
@@ -401,10 +403,112 @@ input[type="submit"],
 
 /* Gradient Text */
 .gradient-text {
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #10b981, #2dd4bf);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+section[id] {
+  scroll-margin-top: 120px;
+}
+
+/* Improve contrast for common muted text utilities on light backgrounds */
+.text-gray-600 {
+  color: #94a3b8 !important;
+}
+
+.text-gray-500 {
+  color: #64748b !important;
+}
+
+.text-gray-700 {
+  color: #cbd5f5 !important;
+}
+
+.text-gray-800 {
+  color: #e2e8f0 !important;
+}
+
+.text-gray-900 {
+  color: #f8fafc !important;
+}
+
+/* Remove pure white backgrounds globally */
+.bg-white {
+  background-color: #121723 !important;
+}
+
+.bg-white\/95 {
+  background-color: rgba(18, 23, 35, 0.95) !important;
+}
+
+.bg-gray-50 {
+  background-color: #0b0d12 !important;
+}
+
+.bg-gray-100 {
+  background-color: #0f1320 !important;
+}
+
+.bg-gray-200 {
+  background-color: #111827 !important;
+}
+
+.bg-slate-50 {
+  background-color: #0b0d12 !important;
+}
+
+.bg-slate-100 {
+  background-color: #0f1320 !important;
+}
+
+.bg-blue-50,
+.bg-purple-50,
+.bg-green-100,
+.bg-orange-50,
+.bg-emerald-500\/10,
+.bg-purple-100 {
+  background-color: #0f1320 !important;
+}
+
+.from-gray-50 {
+  --tw-gradient-from: #0b0d12 !important;
+}
+
+.to-gray-50 {
+  --tw-gradient-to: #0b0d12 !important;
+}
+
+.from-gray-100 {
+  --tw-gradient-from: #0f1320 !important;
+}
+
+.to-gray-100 {
+  --tw-gradient-to: #0f1320 !important;
+}
+
+.border-gray-100 {
+  border-color: #1f2937 !important;
+}
+
+.border-gray-200 {
+  border-color: #1f2937 !important;
+}
+
+.border-gray-300 {
+  border-color: #334155 !important;
+}
+
+.bg-accent-glow {
+  background: radial-gradient(ellipse, var(--accent-glow-strong) 0%, transparent 70%);
+}
+
+/* Soften pure white cards if any inline styles remain */
+.shadow-sm,
+.shadow-md,
+.shadow-lg {
+  background-clip: padding-box;
 }
 
 /* Blob Animation */

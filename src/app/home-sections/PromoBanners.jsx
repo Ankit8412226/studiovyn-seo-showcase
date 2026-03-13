@@ -5,7 +5,8 @@ export default function PromoBanners() {
     { src: '/digital_marketing_seo_premium_1769518403220.png', alt: 'SEO & Growth Marketing' },
   ];
   return (
-    <section className="py-20 bg-gray-50 border-y border-gray-100">
+    <section className="py-20 bg-[#0b0d12] border-y border-[#1f2937] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
           {banners.map((b, i) => (

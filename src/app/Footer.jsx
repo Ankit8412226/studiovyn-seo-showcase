@@ -33,24 +33,24 @@ export default function Footer() {
 
   return (
     <footer
-      className="bg-gradient-to-br from-slate-900 via-blue-950 to-slate-900 text-white mt-24 relative overflow-hidden border-t border-blue-900/20"
+      className="bg-gradient-to-br from-[#0b0d12] via-[#0f1320] to-[#111827] text-[#e5e7eb] mt-24 relative overflow-hidden border-t border-[#1f2937]"
       role="contentinfo"
       aria-label="Site footer"
     >
       {/* Subtle background pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e3a8a_1px,transparent_1px),linear-gradient(to_bottom,#1e3a8a_1px,transparent_1px)] bg-[size:32px_32px] opacity-10 pointer-events-none" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#10b98126_1px,transparent_1px),linear-gradient(to_bottom,#10b98126_1px,transparent_1px)] bg-[size:32px_32px] opacity-10 pointer-events-none" aria-hidden="true"></div>
 
       {/* Accent gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-blue-900/5 via-transparent to-teal-900/5 pointer-events-none" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-[#10b981]/12 via-transparent to-[#2dd4bf]/12 pointer-events-none" aria-hidden="true"></div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* CTA Section */}
-        <div className="py-12 sm:py-16 lg:py-20 border-b border-blue-800/30">
+        <div className="py-12 sm:py-16 lg:py-20 border-b border-[#1f2937]">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 leading-tight sm:leading-tight px-2" style={{ color: '#ffffff !important' }}>
               Ready to Build Something Amazing?
             </h2>
-            <p className="text-base sm:text-lg text-blue-100 font-primary mb-8 max-w-2xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-[#94a3b8] font-primary mb-8 max-w-2xl mx-auto px-4">
               Let's transform your digital presence with a high-performance website that drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -79,15 +79,11 @@ export default function Footer() {
             {/* Brand Column - Spans 4 columns */}
             <div className="lg:col-span-4 text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-6">
-                <img
-                  src="/logo.jpeg"
-                  alt="StudioVyn - IT Service Provider"
-                  className="w-auto h-12 sm:h-20 rounded-xl shadow-lg border border-white/5"
-                  width="120"
-                  height="80"
-                />
+                <span className="text-2xl sm:text-3xl font-secondary font-bold tracking-tight text-white">
+                  StudioVyn
+                </span>
               </div>
-              <p className="text-sm font-primary leading-relaxed text-blue-100 mb-8 max-w-sm mx-auto md:mx-0">
+              <p className="text-sm font-primary leading-relaxed text-[#94a3b8] mb-8 max-w-sm mx-auto md:mx-0">
                 India's leading web development agency. We build high-performance websites and digital solutions that drive real business results.
               </p>
 
@@ -102,7 +98,7 @@ export default function Footer() {
                   <li key={service.href}>
                     <a
                       href={service.href}
-                      className="text-sm text-blue-100 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
+                      className="text-sm text-[#94a3b8] hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       <span>{service.label}</span>
@@ -120,7 +116,7 @@ export default function Footer() {
                   <li key={item.href}>
                     <a
                       href={item.href}
-                      className="text-sm text-blue-100 hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
+                      className="text-sm text-[#94a3b8] hover:text-white transition-colors font-primary inline-flex items-center gap-2 group"
                     >
                       <ArrowRight className="w-3 h-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-200" />
                       <span>{item.label}</span>
@@ -138,48 +134,48 @@ export default function Footer() {
               <div className="space-y-4 mb-8">
                 <a
                   href="tel:+918529747613"
-                  className="flex items-center gap-3 text-sm text-blue-100 hover:text-white transition-colors font-primary group"
+                  className="flex items-center gap-3 text-sm text-[#94a3b8] hover:text-white transition-colors font-primary group"
                   aria-label="Call StudioVyn at +91 8529747613"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center group-hover:bg-blue-800 group-hover:border-blue-700 transition-all duration-200">
-                    <Phone className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
+                  <div className="w-10 h-10 rounded-lg bg-[#121723] border-2 border-[#1f2937] flex items-center justify-center group-hover:bg-[#1a2235] group-hover:border-[#263045] transition-all duration-200">
+                    <Phone className="w-4 h-4 text-[#cbd5f5] group-hover:text-white transition-colors" />
                   </div>
                   <span className="font-semibold text-white">+91 8529747613</span>
                 </a>
                 <a
                   href="mailto:tech@studiovyn.in"
-                  className="flex items-center gap-3 text-sm text-blue-100 hover:text-white transition-colors font-primary group"
+                  className="flex items-center gap-3 text-sm text-[#94a3b8] hover:text-white transition-colors font-primary group"
                   aria-label="Email StudioVyn at tech@studiovyn.in"
                 >
-                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center group-hover:bg-blue-800 group-hover:border-blue-700 transition-all duration-200">
-                    <Mail className="w-4 h-4 text-blue-200 group-hover:text-white transition-colors" />
+                  <div className="w-10 h-10 rounded-lg bg-[#121723] border-2 border-[#1f2937] flex items-center justify-center group-hover:bg-[#1a2235] group-hover:border-[#263045] transition-all duration-200">
+                    <Mail className="w-4 h-4 text-[#cbd5f5] group-hover:text-white transition-colors" />
                   </div>
                   <span className="font-semibold text-white">tech@studiovyn.in</span>
                 </a>
-                <div className="flex items-start gap-3 text-sm text-blue-100 font-primary">
-                  <div className="w-10 h-10 rounded-lg bg-blue-900/30 border-2 border-blue-800/50 flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-4 h-4 text-blue-200" />
+                <div className="flex items-start gap-3 text-sm text-[#94a3b8] font-primary">
+                  <div className="w-10 h-10 rounded-lg bg-[#121723] border-2 border-[#1f2937] flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-4 h-4 text-[#cbd5f5]" />
                   </div>
                   <span className="font-medium text-white pt-2">Delhi NCR, India</span>
                 </div>
               </div>
 
               {/* Newsletter */}
-              <div className="bg-blue-900/20 border-2 border-blue-800/40 rounded-xl p-6">
+              <div className="bg-[#121723] border-2 border-[#1f2937] rounded-xl p-6">
                 <p className="text-sm font-semibold font-primary mb-2" style={{ color: '#ffffff' }}>Newsletter</p>
-                <p className="text-xs font-primary mb-4" style={{ color: '#bfdbfe' }}>
+                <p className="text-xs font-primary mb-4" style={{ color: '#94a3b8' }}>
                   Get web development tips delivered to your inbox.
                 </p>
                 <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
                   <input
                     type="email"
                     placeholder="Your email"
-                    className="flex-1 px-4 py-2.5 bg-blue-950/50 border-2 border-blue-800/50 rounded-lg text-sm text-white placeholder-blue-300 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-blue-600 transition-all duration-200 font-primary"
+                    className="flex-1 px-4 py-2.5 bg-[#0f1320] border-2 border-[#1f2937] rounded-lg text-sm text-white placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-[var(--brand-secondary)] focus:border-[var(--brand-secondary)] transition-all duration-200 font-primary"
                     aria-label="Email address for newsletter"
                   />
                   <button
                     type="submit"
-                    className="px-4 py-2.5 bg-blue-800 border-2 border-blue-800 text-white rounded-lg hover:bg-blue-900 hover:border-blue-900 transition-all duration-200 flex items-center justify-center"
+                    className="px-4 py-2.5 bg-gradient-to-r from-[#10b981] via-[#2dd4bf] to-[#84cc16] border-2 border-[#10b981] text-white rounded-lg hover:opacity-90 transition-all duration-200 flex items-center justify-center"
                     aria-label="Subscribe to newsletter"
                   >
                     <Send className="w-4 h-4" />
@@ -191,10 +187,10 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-blue-800/30 py-8">
+        <div className="border-t border-[#1f2937] py-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
-              <p className="text-sm text-blue-200 font-primary">
+              <p className="text-sm text-[#94a3b8] font-primary">
                 © {currentYear} StudioVyn. All rights reserved.
               </p>
               <div className="flex items-center gap-4 md:gap-6">
@@ -202,12 +198,12 @@ export default function Footer() {
                   <span key={item.href} className="flex items-center gap-4">
                     <a
                       href={item.href}
-                      className="text-xs text-blue-300 hover:text-white transition-colors font-primary"
+                      className="text-xs text-[#94a3b8] hover:text-white transition-colors font-primary"
                     >
                       {item.label}
                     </a>
                     {index < resources.length - 1 && (
-                      <span className="text-blue-800" aria-hidden="true">•</span>
+                      <span className="text-[#334155]" aria-hidden="true">•</span>
                     )}
                   </span>
                 ))}
@@ -215,7 +211,7 @@ export default function Footer() {
             </div>
             <div className="flex items-center gap-2">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" aria-hidden="true"></div>
-              <p className="text-xs text-blue-200 font-primary">
+              <p className="text-xs text-[#94a3b8] font-primary">
                 Made with <span className="text-red-400">❤️</span> in India
               </p>
             </div>
@@ -225,4 +221,3 @@ export default function Footer() {
     </footer>
   );
 }
-

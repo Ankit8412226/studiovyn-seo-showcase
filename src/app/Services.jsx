@@ -27,7 +27,7 @@ const Services = () => {
       title: 'Web Development',
       shortDescription: 'Custom websites and web applications built with modern technologies like React, Next.js, and Node.js for optimal performance and scalability.',
       features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure & Scalable'],
-      color: 'from-blue-500 to-cyan-500',
+      color: 'from-emerald-500 to-teal-400',
       seoContent: {
         heading: 'Professional Web Development Services',
         intro: 'Transform your digital presence with custom web development solutions that drive results. Our expert team specializes in creating high-performance, scalable websites and web applications using cutting-edge technologies.',
@@ -68,7 +68,7 @@ const Services = () => {
       title: 'Mobile App Development',
       shortDescription: 'Native and cross-platform mobile applications that deliver seamless user experiences on iOS and Android devices.',
       features: ['Cross-Platform', 'Native Performance', 'Offline Support', 'Push Notifications'],
-      color: 'from-purple-500 to-pink-500',
+      color: 'from-emerald-500 to-lime-400',
       seoContent: {
         heading: 'Expert Mobile App Development Solutions',
         intro: 'Build powerful mobile applications that engage users and drive business growth. We create native and cross-platform apps that deliver exceptional performance and user experience on both iOS and Android.',
@@ -109,7 +109,7 @@ const Services = () => {
       title: 'UI/UX Design',
       shortDescription: 'Beautiful, intuitive designs that prioritize user experience and drive engagement with your brand.',
       features: ['User Research', 'Wireframing', 'Prototyping', 'Brand Identity'],
-      color: 'from-orange-500 to-red-500',
+      color: 'from-teal-500 to-emerald-400',
       seoContent: {
         heading: 'Professional UI/UX Design Services',
         intro: 'Create memorable digital experiences with user-centered design that converts visitors into customers. Our design team combines aesthetics with functionality to deliver interfaces that users love.',
@@ -150,7 +150,7 @@ const Services = () => {
       title: 'E-Commerce Solutions',
       shortDescription: 'Complete e-commerce platforms with payment integration, inventory management, and analytics to grow your online business.',
       features: ['Payment Gateway', 'Inventory System', 'Analytics', 'Multi-vendor'],
-      color: 'from-green-500 to-emerald-500',
+      color: 'from-emerald-500 to-teal-400',
       seoContent: {
         heading: 'Comprehensive E-Commerce Development Services',
         intro: 'Launch and scale your online store with powerful e-commerce solutions built for growth. We create feature-rich platforms that provide seamless shopping experiences and drive sales.',
@@ -191,7 +191,7 @@ const Services = () => {
       title: 'Backend Development',
       shortDescription: 'Robust backend systems and APIs that power your applications with security, reliability, and performance.',
       features: ['RESTful APIs', 'Database Design', 'Cloud Integration', 'Authentication'],
-      color: 'from-indigo-500 to-blue-500',
+      color: 'from-teal-500 to-emerald-500',
       seoContent: {
         heading: 'Professional Backend Development Services',
         intro: 'Power your applications with robust, scalable backend infrastructure. We build secure APIs, design efficient databases, and implement cloud solutions that handle millions of requests reliably.',
@@ -232,7 +232,7 @@ const Services = () => {
       title: 'Digital Marketing',
       shortDescription: 'Strategic digital marketing solutions including SEO, content marketing, and social media to expand your reach.',
       features: ['SEO Strategy', 'Content Marketing', 'Social Media', 'Analytics'],
-      color: 'from-yellow-500 to-orange-500',
+      color: 'from-lime-500 to-emerald-400',
       seoContent: {
         heading: 'Results-Driven Digital Marketing Services',
         intro: 'Grow your online presence and drive qualified traffic with data-driven digital marketing strategies. We combine SEO, content marketing, and social media expertise to deliver measurable results.',
@@ -274,28 +274,29 @@ const Services = () => {
     <>
       <section
         id="services"
-        className="py-20 sm:py-24 lg:py-32 bg-white relative overflow-hidden"
+        className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden scroll-mt-32"
         aria-label="Our professional services"
       >
         {/* Background Decoration */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full filter blur-3xl opacity-20"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-100 rounded-full filter blur-3xl opacity-20"></div>
+          <div className="absolute inset-0 bg-accent-glow opacity-25"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 bg-[#10b981]/20 rounded-full filter blur-3xl opacity-40"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2dd4bf]/20 rounded-full filter blur-3xl opacity-40"></div>
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           {/* Section Header */}
           <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
-            <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-6 font-medium text-sm">
+            <div className="inline-flex items-center space-x-2 bg-[#0f1320] text-emerald-200 px-4 py-2 rounded-full mb-6 font-medium text-sm">
               <Sparkles className="w-4 h-4" aria-hidden="true" />
               <span>What We Offer</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-6 text-gray-900">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-6 text-white">
               Our <span className="gradient-text">Services</span>
             </h2>
 
-            <p className="text-lg text-gray-600 font-primary leading-relaxed">
+            <p className="text-lg text-slate-300 font-primary leading-relaxed">
               Comprehensive digital solutions tailored to your business needs. From concept to deployment, we deliver excellence at every step.
             </p>
           </div>
@@ -307,7 +308,7 @@ const Services = () => {
               return (
                 <article
                   key={index}
-                  className="group bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 hover:border-blue-200 cursor-pointer"
+                  className="group bg-[#121723] rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border border-[#1f2937] hover:border-emerald-400/40 cursor-pointer"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                 >
@@ -317,19 +318,19 @@ const Services = () => {
                   </div>
 
                   {/* Title */}
-                  <h3 className="text-xl sm:text-2xl font-bold font-secondary mb-4 text-gray-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-bold font-secondary mb-4 text-white group-hover:text-emerald-200 transition-colors">
                     {service.title}
                   </h3>
 
                   {/* Description */}
-                  <p className="text-gray-600 font-primary mb-6 leading-relaxed">
+                  <p className="text-slate-300 font-primary mb-6 leading-relaxed">
                     {service.shortDescription}
                   </p>
 
                   {/* Features */}
                   <ul className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center text-sm text-gray-600 font-primary">
+                      <li key={idx} className="flex items-center text-sm text-slate-300 font-primary">
                         <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.color} mr-3`}></div>
                         {feature}
                       </li>
@@ -339,9 +340,9 @@ const Services = () => {
                   {/* View More Button */}
                   <button
                     onClick={() => setSelectedService(service)}
-                    className="inline-flex items-center space-x-2 text-blue-600 font-semibold font-primary group-hover:space-x-3 transition-all"
-                    aria-label={`Learn more about ${service.title}`}
-                  >
+                  className="inline-flex items-center space-x-2 text-emerald-200 font-semibold font-primary group-hover:space-x-3 transition-all"
+                  aria-label={`Learn more about ${service.title}`}
+                >
                     <span>View More</span>
                     <ArrowRight
                       className={`w-4 h-4 transition-transform ${hoveredIndex === index ? 'translate-x-1' : ''}`}
@@ -355,7 +356,7 @@ const Services = () => {
 
           {/* Bottom CTA */}
           <div className="text-center mt-16 sm:mt-20">
-            <p className="text-lg text-gray-600 font-primary mb-6">
+            <p className="text-lg text-slate-300 font-primary mb-6">
               Don't see what you're looking for? We offer custom solutions too!
             </p>
             <button
@@ -376,29 +377,29 @@ const Services = () => {
       {/* Service Detail Modal */}
       {selectedService && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50 backdrop-blur-sm"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm"
           onClick={() => setSelectedService(null)}
         >
           <div
-            className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+            className="bg-[#0f172a] rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto border border-[#1f2937]"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
             <div className={`bg-gradient-to-r ${selectedService.color} p-8 text-white relative`}>
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-4 right-4 p-2 hover:bg-white hover:bg-opacity-20 rounded-full transition-all"
+                className="absolute top-4 right-4 p-2 hover:bg-white/10 rounded-full transition-all"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6" />
               </button>
 
               <div className="flex items-center space-x-4 mb-4">
-                <div className="w-16 h-16 bg-white bg-opacity-20 rounded-xl flex items-center justify-center">
+                <div className="w-16 h-16 bg-white/10 rounded-xl flex items-center justify-center">
                   <selectedService.icon className="w-8 h-8" />
                 </div>
                 <div>
-                  <h2 className="text-3xl font-bold font-secondary">{selectedService.seoContent.heading}</h2>
+                  <h2 className="text-3xl font-bold font-secondary text-white">{selectedService.seoContent.heading}</h2>
                 </div>
               </div>
 
@@ -408,15 +409,15 @@ const Services = () => {
             </div>
 
             {/* Modal Content */}
-            <div className="p-8">
+            <div className="p-8 text-white">
               {/* Stats */}
               <div className="grid grid-cols-3 gap-4 mb-10">
                 {selectedService.seoContent.stats.map((stat, idx) => (
-                  <div key={idx} className="text-center p-4 bg-gray-50 rounded-xl">
+                  <div key={idx} className="text-center p-4 bg-[#111827] rounded-xl border border-[#1f2937]">
                     <div className={`text-3xl font-bold bg-gradient-to-r ${selectedService.color} bg-clip-text text-transparent mb-1`}>
                       {stat.value}
                     </div>
-                    <div className="text-sm text-gray-600 font-primary">{stat.label}</div>
+                    <div className="text-sm text-slate-300 font-primary">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -425,7 +426,7 @@ const Services = () => {
               <div className="mb-10">
                 <div className="flex items-center space-x-2 mb-6">
                   <TrendingUp className={`w-6 h-6 bg-gradient-to-r ${selectedService.color} bg-clip-text text-transparent`} />
-                  <h3 className="text-2xl font-bold font-secondary text-gray-900">Key Benefits</h3>
+                  <h3 className="text-2xl font-bold font-secondary text-white">Key Benefits</h3>
                 </div>
                 <div className="space-y-6">
                   {selectedService.seoContent.benefits.map((benefit, idx) => (
@@ -434,8 +435,8 @@ const Services = () => {
                         <Check className="w-5 h-5 text-white" />
                       </div>
                       <div>
-                        <h4 className="font-semibold text-lg text-gray-900 mb-2 font-secondary">{benefit.title}</h4>
-                        <p className="text-gray-600 font-primary leading-relaxed">{benefit.description}</p>
+                        <h4 className="font-semibold text-lg text-white mb-2 font-secondary">{benefit.title}</h4>
+                        <p className="text-slate-300 font-primary leading-relaxed">{benefit.description}</p>
                       </div>
                     </div>
                   ))}
@@ -446,15 +447,15 @@ const Services = () => {
               <div className="mb-10">
                 <div className="flex items-center space-x-2 mb-6">
                   <Zap className={`w-6 h-6 bg-gradient-to-r ${selectedService.color} bg-clip-text text-transparent`} />
-                  <h3 className="text-2xl font-bold font-secondary text-gray-900">Our Process</h3>
+                  <h3 className="text-2xl font-bold font-secondary text-white">Our Process</h3>
                 </div>
                 <div className="grid gap-4">
                   {selectedService.seoContent.process.map((step, idx) => (
-                    <div key={idx} className="flex items-start space-x-4 p-4 bg-gray-50 rounded-xl">
+                    <div key={idx} className="flex items-start space-x-4 p-4 bg-[#111827] rounded-xl border border-[#1f2937]">
                       <div className={`flex-shrink-0 w-8 h-8 bg-gradient-to-br ${selectedService.color} rounded-full flex items-center justify-center text-white font-bold text-sm`}>
                         {idx + 1}
                       </div>
-                      <p className="text-gray-700 font-primary pt-1">{step}</p>
+                      <p className="text-slate-300 font-primary pt-1">{step}</p>
                     </div>
                   ))}
                 </div>
@@ -464,7 +465,7 @@ const Services = () => {
               <div className="mb-8">
                 <div className="flex items-center space-x-2 mb-6">
                   <Users className={`w-6 h-6 bg-gradient-to-r ${selectedService.color} bg-clip-text text-transparent`} />
-                  <h3 className="text-2xl font-bold font-secondary text-gray-900">Technologies We Use</h3>
+                  <h3 className="text-2xl font-bold font-secondary text-white">Technologies We Use</h3>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {selectedService.seoContent.technologies.map((tech, idx) => (
@@ -479,11 +480,11 @@ const Services = () => {
               </div>
 
               {/* CTA */}
-              <div className="bg-gray-50 rounded-xl p-6 text-center">
-                <h4 className="text-xl font-bold font-secondary text-gray-900 mb-3">
+              <div className="bg-[#111827] rounded-xl p-6 text-center border border-[#1f2937]">
+                <h4 className="text-xl font-bold font-secondary text-white mb-3">
                   Ready to Get Started?
                 </h4>
-                <p className="text-gray-600 font-primary mb-4">
+                <p className="text-slate-300 font-primary mb-4">
                   Let's discuss how our {selectedService.title.toLowerCase()} services can help your business grow.
                 </p>
                 <button

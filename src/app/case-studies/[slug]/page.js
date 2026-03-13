@@ -88,7 +88,8 @@ export default async function CaseStudyPage({ params }) {
   ];
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-24 pb-16 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <Script
         id="case-study-jsonld"
         type="application/ld+json"
@@ -96,19 +97,19 @@ export default async function CaseStudyPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-        <h1 className="text-4xl font-bold font-secondary mb-4">{p.title}</h1>
-        <div className="text-green-600 font-primary mb-2">{p.result}</div>
-        <div className="text-sm text-gray-600 font-primary mb-4">{p.stack}</div>
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
+        <h1 className="text-4xl font-bold font-secondary mb-4 text-white">{p.title}</h1>
+        <div className="text-emerald-300 font-primary mb-2">{p.result}</div>
+        <div className="text-sm text-slate-300 font-primary mb-4">{p.stack}</div>
         <div className="w-full h-64 relative rounded-2xl overflow-hidden mb-6">
           <Image
             src={p.image}
             alt={`${p.title} - StudioVyn case study`}
             fill
-            className="object-cover bg-gray-100"
+            className="object-cover bg-[#0f172a]"
           />
         </div>
-        <article className="text-gray-800 font-primary leading-7 whitespace-pre-line">
+        <article className="text-slate-200 font-primary leading-7 whitespace-pre-line">
           {p.body}
         </article>
         <div className="mt-6 flex gap-3">
@@ -117,12 +118,12 @@ export default async function CaseStudyPage({ params }) {
         </div>
 
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
             Want similar results?
           </h2>
           <p>
-            Explore our <Link className="text-blue-600 underline" href="/services">services</Link> or{' '}
-            <Link className="text-blue-600 underline" href="/contact">book a free consultation</Link>.
+            Explore our <Link className="text-emerald-200 underline" href="/services">services</Link> or{' '}
+            <Link className="text-emerald-200 underline" href="/contact">book a free consultation</Link>.
           </p>
         </SeoProse>
       </section>

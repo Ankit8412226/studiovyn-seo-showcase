@@ -40,18 +40,19 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-[#0b0d12] to-[#0f1320] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-10 sm:mb-16">
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-blue-100 mb-4 sm:mb-6">
-              <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" aria-hidden="true" />
+            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#121723] mb-4 sm:mb-6">
+              <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-200" aria-hidden="true" />
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 text-gray-900">
+            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 text-white">
               Frequently Asked Questions
             </h2>
-            <p className="text-lg text-gray-600 font-primary max-w-2xl mx-auto px-4">
+            <p className="text-lg text-[#94a3b8] font-primary max-w-2xl mx-auto px-4">
               Everything you need to know about our website development services.
             </p>
           </div>
@@ -63,5 +64,3 @@ export default function FAQ() {
     </section>
   );
 }
-
-

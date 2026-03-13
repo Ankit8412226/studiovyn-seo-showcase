@@ -91,7 +91,7 @@ const Modal = ({
       <div
         ref={modalRef}
         className={cn(
-          'relative bg-white rounded-2xl shadow-2xl w-full',
+          'relative bg-[#121723] rounded-2xl shadow-2xl w-full border border-[#1f2937]',
           sizes[size],
           'animate-fade-in-up',
           className
@@ -100,11 +100,11 @@ const Modal = ({
       >
         {/* Header */}
         {(title || showCloseButton) && (
-          <div className="flex items-center justify-between p-6 border-b border-gray-200">
+          <div className="flex items-center justify-between p-6 border-b border-[#1f2937]">
             {title && (
               <h2
                 id="modal-title"
-                className="text-2xl font-bold font-secondary text-gray-900"
+                className="text-2xl font-bold font-secondary text-white"
               >
                 {title}
               </h2>
@@ -112,7 +112,7 @@ const Modal = ({
             {showCloseButton && (
               <button
                 onClick={onClose}
-                className="p-2 rounded-lg hover:bg-gray-100 transition-colors text-gray-500 hover:text-gray-700"
+                className="p-2 rounded-lg hover:bg-[#0f1320] transition-colors text-[#94a3b8] hover:text-white"
                 aria-label="Close modal"
               >
                 <X className="w-5 h-5" />
@@ -129,4 +129,3 @@ const Modal = ({
 };
 
 export default Modal;
-

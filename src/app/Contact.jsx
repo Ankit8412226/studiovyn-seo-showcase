@@ -119,13 +119,13 @@ export default function Contact() {
         showCloseButton={true}
       >
         <div className="text-center py-4">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 className="w-8 h-8 text-green-600" aria-hidden="true" />
+          <div className="w-16 h-16 bg-[#0f1320] rounded-full flex items-center justify-center mx-auto mb-4">
+            <CheckCircle2 className="w-8 h-8 text-emerald-300" aria-hidden="true" />
           </div>
-          <h3 className="text-2xl font-bold font-secondary mb-2 text-gray-900">
+          <h3 className="text-2xl font-bold font-secondary mb-2 text-white">
             Thank You!
           </h3>
-          <p className="text-gray-600 font-primary mb-6">
+          <p className="text-[#94a3b8] font-primary mb-6">
             Thanks for contacting StudioVyn. We'll get back to you within 24 hours!
           </p>
           <Button onClick={() => setShowModal(false)} fullWidth>
@@ -134,18 +134,19 @@ export default function Contact() {
         </div>
       </Modal>
 
-      <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
+        <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-purple-100 mb-6">
-                <MessageSquare className="w-8 h-8 text-blue-600" aria-hidden="true" />
+              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#121723] mb-6">
+                <MessageSquare className="w-8 h-8 text-emerald-200" aria-hidden="true" />
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 text-gray-900">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 text-white">
                 Let's Build Something Great
               </h2>
-              <p className="text-lg text-gray-600 font-primary max-w-2xl mx-auto">
+              <p className="text-lg text-[#94a3b8] font-primary max-w-2xl mx-auto">
                 Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.
               </p>
             </div>
@@ -154,26 +155,26 @@ export default function Contact() {
               {/* Contact Info Cards */}
               <div className="lg:col-span-1 space-y-4">
                 <Card variant="elevated" padding="md" className="text-center lg:text-left">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                    <Mail className="w-6 h-6 text-blue-600" aria-hidden="true" />
+                  <div className="w-12 h-12 bg-[#0f1320] rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
+                    <Mail className="w-6 h-6 text-emerald-200" aria-hidden="true" />
                   </div>
-                  <h3 className="font-semibold font-secondary text-gray-900 mb-2">Email Us</h3>
+                  <h3 className="font-semibold font-secondary text-white mb-2">Email Us</h3>
                   <a
                     href="mailto:tech@studiovyn.in"
-                    className="text-blue-600 hover:text-blue-700 font-primary text-sm"
+                    className="text-emerald-200 hover:text-emerald-100 font-primary text-sm"
                   >
                     tech@studiovyn.in
                   </a>
                 </Card>
 
                 <Card variant="elevated" padding="md" className="text-center lg:text-left">
-                  <div className="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                    <Phone className="w-6 h-6 text-purple-600" aria-hidden="true" />
+                  <div className="w-12 h-12 bg-[#0f1320] rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
+                    <Phone className="w-6 h-6 text-emerald-200" aria-hidden="true" />
                   </div>
-                  <h3 className="font-semibold font-secondary text-gray-900 mb-2">Call Us</h3>
+                  <h3 className="font-semibold font-secondary text-white mb-2">Call Us</h3>
                   <a
                     href="tel:+918529747613"
-                    className="text-blue-600 hover:text-blue-700 font-primary text-sm"
+                    className="text-emerald-200 hover:text-emerald-100 font-primary text-sm"
                   >
                     +91 8529747613
                   </a>

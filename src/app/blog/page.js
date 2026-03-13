@@ -5,9 +5,16 @@ import SeoProse from '@/components/seo/SeoProse';
 import SeoFaq from '@/components/seo/SeoFaq';
 
 export const metadata = {
-  title: 'Blog | StudioVyn',
+  title: 'StudioVyn Blog | Web Development & SEO Insights',
   description:
-    'Guides on web development, SEO, performance, and conversion optimization in India. Learn from StudioVyn’s insights to grow your business online.',
+    'Guides on web development, SEO, performance, and conversion optimization in India from StudioVyn.',
+  keywords: [
+    'StudioVyn blog',
+    'web development insights',
+    'SEO guides India',
+    'Core Web Vitals',
+    'conversion optimization'
+  ],
   alternates: { canonical: '/blog' },
   openGraph: {
     title: 'Blog | StudioVyn',
@@ -51,13 +58,14 @@ export default function BlogIndex() {
   ];
 
   return (
-    <main className="min-h-screen pt-24 pb-16">
+    <main className="min-h-screen pt-32 pb-16 bg-[#0b0d12] relative overflow-hidden">
+      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <section className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h1 className="text-4xl font-bold font-secondary mb-3">
+          <h1 className="text-4xl font-bold font-secondary mb-3 text-white">
             Insights & Guides
           </h1>
-          <p className="text-gray-600 font-primary">
+          <p className="text-slate-300 font-primary">
             Actionable articles to grow your business online.
           </p>
         </div>
@@ -67,29 +75,44 @@ export default function BlogIndex() {
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
-              className="p-6 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition bg-white"
+              className="p-6 rounded-2xl border border-[#1f2937] shadow-sm hover:shadow-md transition bg-[#121723]"
             >
               <div className="w-full h-40 relative rounded-xl mb-4 overflow-hidden">
                 <Image
                   src={p.image}
                   alt={`${p.title} - StudioVyn blog`}
                   fill
-                  className="object-contain bg-gray-100"
+                  className="object-contain bg-[#0f172a]"
                 />
               </div>
-              <h2 className="text-xl font-semibold font-secondary mb-2">
+              <h2 className="text-xl font-semibold font-secondary mb-2 text-white">
                 {p.title}
               </h2>
-              <p className="text-gray-600 font-primary text-sm">
+              <p className="text-[#94a3b8] font-primary text-sm">
                 {(p.body || '').slice(0, 140)}...
               </p>
-              <div className="mt-4 text-blue-600 font-semibold">Read more →</div>
+              <div className="mt-4 text-emerald-200 font-semibold">Read more →</div>
             </Link>
           ))}
         </div>
 
+        <div className="mt-12 rounded-2xl border border-[#1f2937] bg-[#121723] p-6">
+          <h2 className="text-2xl font-bold font-secondary text-white mb-3">
+            Explore StudioVyn services
+          </h2>
+          <p className="text-[#94a3b8] font-primary mb-4">
+            Looking for implementation? StudioVyn delivers web development, SEO, and e-commerce builds that rank and convert.
+          </p>
+          <ul className="space-y-2 text-slate-300 font-primary">
+            <li><Link className="text-emerald-200 underline" href="/services/web-development">Web Development</Link></li>
+            <li><Link className="text-emerald-200 underline" href="/services/ui-ux-design">UI/UX Design</Link></li>
+            <li><Link className="text-emerald-200 underline" href="/services/e-commerce">E-commerce Development</Link></li>
+            <li><Link className="text-emerald-200 underline" href="/services/digital-marketing">Digital Marketing</Link></li>
+          </ul>
+        </div>
+
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-gray-900">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
             SEO + Web Development Guides for Businesses in India
           </h2>
           <p>
@@ -99,9 +122,9 @@ export default function BlogIndex() {
           </p>
           <p>
             Looking for implementation help? Explore our{' '}
-            <Link className="text-blue-600 underline" href="/services">services</Link>, browse{' '}
-            <Link className="text-blue-600 underline" href="/portfolio">portfolio</Link>, or{' '}
-            <Link className="text-blue-600 underline" href="/contact">request a free consultation</Link>.
+            <Link className="text-emerald-200 underline" href="/services">services</Link>, browse{' '}
+            <Link className="text-emerald-200 underline" href="/portfolio">portfolio</Link>, or{' '}
+            <Link className="text-emerald-200 underline" href="/contact">request a free consultation</Link>.
           </p>
         </SeoProse>
       </section>

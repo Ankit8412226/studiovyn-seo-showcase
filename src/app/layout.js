@@ -1,22 +1,22 @@
-import { Inter, Poppins } from "next/font/google";
+import { Manrope, Space_Grotesk } from "next/font/google";
 import Script from "next/script";
 import Footer from "./Footer";
 import "./globals.css";
 import Header from "./Header";
 import RequestProjectModal from "./request-modal";
 
-const inter = Inter({
+const inter = Manrope({
   variable: "--font-inter",
   subsets: ["latin"],
   display: "swap",
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
-const poppins = Poppins({
+const poppins = Space_Grotesk({
   variable: "--font-poppins",
   subsets: ["latin"],
   display: "swap",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -104,6 +104,12 @@ export default function RootLayout({ children }) {
               },
               image: 'https://studiovyn.in/og-image.svg',
               description: 'Leading website development company in India providing professional web design, e-commerce solutions, mobile app development and digital marketing services across Delhi, Kolkata, Bihar and all of India.',
+              slogan: 'Performance-first web development that ranks and converts.',
+              brand: {
+                '@type': 'Brand',
+                name: 'StudioVyn',
+                url: 'https://studiovyn.in'
+              },
               contactPoint: [
                 {
                   '@type': 'ContactPoint',
@@ -119,6 +125,22 @@ export default function RootLayout({ children }) {
                 addressCountry: 'IN',
                 addressRegion: 'Delhi NCR'
               },
+              areaServed: [
+                'India',
+                'Delhi NCR',
+                'Bihar',
+                'West Bengal',
+                'Kolkata'
+              ],
+              knowsAbout: [
+                'Website Development',
+                'Web Design',
+                'E-commerce Development',
+                'Mobile App Development',
+                'UI/UX Design',
+                'Technical SEO',
+                'Core Web Vitals Optimization'
+              ],
               sameAs: [],
               foundingDate: '2021',
               aggregateRating: {
@@ -371,7 +393,7 @@ export default function RootLayout({ children }) {
                   '@id': 'https://studiovyn.in/#nav-ecommerce',
                   name: 'E-Commerce Solutions',
                   description: 'Why StudioVyn - 5+ years experience across industries.',
-                  url: 'https://studiovyn.in/services/ecommerce-development'
+                  url: 'https://studiovyn.in/services/e-commerce'
                 },
                 {
                   '@type': 'SiteNavigationElement',
@@ -392,7 +414,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased font-primary bg-white text-gray-900 text-center sm:text-left">
+      <body className="antialiased font-primary bg-[#0b0d12] text-[#e5e7eb] text-center sm:text-left">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5LDXVGQYYJ"
           strategy="afterInteractive"

@@ -27,20 +27,20 @@ const Textarea = forwardRef(
     const inputId = props.id || generatedId;
 
     const baseStyles =
-      'w-full px-4 py-3 rounded-xl border transition-all duration-200 font-primary text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-0 resize-y';
+      'w-full px-4 py-3 rounded-xl border transition-all duration-200 font-primary text-white placeholder-[#64748b] focus:outline-none focus:ring-2 focus:ring-offset-0 resize-y';
 
     const stateStyles = error
-      ? 'border-red-300 focus:border-red-500 focus:ring-red-500 bg-red-50'
+      ? 'border-red-400 focus:border-red-500 focus:ring-red-500 bg-red-950/30'
       : focused
-      ? 'border-blue-500 focus:border-blue-500 focus:ring-blue-500 bg-white'
-      : 'border-gray-300 focus:border-blue-500 focus:ring-blue-500 bg-white hover:border-gray-400';
+      ? 'border-emerald-400 focus:border-emerald-400 focus:ring-emerald-400 bg-[#0f1320]'
+      : 'border-[#1f2937] focus:border-emerald-400 focus:ring-emerald-400 bg-[#0f1320] hover:border-[#334155]';
 
     return (
       <div className="w-full">
         {label && (
           <label
             htmlFor={inputId}
-            className="block text-sm font-semibold text-gray-700 mb-2 font-primary"
+            className="block text-sm font-semibold text-[#cbd5f5] mb-2 font-primary"
           >
             {label}
             {props.required && <span className="text-red-500 ml-1">*</span>}
@@ -66,7 +66,7 @@ const Textarea = forwardRef(
             {...props}
           />
           {showCount && maxLength && (
-            <div className="absolute bottom-3 right-4 text-xs text-gray-400 font-primary">
+            <div className="absolute bottom-3 right-4 text-xs text-[#94a3b8] font-primary">
               {charCount}/{maxLength}
             </div>
           )}
@@ -81,7 +81,7 @@ const Textarea = forwardRef(
           </p>
         )}
         {helperText && !error && (
-          <p id={`${inputId}-helper`} className="mt-2 text-sm text-gray-500 font-primary">
+          <p id={`${inputId}-helper`} className="mt-2 text-sm text-[#94a3b8] font-primary">
             {helperText}
           </p>
         )}
@@ -93,4 +93,3 @@ const Textarea = forwardRef(
 Textarea.displayName = 'Textarea';
 
 export default Textarea;
-

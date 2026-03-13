@@ -3,13 +3,13 @@ import { Award, CheckCircle2, Shield, Zap } from 'lucide-react';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 bg-white relative overflow-hidden">
+    <section id="about" className="py-24 sm:py-32 bg-[#0b0d12] relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
           <div className="relative">
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-100/50 rounded-3xl -z-10 animate-pulse"></div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100/50 rounded-3xl -z-10 animate-pulse delay-700"></div>
-            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative z-10">
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-emerald-500/20 rounded-3xl -z-10 animate-pulse"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-emerald-500/20 rounded-3xl -z-10 animate-pulse delay-700"></div>
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-[#1f2937] relative z-10">
               <OptimizedImage
                 src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
                 alt="StudioVyn Team Collaboration"
@@ -19,53 +19,53 @@ export default function About() {
               />
             </div>
 
-            <div className="absolute -bottom-10 left-4 right-4 sm:left-10 sm:right-10 bg-white shadow-xl rounded-2xl p-4 sm:p-6 border border-gray-100 z-20">
+            <div className="absolute -bottom-10 left-4 right-4 sm:left-10 sm:right-10 bg-[#121723] shadow-xl rounded-2xl p-4 sm:p-6 border border-[#1f2937] z-20">
                <div className="flex items-center justify-around gap-2 sm:gap-4 text-center">
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold font-secondary text-blue-600">150+</div>
-                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Projects</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-emerald-200">150+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-[#94a3b8] uppercase tracking-widest">Projects</div>
                   </div>
-                  <div className="h-10 w-px bg-gray-100"></div>
+                  <div className="h-10 w-px bg-[#1f2937]"></div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold font-secondary text-purple-600">98%</div>
-                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Happy Clients</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-emerald-300">98%</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-[#94a3b8] uppercase tracking-widest">Happy Clients</div>
                   </div>
-                  <div className="h-10 w-px bg-gray-100"></div>
+                  <div className="h-10 w-px bg-[#1f2937]"></div>
                   <div>
-                    <div className="text-xl sm:text-2xl font-bold font-secondary text-green-600">300+</div>
-                    <div className="text-[10px] sm:text-xs font-semibold text-gray-500 uppercase tracking-widest">Locations</div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-emerald-200">300+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-[#94a3b8] uppercase tracking-widest">Locations</div>
                   </div>
                </div>
             </div>
           </div>
 
           <div>
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-600 font-bold text-sm mb-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#0f1320] text-emerald-200 font-bold text-sm mb-6">
                <Award className="w-4 h-4" /> Who We Are
             </div>
-            <h2 className="text-4xl sm:text-5xl font-bold font-secondary mb-6 text-gray-900">Empowering Businesses with <span className="text-blue-600">Digital Excellence</span></h2>
-            <p className="text-xl text-gray-600 font-primary mb-8 leading-relaxed">
-              We are a results-driven web and software studio serving businesses across India. From our hubs in Bihar, West Bengal, and Delhi NCR, we build modern digital experiences that are fast, secure, and built to scale.
+            <h2 className="text-4xl sm:text-5xl font-bold font-secondary mb-6 text-white">Empowering Businesses with <span className="text-emerald-200">Digital Excellence</span></h2>
+            <p className="text-xl text-[#94a3b8] font-primary mb-8 leading-relaxed">
+              StudioVyn is a results-driven web and software studio serving businesses across India. From our hubs in Bihar, West Bengal, and Delhi NCR, we build modern digital experiences that are fast, secure, and built to scale.
             </p>
 
             <div className="space-y-4 mb-10">
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-300" />
                 </div>
-                <p className="text-gray-700 font-medium">Local SEO strategies tailored for Indian markets (Bihar, Kolkata, Delhi).</p>
+                <p className="text-[#cbd5f5] font-medium">Local SEO strategies tailored for Indian markets (Bihar, Kolkata, Delhi).</p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-300" />
                 </div>
-                <p className="text-gray-700 font-medium">Performance-first engineering using React, Next.js, and Node.js.</p>
+                <p className="text-[#cbd5f5] font-medium">Performance-first engineering using React, Next.js, and Node.js.</p>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center shrink-0 mt-1">
-                  <CheckCircle2 className="w-4 h-4 text-green-600" />
+                <div className="w-6 h-6 rounded-full bg-emerald-500/20 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-emerald-300" />
                 </div>
-                <p className="text-gray-700 font-medium">Transparent communication and on-time delivery guaranteed.</p>
+                <p className="text-[#cbd5f5] font-medium">Transparent communication and on-time delivery guaranteed.</p>
               </div>
             </div>
 
@@ -77,25 +77,25 @@ export default function About() {
         </div>
 
         {/* Why We Win Section */}
-        <div className="p-10 sm:p-16 rounded-[2.5rem] bg-gray-900 text-white relative overflow-hidden mb-24">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full filter blur-3xl"></div>
+        <div className="p-10 sm:p-16 rounded-[2.5rem] bg-[#0f1320] text-white relative overflow-hidden mb-24">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/20 rounded-full filter blur-3xl"></div>
           <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-3xl font-bold font-secondary mb-4">Why We <span className="text-blue-400">Win in Search</span></h3>
-              <p className="text-gray-300 font-primary text-lg mb-8">We don't just build websites; we build marketing machines optimized for the Google search algorithm.</p>
+              <h3 className="text-3xl font-bold font-secondary mb-4">Why We <span className="text-emerald-200">Win in Search</span></h3>
+              <p className="text-[#94a3b8] font-primary text-lg mb-8">We don't just build websites; we build marketing machines optimized for the Google search algorithm.</p>
               <div className="grid sm:grid-cols-2 gap-6">
                 <div className="flex gap-4">
-                  <Zap className="w-6 h-6 text-blue-400 shrink-0" />
+                  <Zap className="w-6 h-6 text-emerald-200 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Core Web Vitals</h4>
-                    <p className="text-sm text-gray-400">Optimized LCP, CLS, and INP scores by default.</p>
+                    <p className="text-sm text-[#94a3b8]">Optimized LCP, CLS, and INP scores by default.</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <Shield className="w-6 h-6 text-blue-400 shrink-0" />
+                  <Shield className="w-6 h-6 text-emerald-200 shrink-0" />
                   <div>
                     <h4 className="font-bold mb-1">Tech SEO</h4>
-                    <p className="text-sm text-gray-400">Clean architecture and automated schema injection.</p>
+                    <p className="text-sm text-[#94a3b8]">Clean architecture and automated schema injection.</p>
                   </div>
                 </div>
               </div>
@@ -105,28 +105,28 @@ export default function About() {
                   <div>
                     <div className="flex justify-between mb-2">
                        <span className="font-bold">Performance Optimization</span>
-                       <span className="text-blue-400">100%</span>
+                       <span className="text-emerald-200">100%</span>
                     </div>
                     <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                       <div className="h-full bg-blue-400 w-full"></div>
+                       <div className="h-full bg-emerald-400 w-full"></div>
                     </div>
                   </div>
                   <div>
                     <div className="flex justify-between mb-2">
                        <span className="font-bold">Local SEO Readiness</span>
-                       <span className="text-blue-400">98%</span>
+                       <span className="text-emerald-200">98%</span>
                     </div>
                     <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                       <div className="h-full bg-blue-400 w-[98%]"></div>
+                       <div className="h-full bg-emerald-400 w-[98%]"></div>
                     </div>
                   </div>
                   <div>
                     <div className="flex justify-between mb-2">
                        <span className="font-bold">Conversion-Focused Design</span>
-                       <span className="text-blue-400">95%</span>
+                       <span className="text-emerald-200">95%</span>
                     </div>
                     <div className="h-2 w-full bg-white/10 rounded-full overflow-hidden">
-                       <div className="h-full bg-blue-400 w-[95%]"></div>
+                       <div className="h-full bg-emerald-400 w-[95%]"></div>
                     </div>
                   </div>
                </div>
@@ -137,8 +137,8 @@ export default function About() {
         {/* Engineering Culture / Workspace Gallery */}
         <div className="mt-24">
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold font-secondary text-gray-900 mb-4">Our Engineering <span className="text-blue-600">Workspace</span></h3>
-            <p className="text-gray-600 font-primary">Where the magic happens—crafting high-performance code and scalable architectures.</p>
+            <h3 className="text-3xl font-bold font-secondary text-white mb-4">Our Engineering <span className="text-emerald-200">Workspace</span></h3>
+            <p className="text-[#94a3b8] font-primary">Where the magic happens—crafting high-performance code and scalable architectures.</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
