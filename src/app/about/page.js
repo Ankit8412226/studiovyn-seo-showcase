@@ -67,15 +67,33 @@ export default function AboutPage() {
       },
     },
     mainEntity: {
-      '@type': 'Person',
-      name: 'Ankit Kumar',
-      jobTitle: 'Founder & Lead Engineer',
-      worksFor: {
-        '@type': 'Organization',
-        name: 'StudioVyn',
-        url: 'https://studiovyn.in',
-      },
-      nationality: 'Indian',
+      '@type': 'Organization',
+      name: 'StudioVyn',
+      url: 'https://studiovyn.in',
+      founder: [
+        {
+          '@type': 'Person',
+          name: 'Ayush Anand',
+          jobTitle: 'CEO',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'StudioVyn',
+            url: 'https://studiovyn.in',
+          },
+          nationality: 'Indian',
+        },
+        {
+          '@type': 'Person',
+          name: 'Ankit Kumar',
+          jobTitle: 'Co-Founder & Lead Engineer',
+          worksFor: {
+            '@type': 'Organization',
+            name: 'StudioVyn',
+            url: 'https://studiovyn.in',
+          },
+          nationality: 'Indian',
+        },
+      ],
     },
   };
 
