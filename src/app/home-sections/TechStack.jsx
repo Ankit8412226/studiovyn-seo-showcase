@@ -10,7 +10,7 @@ export default function TechStack() {
     { name: 'Redis', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg' },
     { name: 'Vercel', logo: '/vercel.svg' },
     { name: 'AWS', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg' },
-    { name: 'Prisma', logo: 'https://raw.githubusercontent.com/prisma/presskit/main/Assets/Logos/prisma-logo.svg' },
+    { name: 'Prisma', logo: '/prisma.svg' },
     { name: 'GraphQL', logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' },
     { name: 'Stripe', logo: 'https://upload.wikimedia.org/wikipedia/commons/3/3f/Stripe_Logo%2C_revised_2016.svg' },
     { name: 'Playwright', logo: 'https://playwright.dev/img/playwright-logo.svg' },
