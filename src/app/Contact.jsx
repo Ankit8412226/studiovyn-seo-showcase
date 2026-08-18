@@ -1,12 +1,11 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MessageSquare, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, Phone, MessageSquare, CheckCircle2, AlertCircle, Sparkles } from 'lucide-react';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
 import Button from '@/components/ui/Button';
 import Modal from '@/components/ui/Modal';
-import Card from '@/components/ui/Card';
 
 export default function Contact() {
   const [status, setStatus] = useState('idle');
@@ -20,19 +19,11 @@ export default function Contact() {
     message: '',
   });
 
-  const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  const validatePhone = (phone) => {
-    if (!phone) return true; // Optional field
-    return /^[\d\s\-\+\(\)]+$/.test(phone);
-  };
+  const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors((prev) => ({ ...prev, [name]: '' }));
     }
@@ -40,37 +31,24 @@ export default function Contact() {
 
   const validateForm = () => {
     const newErrors = {};
-
-    if (!formData.name.trim()) {
-      newErrors.name = 'Name is required';
-    }
-
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email.trim()) {
       newErrors.email = 'Email is required';
     } else if (!validateEmail(formData.email)) {
       newErrors.email = 'Please enter a valid email address';
     }
-
-    if (formData.phone && !validatePhone(formData.phone)) {
-      newErrors.phone = 'Please enter a valid phone number';
-    }
-
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
     } else if (formData.message.trim().length < 10) {
       newErrors.message = 'Message must be at least 10 characters';
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setStatus('submitting');
     try {
@@ -81,33 +59,20 @@ export default function Contact() {
       });
 
       const data = await res.json();
-
-      if (!res.ok || !data.ok) {
-        throw new Error(data.message || 'Failed to send message');
-      }
+      if (!res.ok || !data.ok) throw new Error(data.message || 'Failed to send message');
 
       setStatus('success');
       setShowModal(true);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        message: '',
-      });
+      setFormData({ name: '', email: '', company: '', phone: '', message: '' });
       setErrors({});
     } catch (error) {
       setStatus('error');
-      console.error('Contact form error:', error);
-      setTimeout(() => {
-        setStatus('idle');
-      }, 3000);
+      setTimeout(() => setStatus('idle'), 3000);
     }
   };
 
   return (
     <>
-      {/* Success Modal */}
       <Modal
         isOpen={showModal}
         onClose={() => {
@@ -119,14 +84,12 @@ export default function Contact() {
         showCloseButton={true}
       >
         <div className="text-center py-4">
-          <div className="w-16 h-16 bg-[#0f1320] rounded-full flex items-center justify-center mx-auto mb-4">
-            <CheckCircle2 className="w-8 h-8 text-emerald-300" aria-hidden="true" />
+          <div className="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4 text-[#34d399]">
+            <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="text-2xl font-bold font-secondary mb-2 text-white">
-            Thank You!
-          </h3>
-          <p className="text-[#94a3b8] font-primary mb-6">
-            Thanks for contacting StudioVyn. We'll get back to you within 24 hours!
+          <h3 className="text-2xl font-bold font-secondary mb-2 text-white">Proposal Request Received</h3>
+          <p className="text-slate-300 font-primary text-sm mb-6">
+            Thanks for reaching out to StudioVyn. Our senior software director will review your requirements and respond within 24 hours.
           </p>
           <Button onClick={() => setShowModal(false)} fullWidth>
             Close
@@ -134,142 +97,131 @@ export default function Contact() {
         </div>
       </Modal>
 
-      <section id="contact" className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
-        <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section id="contact-form" className="py-24 sm:py-32 bg-[#07090e] bg-grid-pattern relative overflow-hidden border-t border-white/10">
+        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+          
           <div className="max-w-4xl mx-auto">
-            {/* Section Header */}
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[#121723] mb-6">
-                <MessageSquare className="w-8 h-8 text-emerald-200" aria-hidden="true" />
+            {/* Header */}
+            <div className="text-center mb-16">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+                <MessageSquare className="w-3.5 h-3.5" />
+                <span>Start a Project</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 text-white">
-                Let's Build Something Great
+              <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+                Let’s build something <span className="text-gradient-emerald">exceptional together.</span>
               </h2>
-              <p className="text-lg text-[#94a3b8] font-primary max-w-2xl mx-auto">
-                Tell us about your project and we'll get back to you within 24 hours with a detailed proposal.
+              <p className="text-slate-300 text-base sm:text-lg font-primary max-w-xl mx-auto">
+                Tell us about your digital product goals. We'll reply within 24 hours with an itemized scope and proposal.
               </p>
             </div>
 
-            <div className="grid lg:grid-cols-3 gap-8">
-              {/* Contact Info Cards */}
-              <div className="lg:col-span-1 space-y-4">
-                <Card variant="elevated" padding="md" className="text-center lg:text-left">
-                  <div className="w-12 h-12 bg-[#0f1320] rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                    <Mail className="w-6 h-6 text-emerald-200" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-semibold font-secondary text-white mb-2">Email Us</h3>
-                  <a
-                    href="mailto:tech@studiovyn.in"
-                    className="text-emerald-200 hover:text-emerald-100 font-primary text-sm"
-                  >
+            <div className="grid lg:grid-cols-12 gap-8 items-start">
+              {/* Left Contact Cards — 4 COLS */}
+              <div className="lg:col-span-4 space-y-4">
+                <div className="glass-card p-6 rounded-2xl border border-white/10">
+                  <Mail className="w-6 h-6 text-[#34d399] mb-3" />
+                  <h3 className="font-secondary font-bold text-white text-base mb-1">Direct Email</h3>
+                  <a href="mailto:tech@studiovyn.in" className="text-xs font-mono text-slate-300 hover:text-[#34d399] transition-colors">
                     tech@studiovyn.in
                   </a>
-                </Card>
+                </div>
 
-                <Card variant="elevated" padding="md" className="text-center lg:text-left">
-                  <div className="w-12 h-12 bg-[#0f1320] rounded-xl flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                    <Phone className="w-6 h-6 text-emerald-200" aria-hidden="true" />
-                  </div>
-                  <h3 className="font-semibold font-secondary text-white mb-2">Call Us</h3>
-                  <a
-                    href="tel:+918529747613"
-                    className="text-emerald-200 hover:text-emerald-100 font-primary text-sm"
-                  >
+                <div className="glass-card p-6 rounded-2xl border border-white/10">
+                  <Phone className="w-6 h-6 text-[#34d399] mb-3" />
+                  <h3 className="font-secondary font-bold text-white text-base mb-1">Direct Phone</h3>
+                  <a href="tel:+918529747613" className="text-xs font-mono text-slate-300 hover:text-[#34d399] transition-colors">
                     +91 8529747613
                   </a>
-                </Card>
+                </div>
+
+                <div className="glass-card p-6 rounded-2xl border border-white/10 bg-[#0d121d]">
+                  <div className="text-xs font-mono text-slate-400 mb-2">✓ Senior Engineer Audit</div>
+                  <div className="text-xs font-mono text-slate-400 mb-2">✓ Fixed Price Guarantee</div>
+                  <div className="text-xs font-mono text-slate-400">✓ 100% Core Web Vitals Standard</div>
+                </div>
               </div>
 
-              {/* Contact Form */}
-              <div className="lg:col-span-2">
-                <Card variant="elevated" padding="lg">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Input
-                        label="Full Name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        error={errors.name}
-                        required
-                        placeholder="John Doe"
-                      />
-                      <Input
-                        label="Email Address"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        error={errors.email}
-                        required
-                        placeholder="john@example.com"
-                        icon={<Mail className="w-4 h-4" />}
-                      />
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                      <Input
-                        label="Company (Optional)"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        error={errors.company}
-                        placeholder="Your Company"
-                      />
-                      <Input
-                        label="Phone (Optional)"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        error={errors.phone}
-                        placeholder="+91 9876543210"
-                        icon={<Phone className="w-4 h-4" />}
-                      />
-                    </div>
-
-                    <Textarea
-                      label="Project Details"
-                      name="message"
-                      value={formData.message}
+              {/* Form — 8 COLS */}
+              <div className="lg:col-span-8 glass-card p-8 sm:p-10 rounded-2xl border border-white/15 bg-[#0d121d]">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <Input
+                      label="Your Full Name"
+                      name="name"
+                      value={formData.name}
                       onChange={handleChange}
-                      error={errors.message}
+                      error={errors.name}
                       required
-                      rows={6}
-                      placeholder="Tell us about your project, goals, timeline, and any specific requirements..."
-                      showCount
-                      maxLength={1000}
-                      helperText="Minimum 10 characters required"
+                      placeholder="John Doe"
                     />
+                    <Input
+                      label="Work Email Address"
+                      name="email"
+                      type="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      error={errors.email}
+                      required
+                      placeholder="john@company.com"
+                    />
+                  </div>
 
-                    {status === 'error' && (
-                      <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-xl">
-                        <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-                        <p className="text-sm text-red-600 font-primary">
-                          Something went wrong. Please try again or contact us directly.
-                        </p>
-                      </div>
-                    )}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <Input
+                      label="Company / Brand (Optional)"
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      error={errors.company}
+                      placeholder="Your Company Name"
+                    />
+                    <Input
+                      label="Phone Number (Optional)"
+                      name="phone"
+                      type="tel"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      error={errors.phone}
+                      placeholder="+91 9876543210"
+                    />
+                  </div>
 
-                    <Button
-                      type="submit"
-                      disabled={status === 'submitting'}
-                      loading={status === 'submitting'}
-                      fullWidth
-                      size="lg"
-                    >
-                      {status === 'submitting' ? 'Sending...' : 'Request a Proposal'}
-                    </Button>
+                  <Textarea
+                    label="Project Scope & Requirements"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    error={errors.message}
+                    required
+                    rows={5}
+                    placeholder="Briefly describe your product goals, timeline, and budget constraints..."
+                    maxLength={1000}
+                  />
 
-                    <p className="text-xs text-gray-500 font-primary text-center">
-                      By submitting this form, you agree to our privacy policy. We'll never spam you.
-                    </p>
-                  </form>
-                </Card>
+                  {status === 'error' && (
+                    <div className="flex items-center gap-2 p-4 bg-red-500/10 border border-red-500/20 rounded-xl text-red-400 text-sm">
+                      <AlertCircle className="w-5 h-5 shrink-0" />
+                      <span>Something went wrong. Please try again or email tech@studiovyn.in directly.</span>
+                    </div>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={status === 'submitting'}
+                    className="w-full py-4 px-6 rounded-xl font-secondary font-bold text-base text-black bg-[#34d399] hover:bg-[#10b981] shadow-xl shadow-emerald-500/25 transition-all"
+                  >
+                    {status === 'submitting' ? 'Submitting Proposal Request...' : 'Get Free Proposal & Timeline'}
+                  </button>
+
+                  <p className="text-[11px] text-slate-400 font-mono text-center">
+                    By submitting this form, you agree to our privacy standards. No spam guarantee.
+                  </p>
+                </form>
               </div>
+
             </div>
           </div>
+
         </div>
       </section>
     </>

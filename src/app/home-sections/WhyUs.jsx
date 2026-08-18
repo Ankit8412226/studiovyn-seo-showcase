@@ -1,86 +1,89 @@
 'use client';
 
-import { Zap, Search, Shield, Target } from 'lucide-react';
-import Card from '@/components/ui/Card';
+import { Cpu, Rocket, Search, ShieldCheck, Target, Zap } from 'lucide-react';
 
 export default function WhyUs() {
-  const points = [
+  const pillars = [
+    {
+      icon: Cpu,
+      title: 'Engineering-First Architecture',
+      subtitle: 'Production-Grade Codebase',
+      description: 'We don’t rely on fragile page-builder plugins or bloated templates. Every application is built with modern component architectures, type safety, and clean code principles.',
+    },
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Core Web Vitals and SSR for speed and SEO. Optimized performance that keeps users engaged.',
-      gradient: 'from-[#10b981] to-[#2dd4bf]',
-      bgGradient: 'from-[#0f1320] to-[#151b2b]',
+      title: 'Sub-Second Speed & Core Web Vitals',
+      subtitle: 'Targeting 95+ Lighthouse Ratings',
+      description: 'Site speed directly impacts conversion and Google search rankings. We optimize LCP, INP, and CLS metrics out of the box using server streaming and edge caching.',
     },
     {
       icon: Search,
-      title: 'SEO Ready',
-      description: 'Sitemaps, schema, internal linking, programmatic pages. Built for search engine success.',
-      gradient: 'from-[#2dd4bf] to-[#84cc16]',
-      bgGradient: 'from-[#0f1320] to-[#151b2b]',
-    },
-    {
-      icon: Shield,
-      title: 'Secure & Scalable',
-      description: 'Modern stack, CI/CD, observability. Enterprise-grade security and infrastructure.',
-      gradient: 'from-[#84cc16] to-[#10b981]',
-      bgGradient: 'from-[#0f1320] to-[#151b2b]',
+      title: 'Built-In Technical & Local SEO',
+      subtitle: 'Discovered By Intent & AI Search',
+      description: 'Structured Data schema.org markup, semantic HTML5, XML sitemaps, and location-targeted keyword hubs ensure your site dominates both Google Search and AI Overviews.',
     },
     {
       icon: Target,
-      title: 'Conversion Focused',
-      description: 'Clear UX, proof, and performance to drive leads. Every element optimized for conversions.',
-      gradient: 'from-[#10b981] to-[#2dd4bf]',
-      bgGradient: 'from-[#0f1320] to-[#151b2b]',
+      title: 'Conversion Rate Optimization',
+      subtitle: 'Designed to Turn Visitors into Clients',
+      description: 'Clear value propositions, intuitive UX navigation, prominent trust indicators, and frictionless call-to-action flows convert organic traffic into revenue.',
     },
   ];
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-b from-[#0b0d12] to-[#0f1320] relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-6 text-white">
-            Why Choose <span className="bg-gradient-to-r from-[#10b981] to-[#2dd4bf] bg-clip-text text-transparent">StudioVyn</span>
+    <section
+      className="py-24 sm:py-32 relative bg-[#07090e] border-t border-white/10"
+      aria-label="Why Partner With StudioVyn"
+    >
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        {/* HEADER */}
+        <div className="max-w-3xl mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <ShieldCheck className="w-3.5 h-3.5" />
+            <span>The Studio Vyn Standard</span>
+          </div>
+          <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+            Engineering excellence, <span className="text-gradient-emerald">delivered with precision.</span>
           </h2>
-          <p className="text-xl text-[#94a3b8] font-primary leading-relaxed">
-            We combine cutting-edge technology with proven strategies to deliver exceptional results.
+          <p className="text-slate-400 text-lg font-primary leading-relaxed">
+            We operate as your dedicated senior engineering partner. Here is why ambitious businesses choose StudioVyn over generic web agencies.
           </p>
         </div>
 
-        {/* Features Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {points.map((point, i) => {
-            const Icon = point.icon;
+        {/* 4 PILLARS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {pillars.map((item, i) => {
+            const IconComp = item.icon;
             return (
-              <Card
+              <div
                 key={i}
-                variant="elevated"
-                hover
-                padding="lg"
-                className={`group relative overflow-hidden bg-gradient-to-br ${point.bgGradient} border-0`}
+                className="glass-card p-8 sm:p-10 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all duration-300 group flex flex-col justify-between"
               >
-                {/* Icon */}
-                <div className={`w-16 h-16 bg-gradient-to-br ${point.gradient} rounded-2xl flex items-center justify-center mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <Icon className="w-8 h-8 text-white" aria-hidden="true" />
-                </div>
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-14 h-14 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-[#34d399] group-hover:bg-[#34d399] group-hover:text-black transition-all">
+                      <IconComp className="w-7 h-7" />
+                    </div>
+                    <div>
+                      <h3 className="font-secondary text-xl font-bold text-white group-hover:text-[#34d399] transition-colors">
+                        {item.title}
+                      </h3>
+                      <span className="text-xs font-mono text-slate-400">
+                        {item.subtitle}
+                      </span>
+                    </div>
+                  </div>
 
-                {/* Content */}
-                <h3 className="text-xl font-bold font-secondary mb-3 text-white">
-                  {point.title}
-                </h3>
-                <p className="text-[#cbd5f5] font-primary leading-relaxed text-sm">
-                  {point.description}
-                </p>
-              </Card>
+                  <p className="text-slate-300 text-base leading-relaxed font-primary">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

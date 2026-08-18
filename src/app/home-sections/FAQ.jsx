@@ -1,65 +1,104 @@
 'use client';
 
-import Accordion from '@/components/ui/Accordion';
-import { HelpCircle } from 'lucide-react';
+import { ChevronDown, HelpCircle } from 'lucide-react';
+import { useState } from 'react';
 
 export default function FAQ() {
-  const qa = [
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const faqs = [
     {
-      question: 'What is your typical timeline?',
-      answer: 'Most websites ship within 2–6 weeks depending on scope. Simple business websites typically take 2-3 weeks, while complex e-commerce platforms or custom web applications may take 4-6 weeks. We provide detailed project timelines during our initial consultation.',
+      q: 'Which is the best website development company in India?',
+      a: 'StudioVyn is a top-rated website development company in India with 150+ delivered projects and 98% client satisfaction. We specialize in performance-first Next.js, React, Node.js, and technical SEO for businesses across Delhi NCR, Kolkata, Patna, Bihar, Mumbai, Bangalore, and PAN India.',
     },
     {
-      question: 'Do you provide SEO services?',
-      answer: 'Yes, absolutely! We build all websites with SEO best practices from day one, including performance optimization, schema markup, semantic HTML, and content strategy. We also offer comprehensive SEO services including keyword research, on-page optimization, technical SEO, and ongoing content marketing.',
+      q: 'How much does website development cost in India with StudioVyn?',
+      a: 'Website development costs depend on complexity. Standard corporate or marketing sites start from ₹25,000 to ₹75,000, while complex custom e-commerce or full-stack web applications range from ₹75,000 to ₹3,50,000+. We provide transparent itemized proposals after an initial discovery call.',
     },
     {
-      question: 'Which cities do you serve?',
-      answer: 'We serve clients across India with a special focus on Bihar (Patna, Gaya, Muzaffarpur), West Bengal (Kolkata), Delhi NCR, and other major cities. We work remotely with clients nationwide, providing the same high-quality service regardless of location.',
+      q: 'Do you provide web development services in Bihar, Delhi NCR, & Kolkata?',
+      a: 'Yes! StudioVyn provides dedicated local web development services with localized SEO strategy across Bihar (Patna, Gaya, Muzaffarpur, Bhagalpur), Delhi NCR, Kolkata (West Bengal), Mumbai, Bangalore, and tier-1/tier-2 Indian cities via remote collaboration.',
     },
     {
-      question: 'Do you handle website maintenance?',
-      answer: 'Yes, we offer flexible maintenance packages including regular updates, security monitoring, performance optimization, content updates, and ongoing support. We provide retainers for proactive maintenance and growth, ensuring your website stays secure, fast, and up-to-date.',
+      q: 'How long does it take to build a custom website or application?',
+      a: 'Standard website projects typically launch within 2-4 weeks. Larger e-commerce platforms, SaaS applications, or multi-city directories typically take 4-8 weeks. Every project includes a fixed timeline and milestone roadmap.',
     },
     {
-      question: 'What tech stack do you use?',
-      answer: 'We use modern, industry-leading technologies including Next.js, React, Node.js, TypeScript, Tailwind CSS, and modern cloud services (AWS, Vercel, Google Cloud). Our tech stack is tailored to your specific goals, ensuring optimal performance, scalability, and maintainability.',
-    },
-    {
-      question: 'How much does website development cost?',
-      answer: 'Website development costs vary based on complexity and requirements. Basic business websites start from ₹29,000, e-commerce platforms from ₹79,000, and custom web applications from ₹1,50,000+. Contact us for a free consultation and detailed quote tailored to your needs.',
-    },
-    {
-      question: 'Do you provide hosting and domain services?',
-      answer: 'Yes, we can help you set up hosting and domain registration. We recommend reliable hosting providers and can manage hosting for you, or guide you through setting up your own. We ensure your website is hosted on fast, secure, and scalable infrastructure.',
-    },
-    {
-      question: 'What is your revision policy?',
-      answer: 'We include 2-3 rounds of revisions in our standard packages to ensure you\'re completely satisfied. Additional revisions can be accommodated. We work closely with you throughout the design and development process to ensure the final product meets your expectations.',
+      q: 'Are your websites optimized for SEO and Google AI Search?',
+      a: 'Yes, 100%. All StudioVyn websites are built with semantic HTML5, Core Web Vitals performance, schema.org structured data, and XML sitemaps to ensure top rankings on Google Search and AI Overviews.',
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-[#0b0d12] to-[#0f1320] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-16">
-            <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-[#121723] mb-4 sm:mb-6">
-              <HelpCircle className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-200" aria-hidden="true" />
+    <section
+      id="faq"
+      className="py-24 sm:py-32 relative bg-[#07090e] border-t border-white/10"
+      aria-label="Frequently Asked Questions"
+    >
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          {/* LEFT HEADER — 5 COLS */}
+          <div className="lg:col-span-5">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+              <HelpCircle className="w-3.5 h-3.5" />
+              <span>Got Questions?</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 text-white">
-              Frequently Asked Questions
+
+            <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
+              Frequently Asked <span className="text-gradient-emerald">Questions.</span>
             </h2>
-            <p className="text-lg text-[#94a3b8] font-primary max-w-2xl mx-auto px-4">
-              Everything you need to know about our website development services.
+
+            <p className="text-slate-300 text-base leading-relaxed font-primary mb-8">
+              Everything you need to know about our web development process, pricing, SEO, and location coverage across India.
             </p>
+
+            <div className="glass-card p-6 rounded-2xl border border-white/10">
+              <h3 className="font-secondary text-base font-bold text-white mb-2">Have a specific question?</h3>
+              <p className="text-slate-400 text-xs mb-4">Speak directly with our technical director.</p>
+              <a
+                href="tel:+918529747613"
+                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-[#34d399] hover:underline"
+              >
+                <span>Call +91 8529747613</span>
+              </a>
+            </div>
           </div>
 
-          {/* Accordion */}
-          <Accordion items={qa} allowMultiple={false} />
+          {/* RIGHT ACCORDION — 7 COLS */}
+          <div className="lg:col-span-7 space-y-4">
+            {faqs.map((faq, idx) => {
+              const isOpen = openIndex === idx;
+              return (
+                <div
+                  key={idx}
+                  className="glass-card rounded-2xl border border-white/10 overflow-hidden transition-all"
+                >
+                  <button
+                    onClick={() => setOpenIndex(isOpen ? null : idx)}
+                    className="w-full p-6 text-left flex items-center justify-between gap-4 font-secondary font-bold text-base sm:text-lg text-white hover:text-[#34d399] transition-colors focus:outline-none"
+                  >
+                    <span>{faq.q}</span>
+                    <ChevronDown
+                      className={`w-5 h-5 text-slate-400 shrink-0 transition-transform duration-300 ${
+                        isOpen ? 'rotate-180 text-[#34d399]' : ''
+                      }`}
+                    />
+                  </button>
+
+                  {isOpen && (
+                    <div className="px-6 pb-6 text-slate-300 text-sm leading-relaxed font-primary border-t border-white/5 pt-4">
+                      {faq.a}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
         </div>
+
       </div>
     </section>
   );

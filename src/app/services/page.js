@@ -1,32 +1,20 @@
 import Link from 'next/link';
+import { ArrowRight, Code2, Sparkles } from 'lucide-react';
 import { services } from './data';
 
 export const metadata = {
-  title: 'Our Services | StudioVyn - Professional Web Development & Digital Solutions',
+  title: 'Our Services | StudioVyn — Full-Stack Digital Product Studio',
   description:
-    'StudioVyn. Professional web development and digital marketing services. Web development, mobile apps, UI/UX design, e-commerce solutions, SEO & digital marketing. 150+ projects, 98% satisfaction.',
+    'StudioVyn digital engineering services: Custom web apps, Next.js development, e-commerce storefronts, mobile applications, backend APIs, and technical SEO across India.',
   keywords: 'web development services, mobile app development, UI/UX design, e-commerce development, digital marketing services, SEO services India, web design company',
   alternates: { canonical: '/services' },
   openGraph: {
-    title: 'Our Services | StudioVyn - Web Development & Digital Solutions',
-    description: 'Professional web development and digital marketing services. Custom websites, mobile apps, e-commerce & SEO.',
+    title: 'Our Services | StudioVyn — Web Development & Digital Solutions',
+    description: 'Professional web development and digital engineering services across India.',
     url: 'https://studiovyn.in/services',
     type: 'website',
     siteName: 'StudioVyn',
-    images: [
-      {
-        url: 'https://studiovyn.in/og-image.svg',
-        width: 1200,
-        height: 630,
-        alt: 'StudioVyn Services',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Our Services | StudioVyn',
-    description: 'Professional web development and digital marketing services across India.',
-    images: ['https://studiovyn.in/og-image.svg'],
+    images: [{ url: 'https://studiovyn.in/og-image.svg', width: 1200, height: 630, alt: 'StudioVyn Services' }],
   },
 };
 
@@ -55,70 +43,103 @@ export default function ServicesIndexPage() {
   };
 
   return (
-    <main className="min-h-screen pt-32 pb-20 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+    <main className="min-h-screen pt-32 pb-24 bg-[#07090e] bg-grid-pattern relative overflow-hidden">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-2xl mx-auto mb-12">
-          <h1 className="text-4xl sm:text-5xl font-bold font-secondary mb-4 text-white">Our Services</h1>
-          <p className="text-slate-300 font-primary">High-impact digital solutions tailored to your goals.</p>
+      
+      {/* Radial glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-emerald-500/10 blur-[160px] pointer-events-none rounded-full" />
+
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        {/* HEADER */}
+        <div className="max-w-3xl mb-16">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Digital Engineering Capabilities</span>
+          </div>
+          <h1 className="font-secondary text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight mb-4">
+            Engineering services built to <span className="text-gradient-emerald">scale your business.</span>
+          </h1>
+          <p className="text-slate-300 text-lg font-primary leading-relaxed">
+            From high-speed web apps and custom e-commerce stores to mobile applications and multi-city SEO hubs — we deliver production-grade software solutions.
+          </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((s) => {
+        {/* SERVICES BENTO GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+          {services.map((s, idx) => {
             const Icon = s.icon;
             return (
               <Link
                 key={s.slug}
                 href={`/services/${s.slug}`}
-                className="group bg-[#121723] rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all border border-[#1f2937] hover:border-emerald-400/40"
+                className="glass-card rounded-2xl border border-white/10 p-8 flex flex-col justify-between group hover:border-emerald-500/40 transition-all duration-300 relative overflow-hidden"
               >
-                <div className={`w-14 h-14 bg-gradient-to-br ${s.color} rounded-xl flex items-center justify-center mb-5`}>
-                  <Icon className="w-7 h-7 text-white" />
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#34d399] group-hover:bg-[#34d399] group-hover:text-black transition-all">
+                      <Icon className="w-6 h-6" />
+                    </div>
+                    <span className="font-mono text-xl font-bold text-slate-600">0{idx + 1}</span>
+                  </div>
+
+                  <h2 className="font-secondary text-2xl font-bold text-white group-hover:text-[#34d399] transition-colors mb-3">
+                    {s.title}
+                  </h2>
+
+                  <p className="text-slate-300 text-sm font-primary leading-relaxed mb-6">
+                    {s.description}
+                  </p>
                 </div>
-                <h2 className="text-xl font-semibold font-secondary mb-2 text-white group-hover:text-emerald-200">{s.title}</h2>
-                <p className="text-slate-300 text-sm font-primary mb-4">{s.description}</p>
-                <span className="text-emerald-200 font-semibold font-primary">Learn more →</span>
+
+                <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-bold text-[#34d399] group-hover:text-white transition-colors">
+                  <span>Explore Service Specifications</span>
+                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </div>
               </Link>
             );
           })}
         </div>
-      </section>
 
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8 mt-16 relative z-10">
-        <div className="rounded-3xl border border-[#1f2937] bg-[#121723] shadow-sm p-8 sm:p-10">
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white mb-3">
-            Why brands choose StudioVyn
+        {/* BOTTOM PROSE BANNER */}
+        <div className="glass-card p-8 sm:p-12 rounded-3xl border border-white/15">
+          <h2 className="font-secondary text-2xl sm:text-3xl font-bold text-white mb-4">
+            Why brands partner with StudioVyn
           </h2>
-          <p className="text-[#94a3b8] font-primary mb-6">
-            StudioVyn is a web development agency in India focused on performance, SEO, and conversions. Our services are
-            designed to strengthen brand visibility in search and AI assistants while driving real business outcomes.
+          <p className="text-slate-300 font-primary text-base leading-relaxed mb-8 max-w-3xl">
+            StudioVyn is a senior digital engineering studio focused on performance, Core Web Vitals speed, search authority, and user conversion. We construct software tailored to your specific commercial goals.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-2 gap-8 text-sm">
             <div>
-              <h3 className="text-lg font-semibold font-secondary text-white mb-2">Popular services</h3>
-              <ul className="space-y-2 text-[#94a3b8] font-primary">
-              <li><Link className="text-emerald-200 underline" href="/services/web-development">Web Development</Link></li>
-              <li><Link className="text-emerald-200 underline" href="/services/e-commerce">E-commerce Development</Link></li>
-              <li><Link className="text-emerald-200 underline" href="/services/ui-ux-design">UI/UX Design</Link></li>
-              <li><Link className="text-emerald-200 underline" href="/services/digital-marketing">Digital Marketing</Link></li>
+              <h3 className="font-secondary font-bold text-white uppercase text-xs tracking-wider mb-3 text-[#34d399]">
+                Popular Discipline Hubs
+              </h3>
+              <ul className="space-y-2 text-slate-300 font-primary">
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/services/web-development"><span>→ Custom Web & SaaS Development</span></Link></li>
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/services/e-commerce"><span>→ E-Commerce Storefronts & UPI</span></Link></li>
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/services/ui-ux-design"><span>→ UI/UX & Product Design</span></Link></li>
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/services/digital-marketing"><span>→ Technical & Multi-City SEO</span></Link></li>
               </ul>
             </div>
+
             <div>
-              <h3 className="text-lg font-semibold font-secondary text-white mb-2">Recommended reads</h3>
-              <ul className="space-y-2 text-[#94a3b8] font-primary">
-              <li><Link className="text-emerald-200 underline" href="/blog/ai-driven-web-development-trends-2026">AI-Driven Web Development Trends 2026</Link></li>
-              <li><Link className="text-emerald-200 underline" href="/blog/nextjs-16-performance-optimization-guide">Next.js 16 Performance Optimization</Link></li>
-              <li><Link className="text-emerald-200 underline" href="/blog/content-strategy-topic-clusters">Content Strategy with Topic Clusters</Link></li>
+              <h3 className="font-secondary font-bold text-white uppercase text-xs tracking-wider mb-3 text-[#34d399]">
+                Recommended Engineering Reads
+              </h3>
+              <ul className="space-y-2 text-slate-300 font-primary">
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/blog/ai-driven-web-development-trends-2026"><span>→ AI-Driven Web Development Trends 2026</span></Link></li>
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/blog/nextjs-16-performance-optimization-guide"><span>→ Next.js 16 Performance Optimization Guide</span></Link></li>
+                <li><Link className="hover:text-[#34d399] transition-colors flex items-center gap-2" href="/blog/content-strategy-topic-clusters"><span>→ Content Strategy with Topic Clusters</span></Link></li>
               </ul>
             </div>
           </div>
         </div>
-      </section>
+
+      </div>
     </main>
   );
 }

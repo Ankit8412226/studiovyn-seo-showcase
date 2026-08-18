@@ -1,26 +1,18 @@
-import About from "./About";
-import Contact from "./Contact";
 import Hero from "./hero";
-import Banner from "./home-sections/Banner";
-import BlogHighlights from "./home-sections/BlogHighlights";
-import BrandPositioning from "./home-sections/BrandPositioning";
 import CaseSpotlight from "./home-sections/CaseSpotlight";
-import ClientsLogos from "./home-sections/ClientsLogos";
-import ContactMicro from "./home-sections/ContactMicro";
-import FAQ from "./home-sections/FAQ";
-import Industries from "./home-sections/Industries";
-import Pricing from "./home-sections/Pricing";
-import Process from "./home-sections/Process";
-import PromoBanners from "./home-sections/PromoBanners";
-import PromoCTABanners from "./home-sections/PromoCTABanners";
 import ServicesShowcase from "./home-sections/ServicesShowcase";
-import TechStack from "./home-sections/TechStack";
-import TestimonialsShowcase from "./home-sections/TestimonialsShowcase";
-import Transform from "./home-sections/Transform";
-import TrustBadges from "./home-sections/TrustBadges";
 import WhyUs from "./home-sections/WhyUs";
-import Portfolio from "./Portfolio";
-import FounderSection from "@/components/FounderSection";
+import Process from "./home-sections/Process";
+import SEOGrowth from "./home-sections/SEOGrowth";
+import LocationsSection from "./home-sections/LocationsSection";
+import ProjectEstimator from "./home-sections/ProjectEstimator";
+import ComparisonSection from "./home-sections/ComparisonSection";
+import TechStackSection from "./home-sections/TechStackSection";
+import TestimonialsShowcase from "./home-sections/TestimonialsShowcase";
+import BlogHighlights from "./home-sections/BlogHighlights";
+import FAQ from "./home-sections/FAQ";
+import FinalCTA from "./home-sections/FinalCTA";
+import QuickActionWidget from "@/components/ui/QuickActionWidget";
 
 export const metadata = {
   title: 'StudioVyn | Top Website Development Company in India',
@@ -51,29 +43,50 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* 01 — Hero Spotlight */}
       <Hero />
-      <BrandPositioning />
-      <ClientsLogos />
-      <ServicesShowcase />
-      <WhyUs />
-      <About />
-      <FounderSection />
+
+      {/* 02 — Selected Client Work */}
       <CaseSpotlight />
+
+      {/* 03 — Full-Stack Bento Services Showcase */}
+      <ServicesShowcase />
+
+      {/* 04 — Why StudioVyn Standards */}
+      <WhyUs />
+
+      {/* 05 — Interactive Project Scope & Cost Estimator */}
+      <ProjectEstimator />
+
+      {/* 06 — StudioVyn vs Traditional Agency Matrix */}
+      <ComparisonSection />
+
+      {/* 07 — Interactive Technology & Architecture Matrix */}
+      <TechStackSection />
+
+      {/* 08 — Agile Execution Pipeline */}
       <Process />
-      <Industries />
-      <Banner />
-      <PromoCTABanners />
-      <PromoBanners />
-      <TechStack />
-      <Pricing />
-      <BlogHighlights />
-      <TrustBadges />
-      <ContactMicro />
-      <Transform />
-      <Portfolio />
+
+      {/* 09 — Technical SEO & Growth Engine */}
+      <SEOGrowth />
+
+      {/* 10 — Multi-City Local Search Reach */}
+      <LocationsSection />
+
+      {/* 11 — Verified Client Testimonials */}
       <TestimonialsShowcase />
+
+      {/* 12 — Engineering & SEO Insights Journal */}
+      <BlogHighlights />
+
+      {/* 13 — FAQ Accordion */}
       <FAQ />
-      <Contact />
+
+      {/* 14 — Final Action CTA */}
+      <FinalCTA />
+
+      {/* Floating Quick Action Connect Widget */}
+      <QuickActionWidget />
     </main>
   );
 }

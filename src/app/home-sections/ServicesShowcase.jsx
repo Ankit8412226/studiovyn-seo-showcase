@@ -1,203 +1,188 @@
 'use client';
 
-import Button from '@/components/ui/Button';
-import Card from '@/components/ui/Card';
-import OptimizedImage from '@/components/ui/OptimizedImage';
-import {
-    ArrowRight,
-    Code2,
-    Database,
-    Globe,
-    Palette,
-    ShoppingCart,
-    Smartphone,
-    Sparkles
-} from 'lucide-react';
-import { useState } from 'react';
+import { ArrowRight, Code2, Database, Globe, Layers, Palette, ShoppingCart, Smartphone, Sparkles } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ServicesShowcase() {
-  const [hoveredIndex, setHoveredIndex] = useState(null);
-
   const services = [
     {
+      id: '01',
+      slug: 'web-development',
       icon: Code2,
-      title: 'Web Development',
-      shortDescription: 'Custom websites and web applications built with modern technologies for optimal performance and scalability.',
-      features: ['Responsive Design', 'SEO Optimized', 'Fast Loading', 'Secure & Scalable'],
-      color: 'from-[#10b981] to-[#2dd4bf]',
-      image: '/web_development_premium_1769518207985.png',
-      gradient: 'from-[#10b981]/15 to-[#2dd4bf]/15',
+      title: 'Web & SaaS Development',
+      subtitle: 'Custom Websites, Next.js Apps, & Enterprise Portals',
+      description: 'We build ultra-fast, responsive web applications using React 19, Next.js 16, and modern server architecture. Engineered for high conversion and 100% Google Lighthouse speed scores.',
+      tags: ['Next.js 16', 'React.js', 'TypeScript', 'Tailwind CSS', 'PPR & SSR'],
+      accent: 'from-emerald-500 to-teal-400',
+      featured: true,
     },
     {
+      id: '02',
+      slug: 'e-commerce',
+      icon: ShoppingCart,
+      title: 'E-Commerce Platforms',
+      subtitle: 'High-Converting Stores with Local Payment Gateways',
+      description: 'Custom e-commerce platforms with Razorpay, PayU, and UPI payment integrations. Built for fast product browsing, smooth checkout, and seamless inventory management.',
+      tags: ['Shopify', 'Custom Next.js Storefront', 'UPI Gateways', 'Inventory Sync'],
+      accent: 'from-teal-400 to-cyan-500',
+      featured: false,
+    },
+    {
+      id: '03',
+      slug: 'mobile-app-development',
       icon: Smartphone,
       title: 'Mobile App Development',
-      shortDescription: 'Native and cross-platform mobile applications that deliver seamless user experiences on iOS and Android devices.',
-      features: ['Cross-Platform', 'Native Performance', 'Offline Support', 'Push Notifications'],
-      color: 'from-[#2dd4bf] to-[#84cc16]',
-      image: '/mobile_app_development_premium_1769518249733.png',
-      gradient: 'from-[#2dd4bf]/15 to-[#84cc16]/15',
+      subtitle: 'Native & Cross-Platform iOS & Android Apps',
+      description: 'High-performance mobile applications delivering native UX across mobile devices. Offline support, push notifications, and real-time backend synchronization.',
+      tags: ['React Native', 'iOS & Android', 'Push Alerts', 'Offline Sync'],
+      accent: 'from-cyan-500 to-indigo-500',
+      featured: false,
     },
     {
+      id: '04',
+      slug: 'ui-ux-design',
       icon: Palette,
-      title: 'UI/UX Design',
-      shortDescription: 'Beautiful, intuitive designs that prioritize user experience and drive engagement with your brand.',
-      features: ['User Research', 'Wireframing', 'Prototyping', 'Brand Identity'],
-      color: 'from-[#84cc16] to-[#10b981]',
-      image: '/ui_ux_design_premium_1769518278516.png',
-      gradient: 'from-[#84cc16]/15 to-[#10b981]/15',
+      title: 'UI/UX & Product Design',
+      subtitle: 'User-Centric Design Systems & Wireframing',
+      description: 'Conversion-oriented UI/UX design that turns traffic into paying clients. Complete design systems, interactive prototypes, and modern aesthetic hierarchy.',
+      tags: ['Figma Design', 'Wireframing', 'User Research', 'Design Systems'],
+      accent: 'from-indigo-500 to-purple-500',
+      featured: false,
     },
     {
-      icon: ShoppingCart,
-      title: 'E-Commerce Solutions',
-      shortDescription: 'Complete e-commerce platforms with payment integration, inventory management, and analytics to grow your online business.',
-      features: ['Payment Gateway', 'Inventory System', 'Analytics', 'Multi-vendor'],
-      color: 'from-[#10b981] to-[#2dd4bf]',
-      image: '/ecommerce_solutions_premium_1769518314027.png',
-      gradient: 'from-[#10b981]/15 to-[#2dd4bf]/15',
-    },
-    {
+      id: '05',
+      slug: 'backend-development',
       icon: Database,
-      title: 'Backend Development',
-      shortDescription: 'Robust backend systems and APIs that power your applications with security, reliability, and performance.',
-      features: ['RESTful APIs', 'Database Design', 'Cloud Integration', 'Authentication'],
-      color: 'from-[#0ea5e9] to-[#6366f1]',
-      image: '/backend_infrastructure_premium_1769518360170.png',
-      gradient: 'from-[#0ea5e9]/15 to-[#6366f1]/15',
+      title: 'Backend & Cloud APIs',
+      subtitle: 'Scalable Microservices, Node.js & Cloud DBs',
+      description: 'Robust server architecture, RESTful/GraphQL APIs, database design (PostgreSQL/MongoDB), and cloud deployment on AWS or Cloudflare Edge.',
+      tags: ['Node.js', 'PostgreSQL', 'MongoDB', 'AWS & Cloudflare', 'REST/GraphQL'],
+      accent: 'from-emerald-400 to-cyan-400',
+      featured: false,
     },
     {
+      id: '06',
+      slug: 'digital-marketing',
       icon: Globe,
-      title: 'Digital Marketing',
-      shortDescription: 'Strategic digital marketing solutions including SEO, content marketing, and social media to expand your reach.',
-      features: ['SEO Strategy', 'Content Marketing', 'Social Media', 'Analytics'],
-      color: 'from-[#2dd4bf] to-[#10b981]',
-      image: '/digital_marketing_seo_premium_1769518403220.png',
-      gradient: 'from-[#2dd4bf]/15 to-[#10b981]/15',
+      title: 'Technical SEO & Digital Marketing',
+      subtitle: 'Search Authority, Schema, & Multi-City Reach',
+      description: 'Technical SEO, structured data schema, local search optimization across 23+ Indian cities, and growth marketing to dominate Google SERP rankings.',
+      tags: ['Technical SEO', 'Schema Markup', 'Local SEO', 'Core Web Vitals'],
+      accent: 'from-cyan-400 to-emerald-500',
+      featured: true,
     },
   ];
 
   return (
     <section
       id="services"
-      className="py-16 sm:py-24 lg:py-32 scroll-mt-32 bg-gradient-to-b from-[#0b0d12] via-[#0f1320] to-[#111827] relative overflow-hidden"
-      aria-label="Our professional services"
+      className="py-24 sm:py-32 relative bg-[#07090e] border-t border-white/10"
+      aria-label="Our Digital Engineering Services"
     >
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#1f3b8a]/30 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2dd4bf]/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b26_1px,transparent_1px),linear-gradient(to_bottom,#1e293b26_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      </div>
+      {/* Background radial glow */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-emerald-500/10 blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
-          <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-[#121723] to-[#1a2235] mb-4 sm:mb-6">
-            <Sparkles className="w-6 h-6 sm:w-8 sm:h-8 text-emerald-200" aria-hidden="true" />
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        {/* SECTION HEADER */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Full-Stack Capabilities</span>
+            </div>
+            <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+              Services built for <span className="text-gradient-emerald">real business growth.</span>
+            </h2>
           </div>
-
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-4 sm:mb-6 text-white">
-            Our <span className="bg-gradient-to-r from-[#10b981] to-[#2dd4bf] bg-clip-text text-transparent">Services</span>
-          </h2>
-
-          <p className="text-lg sm:text-xl text-[#94a3b8] font-primary leading-relaxed">
-            Comprehensive digital solutions tailored to your business needs. From concept to deployment, we deliver excellence at every step.
+          <p className="text-slate-400 text-base max-w-lg font-primary leading-relaxed">
+            We don't sell bloated templates. We architect custom digital products tailored to your technical and commercial goals.
           </p>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            const isHovered = hoveredIndex === index;
-
+        {/* 21ST.DEV BENTO GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          {services.map((item) => {
+            const IconComponent = item.icon;
             return (
-              <Card
-                key={index}
-                variant="elevated"
-                hover
-                padding="none"
-                className="group relative overflow-hidden cursor-pointer"
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+              <div
+                key={item.id}
+                className="group glass-card p-8 rounded-2xl flex flex-col justify-between relative overflow-hidden transition-all duration-300"
               >
-                {/* Image Background */}
-                <div className="relative h-48 overflow-hidden">
-                  <OptimizedImage
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className={`transition-transform duration-700 ${
-                      isHovered ? 'scale-110' : 'scale-100'
-                    }`}
-                    objectFit="cover"
-                  />
+                {/* Accent top line on hover */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${item.accent} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
-                  {/* Gradient Overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-80`}></div>
-
-                  {/* Icon Badge */}
-                  <div className="absolute top-4 left-4">
-                    <div
-                      className={`w-14 h-14 bg-gradient-to-br ${service.color} rounded-xl flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <Icon className="w-7 h-7 text-white" aria-hidden="true" />
+                <div>
+                  {/* Top bar: Icon & Number */}
+                  <div className="flex items-center justify-between mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-[#34d399] group-hover:scale-110 group-hover:bg-[#10b981] group-hover:text-black transition-all">
+                      <IconComponent className="w-6 h-6" />
                     </div>
+                    <span className="font-mono text-2xl font-black text-slate-600 group-hover:text-slate-400 transition-colors">
+                      {item.id}
+                    </span>
                   </div>
-                </div>
 
-                {/* Content */}
-                <div className="p-6">
-                  <h3 className="text-xl sm:text-2xl font-bold font-secondary mb-3 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:bg-clip-text group-hover:from-[#10b981] group-hover:to-[#2dd4bf] transition-all duration-300">
-                    {service.title}
+                  {/* Service Title */}
+                  <h3 className="font-secondary text-xl font-bold text-white mb-2 group-hover:text-[#34d399] transition-colors">
+                    {item.title}
                   </h3>
-
-                  <p className="text-[#94a3b8] font-primary mb-4 leading-relaxed text-sm">
-                    {service.shortDescription}
+                  <p className="text-xs font-mono text-slate-400 mb-4">
+                    {item.subtitle}
                   </p>
 
-                  {/* Features */}
-                  <ul className="space-y-2 mb-6">
-                    {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm text-[#cbd5f5] font-primary">
-                      <div className={`w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.color} mr-3 flex-shrink-0`}></div>
-                      {feature}
-                    </li>
-                    ))}
-                  </ul>
-
-                  {/* CTA */}
-                  <Button
-                    href="/services"
-                    variant="ghost"
-                    size="sm"
-                    icon={<ArrowRight className="w-4 h-4" />}
-                    iconPosition="right"
-                    className="w-full group-hover:text-emerald-200"
-                  >
-                    Learn More
-                  </Button>
+                  {/* Description */}
+                  <p className="text-slate-300 text-sm leading-relaxed mb-6 font-primary">
+                    {item.description}
+                  </p>
                 </div>
-              </Card>
+
+                <div>
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-6 pt-4 border-t border-white/10">
+                    {item.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-[11px] font-mono text-slate-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Link CTA */}
+                  <Link
+                    href={`/services/${item.slug}`}
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-[#34d399] hover:text-white transition-colors group/link"
+                  >
+                    <span>Explore Service Details</span>
+                    <ArrowRight className="w-4 h-4 group-hover/link:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
+              </div>
             );
           })}
         </div>
 
-        {/* Bottom CTA */}
-        <div className="text-center">
-          <p className="text-lg text-slate-300 font-primary mb-6">
-            Don't see what you're looking for? We offer custom solutions too!
-          </p>
-          <Button
+        {/* BOTTOM CALLOUT */}
+        <div className="mt-12 p-8 rounded-2xl glass-card border border-white/10 flex flex-col sm:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-[#34d399] shrink-0">
+              <Layers className="w-6 h-6" />
+            </div>
+            <div>
+              <h4 className="font-secondary text-lg font-bold text-white">Need a custom architecture or solution?</h4>
+              <p className="text-slate-400 text-sm">We provide tailored enterprise software, APIs, and headless CMS integrations.</p>
+            </div>
+          </div>
+          <Link
             href="/contact"
-            size="lg"
-            icon={<ArrowRight className="w-5 h-5" />}
-            iconPosition="right"
-            className="shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
-            aria-label="Contact us for custom solutions"
+            className="shrink-0 px-6 py-3 rounded-xl bg-[#34d399] text-black font-secondary font-bold text-sm hover:bg-[#10b981] shadow-lg shadow-emerald-500/20 transition-all"
           >
-            Get a Custom Quote
-          </Button>
+            Request Custom Proposal
+          </Link>
         </div>
+
       </div>
     </section>
   );

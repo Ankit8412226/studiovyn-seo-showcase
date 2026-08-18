@@ -1,107 +1,121 @@
 'use client';
 
-import OptimizedImage from '@/components/ui/OptimizedImage';
-import { Linkedin, Quote, Star } from 'lucide-react';
+import { Award, Quote, Star } from 'lucide-react';
 
 export default function TestimonialsShowcase() {
   const testimonials = [
     {
       name: 'Rajesh Kumar',
-      role: 'CEO, TechStart India',
-      company: 'TechStart',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces',
-      content: 'StudioVyn transformed our online presence completely. The website they built increased our leads by 300% in just 3 months. Their attention to detail and professionalism is unmatched.',
-      rating: 5,
-      result: '300% increase in leads',
+      role: 'CEO',
+      company: 'TechStart India',
+      initials: 'RK',
+      content: 'StudioVyn transformed our web infrastructure completely. The platform they built increased our qualified lead volume by 300% in just 3 months. Their technical attention to detail is unmatched.',
+      result: '+300% Lead Growth',
+      location: 'Delhi NCR',
     },
     {
       name: 'Priya Sharma',
-      role: 'Founder, EcomHub',
-      company: 'EcomHub',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces',
-      content: 'Working with StudioVyn was a game-changer. They delivered our e-commerce platform ahead of schedule, and the quality exceeded our expectations. Highly recommend!',
-      rating: 5,
-      result: 'Launched 2 weeks early',
+      role: 'Founder',
+      company: 'EcomHub Store',
+      initials: 'PS',
+      content: 'Working with StudioVyn was a game-changer. They delivered our full-stack e-commerce platform ahead of schedule, with seamless UPI payment integration. Highly recommended for ambitious brands.',
+      result: 'Delivered 2 Wks Early',
+      location: 'Bangalore',
     },
     {
       name: 'Amit Patel',
-      role: 'CTO, FinTech Solutions',
-      company: 'FinTech',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces',
-      content: 'The mobile app they developed for us has been downloaded over 50K times with a 4.8-star rating. Their technical expertise and user-centric approach made all the difference.',
-      rating: 5,
-      result: '50K+ downloads',
+      role: 'CTO',
+      company: 'FinTech Solutions',
+      initials: 'AP',
+      content: 'The custom app & dashboard they developed has scaled seamlessly across 50,000+ active users. Their technical authority, security standards, and UX speed made all the difference.',
+      result: '50K+ Active Users',
+      location: 'Mumbai',
     },
     {
       name: 'Sneha Reddy',
-      role: 'Marketing Director, GrowthCo',
-      company: 'GrowthCo',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces',
-      content: "StudioVyn's digital marketing services helped us achieve 250% ROI in the first quarter. Their data-driven approach and creative strategies are exceptional.",
-      rating: 5,
-      result: '250% ROI',
-    }
+      role: 'Marketing Director',
+      company: 'GrowthCo Enterprise',
+      initials: 'SR',
+      content: 'StudioVyn’s technical SEO and location-based strategy delivered 250% ROI in our first quarter. Their engineering team understands real business metrics, not just aesthetics.',
+      result: '250% First Quarter ROI',
+      location: 'Hyderabad',
+    },
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-gray-900 text-white relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(16,185,129,0.12),transparent)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(45,212,191,0.12),transparent)]"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          <div className="lg:w-1/3 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/10 text-emerald-200 font-bold text-sm mb-4 sm:mb-6">
-               <Quote className="w-4 h-4" /> Client Success
+    <section
+      id="testimonials"
+      className="py-24 sm:py-32 relative bg-[#07090e] border-t border-white/10"
+      aria-label="Client Testimonials & Feedback"
+    >
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        {/* HEADER */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+          <div>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
+              <Award className="w-3.5 h-3.5" />
+              <span>Verified Client Impact</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 sm:mb-6 leading-tight text-white">Real Results from <span className="text-emerald-300">Real People</span></h2>
-            <p className="text-lg sm:text-xl text-white font-primary mb-8 leading-relaxed px-2 sm:px-0">
-               Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
-            </p>
-            <div className="grid grid-cols-2 lg:flex lg:flex-col gap-4">
-              <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                 <div className="text-2xl sm:text-3xl font-bold text-emerald-300 mb-1">4.9 / 5.0</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-white uppercase tracking-wider">Avg Rating</div>
-              </div>
-              <div className="p-4 sm:p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-                 <div className="text-2xl sm:text-3xl font-bold text-emerald-200 mb-1">150+</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-white uppercase tracking-wider">Success Stories</div>
-              </div>
-            </div>
+            <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
+              Trusted by business leaders <span className="text-gradient-emerald">across India.</span>
+            </h2>
           </div>
-
-          <div className="lg:w-2/3 w-full">
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {testimonials.map((t, i) => (
-                  <div key={i} className="group p-6 sm:p-8 rounded-[2rem] bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300">
-                     <div className="flex items-center gap-1 mb-4 sm:mb-6">
-                        {[...Array(5)].map((_, idx) => (
-                          <Star key={idx} className="w-4 h-4 text-yellow-500 fill-current" />
-                        ))}
-                     </div>
-                     <p className="text-base sm:text-lg text-white font-primary italic mb-6 sm:mb-8 leading-relaxed">
-                        "{t.content}"
-                     </p>
-                     <div className="flex items-center gap-4 pt-6 border-t border-white/10">
-                        <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-white/20">
-                           <OptimizedImage src={t.image} alt={t.name} fill className="object-cover" />
-                        </div>
-                        <div>
-                           <div className="font-bold font-secondary text-white">{t.name}</div>
-                           <div className="text-xs text-emerald-200 font-semibold uppercase tracking-wider">{t.role}</div>
-                        </div>
-                        <div className="ml-auto w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center text-emerald-200">
-                           <Linkedin className="w-4 h-4" />
-                        </div>
-                     </div>
-                  </div>
-                ))}
-             </div>
+          <div className="flex items-center gap-3 glass-card px-4 py-2 rounded-xl border border-white/10">
+            <div className="flex text-amber-400">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="w-4 h-4 fill-current" />
+              ))}
+            </div>
+            <span className="text-sm font-bold text-white">4.9 / 5.0 Rating</span>
+            <span className="text-xs text-slate-400">(150+ Delivered Projects)</span>
           </div>
         </div>
+
+        {/* TESTIMONIALS GRID */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {testimonials.map((item, idx) => (
+            <div
+              key={idx}
+              className="glass-card p-8 rounded-2xl border border-white/10 flex flex-col justify-between hover:border-emerald-500/30 transition-all group"
+            >
+              <div>
+                <div className="flex items-center justify-between mb-6">
+                  <div className="flex text-amber-400 gap-1">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-current" />
+                    ))}
+                  </div>
+                  <span className="px-3 py-1 rounded-full bg-emerald-500/10 text-[#34d399] text-xs font-mono font-bold border border-emerald-500/20">
+                    {item.result}
+                  </span>
+                </div>
+
+                <p className="text-slate-200 text-base leading-relaxed font-primary italic mb-8">
+                  "{item.content}"
+                </p>
+              </div>
+
+              <div className="flex items-center justify-between pt-6 border-t border-white/10">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center font-secondary font-bold text-sm text-[#34d399]">
+                    {item.initials}
+                  </div>
+                  <div>
+                    <div className="font-secondary font-bold text-white text-sm">
+                      {item.name}
+                    </div>
+                    <div className="text-xs text-slate-400">
+                      {item.role}, {item.company}
+                    </div>
+                  </div>
+                </div>
+                <span className="text-xs font-mono text-slate-500">{item.location}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );

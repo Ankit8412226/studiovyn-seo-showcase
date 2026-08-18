@@ -1,123 +1,103 @@
 'use client';
 
-import Card from '@/components/ui/Card';
-import OptimizedImage from '@/components/ui/OptimizedImage';
-import { ArrowRight, Code, Palette, Search, TrendingUp } from 'lucide-react';
+import { CheckCircle, Code, Eye, FileText, Layers, Rocket, Search } from 'lucide-react';
 
 export default function Process() {
   const steps = [
     {
-      number: '01',
-      title: 'Discovery',
-      description: 'Define goals, audience, and success metrics. We dive deep into your business to understand your unique needs.',
+      step: '01',
+      title: 'Discovery & Architecture',
+      duration: 'Week 1',
       icon: Search,
-      gradient: 'from-emerald-500 to-teal-400',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop',
+      description: 'We audit your requirements, analyze target user personas, and design the technical stack and SEO keyword strategy.',
     },
     {
-      number: '02',
-      title: 'Design',
-      description: 'Wireframes, prototypes, and design system. We create beautiful, user-centric designs that convert.',
-      icon: Palette,
-      gradient: 'from-teal-500 to-emerald-400',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+      step: '02',
+      title: 'UI/UX Design Systems',
+      duration: 'Week 2',
+      icon: Layers,
+      description: 'We craft high-fidelity responsive wireframes and interactive prototypes in Figma with clear conversion pathways.',
     },
     {
-      number: '03',
-      title: 'Build',
-      description: 'Modern stack, testing, and CI/CD. We build with best practices, ensuring quality and performance.',
+      step: '03',
+      title: 'Agile Engineering',
+      duration: 'Weeks 3-4',
       icon: Code,
-      gradient: 'from-emerald-500 to-teal-400',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+      description: 'Our engineers build your solution using Next.js/React, implementing clean APIs, fast rendering, and type safety.',
     },
     {
-      number: '04',
-      title: 'Grow',
-      description: 'SEO, analytics, and iteration after launch. We help you grow with data-driven optimizations.',
-      icon: TrendingUp,
-      gradient: 'from-lime-500 to-emerald-400',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      step: '04',
+      title: 'SEO & Quality Assurance',
+      duration: 'Week 5',
+      icon: CheckCircle,
+      description: 'Rigorous cross-browser testing, Core Web Vitals optimization, schema validation, and accessibility compliance.',
+    },
+    {
+      step: '05',
+      title: 'Production Deployment',
+      duration: 'Week 6',
+      icon: Rocket,
+      description: 'Smooth launch on enterprise cloud (AWS/Vercel) with SSL, domain DNS configuration, and Google Search Console indexing.',
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute inset-0 bg-accent-glow opacity-25"></div>
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#10b981]/20 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#84cc16]/20 rounded-full filter blur-3xl"></div>
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-4 sm:mb-6 text-white">
-            Our <span className="bg-gradient-to-r from-[#10b981] to-[#2dd4bf] bg-clip-text text-transparent">Process</span>
+    <section
+      className="py-24 sm:py-32 relative bg-[#090d16] border-t border-white/10"
+      aria-label="Our Development Process"
+    >
+      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
+        
+        {/* HEADER */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-mono font-bold uppercase tracking-wider mb-4">
+            <Rocket className="w-3.5 h-3.5" />
+            <span>Structured Execution</span>
+          </div>
+          <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-4">
+            From initial concept to <span className="text-gradient">high-performance launch.</span>
           </h2>
-          <p className="text-lg sm:text-xl text-[#94a3b8] font-primary leading-relaxed px-4">
-            A proven methodology that delivers results. From discovery to growth, we guide you every step of the way.
+          <p className="text-slate-400 text-lg font-primary leading-relaxed">
+            Our transparent 5-step methodology delivers enterprise-quality results with zero guesswork and predictable delivery dates.
           </p>
         </div>
 
-        {/* Process Steps */}
-        <div className="space-y-8">
-          {steps.map((step, i) => {
-            const Icon = step.icon;
-            const isEven = i % 2 === 0;
-
+        {/* PROCESS TIMELINE PIPELINE */}
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-6">
+          {steps.map((item, idx) => {
+            const IconComp = item.icon;
             return (
               <div
-                key={i}
-                className={`grid lg:grid-cols-2 gap-8 items-center ${
-                  !isEven ? 'lg:flex-row-reverse' : ''
-                }`}
+                key={item.step}
+                className="glass-card p-6 rounded-2xl border border-white/10 flex flex-col justify-between relative group hover:border-emerald-500/30 transition-all"
               >
-                {/* Image */}
-                <div className={`${!isEven ? 'lg:order-2' : ''}`}>
-                  <Card variant="elevated" padding="none" className="overflow-hidden group rounded-3xl">
-                    <div className="relative h-48 sm:h-64 lg:h-80">
-                      <OptimizedImage
-                        src={step.image}
-                        alt={step.title}
-                        fill
-                        className="transition-transform duration-700 group-hover:scale-110"
-                        objectFit="cover"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-20`}></div>
-                    </div>
-                  </Card>
-                </div>
+                <div>
+                  <div className="flex items-center justify-between mb-6">
+                    <span className="font-mono text-xl font-bold text-[#34d399]">
+                      {item.step}
+                    </span>
+                    <span className="px-2.5 py-0.5 rounded-full bg-white/5 text-[10px] font-mono text-slate-400 border border-white/10">
+                      {item.duration}
+                    </span>
+                  </div>
 
-                {/* Content */}
-                <div className={`${!isEven ? 'lg:order-1' : ''}`}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center shadow-xl`}>
-                      <Icon className="w-10 h-10 text-white" aria-hidden="true" />
-                    </div>
-                    <div>
-                    <div className="text-sm text-[#94a3b8] font-semibold uppercase tracking-wider font-primary mb-1">
-                      Step {step.number}
-                    </div>
-                    <h3 className="text-3xl font-bold font-secondary text-white">
-                      {step.title}
-                    </h3>
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-200 mb-4 group-hover:bg-[#34d399] group-hover:text-black transition-all">
+                    <IconComp className="w-5 h-5" />
                   </div>
-                </div>
-                <p className="text-lg text-[#cbd5f5] font-primary leading-relaxed mb-6">
-                  {step.description}
-                </p>
-                {i < steps.length - 1 && (
-                  <div className="flex items-center text-emerald-200 font-semibold font-primary">
-                    <span>Next: {steps[i + 1].title}</span>
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </div>
-                  )}
+
+                  <h3 className="font-secondary text-lg font-bold text-white mb-2 group-hover:text-[#34d399] transition-colors">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-slate-300 text-xs leading-relaxed font-primary">
+                    {item.description}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
+
       </div>
     </section>
   );

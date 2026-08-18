@@ -6,11 +6,12 @@ import About from '../About';
 import FounderSection from '@/components/FounderSection';
 
 export const metadata = {
-  title: 'About StudioVyn | Web Development & Digital Agency in India',
+  title: 'About StudioVyn | Digital Product Studio & Web Development in India',
   description:
-    'Learn more about StudioVyn — a web design, development, and digital marketing agency in India. We build websites, apps, and SEO-driven digital experiences.',
+    'Learn about StudioVyn — a senior web design, app development, and technical SEO studio in India founded by Ankit Kumar. We build fast, scalable web apps and SEO solutions.',
   keywords: [
     'About StudioVyn',
+    'Ankit Kumar StudioVyn',
     'web development agency India',
     'digital marketing agency India',
     'web design company',
@@ -18,9 +19,9 @@ export const metadata = {
   ],
   alternates: { canonical: '/about' },
   openGraph: {
-    title: 'About StudioVyn | Web Development & Digital Agency',
+    title: 'About StudioVyn | Digital Product Studio',
     description:
-      'StudioVyn specializes in website development, app creation, and SEO-focused digital solutions to help businesses grow online.',
+      'StudioVyn specializes in high-speed website development, mobile app creation, and SEO-focused digital solutions founded by Ankit Kumar.',
     url: 'https://studiovyn.in/about',
     type: 'website',
     siteName: 'StudioVyn',
@@ -29,15 +30,15 @@ export const metadata = {
         url: 'https://studiovyn.in/og-image.svg',
         width: 1200,
         height: 630,
-        alt: 'About StudioVyn - Web Design & Development Agency',
+        alt: 'About StudioVyn - Digital Product Studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About StudioVyn | Web Development & Digital Agency in India',
+    title: 'About StudioVyn | Digital Product Studio in India',
     description:
-      'Discover StudioVyn’s story, mission, and team — we craft high-performance websites and apps that drive business growth.',
+      'Discover StudioVyn’s story, engineering mission, and leadership by Ankit Kumar — crafting high-performance websites and apps that drive business growth.',
     images: ['https://studiovyn.in/og-image.svg'],
   },
 };
@@ -49,14 +50,14 @@ export default function AboutPage() {
     name: 'About StudioVyn',
     url: 'https://studiovyn.in/about',
     description:
-      'StudioVyn is a full-service digital agency offering website design, app development, and SEO services for businesses in India.',
+      'StudioVyn is a digital product studio offering website engineering, app development, and technical SEO services for businesses in India.',
     publisher: {
       '@type': 'Organization',
       name: 'StudioVyn',
       url: 'https://studiovyn.in',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://studiovyn.in/logo.jpeg',
+        url: 'https://studiovyn.in/studiovyn_logo.png',
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -73,19 +74,8 @@ export default function AboutPage() {
       founder: [
         {
           '@type': 'Person',
-          name: 'Ayush Anand',
-          jobTitle: 'CEO',
-          worksFor: {
-            '@type': 'Organization',
-            name: 'StudioVyn',
-            url: 'https://studiovyn.in',
-          },
-          nationality: 'Indian',
-        },
-        {
-          '@type': 'Person',
           name: 'Ankit Kumar',
-          jobTitle: 'Co-Founder & Lead Engineer',
+          jobTitle: 'Founder & CTO',
           worksFor: {
             '@type': 'Organization',
             name: 'StudioVyn',
@@ -99,22 +89,21 @@ export default function AboutPage() {
 
   const faqs = [
     {
-      q: 'What does StudioVyn specialize in?',
-      a: 'We specialize in high-performance websites, web apps, e-commerce, UI/UX, and SEO foundations that help businesses rank on Google and convert visitors into leads.',
+      q: 'Who leads StudioVyn?',
+      a: 'StudioVyn is founded and led by Ankit Kumar (Founder & CTO), who manages the engineering architecture, technical SEO, and digital product strategy for all client engagements.',
     },
     {
-      q: 'Do you work with startups and enterprises?',
-      a: 'Yes. We work with startups, SMEs, and enterprise teams. We adapt process, timelines, and deliverables to match your goals and internal workflows.',
+      q: 'What does StudioVyn specialize in?',
+      a: 'We specialize in high-performance websites, web apps, e-commerce storefronts, UI/UX, and technical SEO foundations that help businesses rank on Google and convert visitors into leads.',
     },
     {
       q: 'Where does StudioVyn operate?',
-      a: 'We serve clients across India with a strong focus on Delhi NCR, Bihar, and West Bengal, and we work remotely PAN-India.',
+      a: 'We serve clients across India with a strong focus on Delhi NCR, Bihar (Patna), West Bengal (Kolkata), Mumbai, and Bangalore, working remotely PAN-India.',
     },
   ];
 
   return (
-    <main className="min-h-screen pt-24 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-15" aria-hidden="true"></div>
+    <main className="min-h-screen pt-24 bg-[#07090e] bg-grid-pattern relative overflow-hidden">
       <Script
         id="about-jsonld"
         type="application/ld+json"
@@ -125,19 +114,18 @@ export default function AboutPage() {
         <About />
         <FounderSection />
 
-        <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl pb-16">
+        <section className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 pb-20">
           <SeoProse>
             <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
-              Our approach: performance + SEO + conversion UX
+              Our approach: performance + technical SEO + conversion UX
             </h2>
             <p>
-              We build premium digital experiences that are engineered to rank and convert. That means clean information
-              architecture, fast load times, accessibility, and content structures that match search intent.
+              We build premium digital experiences that are engineered to rank and convert. That means clean information architecture, sub-second load times, accessibility compliance, and content structures that match search intent.
             </p>
             <p>
-              Explore <Link className="text-emerald-200 underline" href="/services">our services</Link>, review{' '}
-              <Link className="text-emerald-200 underline" href="/portfolio">portfolio</Link>, or contact us for a{' '}
-              <Link className="text-emerald-200 underline" href="/contact">free consultation</Link>.
+              Explore <Link className="text-[#34d399] underline" href="/services">our services</Link>, review our{' '}
+              <Link className="text-[#34d399] underline" href="/portfolio">portfolio</Link>, or contact us for a{' '}
+              <Link className="text-[#34d399] underline" href="/contact">free strategy consultation</Link>.
             </p>
           </SeoProse>
         </section>

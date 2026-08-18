@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
+        <link rel="icon" href="/studiovyn_logo.png" type="image/png" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="canonical" href="https://studiovyn.in" />
         <script
@@ -414,7 +414,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased font-primary bg-[#0b0d12] text-[#e5e7eb] text-center sm:text-left">
+      <body className="antialiased font-primary bg-[#0a0a0a] text-[#f0f0f0]">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5LDXVGQYYJ"
           strategy="afterInteractive"
