@@ -39,21 +39,21 @@ const Accordion = ({ items, allowMultiple = false, defaultOpen = [] }) => {
         return (
           <div
             key={index}
-            className="border border-[#1f2937] rounded-xl overflow-hidden bg-[#121723] transition-all duration-200 hover:shadow-md"
+            className="border border-slate-200 rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-blue-300 hover:shadow-md"
           >
             <button
               onClick={() => toggleItem(index)}
-              className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-emerald-400 focus:ring-inset"
+              className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
               aria-expanded={isOpen}
               aria-controls={`accordion-content-${index}`}
             >
-              <span className="text-lg font-semibold font-secondary text-white pr-4">
+              <span className={`text-lg font-semibold font-secondary pr-4 transition-colors ${isOpen ? 'text-blue-600' : 'text-slate-900'}`}>
                 {item.question}
               </span>
               <ChevronDown
                 className={cn(
-                  'w-5 h-5 text-[#94a3b8] flex-shrink-0 transition-transform duration-200',
-                  isOpen && 'transform rotate-180'
+                  'w-5 h-5 flex-shrink-0 transition-transform duration-200',
+                  isOpen ? 'transform rotate-180 text-blue-600' : 'text-slate-400'
                 )}
                 aria-hidden="true"
               />
@@ -65,7 +65,7 @@ const Accordion = ({ items, allowMultiple = false, defaultOpen = [] }) => {
                 isOpen ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'
               )}
             >
-              <div className="p-6 pt-0 text-[#94a3b8] font-primary leading-relaxed">
+              <div className="p-6 pt-0 text-slate-600 font-primary leading-relaxed border-t border-slate-50 mt-1">
                 {item.answer}
               </div>
             </div>

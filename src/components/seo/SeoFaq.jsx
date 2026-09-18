@@ -28,8 +28,8 @@ export default function SeoFaq({ title = 'Frequently Asked Questions', faqs = []
       : null;
 
   return (
-    <section className="py-16 sm:py-20 border-t border-[#1f2937] bg-[#0b0d12] relative overflow-hidden" aria-label="Frequently asked questions">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+    <section className="py-16 sm:py-20 border-t border-slate-200 bg-slate-50 relative overflow-hidden" aria-label="Frequently asked questions">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(37,99,235,0.04),transparent)] pointer-events-none" aria-hidden="true"></div>
       {jsonLd && (
         <Script
           id="faq-jsonld"
@@ -39,7 +39,7 @@ export default function SeoFaq({ title = 'Frequently Asked Questions', faqs = []
         />
       )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl relative z-10">
-        <h2 className="text-3xl sm:text-4xl font-bold font-secondary text-white mb-6">
+        <h2 className="text-3xl sm:text-4xl font-bold font-secondary text-slate-900 mb-6">
           {title}
         </h2>
         <Accordion items={items} allowMultiple={false} />

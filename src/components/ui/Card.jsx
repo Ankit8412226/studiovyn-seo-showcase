@@ -22,10 +22,10 @@ const Card = forwardRef(
     const baseStyles = 'rounded-2xl transition-all duration-300';
 
     const variants = {
-      default: 'bg-[#121723] border border-[#1f2937] shadow-sm',
-      elevated: 'bg-[#121723] border border-[#1f2937] shadow-lg hover:shadow-xl',
-      outlined: 'bg-[#121723] border-2 border-[#1f2937]',
-      gradient: 'bg-gradient-to-br from-[#0f1320] to-[#151b2b] border border-[#1f2937]',
+      default: 'bg-white border border-slate-200 shadow-sm hover:border-blue-200',
+      elevated: 'bg-white border border-slate-200/80 shadow-md hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-300',
+      outlined: 'bg-white border-2 border-slate-200 hover:border-blue-500',
+      gradient: 'bg-gradient-to-br from-white via-blue-50/40 to-slate-50 border border-blue-100 shadow-sm',
     };
 
     const paddings = {
@@ -68,13 +68,13 @@ Card.Header = ({ children, className, ...props }) => (
 );
 
 Card.Title = ({ children, className, ...props }) => (
-  <h3 className={cn('text-xl font-bold font-secondary text-white', className)} {...props}>
+  <h3 className={cn('text-xl font-bold font-secondary text-slate-900', className)} {...props}>
     {children}
   </h3>
 );
 
 Card.Description = ({ children, className, ...props }) => (
-  <p className={cn('text-slate-300 font-primary', className)} {...props}>
+  <p className={cn('text-slate-600 font-primary', className)} {...props}>
     {children}
   </p>
 );
@@ -86,7 +86,7 @@ Card.Content = ({ children, className, ...props }) => (
 );
 
 Card.Footer = ({ children, className, ...props }) => (
-  <div className={cn('mt-6 pt-6 border-t border-[#1f2937]', className)} {...props}>
+  <div className={cn('mt-6 pt-6 border-t border-slate-100', className)} {...props}>
     {children}
   </div>
 );

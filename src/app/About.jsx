@@ -1,89 +1,168 @@
-import Image from 'next/image';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import { Award, CheckCircle2, Shield, Zap } from 'lucide-react';
-import Link from 'next/link';
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32 bg-[#07090e] relative overflow-hidden border-t border-white/10">
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10">
-        
-        {/* GRID LAYOUT */}
-        <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-20">
-          
-          {/* IMAGE SIDE — 6 COLS */}
-          <div className="lg:col-span-6 relative">
-            <div className="glass-card p-3 rounded-2xl border border-white/15 overflow-hidden shadow-2xl">
-              <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-[#0d121d]">
-                <Image
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
-                  alt="StudioVyn Senior Software Team Collaboration"
-                  fill
-                  className="object-cover"
-                />
-              </div>
+    <section id="about" className="py-24 sm:py-32 bg-slate-50/60 relative overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-24">
+          <div className="relative">
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-blue-500/20 rounded-3xl -z-10 animate-pulse"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-cyan-500/20 rounded-3xl -z-10 animate-pulse delay-700"></div>
+            <div className="rounded-3xl overflow-hidden shadow-2xl border-4 border-white relative z-10 bg-white">
+              <OptimizedImage
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&q=80"
+                alt="StudioVyn Team Collaboration"
+                width={600}
+                height={600}
+                className="w-full h-auto object-cover"
+              />
             </div>
 
-            {/* METRICS STRIP */}
-            <div className="glass-card mt-4 p-4 rounded-xl border border-white/15 bg-[#0d121d] flex items-center justify-around text-center">
-              <div>
-                <div className="font-secondary text-2xl font-black text-white">150+</div>
-                <div className="text-[10px] font-mono text-slate-400 uppercase">Products Shipped</div>
-              </div>
-              <div className="h-8 w-px bg-white/10" />
-              <div>
-                <div className="font-secondary text-2xl font-black text-[#34d399]">98%</div>
-                <div className="text-[10px] font-mono text-slate-400 uppercase">Client Satisfaction</div>
-              </div>
-              <div className="h-8 w-px bg-white/10" />
-              <div>
-                <div className="font-secondary text-2xl font-black text-white">23+</div>
-                <div className="text-[10px] font-mono text-slate-400 uppercase">City SEO Reach</div>
-              </div>
+            <div className="absolute -bottom-10 left-4 right-4 sm:left-10 sm:right-10 bg-white shadow-xl rounded-2xl p-4 sm:p-6 border border-slate-200 z-20">
+               <div className="flex items-center justify-around gap-2 sm:gap-4 text-center">
+                  <div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-blue-600">150+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-widest">Projects</div>
+                  </div>
+                  <div className="h-10 w-px bg-slate-200"></div>
+                  <div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-blue-700">98%</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-widest">Happy Clients</div>
+                  </div>
+                  <div className="h-10 w-px bg-slate-200"></div>
+                  <div>
+                    <div className="text-xl sm:text-2xl font-bold font-secondary text-blue-600">300+</div>
+                    <div className="text-[10px] sm:text-xs font-semibold text-slate-500 uppercase tracking-widest">Locations</div>
+                  </div>
+               </div>
             </div>
           </div>
 
-          {/* CONTENT SIDE — 6 COLS */}
-          <div className="lg:col-span-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
-              <Award className="w-3.5 h-3.5" />
-              <span>About StudioVyn</span>
+          <div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 border border-blue-200 font-bold text-sm mb-6">
+               <Award className="w-4 h-4 text-blue-600" /> Who We Are
             </div>
-
-            <h2 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
-              Empowering businesses with <span className="text-gradient-emerald">engineering rigour.</span>
+            <h2 className="text-4xl sm:text-5xl font-bold font-secondary mb-6 text-slate-900 leading-tight">
+              Empowering Businesses with <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Digital Excellence</span>
             </h2>
-
-            <p className="text-slate-300 text-base sm:text-lg leading-relaxed font-primary mb-8">
-              StudioVyn is a senior digital engineering studio serving clients across India. Operating from engineering hubs serving Delhi NCR, Kolkata, Patna, and PAN India, we craft modern web applications, e-commerce storefronts, and SEO hubs built for long-term scalability.
+            <p className="text-xl text-slate-600 font-primary mb-8 leading-relaxed">
+              StudioVyn is a results-driven web and software studio serving businesses across India. From our hubs in Bihar, West Bengal, and Delhi NCR, we build modern digital experiences that are fast, secure, and built to scale.
             </p>
 
-            <div className="space-y-3 mb-10 text-sm font-primary text-slate-200">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#34d399] shrink-0 mt-0.5" />
-                <span>Multi-city local search strategies tailored for Indian consumer intent.</span>
+            <div className="space-y-4 mb-10">
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                </div>
+                <p className="text-slate-700 font-medium">Local SEO strategies tailored for Indian markets (Bihar, Kolkata, Delhi).</p>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#34d399] shrink-0 mt-0.5" />
-                <span>Production-grade web architecture built with React 19, Next.js 16, and Node.js.</span>
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                </div>
+                <p className="text-slate-700 font-medium">Performance-first engineering using React, Next.js, and Node.js.</p>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-[#34d399] shrink-0 mt-0.5" />
-                <span>Transparent communication, fixed milestone timelines, and on-time delivery.</span>
+              <div className="flex items-start gap-4">
+                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-1">
+                  <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                </div>
+                <p className="text-slate-700 font-medium">Transparent communication and on-time delivery guaranteed.</p>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Link href="/portfolio" className="px-6 py-3.5 rounded-xl bg-[#34d399] text-black font-secondary font-bold text-sm hover:bg-[#10b981] transition-all">
-                View Selected Work
-              </Link>
-              <Link href="/contact" className="px-6 py-3.5 rounded-xl bg-white/5 border border-white/10 text-slate-200 font-secondary font-semibold text-sm hover:bg-white/10 transition-all">
-                Get a Strategy Call
-              </Link>
+              <a href="#portfolio" className="btn-primary">View Recent Projects</a>
+              <a href="#contact" className="btn-secondary">Get a Free Proposal</a>
             </div>
           </div>
-
         </div>
 
+        {/* Why We Win Section */}
+        <div className="p-10 sm:p-16 rounded-[2.5rem] bg-gradient-to-br from-blue-700 via-blue-800 to-indigo-950 text-white relative overflow-hidden mb-24 shadow-2xl shadow-blue-500/15">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-400/20 rounded-full filter blur-3xl"></div>
+          <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold font-secondary mb-4 text-white">Why We <span className="text-cyan-300">Win in Search</span></h3>
+              <p className="text-blue-100 font-primary text-lg mb-8">We don't just build websites; we build marketing machines optimized for the Google search algorithm.</p>
+              <div className="grid sm:grid-cols-2 gap-6">
+                <div className="flex gap-4">
+                  <Zap className="w-6 h-6 text-cyan-300 shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1 text-white">Core Web Vitals</h4>
+                    <p className="text-sm text-blue-100">Optimized LCP, CLS, and INP scores by default.</p>
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <Shield className="w-6 h-6 text-cyan-300 shrink-0" />
+                  <div>
+                    <h4 className="font-bold mb-1 text-white">Tech SEO</h4>
+                    <p className="text-sm text-blue-100">Clean architecture and automated schema injection.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+               <div className="space-y-6">
+                  <div>
+                    <div className="flex justify-between mb-2">
+                       <span className="font-bold text-white">Performance Optimization</span>
+                       <span className="text-cyan-300 font-bold">100%</span>
+                    </div>
+                    <div className="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+                       <div className="h-full bg-cyan-400 w-full"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-2">
+                       <span className="font-bold text-white">Local SEO Readiness</span>
+                       <span className="text-cyan-300 font-bold">98%</span>
+                    </div>
+                    <div className="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+                       <div className="h-full bg-cyan-400 w-[98%]"></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="flex justify-between mb-2">
+                       <span className="font-bold text-white">Conversion-Focused Design</span>
+                       <span className="text-cyan-300 font-bold">95%</span>
+                    </div>
+                    <div className="h-2 w-full bg-white/20 rounded-full overflow-hidden">
+                       <div className="h-full bg-cyan-400 w-[95%]"></div>
+                    </div>
+                  </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Engineering Culture / Workspace Gallery */}
+        <div className="mt-24">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-bold font-secondary text-slate-900 mb-4">Our Engineering <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Workspace</span></h3>
+            <p className="text-slate-600 font-primary">Where the magic happens—crafting high-performance code and scalable architectures.</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[
+              { src: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600&q=80', alt: 'Developer workspace' },
+              { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80', alt: 'Code on screen' },
+              { src: 'https://images.unsplash.com/photo-1517430816045-df4b7de11d1d?w=600&q=80', alt: 'Programming setup' },
+              { src: 'https://images.unsplash.com/photo-1516259762381-22954d7d3ad2?w=600&q=80', alt: 'Laptop and notes' }
+            ].map((img, i) => (
+              <div key={i} className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 aspect-video lg:aspect-square border border-slate-200">
+                 <OptimizedImage
+                   src={img.src}
+                   alt={img.alt}
+                   fill
+                   className="object-cover group-hover:scale-110 transition-transform duration-500"
+                 />
+                 <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-slate-900/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-white text-xs font-bold font-secondary">{img.alt}</p>
+                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

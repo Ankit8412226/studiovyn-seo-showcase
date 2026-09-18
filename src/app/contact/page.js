@@ -57,7 +57,7 @@ export default function ContactPage() {
       logo: 'https://studiovyn.in/logo.jpeg',
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+91-8529747613',
+        telephone: '+91-9771123401',
         contactType: 'Customer Support',
         areaServed: 'IN',
         availableLanguage: ['English', 'Hindi'],
@@ -81,8 +81,8 @@ export default function ContactPage() {
   ];
 
   return (
-    <main className="min-h-screen pt-24 bg-[#0b0d12] text-[#e5e7eb] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+    <main className="min-h-screen pt-24 bg-white text-slate-800 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.03),transparent)] pointer-events-none" aria-hidden="true"></div>
       <Script
         id="contact-jsonld"
         type="application/ld+json"
@@ -92,10 +92,10 @@ export default function ContactPage() {
 
       <section className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <header className="text-center mb-10">
-          <h1 className="text-4xl sm:text-5xl font-bold font-secondary mb-3 text-white">
+          <h1 className="text-4xl sm:text-5xl font-bold font-secondary mb-3 text-slate-900">
             Get a Free Consultation
           </h1>
-          <p className="text-slate-300 text-lg font-primary max-w-2xl mx-auto">
+          <p className="text-slate-600 text-lg font-primary max-w-2xl mx-auto">
             Tell us what you’re building—website, e-commerce, app, or SEO growth. We’ll reply within 24 hours with a clear plan and timeline.
           </p>
         </header>
@@ -103,17 +103,17 @@ export default function ContactPage() {
         <Contact />
 
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-slate-900 mt-12">
             What happens after you submit?
           </h2>
-          <ol className="list-decimal ml-5 space-y-2">
+          <ol className="list-decimal ml-5 space-y-2 text-slate-600">
             <li>We review your goals and reply with clarifying questions (if needed).</li>
             <li>We share a recommended plan: scope, timeline, and milestones.</li>
             <li>If it’s a fit, we start with discovery and ship in milestones.</li>
           </ol>
-          <p>
-            Prefer exploring first? See <Link className="text-emerald-200 underline" href="/services">services</Link> or browse{' '}
-            <Link className="text-emerald-200 underline" href="/portfolio">portfolio</Link>.
+          <p className="text-slate-600">
+            Prefer exploring first? See <Link className="text-blue-600 font-medium underline" href="/services">services</Link> or browse{' '}
+            <Link className="text-blue-600 font-medium underline" href="/portfolio">portfolio</Link>.
           </p>
         </SeoProse>
       </section>
@@ -122,3 +122,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

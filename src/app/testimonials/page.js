@@ -15,15 +15,15 @@ export const metadata = {
 
 export default function TestimonialsPage() {
   return (
-    <main className="min-h-screen pt-24 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
+    <main className="min-h-screen pt-24 bg-slate-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.04),transparent)] pointer-events-none" aria-hidden="true"></div>
       <Testimonials />
       <section className="container mx-auto px-4 sm:px-6 lg:px-8 pb-16 relative z-10">
-        <div className="rounded-3xl border border-[#1f2937] bg-[#0f172a] p-8 sm:p-10 shadow-sm">
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white mb-3">
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 sm:p-10 shadow-md">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-slate-900 mb-3">
             Why businesses choose StudioVyn
           </h2>
-          <p className="text-slate-300 font-primary mb-6">
+          <p className="text-slate-600 font-primary mb-6">
             StudioVyn is a performance-first web development agency trusted by teams across India. We focus on SEO-ready
             builds, clear communication, and measurable outcomes.
           </p>
@@ -37,3 +37,4 @@ export default function TestimonialsPage() {
     </main>
   );
 }
+

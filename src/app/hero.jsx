@@ -1,112 +1,133 @@
 'use client';
 
-import { ArrowRight, Award, CheckCircle2, ChevronRight, ShieldCheck, Sparkles, TrendingUp, Users } from 'lucide-react';
-import Link from 'next/link';
+import Button from '@/components/ui/Button';
+import { ArrowRight, Award, CheckCircle2, TrendingUp, Users } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
-export default function Hero() {
-  const proofMetrics = [
-    { value: '150+', label: 'Products Shipped', sub: 'Web, Apps & E-Commerce' },
-    { value: '98%', label: 'Client Satisfaction', sub: 'Verified 5-Star Reviews' },
-    { value: '95+', label: 'Lighthouse Speed', sub: 'Sub-Second Page Loads' },
-    { value: '23+', label: 'Indian Cities', sub: 'Multi-City SEO Authority' },
+const Hero = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
+  const scrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const features = [
+    'React & Next.js Development',
+    'Mobile-First Design',
+    'SEO Optimized',
+    'Fast Performance',
   ];
 
-  const marqueeItems = [
-    'Next.js 16 Production Architecture',
-    'React 19 Server Components',
-    'Technical & Schema.org SEO',
-    'Razorpay & UPI Payment Gateways',
-    'Tailwind CSS v4 Engineering',
-    'Cloudflare Edge & AWS Deployment',
-    'Google AI Overviews Search Ready',
+  const stats = [
+    { value: '150+', label: 'Projects Delivered', icon: TrendingUp },
+    { value: '98%', label: 'Client Satisfaction', icon: Award },
+    { value: '3+', label: 'Years Experience', icon: Users },
   ];
 
   return (
     <section
       id="home"
-      className="relative min-h-[92vh] pt-32 pb-20 lg:pt-44 lg:pb-28 bg-[#07090e] bg-grid-pattern flex flex-col justify-between overflow-hidden"
+      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-50/40 to-white pt-32 pb-16 lg:pt-40 lg:pb-24"
       role="banner"
+      aria-label="Hero section introducing StudioVyn web development services"
     >
-      {/* Subtle top radial lighting */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] bg-radial-gradient pointer-events-none opacity-80" />
-      <div className="absolute top-1/4 left-1/3 w-[500px] h-[350px] bg-emerald-500/10 blur-[160px] pointer-events-none rounded-full" />
+      {/* Professional Background Pattern */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
+        <div className="absolute top-10 right-1/4 w-96 h-96 bg-blue-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
+        <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-cyan-200/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e140_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e140_1px,transparent_1px)] bg-[size:28px_28px]"></div>
+      </div>
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10 my-auto">
-        
-        {/* EYEBROW BADGE */}
-        <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full glass-card border border-white/15 shadow-xl mb-8">
-          <span className="w-2.5 h-2.5 rounded-full bg-[#34d399] animate-pulse"></span>
-          <span className="text-xs sm:text-sm font-mono font-semibold tracking-wider text-slate-200 uppercase">
-            StudioVyn · Senior Digital Engineering Studio
-          </span>
-          <span className="hidden md:inline-block w-px h-3 bg-white/20"></span>
-          <span className="hidden md:inline-block text-xs font-mono text-[#34d399]">
-            Available for Q3/Q4 Projects
-          </span>
-        </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <div
+            className={`text-center space-y-6 lg:space-y-8 transition-all duration-1000 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            }`}
+          >
+            {/* Main Heading - Professional Typography */}
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-secondary leading-[1.08] tracking-tight text-slate-900">
+              Build a Website Brand That{' '}
+              <span className="relative inline-block">
+                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
+                  Ranks & Converts
+                </span>
+                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-500/20 opacity-70 blur-xl"></span>
+              </span>
+            </h1>
 
-        {/* MAIN EDITORIAL HEADLINE */}
-        <div className="max-w-5xl">
-          <h1 className="font-secondary text-4xl sm:text-7xl xl:text-8xl font-black tracking-tight text-white leading-[1.05] mb-8">
-            We architect digital products{' '}
-            <span className="text-gradient-emerald">that perform.</span>
-          </h1>
+            {/* Subheading - Strong Value Proposition */}
+            <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto font-primary leading-relaxed font-medium">
+              StudioVyn builds high-performance websites and AI-ready experiences for brands across India.
+              <span className="font-bold text-slate-900"> Faster pages, stronger rankings, and measurable growth.</span>
+            </p>
 
-          <p className="text-lg sm:text-2xl text-slate-300 font-primary leading-relaxed mb-12 max-w-3xl font-normal">
-            A high-end engineering studio building fast websites, scalable web applications, e-commerce storefronts, and multi-city SEO hubs. Engineered for Google search dominance and maximum client conversion.
-          </p>
-
-          {/* DUAL CTA BUTTONS */}
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mb-16">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-3 px-9 py-4.5 rounded-xl font-secondary font-bold text-base text-black bg-[#34d399] hover:bg-[#10b981] shadow-2xl shadow-emerald-500/30 hover:scale-[1.02] active:scale-[0.98] transition-all"
-            >
-              <span>Start a Project</span>
-              <ArrowRight className="w-5 h-5" />
-            </Link>
-
-            <Link
-              href="/portfolio"
-              className="inline-flex items-center justify-center gap-2.5 px-8 py-4.5 rounded-xl font-secondary font-semibold text-base text-slate-200 glass-card border border-white/15 hover:bg-white/10 hover:text-white transition-all"
-            >
-              <span>Explore Selected Work</span>
-              <ChevronRight className="w-4 h-4 opacity-60" />
-            </Link>
-          </div>
-        </div>
-
-        {/* METRICS ROW */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-10 border-t border-white/10">
-          {proofMetrics.map((item, idx) => (
-            <div key={idx} className="glass-card p-6 rounded-2xl border border-white/10 hover:border-emerald-500/30 transition-all">
-              <div className="font-secondary text-3xl sm:text-4xl font-black text-white mb-1">
-                {item.value}
+            {/* Key Benefits - Mobile Optimized */}
+            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 pt-2">
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-blue-200/80 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                <span className="text-xs lg:text-sm font-semibold text-blue-700 font-primary">2-6 Week Delivery</span>
               </div>
-              <div className="text-sm font-semibold text-[#34d399] mb-0.5">
-                {item.label}
-              </div>
-              <div className="text-xs text-slate-400 font-mono">
-                {item.sub}
+              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-blue-200/80 shadow-sm">
+                <CheckCircle2 className="w-4 h-4 text-blue-600" />
+                <span className="text-xs lg:text-sm font-semibold text-blue-700 font-primary">SEO + AI Search Ready</span>
               </div>
             </div>
-          ))}
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+              <Button
+                onClick={() => scrollToSection('contact')}
+                size="lg"
+                icon={<ArrowRight className="w-5 h-5" />}
+                iconPosition="right"
+                className="group shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/35 hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
+                aria-label="Get free website development consultation"
+              >
+                Get Free Consultation
+              </Button>
+              <Button
+                onClick={() => scrollToSection('portfolio')}
+                variant="secondary"
+                size="lg"
+                className="shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
+                aria-label="View our website portfolio"
+              >
+                View Portfolio
+              </Button>
+            </div>
+
+            {/* Trust Stats - Better Mobile Layout */}
+            <div className="grid grid-cols-3 items-center justify-center gap-4 sm:gap-8 pt-8 border-t border-slate-200/80 max-w-2xl mx-auto">
+              {stats.map((stat, index) => {
+                const Icon = stat.icon;
+                return (
+                  <div key={index} className="text-center group">
+                    <div className="flex items-center justify-center gap-2 mb-1">
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
+                      <div className="text-xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-secondary">
+                        {stat.value}
+                      </div>
+                    </div>
+                    <div className="text-[10px] sm:text-xs text-slate-500 font-bold font-primary uppercase tracking-widest leading-none">
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
-
       </div>
-
-      {/* BOTTOM MARQUEE TICKER */}
-      <div className="w-full border-t border-b border-white/10 bg-[#0d121d]/60 py-3 mt-12 overflow-hidden">
-        <div className="flex whitespace-nowrap animate-scroll gap-8">
-          {[...marqueeItems, ...marqueeItems].map((text, i) => (
-            <span key={i} className="inline-flex items-center gap-3 text-xs font-mono text-slate-400 uppercase tracking-wider">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#34d399]"></span>
-              {text}
-            </span>
-          ))}
-        </div>
-      </div>
-
     </section>
   );
-}
+};
+
+export default Hero;

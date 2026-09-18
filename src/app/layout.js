@@ -83,7 +83,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <link rel="icon" href="/studiovyn_logo.png" type="image/png" />
+        <link rel="icon" href="/logo.jpeg" type="image/jpeg" />
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
         <link rel="canonical" href="https://studiovyn.in" />
         <script
@@ -113,7 +113,7 @@ export default function RootLayout({ children }) {
               contactPoint: [
                 {
                   '@type': 'ContactPoint',
-                  telephone: '+91-8529747613',
+                  telephone: '+91-9771123401',
                   contactType: 'sales',
                   email: 'tech@studiovyn.in',
                   areaServed: 'IN',
@@ -164,7 +164,7 @@ export default function RootLayout({ children }) {
               name: 'StudioVyn - Website Development Company',
               image: 'https://studiovyn.in/og-image.svg',
               url: 'https://studiovyn.in',
-              telephone: '+91-8529747613',
+              telephone: '+91-9771123401',
               email: 'tech@studiovyn.in',
               priceRange: '₹₹',
               address: {
@@ -414,7 +414,7 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body className="antialiased font-primary bg-[#0a0a0a] text-[#f0f0f0]">
+      <body className="antialiased font-primary bg-white text-[#334155] text-center sm:text-left">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-5LDXVGQYYJ"
           strategy="afterInteractive"

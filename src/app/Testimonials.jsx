@@ -38,18 +38,18 @@ export default function Testimonials() {
     },
   ];
   return (
-    <section id="testimonials" className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-25" aria-hidden="true"></div>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="testimonials" className="py-20 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.03),transparent)] pointer-events-none" aria-hidden="true"></div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-3 text-white">Client Testimonials</h2>
-          <p className="text-[#94a3b8] font-primary">What partners across Bihar, West Bengal, and Delhi say about us.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold font-secondary mb-3 text-slate-900">Client Testimonials</h2>
+          <p className="text-slate-600 font-primary">What partners across Bihar, West Bengal, and Delhi say about us.</p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
           {quotes.map((q, i) => (
-            <blockquote key={i} className="p-6 rounded-2xl border border-[#1f2937] shadow-sm bg-[#121723]">
-              <p className="text-[#e5e7eb] font-primary mb-4">“{q.text}”</p>
-              <div className="text-sm text-[#94a3b8] font-primary">— {q.name}, {q.role}</div>
+            <blockquote key={i} className="p-6 rounded-2xl border border-slate-200/80 shadow-md bg-white hover:border-blue-300 hover:shadow-xl transition-all">
+              <p className="text-slate-700 font-primary mb-4 italic leading-relaxed">“{q.text}”</p>
+              <div className="text-sm font-primary"><span className="font-bold text-slate-900">— {q.name}</span>, <span className="text-blue-600">{q.role}</span></div>
             </blockquote>
           ))}
         </div>
@@ -57,4 +57,5 @@ export default function Testimonials() {
     </section>
   );
 }
+
 

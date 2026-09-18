@@ -1,6 +1,6 @@
 import SeoFaq from '@/components/seo/SeoFaq';
 import SeoProse from '@/components/seo/SeoProse';
-import { ArrowLeft, ArrowRight, Award, CheckCircle, Clock, Code2, Sparkles } from 'lucide-react';
+import Button from '@/components/ui/Button';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -67,24 +67,29 @@ export default async function CaseStudyPage({ params }) {
       name: 'StudioVyn',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://studiovyn.in/studiovyn_logo.png',
+        url: 'https://studiovyn.in/logo.jpeg',
       },
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://studiovyn.in/case-studies/${p.slug}`,
     },
   };
 
   const faqs = [
     {
-      q: 'What was the core business outcome?',
-      a: `${p.result}. We focus on verifiable engineering outcomes including Core Web Vitals speed, search traffic growth, and conversion rate improvements.`,
+      q: 'What was the measurable result?',
+      a: `${p.result}. We focus on outcomes like performance, organic traffic growth, conversion improvements, and operational efficiency.`,
     },
     {
-      q: 'Can StudioVyn engineer a similar solution for my company?',
-      a: 'Yes. We start with a technical architecture audit, establish project milestones, and build using modern React 19 / Next.js 16 standards.',
+      q: 'Can StudioVyn replicate this for my business?',
+      a: 'Yes. We start with discovery, define success metrics, then ship in milestones. Book a free consultation to get a tailored plan.',
     },
   ];
 
   return (
-    <main className="min-h-screen pt-32 pb-24 bg-[#07090e] bg-grid-pattern relative overflow-hidden">
+    <main className="min-h-screen pt-24 pb-16 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.03),transparent)] pointer-events-none" aria-hidden="true"></div>
       <Script
         id="case-study-jsonld"
         type="application/ld+json"
@@ -92,107 +97,39 @@ export default async function CaseStudyPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-10 relative z-10">
-        
-        {/* BACK LINK */}
-        <Link
-          href="/case-studies"
-          className="inline-flex items-center gap-2 text-xs font-mono text-slate-400 hover:text-[#34d399] transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to All Case Studies</span>
-        </Link>
-
-        {/* HERO CASE STUDY HEADER */}
-        <div className="grid lg:grid-cols-12 gap-10 items-start mb-12">
-          
-          <div className="lg:col-span-8">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-[#34d399] text-xs font-mono font-bold uppercase tracking-wider mb-4">
-              <Award className="w-3.5 h-3.5" />
-              <span>{p.category || 'Client Case Study'}</span>
-            </div>
-
-            <h1 className="font-secondary text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight mb-6">
-              {p.title}
-            </h1>
-
-            <p className="text-slate-300 text-lg leading-relaxed font-primary mb-6">
-              {p.summary}
-            </p>
-          </div>
-
-          {/* KEY METRICS HIGHLIGHT BOX — 4 COLS */}
-          <div className="lg:col-span-4 glass-card p-6 rounded-2xl border border-white/15 bg-[#0d121d] space-y-4">
-            <div>
-              <span className="text-[11px] font-mono text-slate-400 uppercase tracking-wider block mb-1">Key Result Outcome</span>
-              <span className="font-secondary text-2xl font-black text-[#34d399] block">{p.result}</span>
-            </div>
-
-            {p.timeline && (
-              <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-xs font-mono text-slate-300">
-                <Clock className="w-4 h-4 text-emerald-400" />
-                <span>Delivery Timeframe: {p.timeline}</span>
-              </div>
-            )}
-
-            {p.stack && (
-              <div className="pt-4 border-t border-white/10 text-xs font-mono text-slate-300">
-                <span className="text-slate-400 block mb-1">Tech Stack Used:</span>
-                <span className="text-white font-semibold">{p.stack}</span>
-              </div>
-            )}
-          </div>
-
-        </div>
-
-        {/* FEATURE IMAGE */}
-        <div className="relative rounded-2xl overflow-hidden aspect-[21/9] bg-[#0d121d] border border-white/15 mb-16 shadow-2xl">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl relative z-10">
+        <h1 className="text-4xl font-bold font-secondary mb-4 text-slate-900">{p.title}</h1>
+        <div className="text-blue-600 font-primary font-bold text-lg mb-2">{p.result}</div>
+        <div className="text-sm text-slate-500 font-primary mb-6">{p.stack}</div>
+        <div className="w-full h-64 relative rounded-2xl overflow-hidden mb-6 border border-slate-200 shadow-md">
           <Image
             src={p.image}
-            alt={p.title}
+            alt={`${p.title} - StudioVyn case study`}
             fill
             className="object-cover"
-            priority
           />
         </div>
-
-        {/* BODY ARTICLE CONTENT */}
-        <div className="max-w-4xl mx-auto glass-card p-8 sm:p-12 rounded-3xl border border-white/15 mb-16">
-          <article className="prose prose-invert prose-emerald max-w-none text-slate-200 font-primary leading-relaxed whitespace-pre-line">
-            {p.body}
-          </article>
-
-          <div className="mt-12 pt-8 border-t border-white/10 flex flex-col sm:flex-row gap-4">
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-secondary font-bold text-black bg-[#34d399] hover:bg-[#10b981] shadow-lg shadow-emerald-500/25 transition-all"
-            >
-              <span>Start a Similar Project</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-secondary font-semibold text-slate-300 bg-white/5 border border-white/10 hover:bg-white/10 hover:text-white transition-all"
-            >
-              <span>Browse All Case Studies</span>
-            </Link>
-          </div>
+        <article className="text-slate-700 font-primary leading-7 whitespace-pre-line text-lg">
+          {p.body}
+        </article>
+        <div className="mt-8 flex gap-3">
+          <Button href="/contact" variant="primary">Start your project</Button>
+          <Button href="/case-studies" variant="secondary">More case studies</Button>
         </div>
 
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
-            Want similar business growth for your product?
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-slate-900 mt-12">
+            Want similar results?
           </h2>
-          <p>
-            Explore our <Link className="text-[#34d399] underline" href="/services">services</Link> or{' '}
-            <Link className="text-[#34d399] underline" href="/contact">request a free consultation</Link>.
+          <p className="text-slate-600">
+            Explore our <Link className="text-blue-600 font-medium underline" href="/services">services</Link> or{' '}
+            <Link className="text-blue-600 font-medium underline" href="/contact">book a free consultation</Link>.
           </p>
         </SeoProse>
-
-      </div>
+      </section>
 
       <SeoFaq title="Case Study FAQs" faqs={faqs} pageUrl={`https://studiovyn.in/case-studies/${p.slug}`} />
     </main>
   );
 }
+

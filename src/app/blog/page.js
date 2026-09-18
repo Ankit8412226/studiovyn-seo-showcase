@@ -58,14 +58,14 @@ export default function BlogIndex() {
   ];
 
   return (
-    <main className="min-h-screen pt-32 pb-16 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
-      <section className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <main className="min-h-screen pt-32 pb-16 bg-slate-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_10%,rgba(37,99,235,0.04),transparent)] pointer-events-none" aria-hidden="true"></div>
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-10">
-          <h1 className="text-4xl font-bold font-secondary mb-3 text-white">
+          <h1 className="text-4xl font-bold font-secondary mb-3 text-slate-900">
             Insights & Guides
           </h1>
-          <p className="text-slate-300 font-primary">
+          <p className="text-slate-600 font-primary">
             Actionable articles to grow your business online.
           </p>
         </div>
@@ -75,56 +75,56 @@ export default function BlogIndex() {
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
-              className="p-6 rounded-2xl border border-[#1f2937] shadow-sm hover:shadow-md transition bg-[#121723]"
+              className="group p-6 rounded-2xl border border-slate-200/80 shadow-md hover:shadow-xl transition-all duration-300 bg-white hover:border-blue-300 hover:-translate-y-1"
             >
-              <div className="w-full h-40 relative rounded-xl mb-4 overflow-hidden">
+              <div className="w-full h-40 relative rounded-xl mb-4 overflow-hidden bg-slate-100 border border-slate-100">
                 <Image
                   src={p.image}
                   alt={`${p.title} - StudioVyn blog`}
                   fill
-                  className="object-contain bg-[#0f172a]"
+                  className="object-contain"
                 />
               </div>
-              <h2 className="text-xl font-semibold font-secondary mb-2 text-white">
+              <h2 className="text-xl font-semibold font-secondary mb-2 text-slate-900 group-hover:text-blue-600 transition-colors">
                 {p.title}
               </h2>
-              <p className="text-[#94a3b8] font-primary text-sm">
+              <p className="text-slate-600 font-primary text-sm">
                 {(p.body || '').slice(0, 140)}...
               </p>
-              <div className="mt-4 text-emerald-200 font-semibold">Read more →</div>
+              <div className="mt-4 text-blue-600 font-semibold inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Read more →</div>
             </Link>
           ))}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-[#1f2937] bg-[#121723] p-6">
-          <h2 className="text-2xl font-bold font-secondary text-white mb-3">
+        <div className="mt-12 rounded-2xl border border-slate-200 bg-white shadow-md p-8">
+          <h2 className="text-2xl font-bold font-secondary text-slate-900 mb-3">
             Explore StudioVyn services
           </h2>
-          <p className="text-[#94a3b8] font-primary mb-4">
+          <p className="text-slate-600 font-primary mb-4">
             Looking for implementation? StudioVyn delivers web development, SEO, and e-commerce builds that rank and convert.
           </p>
-          <ul className="space-y-2 text-slate-300 font-primary">
-            <li><Link className="text-emerald-200 underline" href="/services/web-development">Web Development</Link></li>
-            <li><Link className="text-emerald-200 underline" href="/services/ui-ux-design">UI/UX Design</Link></li>
-            <li><Link className="text-emerald-200 underline" href="/services/e-commerce">E-commerce Development</Link></li>
-            <li><Link className="text-emerald-200 underline" href="/services/digital-marketing">Digital Marketing</Link></li>
+          <ul className="space-y-2 text-slate-600 font-primary">
+            <li><Link className="text-blue-600 font-medium underline" href="/services/web-development">Web Development</Link></li>
+            <li><Link className="text-blue-600 font-medium underline" href="/services/ui-ux-design">UI/UX Design</Link></li>
+            <li><Link className="text-blue-600 font-medium underline" href="/services/e-commerce">E-commerce Development</Link></li>
+            <li><Link className="text-blue-600 font-medium underline" href="/services/digital-marketing">Digital Marketing</Link></li>
           </ul>
         </div>
 
         <SeoProse>
-          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold font-secondary text-slate-900 mt-12">
             SEO + Web Development Guides for Businesses in India
           </h2>
-          <p>
+          <p className="text-slate-600">
             If you’re searching for <strong>website development tips</strong>, <strong>technical SEO</strong>, or a
             <strong> Core Web Vitals</strong> playbook that actually moves rankings, you’re in the right place.
             We share proven strategies we use across real projects—so you can rank higher, load faster, and convert more.
           </p>
-          <p>
+          <p className="text-slate-600">
             Looking for implementation help? Explore our{' '}
-            <Link className="text-emerald-200 underline" href="/services">services</Link>, browse{' '}
-            <Link className="text-emerald-200 underline" href="/portfolio">portfolio</Link>, or{' '}
-            <Link className="text-emerald-200 underline" href="/contact">request a free consultation</Link>.
+            <Link className="text-blue-600 font-medium underline" href="/services">services</Link>, browse{' '}
+            <Link className="text-blue-600 font-medium underline" href="/portfolio">portfolio</Link>, or{' '}
+            <Link className="text-blue-600 font-medium underline" href="/contact">request a free consultation</Link>.
           </p>
         </SeoProse>
       </section>
@@ -133,3 +133,4 @@ export default function BlogIndex() {
     </main>
   );
 }
+

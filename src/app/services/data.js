@@ -12,7 +12,7 @@ export const services = [
     slug: 'web-development',
     icon: Code2,
     title: 'Web Development',
-    color: 'from-emerald-500 to-teal-400',
+    color: 'from-blue-600 to-indigo-600',
     description:
       'Custom websites and web applications built with React, Next.js, and Node.js for performance and scalability.',
     metaTitle: 'Web Development Company India | StudioVyn',
@@ -30,7 +30,7 @@ export const services = [
     slug: 'mobile-app-development',
     icon: Smartphone,
     title: 'Mobile App Development',
-    color: 'from-emerald-500 to-lime-400',
+    color: 'from-blue-500 to-cyan-500',
     description:
       'Native and cross-platform apps that deliver seamless experiences on iOS and Android.',
     metaTitle: 'Mobile App Development India | StudioVyn',
@@ -48,7 +48,7 @@ export const services = [
     slug: 'ui-ux-design',
     icon: Palette,
     title: 'UI/UX Design',
-    color: 'from-teal-500 to-emerald-400',
+    color: 'from-indigo-600 to-blue-500',
     description:
       'Beautiful, intuitive designs that convert and delight across web and mobile.',
     metaTitle: 'UI/UX Design Services India | StudioVyn',
@@ -66,7 +66,7 @@ export const services = [
     slug: 'e-commerce',
     icon: ShoppingCart,
     title: 'E-Commerce Solutions',
-    color: 'from-emerald-500 to-teal-400',
+    color: 'from-blue-600 to-sky-500',
     description:
       'Feature-rich e-commerce platforms with payments, inventory, and analytics.',
     metaTitle: 'E-commerce Development India | StudioVyn',
@@ -84,7 +84,7 @@ export const services = [
     slug: 'backend-development',
     icon: Database,
     title: 'Backend Development',
-    color: 'from-teal-500 to-emerald-500',
+    color: 'from-blue-700 to-indigo-600',
     description:
       'Secure, scalable APIs and infrastructure to power your applications.',
     metaTitle: 'Backend Development Services India | StudioVyn',
@@ -102,7 +102,7 @@ export const services = [
     slug: 'digital-marketing',
     icon: Globe,
     title: 'Digital Marketing',
-    color: 'from-lime-500 to-emerald-400',
+    color: 'from-cyan-600 to-blue-600',
     description:
       'SEO, content, and social strategies that grow your audience and revenue.',
     metaTitle: 'Digital Marketing & SEO Services India | StudioVyn',

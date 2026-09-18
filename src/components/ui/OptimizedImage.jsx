@@ -64,7 +64,7 @@ export default function OptimizedImage({
     return (
       <div
         className={cn(
-          'bg-[#0f172a] flex items-center justify-center',
+          'bg-slate-100 flex items-center justify-center',
           className
         )}
         style={fill ? {} : { width, height }}
@@ -102,8 +102,8 @@ export default function OptimizedImage({
         {...props}
       />
       {isLoading && (
-        <div className="absolute inset-0 bg-[#0f172a] animate-pulse flex items-center justify-center z-10">
-          <div className="w-8 h-8 border-4 border-emerald-200/20 border-t-emerald-300 rounded-full animate-spin" />
+        <div className="absolute inset-0 bg-slate-100 animate-pulse flex items-center justify-center z-10">
+          <div className="w-8 h-8 border-4 border-blue-200 border-t-blue-600 rounded-full animate-spin" />
         </div>
       )}
     </div>

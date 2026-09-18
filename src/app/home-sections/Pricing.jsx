@@ -2,7 +2,7 @@
 
 import Button from '@/components/ui/Button';
 import Card from '@/components/ui/Card';
-import { Check, Sparkles } from 'lucide-react';
+import { Check } from 'lucide-react';
 
 export default function Pricing() {
   const tiers = [
@@ -73,21 +73,17 @@ export default function Pricing() {
   ];
 
   return (
-    <section className="py-20 sm:py-24 lg:py-32 bg-[#0b0d12] relative overflow-hidden">
-      <div className="absolute inset-0 bg-accent-glow opacity-25" aria-hidden="true"></div>
+    <section className="py-20 sm:py-24 lg:py-32 bg-slate-50/70 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-[#121723] to-[#1a2235] mb-6">
-            <Sparkles className="w-8 h-8 text-emerald-200" aria-hidden="true" />
-          </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 text-white">
-            Startup‑Friendly Pricing
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-secondary mb-4 text-slate-900">
+            Startup‑Friendly <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Pricing</span>
           </h2>
-          <p className="text-lg text-[#94a3b8] font-primary mb-4">
+          <p className="text-lg text-slate-600 font-primary mb-4">
             Transparent pricing with flexible payment options. All prices are exclusive of 18% GST.
           </p>
-          <p className="text-sm text-[#64748b] font-primary">
+          <p className="text-sm text-slate-500 font-primary">
             Final quotes depend on scope. Flexible payment milestones available for startups.
           </p>
         </div>
@@ -100,42 +96,42 @@ export default function Pricing() {
               variant={tier.highlight ? 'gradient' : 'elevated'}
               hover
               padding="lg"
-              className={`relative flex flex-col h-full ${
+              className={`relative flex flex-col h-full bg-white border border-slate-200/80 shadow-md ${
                 tier.popular
-                  ? 'ring-2 ring-emerald-400 ring-offset-2 scale-[1.02] lg:scale-105 z-10'
-                  : ''
+                  ? 'ring-2 ring-blue-600 ring-offset-2 scale-[1.02] lg:scale-105 z-10 shadow-xl shadow-blue-500/10'
+                  : 'hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5'
               } transition-all duration-300`}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-[#10b981] to-[#84cc16] text-white text-xs font-bold shadow-lg">
+                  <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-xs font-bold shadow-lg shadow-blue-500/30">
                     Most Popular
                   </span>
                 </div>
               )}
 
               <div className="text-center mb-6">
-                <div className="text-xs font-semibold text-[#94a3b8] uppercase tracking-wider mb-2 font-primary">
+                <div className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-2 font-primary">
                   {tier.segment}
                 </div>
-                <h3 className="text-2xl font-bold font-secondary text-white mb-2">
+                <h3 className="text-2xl font-bold font-secondary text-slate-900 mb-2">
                   {tier.name}
                 </h3>
                 <div className="mb-1">
-                  <span className="text-4xl font-extrabold bg-gradient-to-r from-[#10b981] to-[#2dd4bf] bg-clip-text text-transparent font-secondary">
+                  <span className="text-4xl font-extrabold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent font-secondary">
                     {tier.price}
                   </span>
                 </div>
-                <div className="text-sm text-[#64748b] font-primary">{tier.period}</div>
+                <div className="text-sm text-slate-500 font-primary">{tier.period}</div>
               </div>
 
               <ul className="space-y-3 mb-8">
                 {tier.features.map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#0f1320] flex items-center justify-center mt-0.5">
-                      <Check className="w-3 h-3 text-emerald-300" aria-hidden="true" />
+                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-blue-50 flex items-center justify-center mt-0.5 border border-blue-100">
+                      <Check className="w-3 h-3 text-blue-600" aria-hidden="true" />
                     </div>
-                    <span className="text-sm text-[#cbd5f5] font-primary leading-relaxed">
+                    <span className="text-sm text-slate-700 font-primary leading-relaxed">
                       {feature}
                     </span>
                   </li>
@@ -156,7 +152,7 @@ export default function Pricing() {
 
         {/* Additional Info */}
         <div className="text-center">
-          <p className="text-sm text-[#94a3b8] font-primary mb-4">
+          <p className="text-sm text-slate-600 font-primary mb-4">
             Need a custom solution? We offer tailored packages for enterprise clients.
           </p>
           <Button href="/contact" variant="ghost" size="sm">

@@ -20,15 +20,14 @@ export default function CodeGallery() {
 
   return (
     <section
-      className="py-14 sm:py-16 bg-[#0b0d12] relative overflow-hidden"
+      className="py-14 sm:py-16 bg-white relative overflow-hidden"
       aria-labelledby="code-gallery-heading"
       role="region"
     >
-      <div className="absolute inset-0 bg-accent-glow opacity-20" aria-hidden="true"></div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="code-gallery-heading"
-          className="text-2xl sm:text-3xl font-bold font-secondary mb-6 text-white"
+          className="text-2xl sm:text-3xl font-bold font-secondary mb-6 text-slate-900"
         >
           Built by engineers, for growth
         </h2>
@@ -38,7 +37,7 @@ export default function CodeGallery() {
               key={i}
               src={img.src}
               alt={img.alt}
-              className="rounded-2xl shadow-sm object-cover h-48 w-full"
+              className="rounded-2xl shadow-md border border-slate-100 object-cover h-48 w-full hover:scale-[1.02] transition-transform duration-300"
               loading="lazy"
             />
           ))}
@@ -47,3 +46,4 @@ export default function CodeGallery() {
     </section>
   );
 }
+
