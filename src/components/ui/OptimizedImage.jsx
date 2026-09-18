@@ -96,7 +96,6 @@ export default function OptimizedImage({
         placeholder={placeholder}
         blurDataURL={defaultBlurDataURL}
         onLoad={handleLoad}
-        onLoadingComplete={handleLoad}
         onError={handleError}
         loading={priority ? undefined : 'lazy'}
         {...props}

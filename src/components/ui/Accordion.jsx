@@ -39,21 +39,23 @@ const Accordion = ({ items, allowMultiple = false, defaultOpen = [] }) => {
         return (
           <div
             key={index}
-            className="border border-slate-200 rounded-xl overflow-hidden bg-white transition-all duration-200 hover:border-blue-300 hover:shadow-md"
+            className={`border rounded-2xl overflow-hidden transition-all duration-200 ${
+              isOpen ? 'border-[#DBEAFE] bg-[#EFF6FF]/40 shadow-xs' : 'border-slate-200 bg-white hover:border-[#BFDBFE]'
+            }`}
           >
             <button
               onClick={() => toggleItem(index)}
-              className="w-full flex items-center justify-between p-6 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
+              className="w-full flex items-center justify-between p-6 sm:p-7 text-left focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-inset"
               aria-expanded={isOpen}
               aria-controls={`accordion-content-${index}`}
             >
-              <span className={`text-lg font-semibold font-secondary pr-4 transition-colors ${isOpen ? 'text-blue-600' : 'text-slate-900'}`}>
+              <span className={`text-base sm:text-lg font-medium font-secondary pr-4 transition-colors ${isOpen ? 'text-[#2563EB]' : 'text-[#0F172A]'}`}>
                 {item.question}
               </span>
               <ChevronDown
                 className={cn(
                   'w-5 h-5 flex-shrink-0 transition-transform duration-200',
-                  isOpen ? 'transform rotate-180 text-blue-600' : 'text-slate-400'
+                  isOpen ? 'transform rotate-180 text-[#2563EB]' : 'text-[#94A3B8]'
                 )}
                 aria-hidden="true"
               />

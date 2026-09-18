@@ -1,6 +1,7 @@
 'use client';
 
 import Button from '@/components/ui/Button';
+import OptimizedImage from '@/components/ui/OptimizedImage';
 import { ArrowRight, Award, CheckCircle2, TrendingUp, Users } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
@@ -18,13 +19,6 @@ const Hero = () => {
     }
   };
 
-  const features = [
-    'React & Next.js Development',
-    'Mobile-First Design',
-    'SEO Optimized',
-    'Fast Performance',
-  ];
-
   const stats = [
     { value: '150+', label: 'Projects Delivered', icon: TrendingUp },
     { value: '98%', label: 'Client Satisfaction', icon: Award },
@@ -34,61 +28,56 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative min-h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-blue-50/70 via-slate-50/40 to-white pt-32 pb-16 lg:pt-40 lg:pb-24"
+      className="relative min-h-[85vh] flex flex-col items-center justify-center overflow-hidden bg-white pt-28 pb-16 lg:pt-36 lg:pb-24 border-b border-slate-200/80"
       role="banner"
       aria-label="Hero section introducing StudioVyn web development services"
     >
-      {/* Professional Background Pattern */}
+      {/* Restrained Ambient Glow */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-10 right-1/4 w-96 h-96 bg-blue-300/30 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob"></div>
-        <div className="absolute bottom-10 left-1/4 w-96 h-96 bg-cyan-200/40 rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob animation-delay-2000"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e140_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e140_1px,transparent_1px)] bg-[size:28px_28px]"></div>
+        <div className="absolute top-12 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#EFF6FF] rounded-full blur-3xl opacity-80" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="max-w-4xl mx-auto">
           <div
-            className={`text-center space-y-6 lg:space-y-8 transition-all duration-1000 ${
-              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+            className={`text-center space-y-6 lg:space-y-8 transition-all duration-700 ${
+              isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'
             }`}
           >
-            {/* Main Heading - Professional Typography */}
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold font-secondary leading-[1.08] tracking-tight text-slate-900">
+            {/* Main Heading - Refined Serif & Restrained Font Weight */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal font-secondary leading-[1.15] tracking-tight text-[#0F172A]">
               Build a Website Brand That{' '}
-              <span className="relative inline-block">
-                <span className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent">
-                  Ranks & Converts
-                </span>
-                <span className="absolute -bottom-2 left-0 right-0 h-3 bg-gradient-to-r from-blue-500/20 via-sky-500/20 to-cyan-500/20 opacity-70 blur-xl"></span>
+              <span className="font-bold text-[#2563EB]">
+                Ranks & Converts
               </span>
             </h1>
 
-            {/* Subheading - Strong Value Proposition */}
-            <p className="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-3xl mx-auto font-primary leading-relaxed font-medium">
+            {/* Subheading */}
+            <p className="text-base sm:text-lg lg:text-xl text-[#64748B] max-w-2xl mx-auto font-primary leading-relaxed font-normal">
               StudioVyn builds high-performance websites and AI-ready experiences for brands across India.
-              <span className="font-bold text-slate-900"> Faster pages, stronger rankings, and measurable growth.</span>
+              <span className="font-medium text-[#0F172A]"> Faster pages, stronger rankings, and measurable growth.</span>
             </p>
 
-            {/* Key Benefits - Mobile Optimized */}
-            <div className="flex flex-wrap items-center justify-center gap-3 lg:gap-4 pt-2">
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-blue-200/80 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                <span className="text-xs lg:text-sm font-semibold text-blue-700 font-primary">2-6 Week Delivery</span>
+            {/* Key Benefits */}
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+              <div className="flex items-center gap-2 px-3.5 py-1.5 bg-[#EFF6FF] rounded-full border border-[#DBEAFE]">
+                <CheckCircle2 className="w-4 h-4 text-[#2563EB]" />
+                <span className="text-xs font-medium text-[#2563EB] font-primary">2-6 Week Delivery</span>
               </div>
-              <div className="flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-blue-200/80 shadow-sm">
-                <CheckCircle2 className="w-4 h-4 text-blue-600" />
-                <span className="text-xs lg:text-sm font-semibold text-blue-700 font-primary">SEO + AI Search Ready</span>
+              <div className="flex items-center gap-2 px-3.5 py-1.5 bg-[#EFF6FF] rounded-full border border-[#DBEAFE]">
+                <CheckCircle2 className="w-4 h-4 text-[#2563EB]" />
+                <span className="text-xs font-medium text-[#2563EB] font-primary">SEO + AI Search Ready</span>
               </div>
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <div className="flex flex-col sm:flex-row gap-3.5 justify-center pt-3">
               <Button
                 onClick={() => scrollToSection('contact')}
                 size="lg"
-                icon={<ArrowRight className="w-5 h-5" />}
+                icon={<ArrowRight className="w-4 h-4" />}
                 iconPosition="right"
-                className="group shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-blue-500/35 hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
+                className="px-7 py-3.5 text-base font-semibold"
                 aria-label="Get free website development consultation"
               >
                 Get Free Consultation
@@ -97,26 +86,26 @@ const Hero = () => {
                 onClick={() => scrollToSection('portfolio')}
                 variant="secondary"
                 size="lg"
-                className="shadow-md hover:shadow-lg hover:scale-[1.02] transition-all duration-300 px-8 py-4 text-lg"
+                className="px-7 py-3.5 text-base font-semibold"
                 aria-label="View our website portfolio"
               >
                 View Portfolio
               </Button>
             </div>
 
-            {/* Trust Stats - Better Mobile Layout */}
-            <div className="grid grid-cols-3 items-center justify-center gap-4 sm:gap-8 pt-8 border-t border-slate-200/80 max-w-2xl mx-auto">
+            {/* Trust Stats */}
+            <div className="grid grid-cols-3 items-center justify-center gap-4 sm:gap-8 pt-8 border-t border-slate-200/80 max-w-xl mx-auto">
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
                 return (
-                  <div key={index} className="text-center group">
-                    <div className="flex items-center justify-center gap-2 mb-1">
-                      <Icon className="w-4 h-4 sm:w-5 sm:h-5 text-blue-600" />
-                      <div className="text-xl sm:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500 bg-clip-text text-transparent font-secondary">
+                  <div key={index} className="text-center">
+                    <div className="flex items-center justify-center gap-1.5 mb-1">
+                      <Icon className="w-4 h-4 text-[#3B82F6]" />
+                      <div className="text-2xl sm:text-3xl font-bold text-[#2563EB] font-primary">
                         {stat.value}
                       </div>
                     </div>
-                    <div className="text-[10px] sm:text-xs text-slate-500 font-bold font-primary uppercase tracking-widest leading-none">
+                    <div className="text-[11px] sm:text-xs text-[#64748B] font-medium font-primary uppercase tracking-wider">
                       {stat.label}
                     </div>
                   </div>
@@ -125,6 +114,22 @@ const Hero = () => {
             </div>
           </div>
         </div>
+
+        {/* Hero Visual Mockup Preview */}
+        <div className="mt-12 sm:mt-16 max-w-5xl mx-auto relative">
+          <div className="rounded-2xl sm:rounded-3xl p-2 sm:p-3 bg-[#EFF6FF] border border-[#DBEAFE] shadow-xl">
+            <div className="relative rounded-xl sm:rounded-2xl overflow-hidden aspect-[16/9] bg-slate-900 border border-slate-800/80">
+              <OptimizedImage
+                src="/hero_workspace.png"
+                alt="StudioVyn High-Performance Web Architecture Dashboard"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );

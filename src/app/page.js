@@ -3,16 +3,11 @@ import CaseSpotlight from "./home-sections/CaseSpotlight";
 import ServicesShowcase from "./home-sections/ServicesShowcase";
 import WhyUs from "./home-sections/WhyUs";
 import Process from "./home-sections/Process";
-import SEOGrowth from "./home-sections/SEOGrowth";
 import LocationsSection from "./home-sections/LocationsSection";
-import ProjectEstimator from "./home-sections/ProjectEstimator";
 import ComparisonSection from "./home-sections/ComparisonSection";
-import TechStackSection from "./home-sections/TechStackSection";
 import TestimonialsShowcase from "./home-sections/TestimonialsShowcase";
 import BlogHighlights from "./home-sections/BlogHighlights";
 import FAQ from "./home-sections/FAQ";
-import FinalCTA from "./home-sections/FinalCTA";
-import QuickActionWidget from "@/components/ui/QuickActionWidget";
 
 export const metadata = {
   title: 'StudioVyn | Top Website Development Company in India',
@@ -55,22 +50,13 @@ export default function Home() {
       {/* 04 — Why StudioVyn Standards */}
       <WhyUs />
 
-      {/* 05 — Interactive Project Scope & Cost Estimator */}
-      <ProjectEstimator />
-
-      {/* 06 — StudioVyn vs Traditional Agency Matrix */}
+      {/* 05 — StudioVyn vs Traditional Agency Matrix */}
       <ComparisonSection />
 
-      {/* 07 — Interactive Technology & Architecture Matrix */}
-      <TechStackSection />
-
-      {/* 08 — Agile Execution Pipeline */}
+      {/* 06 — Agile Execution Pipeline */}
       <Process />
 
-      {/* 09 — Technical SEO & Growth Engine */}
-      <SEOGrowth />
-
-      {/* 10 — Multi-City Local Search Reach */}
+      {/* 07 — Multi-City Local Search Reach */}
       <LocationsSection />
 
       {/* 11 — Verified Client Testimonials */}
@@ -81,12 +67,6 @@ export default function Home() {
 
       {/* 13 — FAQ Accordion */}
       <FAQ />
-
-      {/* 14 — Final Action CTA */}
-      <FinalCTA />
-
-      {/* Floating Quick Action Connect Widget */}
-      <QuickActionWidget />
     </main>
   );
 }

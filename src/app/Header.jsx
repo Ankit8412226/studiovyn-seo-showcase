@@ -1,7 +1,9 @@
 'use client';
 
 import Button from '@/components/ui/Button';
+import Logo from '@/components/ui/Logo';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 
@@ -88,19 +90,14 @@ const Header = () => {
         aria-label="Main navigation"
       >
         <div className="flex items-center justify-between h-20 lg:h-24">
-          {/* Logo - Premium Integration */}
-          <a
+          {/* Logo */}
+          <Link
             href="/"
             className="flex items-center space-x-3 group"
             aria-label="StudioVyn - Website Development Company India Home"
           >
-            <div className="relative flex items-center">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-xl opacity-0 group-hover:opacity-15 blur-sm transition-opacity duration-300"></div>
-              <span className="relative text-xl sm:text-2xl lg:text-3xl font-secondary font-bold tracking-tight text-slate-900 group-hover:text-blue-600 transition-colors">
-                Studio<span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Vyn</span>
-              </span>
-            </div>
-          </a>
+            <Logo variant="dark" size="md" />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-1">
@@ -108,10 +105,10 @@ const Header = () => {
               <a
                 key={link.id}
                 href={link.href}
-                className={`px-4 py-2 rounded-lg font-semibold font-primary text-sm transition-all duration-200 ${
+                className={`px-4 py-2 rounded-lg font-medium font-primary text-sm transition-all duration-200 ${
                   link.isActive
-                    ? 'text-blue-600 bg-blue-50 border border-blue-200/80'
-                    : 'text-slate-600 hover:text-blue-600 hover:bg-blue-50/60'
+                    ? 'text-[#2563EB] bg-[#EFF6FF] border border-[#DBEAFE]'
+                    : 'text-[#64748B] hover:text-[#2563EB] hover:bg-[#EFF6FF]/60'
                 }`}
                 aria-label={`Navigate to ${link.label}`}
                 aria-current={link.isActive ? 'page' : undefined}

@@ -1,66 +1,171 @@
 'use client';
 
 import Card from '@/components/ui/Card';
-import OptimizedImage from '@/components/ui/OptimizedImage';
 import { ArrowRight, Code, Palette, Search, TrendingUp } from 'lucide-react';
 
 export default function Process() {
   const steps = [
     {
       number: '01',
-      title: 'Discovery',
-      description: 'Define goals, audience, and success metrics. We dive deep into your business to understand your unique needs.',
+      title: 'Discovery & Architecture',
+      description: 'Define goals, audience, and success metrics. We dive deep into your business to understand your unique needs and map technical blueprints.',
       icon: Search,
-      gradient: 'from-blue-600 to-cyan-500',
-      image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop',
+      graphic: (
+        <div className="w-full h-full bg-[#0B1E3D] p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden font-mono text-xs">
+          <div className="flex items-center justify-between border-b border-[#1E3A8A] pb-3 text-[#94A3B8]">
+            <div className="flex items-center gap-2">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#EF4444]/60 inline-block"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#F59E0B]/60 inline-block"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#10B981]/60 inline-block"></span>
+              <span className="text-[#60A5FA] ml-2 text-[11px]">discovery.config.ts</span>
+            </div>
+            <span className="text-[#64748B]">SCOPE 100%</span>
+          </div>
+          <div className="space-y-2 py-4">
+            <div className="flex items-center justify-between p-2.5 rounded-lg bg-[#0F284E] border border-[#1E3A8A] text-[#E2E8F0]">
+              <span className="text-[#60A5FA]">01. Search Intent Matrix</span>
+              <span className="text-[#3B82F6] font-semibold">Analyzed</span>
+            </div>
+            <div className="flex items-center justify-between p-2.5 rounded-lg bg-[#0F284E] border border-[#1E3A8A] text-[#E2E8F0]">
+              <span className="text-[#60A5FA]">02. Tech Stack Architecture</span>
+              <span className="text-[#3B82F6] font-semibold">Next.js 16</span>
+            </div>
+            <div className="flex items-center justify-between p-2.5 rounded-lg bg-[#0F284E] border border-[#1E3A8A] text-[#E2E8F0]">
+              <span className="text-[#60A5FA]">03. Schema & SEO Targets</span>
+              <span className="text-[#3B82F6] font-semibold">PAN India</span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[11px] text-[#94A3B8] border-t border-[#1E3A8A] pt-3">
+            <span>Milestone: Discovery Blueprint</span>
+            <span className="text-[#60A5FA]">✓ Verified</span>
+          </div>
+        </div>
+      ),
     },
     {
       number: '02',
-      title: 'Design',
-      description: 'Wireframes, prototypes, and design system. We create beautiful, user-centric designs that convert.',
+      title: 'Design System & UX',
+      description: 'Wireframes, interactive prototypes, and modular design tokens. We craft beautiful, high-converting experiences tailored for precision.',
       icon: Palette,
-      gradient: 'from-blue-500 to-indigo-600',
-      image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&h=400&fit=crop',
+      graphic: (
+        <div className="w-full h-full bg-[#0B1E3D] p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden">
+          <div className="flex items-center justify-between border-b border-[#1E3A8A] pb-3 text-[#94A3B8] text-xs font-mono">
+            <span className="text-[#60A5FA]">DesignTokens.css</span>
+            <span className="text-[#3B82F6]">Figma → Production</span>
+          </div>
+          <div className="grid grid-cols-2 gap-3 py-4">
+            <div className="p-3 rounded-xl bg-[#0F284E] border border-[#1E3A8A] flex flex-col justify-between">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-5 h-5 rounded-lg bg-[#2563EB]"></div>
+                <span className="text-xs text-[#E2E8F0] font-mono">#2563EB</span>
+              </div>
+              <span className="text-[11px] text-[#94A3B8]">Primary Accent</span>
+            </div>
+            <div className="p-3 rounded-xl bg-[#0F284E] border border-[#1E3A8A] flex flex-col justify-between">
+              <div className="flex items-center gap-2 mb-2">
+                <div className="w-5 h-5 rounded-lg bg-[#EFF6FF] border border-[#DBEAFE]"></div>
+                <span className="text-xs text-[#E2E8F0] font-mono">#EFF6FF</span>
+              </div>
+              <span className="text-[11px] text-[#94A3B8]">Pale Blue Tint</span>
+            </div>
+            <div className="col-span-2 p-3 rounded-xl bg-[#0F284E] border border-[#1E3A8A]">
+              <div className="text-xs text-[#E2E8F0] font-serif mb-1">Playfair Serif + Plus Jakarta Sans</div>
+              <div className="text-[10px] text-[#64748B] font-mono">Modular Responsive Type Scale</div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[11px] text-[#94A3B8] border-t border-[#1E3A8A] pt-3 font-mono">
+            <span>Milestone: UI Prototype</span>
+            <span className="text-[#60A5FA]">✓ Approved</span>
+          </div>
+        </div>
+      ),
     },
     {
       number: '03',
-      title: 'Build',
-      description: 'Modern stack, testing, and CI/CD. We build with best practices, ensuring quality and performance.',
+      title: 'Full-Stack Production Build',
+      description: 'Modern stack engineering, comprehensive test suites, SSR streaming, and CI/CD pipelines. Built with production-grade engineering standards.',
       icon: Code,
-      gradient: 'from-indigo-600 to-blue-500',
-      image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop',
+      graphic: (
+        <div className="w-full h-full bg-[#0B1E3D] p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden font-mono text-xs">
+          <div className="flex items-center justify-between border-b border-[#1E3A8A] pb-3 text-[#94A3B8]">
+            <span className="text-[#60A5FA]">Terminal: release-v1.0.0</span>
+            <span className="text-[#10B981]">BUILD PASS</span>
+          </div>
+          <div className="space-y-2 py-4">
+            <div className="p-2.5 rounded-lg bg-[#0F284E] border border-[#1E3A8A] text-[#E2E8F0]">
+              <span className="text-[#60A5FA]">$ </span>next build --turbo
+              <div className="text-[11px] text-[#94A3B8] mt-1">✓ Server Components Compiled (240ms)</div>
+            </div>
+            <div className="p-2.5 rounded-lg bg-[#0F284E] border border-[#1E3A8A] text-[#E2E8F0]">
+              <span className="text-[#60A5FA]">$ </span>lighthouse --perf
+              <div className="text-[11px] text-[#60A5FA] font-bold mt-1">✓ 100/100 Core Web Vitals Guaranteed</div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[11px] text-[#94A3B8] border-t border-[#1E3A8A] pt-3">
+            <span>Milestone: Production Ready</span>
+            <span className="text-[#60A5FA]">✓ Shipped</span>
+          </div>
+        </div>
+      ),
     },
     {
       number: '04',
-      title: 'Grow',
-      description: 'SEO, analytics, and iteration after launch. We help you grow with data-driven optimizations.',
+      title: 'Organic Growth & Iteration',
+      description: 'Programmatic SEO indexing, analytics instrumentation, and conversion iteration after launch. We engineer continuous measurable growth.',
       icon: TrendingUp,
-      gradient: 'from-cyan-500 to-blue-600',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
+      graphic: (
+        <div className="w-full h-full bg-[#0B1E3D] p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden font-mono text-xs">
+          <div className="flex items-center justify-between border-b border-[#1E3A8A] pb-3 text-[#94A3B8]">
+            <span className="text-[#60A5FA]">Analytics & Search Engine</span>
+            <span className="text-[#60A5FA] font-bold">+300% ROI</span>
+          </div>
+          <div className="py-4 space-y-2">
+            <div className="p-3 rounded-xl bg-[#0F284E] border border-[#1E3A8A]">
+              <div className="flex justify-between items-center mb-1 text-[#E2E8F0]">
+                <span>Organic Search Traffic</span>
+                <span className="text-[#60A5FA] font-bold">3.2x</span>
+              </div>
+              <div className="w-full h-2 bg-[#0B1E3D] rounded-full overflow-hidden">
+                <div className="w-4/5 h-full bg-[#2563EB] rounded-full"></div>
+              </div>
+            </div>
+            <div className="p-3 rounded-xl bg-[#0F284E] border border-[#1E3A8A]">
+              <div className="flex justify-between items-center mb-1 text-[#E2E8F0]">
+                <span>Inbound Lead Conversion</span>
+                <span className="text-[#60A5FA] font-bold">9.8%</span>
+              </div>
+              <div className="w-full h-2 bg-[#0B1E3D] rounded-full overflow-hidden">
+                <div className="w-3/4 h-full bg-[#3B82F6] rounded-full"></div>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-[11px] text-[#94A3B8] border-t border-[#1E3A8A] pt-3">
+            <span>Milestone: Scale & Optimize</span>
+            <span className="text-[#60A5FA]">✓ Continuous</span>
+          </div>
+        </div>
+      ),
     },
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-white relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100/40 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-100/40 rounded-full filter blur-3xl"></div>
-      </div>
-
+    <section className="py-24 sm:py-32 bg-[#EFF6FF] border-b border-slate-200/80 relative overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-20">
-          <h2 className="text-3xl sm:text-5xl lg:text-6xl font-bold font-secondary mb-4 sm:mb-6 text-slate-900">
-            Our <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">Process</span>
+        <div className="text-center max-w-3xl mx-auto mb-16 sm:mb-20">
+          <span className="text-xs font-semibold uppercase tracking-wider text-[#2563EB] block mb-2">
+            Agile Engineering Lifecycle
+          </span>
+          <h2 className="text-3xl sm:text-5xl font-normal font-secondary mb-4 text-[#0F172A]">
+            Our <span className="font-bold text-[#2563EB]">Process</span>
           </h2>
-          <p className="text-lg sm:text-xl text-slate-600 font-primary leading-relaxed px-4">
+          <p className="text-base sm:text-lg text-[#64748B] font-primary leading-relaxed px-4">
             A proven methodology that delivers results. From discovery to growth, we guide you every step of the way.
           </p>
         </div>
 
         {/* Process Steps */}
-        <div className="space-y-12">
+        <div className="space-y-12 max-w-5xl mx-auto">
           {steps.map((step, i) => {
             const Icon = step.icon;
             const isEven = i % 2 === 0;
@@ -72,44 +177,37 @@ export default function Process() {
                   !isEven ? 'lg:flex-row-reverse' : ''
                 }`}
               >
-                {/* Image */}
+                {/* Custom Abstract Architectural Graphic instead of Stock Photo */}
                 <div className={`${!isEven ? 'lg:order-2' : ''}`}>
-                  <Card variant="elevated" padding="none" className="overflow-hidden group rounded-3xl border border-slate-200 shadow-xl shadow-blue-500/5">
-                    <div className="relative h-48 sm:h-64 lg:h-80">
-                      <OptimizedImage
-                        src={step.image}
-                        alt={step.title}
-                        fill
-                        className="transition-transform duration-700 group-hover:scale-110"
-                        objectFit="cover"
-                      />
-                      <div className={`absolute inset-0 bg-gradient-to-br ${step.gradient} opacity-20`}></div>
+                  <Card variant="elevated" padding="none" className="overflow-hidden rounded-3xl border border-[#DBEAFE] shadow-sm hover:shadow-md transition-all">
+                    <div className="relative h-64 sm:h-72">
+                      {step.graphic}
                     </div>
                   </Card>
                 </div>
 
                 {/* Content */}
-                <div className={`${!isEven ? 'lg:order-1' : ''}`}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className={`w-20 h-20 bg-gradient-to-br ${step.gradient} rounded-2xl flex items-center justify-center shadow-lg text-white`}>
-                      <Icon className="w-10 h-10 text-white" aria-hidden="true" />
+                <div className={`${!isEven ? 'lg:order-1' : ''} p-2`}>
+                  <div className="flex items-center gap-3.5 mb-5">
+                    <div className="w-12 h-12 bg-white border border-[#DBEAFE] rounded-xl flex items-center justify-center shadow-xs text-[#2563EB]">
+                      <Icon className="w-6 h-6 text-[#2563EB]" aria-hidden="true" />
                     </div>
                     <div>
-                      <div className="text-sm text-blue-600 font-bold uppercase tracking-wider font-primary mb-1">
+                      <div className="text-xs text-[#2563EB] font-bold uppercase tracking-wider font-primary">
                         Step {step.number}
                       </div>
-                      <h3 className="text-3xl font-bold font-secondary text-slate-900">
+                      <h3 className="text-2xl font-semibold font-secondary text-[#0F172A]">
                         {step.title}
                       </h3>
                     </div>
                   </div>
-                  <p className="text-lg text-slate-600 font-primary leading-relaxed mb-6">
+                  <p className="text-base text-[#64748B] font-primary leading-relaxed mb-6">
                     {step.description}
                   </p>
                   {i < steps.length - 1 && (
-                    <div className="flex items-center text-blue-600 font-semibold font-primary">
+                    <div className="flex items-center text-[#2563EB] text-sm font-semibold font-primary">
                       <span>Next: {steps[i + 1].title}</span>
-                      <ArrowRight className="w-5 h-5 ml-2" />
+                      <ArrowRight className="w-4 h-4 ml-1.5" />
                     </div>
                   )}
                 </div>

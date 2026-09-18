@@ -1,7 +1,7 @@
 'use client';
 
 import OptimizedImage from '@/components/ui/OptimizedImage';
-import { Linkedin, Quote, Star } from 'lucide-react';
+import { Quote, Star } from 'lucide-react';
 
 export default function TestimonialsShowcase() {
   const testimonials = [
@@ -40,72 +40,97 @@ export default function TestimonialsShowcase() {
       content: "StudioVyn's digital marketing services helped us achieve 250% ROI in the first quarter. Their data-driven approach and creative strategies are exceptional.",
       rating: 5,
       result: '250% ROI',
-    }
+    },
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-white text-slate-900 relative overflow-hidden">
-      {/* Background Decoration */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none" aria-hidden="true">
-        <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_20%,rgba(37,99,235,0.05),transparent)]"></div>
-        <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_80%,rgba(14,165,233,0.05),transparent)]"></div>
-      </div>
-
+    <section className="py-24 sm:py-32 bg-white text-[#0F172A] relative overflow-hidden border-b border-slate-200/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-center">
-          <div className="lg:w-1/3 text-center lg:text-left">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 text-blue-700 font-bold text-sm mb-4 sm:mb-6 border border-blue-200/60">
-               <Quote className="w-4 h-4 text-blue-600" /> Client Success
+        
+        {/* Top Header & Stats Grid */}
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-14">
+          <div className="lg:col-span-7">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] text-[#2563EB] font-semibold text-xs mb-3.5 border border-[#DBEAFE]">
+              <Quote className="w-3.5 h-3.5 text-[#2563EB]" />
+              <span>Client Success Verification</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 sm:mb-6 leading-tight text-slate-900">
-              Real Results from <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Real People</span>
+            <h2 className="text-3xl sm:text-5xl font-normal font-secondary mb-3 leading-tight text-[#0F172A]">
+              Real Results from <span className="font-bold text-[#2563EB]">Real Leaders</span>
             </h2>
-            <p className="text-lg sm:text-xl text-slate-600 font-primary mb-8 leading-relaxed px-2 sm:px-0">
-               Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
+            <p className="text-base sm:text-lg text-[#64748B] font-primary leading-relaxed">
+              Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
             </p>
-            <div className="grid grid-cols-2 lg:flex lg:flex-col gap-4">
-              <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-sm">
-                 <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">4.9 / 5.0</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Avg Rating</div>
-              </div>
-              <div className="p-4 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200/80 shadow-sm">
-                 <div className="text-2xl sm:text-3xl font-bold text-blue-600 mb-1">150+</div>
-                 <div className="text-[10px] sm:text-sm font-medium text-slate-500 uppercase tracking-wider">Success Stories</div>
-              </div>
-            </div>
           </div>
 
-          <div className="lg:w-2/3 w-full">
-             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {testimonials.map((t, i) => (
-                  <div key={i} className="group p-6 sm:p-8 rounded-[2rem] bg-white border border-slate-200/80 shadow-md shadow-slate-100 hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300">
-                     <div className="flex items-center gap-1 mb-4 sm:mb-6">
-                        {[...Array(5)].map((_, idx) => (
-                          <Star key={idx} className="w-4 h-4 text-amber-400 fill-amber-400" />
-                        ))}
-                     </div>
-                     <p className="text-base sm:text-lg text-slate-700 font-primary italic mb-6 sm:mb-8 leading-relaxed">
-                        "{t.content}"
-                     </p>
-                     <div className="flex items-center gap-4 pt-6 border-t border-slate-100">
-                        <div className="relative w-12 h-12 rounded-full overflow-hidden shrink-0 border-2 border-blue-100 shadow-sm">
-                           <OptimizedImage src={t.image} alt={t.name} fill className="object-cover" />
-                        </div>
-                        <div>
-                           <div className="font-bold font-secondary text-slate-900">{t.name}</div>
-                           <div className="text-xs text-blue-600 font-semibold uppercase tracking-wider">{t.role}</div>
-                        </div>
-                        <div className="ml-auto w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center text-blue-600">
-                           <Linkedin className="w-4 h-4" />
-                        </div>
-                     </div>
-                  </div>
-                ))}
-             </div>
+          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+            <div className="p-5 rounded-2xl bg-[#EFF6FF] border border-[#DBEAFE]">
+              <div className="text-2xl sm:text-3xl font-bold text-[#2563EB] font-primary mb-0.5">
+                4.9 / 5.0
+              </div>
+              <div className="text-[11px] font-semibold text-[#64748B] uppercase tracking-wider">
+                Average Client Rating
+              </div>
+            </div>
+            <div className="p-5 rounded-2xl bg-[#EFF6FF] border border-[#DBEAFE]">
+              <div className="text-2xl sm:text-3xl font-bold text-[#2563EB] font-primary mb-0.5">
+                150+
+              </div>
+              <div className="text-[11px] font-semibold text-[#64748B] uppercase tracking-wider">
+                Delivered Deployments
+              </div>
+            </div>
           </div>
         </div>
+
+        {/* Compact Side-by-Side Testimonials Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {testimonials.map((t, idx) => (
+            <div
+              key={idx}
+              className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-xs hover:shadow-md hover:border-[#BFDBFE] hover:bg-white transition-all duration-300 flex flex-col justify-between"
+            >
+              <div>
+                {/* Subtle Primary Blue Star Rating */}
+                <div className="flex items-center gap-1 mb-4">
+                  {[...Array(t.rating)].map((_, i) => (
+                    <Star key={i} className="w-3.5 h-3.5 text-[#2563EB] fill-[#2563EB]" />
+                  ))}
+                  <span className="text-[11px] font-medium text-[#2563EB] ml-1.5 font-mono">5.0</span>
+                </div>
+
+                {/* Compact Quote Text */}
+                <blockquote className="text-sm sm:text-[15px] text-[#0F172A] font-secondary font-normal italic leading-relaxed mb-6">
+                  "{t.content}"
+                </blockquote>
+              </div>
+
+              {/* Author Info */}
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-200/70">
+                <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 border border-[#DBEAFE]">
+                  <OptimizedImage
+                    src={t.image}
+                    alt={t.name}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="overflow-hidden">
+                  <div className="font-semibold font-secondary text-sm text-[#0F172A] truncate">
+                    {t.name}
+                  </div>
+                  <div className="text-[11px] text-[#2563EB] font-medium truncate">
+                    {t.role}
+                  </div>
+                  <div className="text-[10px] text-[#64748B] truncate">
+                    {t.result}
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 }
-

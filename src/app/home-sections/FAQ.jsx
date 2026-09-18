@@ -1,6 +1,7 @@
 'use client';
 
 import Accordion from '@/components/ui/Accordion';
+import { HelpCircle } from 'lucide-react';
 
 export default function FAQ() {
   const qa = [
@@ -39,25 +40,27 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-16 sm:py-24 lg:py-32 bg-slate-50 relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(37,99,235,0.04),transparent)] pointer-events-none" aria-hidden="true"></div>
+    <section className="py-24 sm:py-32 bg-white relative overflow-hidden" id="faq">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="max-w-4xl mx-auto">
-          {/* Section Header */}
-          <div className="text-center mb-10 sm:mb-16">
-            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-4 text-slate-900">
-              Frequently Asked Questions
+        <div className="max-w-3xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] border border-[#DBEAFE] text-[#2563EB] text-xs font-semibold uppercase tracking-wider mb-4">
+              <HelpCircle className="w-3.5 h-3.5 text-[#2563EB]" />
+              <span>Common Questions</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-normal font-secondary text-[#0F172A] tracking-tight leading-tight mb-4">
+              Frequently Asked <span className="font-bold text-[#2563EB]">Questions</span>
             </h2>
-            <p className="text-lg text-slate-600 font-primary max-w-2xl mx-auto px-4">
-              Everything you need to know about our website development services.
+            <p className="text-base sm:text-lg text-[#64748B] font-primary leading-relaxed">
+              Everything you need to know about our web development process, pricing, and ongoing support.
             </p>
           </div>
 
           {/* Accordion */}
-          <Accordion items={qa} allowMultiple={false} />
+          <Accordion items={qa} />
         </div>
       </div>
     </section>
   );
 }
-

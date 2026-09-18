@@ -27,14 +27,14 @@ const Button = forwardRef(
     },
     ref
   ) => {
-    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border-2 cursor-pointer';
+    const baseStyles = 'inline-flex items-center justify-center font-semibold font-primary transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden border cursor-pointer';
 
     const variants = {
-      primary: 'bg-blue-600 border-blue-600 text-white hover:bg-blue-700 hover:border-blue-700 focus:ring-blue-500 shadow-md hover:shadow-blue-500/20 active:scale-[0.98]',
-      secondary: 'bg-white border-blue-200 text-blue-600 hover:bg-blue-50 hover:border-blue-400 focus:ring-blue-500 shadow-sm hover:shadow-md active:scale-[0.98]',
-      white: 'bg-white border-white text-blue-700 hover:bg-blue-50 hover:text-blue-800 focus:ring-white shadow-xl active:scale-[0.98]',
-      ghost: 'bg-transparent border-slate-200 text-slate-700 hover:bg-blue-50 hover:text-blue-600 hover:border-blue-200 focus:ring-blue-500',
-      link: 'bg-transparent border-transparent text-blue-600 hover:text-blue-700 underline-offset-4 hover:underline focus:ring-blue-500 p-0',
+      primary: 'bg-[#2563EB] border-[#2563EB] text-white hover:bg-[#1D4ED8] hover:border-[#1D4ED8] focus:ring-blue-500 shadow-sm hover:shadow active:scale-[0.99]',
+      secondary: 'bg-white border-[#DBEAFE] text-[#2563EB] hover:bg-[#EFF6FF] hover:border-[#BFDBFE] focus:ring-blue-500 shadow-xs active:scale-[0.99]',
+      white: 'bg-white border-white text-[#2563EB] hover:bg-[#EFF6FF] focus:ring-white shadow-sm active:scale-[0.99]',
+      ghost: 'bg-transparent border-slate-200 text-slate-700 hover:bg-[#EFF6FF] hover:text-[#2563EB] hover:border-[#BFDBFE] focus:ring-blue-500',
+      link: 'bg-transparent border-transparent text-[#2563EB] hover:text-[#1D4ED8] underline-offset-4 hover:underline focus:ring-blue-500 p-0',
     };
 
     const sizes = {

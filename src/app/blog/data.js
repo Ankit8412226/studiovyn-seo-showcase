@@ -14,7 +14,10 @@ export const posts = [
       'voice search optimization',
       'generative UI'
     ],
-    image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80&auto=format&fit=crop',
+    image: '/blog_ai_web_dev.jpg',
+    date: 'Oct 2026',
+    readTime: '5 min read',
+    excerpt: 'Discover 2026 AI web development trends that boost speed, personalization, and SEO.',
     body: `AI-driven web development is now the baseline for competitive brands. In 2026, modern web development agencies are moving from basic AI add-ons to AI-native experiences that improve speed, personalization, and search visibility. StudioVyn builds AI-ready websites that perform in Google Search, Google AI Overviews, and conversational assistants.
 
 **Key Trends for 2026**:
@@ -49,7 +52,10 @@ If you need an AI-first web development agency in India, StudioVyn can help you 
       'Next.js web development agency',
       'StudioVyn'
     ],
-    image: 'https://images.unsplash.com/photo-1618477388954-7852f32655ec?w=1200&q=80&auto=format&fit=crop',
+    image: '/blog_nextjs_perf.jpg',
+    date: 'Sep 2026',
+    readTime: '6 min read',
+    excerpt: 'Improve Core Web Vitals with Next.js 16. Learn PPR, Server Actions, and sub-second rendering.',
     body: `Next.js 16 changes how we think about performance, streaming, and developer velocity. If you want higher Core Web Vitals scores and faster time-to-market, these optimizations are now essential.
 
 **Optimizing for Next.js 16**:
@@ -81,7 +87,10 @@ StudioVyn is a Next.js web development agency that ships fast, SEO-ready applica
       'SEO-ready websites',
       'StudioVyn'
     ],
-    image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&q=80&auto=format&fit=crop',
+    image: '/blog_india_agency.jpg',
+    date: 'Aug 2026',
+    readTime: '7 min read',
+    excerpt: 'How to choose the best web development company in India. Compare tech stack, performance, and SEO ROI.',
     body: `Choosing the best website development company in India requires careful evaluation of expertise, technology stack, portfolio, and pricing.\n\nTop website development companies in India like StudioVyn offer comprehensive services including custom web design, e-commerce development, mobile apps, and digital marketing. When selecting a web development partner, consider these key factors:\n\n**Technology Expertise**: Look for companies proficient in modern frameworks like React.js, Next.js, Node.js, and responsive design. The best website developers use cutting-edge technology for fast, secure, and scalable solutions.\n\n**Portfolio & Experience**: Review past projects across industries. Top web development companies in India showcase 100+ successful projects with measurable results. Check case studies, client testimonials, and industry recognition.\n\n**SEO & Performance**: Professional website development must include SEO optimization, Core Web Vitals compliance, and fast loading speeds. Your website should rank on Google India from day one.\n\n**Pricing & Support**: Compare website development costs in India. Quality companies offer transparent pricing (₹25,000 to ₹5,00,000+) based on complexity. Ensure post-launch support and maintenance.\n\n**Location Coverage**: The best web development companies serve clients PAN India - Delhi NCR, Mumbai, Bangalore, Kolkata, Bihar, and tier-2 cities with remote collaboration.\n\nStudioVyn ranks among India's top website development companies with 150+ projects, 98% client satisfaction, and expertise in React, Next.js, e-commerce, and mobile apps. Get a free consultation today!`,
   },
   {

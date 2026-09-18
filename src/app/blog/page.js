@@ -82,7 +82,7 @@ export default function BlogIndex() {
                   src={p.image}
                   alt={`${p.title} - StudioVyn blog`}
                   fill
-                  className="object-contain"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <h2 className="text-xl font-semibold font-secondary mb-2 text-slate-900 group-hover:text-blue-600 transition-colors">
