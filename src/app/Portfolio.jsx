@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { ArrowRight, ExternalLink, TrendingUp } from 'lucide-react';
-import { projects } from './case-studies/data';
+import { projects } from './portfolio/data';
 import Card from '@/components/ui/Card';
 import OptimizedImage from '@/components/ui/OptimizedImage';
 import Button from '@/components/ui/Button';
@@ -25,18 +25,14 @@ export default function Portfolio() {
             Selected <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Work</span>
           </h2>
           <p className="text-xl text-slate-600 font-primary leading-relaxed">
-            Case studies that show measurable business impact and real results for our clients.
+            Real projects that show measurable business impact and performance for our clients.
           </p>
         </div>
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {top.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/case-studies/${project.slug}`}
-              className="group"
-            >
+          {top.map((project, idx) => (
+            <div key={idx} className="group">
               <Card
                 variant="elevated"
                 hover
@@ -55,14 +51,6 @@ export default function Portfolio() {
 
                   {/* Overlay Gradient */}
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                  {/* Hover Badge */}
-                  <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg px-3 py-1.5 flex items-center gap-2 shadow-lg border border-slate-200">
-                      <span className="text-sm font-semibold text-slate-900 font-primary">View Case Study</span>
-                      <ExternalLink className="w-4 h-4 text-blue-600" />
-                    </div>
-                  </div>
                 </div>
 
                 {/* Content */}
@@ -81,9 +69,9 @@ export default function Portfolio() {
 
                   {/* Stack Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
-                    {project.stack?.split(',').slice(0, 3).map((tech, idx) => (
+                    {project.stack?.split(',').slice(0, 3).map((tech, i) => (
                       <span
-                        key={idx}
+                        key={i}
                         className="px-2.5 py-1 text-xs font-medium text-slate-600 bg-slate-100 rounded-md font-primary"
                       >
                         {tech.trim()}
@@ -91,28 +79,27 @@ export default function Portfolio() {
                     ))}
                   </div>
 
-                  {/* CTA */}
-                  <div className="mt-auto flex items-center text-blue-600 font-semibold font-primary group-hover:gap-2 transition-all">
-                    <span>Read case study</span>
-                    <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  {/* Summary/Metric */}
+                  <p className="text-sm text-slate-600 font-primary mt-auto">
+                    {project.summary}
+                  </p>
                 </div>
               </Card>
-            </Link>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
         <div className="text-center">
           <Button
-            href="/case-studies"
+            href="/contact"
             variant="primary"
             size="lg"
             icon={<ArrowRight className="w-5 h-5" />}
             iconPosition="right"
             className="shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >
-            View All Case Studies
+            Start Your Project
           </Button>
         </div>
       </div>

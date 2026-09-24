@@ -1,12 +1,12 @@
 import Portfolio from '../Portfolio';
 
 export const metadata = {
-  title: 'StudioVyn Portfolio | Web Development Case Studies',
-  description: 'Case studies and selected work from StudioVyn across industries. See how we deliver performance and growth.',
+  title: 'StudioVyn Portfolio | Selected Web Development Projects',
+  description: 'Selected work from StudioVyn across industries. See how we deliver performance, custom web apps, and digital growth.',
   keywords: [
     'StudioVyn portfolio',
-    'web development case studies',
-    'SEO results',
+    'web development projects',
+    'Next.js portfolio',
     'e-commerce builds',
     'conversion optimization'
   ],
@@ -29,7 +29,6 @@ export default function PortfolioPage() {
           <div className="flex flex-wrap gap-4">
             <a className="btn-primary" href="/contact">Start your project</a>
             <a className="btn-secondary" href="/services">Explore services</a>
-            <a className="btn-secondary" href="/case-studies">View case studies</a>
           </div>
         </div>
       </section>

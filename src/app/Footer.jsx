@@ -7,19 +7,17 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: 'Web Development', href: '/services/web-development' },
-    { label: 'Mobile App Development', href: '/services/mobile-app-development' },
-    { label: 'UI/UX Design', href: '/services/ui-ux-design' },
-    { label: 'E-Commerce', href: '/services/e-commerce' },
-    { label: 'Backend Development', href: '/services/backend-development' },
-    { label: 'Digital Marketing', href: '/services/digital-marketing' },
+    { label: 'Web Development', href: '/services' },
+    { label: 'Mobile App Development', href: '/services' },
+    { label: 'UI/UX Design', href: '/services' },
+    { label: 'E-Commerce', href: '/services' },
+    { label: 'Backend Development', href: '/services' },
+    { label: 'Digital Marketing', href: '/services' },
   ];
 
   const company = [
     { label: 'About Us', href: '/about' },
     { label: 'Portfolio', href: '/portfolio' },
-    { label: 'Case Studies', href: '/case-studies' },
-    { label: 'Blog', href: '/blog' },
     { label: 'Testimonials', href: '/testimonials' },
   ];
 

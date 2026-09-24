@@ -49,7 +49,7 @@ export default function ServicesIndexPage() {
         position: index + 1,
         name: s.title,
         description: s.description,
-        url: `https://studiovyn.in/services/${s.slug}`,
+        url: 'https://studiovyn.in/services',
       })),
     },
   };
@@ -71,18 +71,26 @@ export default function ServicesIndexPage() {
           {services.map((s) => {
             const Icon = s.icon;
             return (
-              <Link
+              <div
                 key={s.slug}
-                href={`/services/${s.slug}`}
-                className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-slate-200/80 hover:border-blue-300 hover:-translate-y-1 duration-300"
+                className="group bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all border border-slate-200/80 hover:border-blue-300 hover:-translate-y-1 duration-300 flex flex-col justify-between"
               >
-                <div className={`w-14 h-14 bg-gradient-to-br ${s.color} rounded-xl flex items-center justify-center mb-5 shadow-md shadow-blue-500/10`}>
-                  <Icon className="w-7 h-7 text-white" />
+                <div>
+                  <div className={`w-14 h-14 bg-gradient-to-br ${s.color} rounded-xl flex items-center justify-center mb-5 shadow-md shadow-blue-500/10`}>
+                    <Icon className="w-7 h-7 text-white" />
+                  </div>
+                  <h2 className="text-xl font-semibold font-secondary mb-2 text-slate-900 group-hover:text-blue-600 transition-colors">{s.title}</h2>
+                  <p className="text-slate-600 text-sm font-primary mb-6 leading-relaxed">{s.description}</p>
                 </div>
-                <h2 className="text-xl font-semibold font-secondary mb-2 text-slate-900 group-hover:text-blue-600 transition-colors">{s.title}</h2>
-                <p className="text-slate-600 text-sm font-primary mb-4">{s.description}</p>
-                <span className="text-blue-600 font-semibold font-primary inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">Learn more →</span>
-              </Link>
+                <div>
+                  <Link
+                    href="/contact"
+                    className="text-blue-600 font-semibold font-primary inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform text-sm hover:underline"
+                  >
+                    Get a proposal →
+                  </Link>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -100,20 +108,20 @@ export default function ServicesIndexPage() {
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h3 className="text-lg font-semibold font-secondary text-slate-900 mb-2">Popular services</h3>
+              <h3 className="text-lg font-semibold font-secondary text-slate-900 mb-2">Our expertise</h3>
               <ul className="space-y-2 text-slate-600 font-primary">
-              <li><Link className="text-blue-600 font-medium underline" href="/services/web-development">Web Development</Link></li>
-              <li><Link className="text-blue-600 font-medium underline" href="/services/e-commerce">E-commerce Development</Link></li>
-              <li><Link className="text-blue-600 font-medium underline" href="/services/ui-ux-design">UI/UX Design</Link></li>
-              <li><Link className="text-blue-600 font-medium underline" href="/services/digital-marketing">Digital Marketing</Link></li>
+                <li><span className="text-slate-800 font-medium">✓ Web Development</span> – Custom Next.js & React architectures</li>
+                <li><span className="text-slate-800 font-medium">✓ E-commerce Development</span> – Shopify, custom stores & checkout flow</li>
+                <li><span className="text-slate-800 font-medium">✓ UI/UX Design</span> – Modern, responsive, conversion-focused design</li>
+                <li><span className="text-slate-800 font-medium">✓ Digital Marketing & SEO</span> – Search ranking & content scaling</li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-semibold font-secondary text-slate-900 mb-2">Recommended reads</h3>
+              <h3 className="text-lg font-semibold font-secondary text-slate-900 mb-2">Ready to grow?</h3>
               <ul className="space-y-2 text-slate-600 font-primary">
-              <li><Link className="text-blue-600 font-medium underline" href="/blog/ai-driven-web-development-trends-2026">AI-Driven Web Development Trends 2026</Link></li>
-              <li><Link className="text-blue-600 font-medium underline" href="/blog/nextjs-16-performance-optimization-guide">Next.js 16 Performance Optimization</Link></li>
-              <li><Link className="text-blue-600 font-medium underline" href="/blog/content-strategy-topic-clusters">Content Strategy with Topic Clusters</Link></li>
+                <li><Link className="text-blue-600 font-medium underline" href="/portfolio">Explore Selected Work</Link> – View client outcomes</li>
+                <li><Link className="text-blue-600 font-medium underline" href="/about">About StudioVyn</Link> – Our team and engineering standards</li>
+                <li><Link className="text-blue-600 font-medium underline" href="/contact">Request a Free Proposal</Link> – Get a custom estimate</li>
               </ul>
             </div>
           </div>

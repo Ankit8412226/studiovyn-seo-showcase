@@ -66,12 +66,6 @@ const Header = () => {
       href: '/portfolio',
       isActive: pathname === '/portfolio',
     },
-    {
-      id: 'blog',
-      label: 'Blog',
-      href: '/blog',
-      isActive: pathname?.startsWith('/blog'),
-    },
   ];
 
   return (

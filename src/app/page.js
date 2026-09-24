@@ -1,12 +1,9 @@
 import Hero from "./hero";
-import CaseSpotlight from "./home-sections/CaseSpotlight";
 import ServicesShowcase from "./home-sections/ServicesShowcase";
 import WhyUs from "./home-sections/WhyUs";
 import Process from "./home-sections/Process";
-import LocationsSection from "./home-sections/LocationsSection";
 import ComparisonSection from "./home-sections/ComparisonSection";
 import TestimonialsShowcase from "./home-sections/TestimonialsShowcase";
-import BlogHighlights from "./home-sections/BlogHighlights";
 import FAQ from "./home-sections/FAQ";
 
 export const metadata = {
@@ -41,10 +38,7 @@ export default function Home() {
       {/* 01 — Hero Spotlight */}
       <Hero />
 
-      {/* 02 — Selected Client Work */}
-      <CaseSpotlight />
-
-      {/* 03 — Full-Stack Bento Services Showcase */}
+      {/* 02 — Full-Stack Bento Services Showcase */}
       <ServicesShowcase />
 
       {/* 04 — Why StudioVyn Standards */}
@@ -56,16 +50,10 @@ export default function Home() {
       {/* 06 — Agile Execution Pipeline */}
       <Process />
 
-      {/* 07 — Multi-City Local Search Reach */}
-      <LocationsSection />
-
-      {/* 11 — Verified Client Testimonials */}
+      {/* 07 — Verified Client Testimonials */}
       <TestimonialsShowcase />
 
-      {/* 12 — Engineering & SEO Insights Journal */}
-      <BlogHighlights />
-
-      {/* 13 — FAQ Accordion */}
+      {/* 08 — FAQ Accordion */}
       <FAQ />
     </main>
   );

@@ -41,10 +41,10 @@ export default function BrandPositioning() {
                 Get a free strategy call
               </Button>
               <Link
-                href="/case-studies"
+                href="/portfolio"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-white/30 text-white hover:bg-white/15 transition font-semibold"
               >
-                View case studies
+                View portfolio
               </Link>
             </div>
           </div>

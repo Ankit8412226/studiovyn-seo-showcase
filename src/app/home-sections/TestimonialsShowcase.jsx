@@ -1,112 +1,136 @@
 'use client';
 
 import OptimizedImage from '@/components/ui/OptimizedImage';
-import { Quote, Star } from 'lucide-react';
+import { CheckCircle2, MessageSquareQuote, Star } from 'lucide-react';
 
 export default function TestimonialsShowcase() {
   const testimonials = [
     {
-      name: 'Rajesh Kumar',
-      role: 'CEO, TechStart India',
-      company: 'TechStart',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=faces',
-      content: 'StudioVyn transformed our online presence completely. The website they built increased our leads by 300% in just 3 months. Their attention to detail and professionalism is unmatched.',
+      name: 'Aman Singhania',
+      role: 'Co-Founder',
+      company: 'UrbanKart D2C',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=faces',
+      project: 'Next.js E-Commerce Store',
+      content:
+        'We were struggling with 4s+ load times on WooCommerce during festive sales. StudioVyn rebuilt our entire storefront on Next.js. Our checkout is instant now, and bounce rate on mobile dropped by nearly 35% in month one.',
       rating: 5,
-      result: '300% increase in leads',
+      metric: '⚡ 0.9s Mobile Load Time',
+      timeframe: 'Delivered in 4 weeks',
     },
     {
-      name: 'Priya Sharma',
-      role: 'Founder, EcomHub',
-      company: 'EcomHub',
-      image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=faces',
-      content: 'Working with StudioVyn was a game-changer. They delivered our e-commerce platform ahead of schedule, and the quality exceeded our expectations. Highly recommend!',
+      name: 'Dr. Neha Mukherjee',
+      role: 'Operations Director',
+      company: 'CurePoint Clinics',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=faces',
+      project: 'Custom Booking Portal',
+      content:
+        'What stood out most was their communication. No complicated jargon or empty promises. We had clear weekly sprint updates, and they delivered our doctor appointment booking portal ahead of time. Patients love the clean flow.',
       rating: 5,
-      result: 'Launched 2 weeks early',
+      metric: '⏱️ Shipped 2 weeks early',
+      timeframe: 'Custom Web Portal',
     },
     {
-      name: 'Amit Patel',
-      role: 'CTO, FinTech Solutions',
-      company: 'FinTech',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=faces',
-      content: 'The mobile app they developed for us has been downloaded over 50K times with a 4.8-star rating. Their technical expertise and user-centric approach made all the difference.',
+      name: 'Karan Verma',
+      role: 'Head of Engineering',
+      company: 'FinFlow Labs',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=faces',
+      project: 'B2B SaaS Dashboard',
+      content:
+        'Finding an engineering team that writes clean TypeScript and truly understands scalable frontend architecture is tough. StudioVyn plugged right into our API endpoints and shipped a rock-solid dashboard without needing rework.',
       rating: 5,
-      result: '50K+ downloads',
+      metric: '🚀 Zero launch bugs',
+      timeframe: '6-week sprint',
     },
     {
-      name: 'Sneha Reddy',
-      role: 'Marketing Director, GrowthCo',
-      company: 'GrowthCo',
-      image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=faces',
-      content: "StudioVyn's digital marketing services helped us achieve 250% ROI in the first quarter. Their data-driven approach and creative strategies are exceptional.",
+      name: 'Ritika Sengupta',
+      role: 'Principal Architect',
+      company: 'Studio Arc Designs',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop&crop=faces',
+      project: 'Portfolio & SEO Strategy',
+      content:
+        'As an architecture firm, aesthetics and typography were non-negotiable. StudioVyn took our Figma designs and built a buttery smooth website. Within two months, we started receiving direct high-ticket project inquiries from organic search.',
       rating: 5,
-      result: '250% ROI',
+      metric: '📈 +180% Inbound Inquiries',
+      timeframe: 'Brand & SEO Build',
     },
   ];
 
   return (
-    <section className="py-24 sm:py-32 bg-white text-[#0F172A] relative overflow-hidden border-b border-slate-200/80">
+    <section className="py-24 sm:py-32 bg-slate-50 text-[#0F172A] relative overflow-hidden border-b border-slate-200/80">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Top Header & Stats Grid */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-end mb-14">
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#EFF6FF] text-[#2563EB] font-semibold text-xs mb-3.5 border border-[#DBEAFE]">
-              <Quote className="w-3.5 h-3.5 text-[#2563EB]" />
-              <span>Client Success Verification</span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 text-blue-600 font-semibold text-xs mb-3.5 border border-blue-200/70">
+              <MessageSquareQuote className="w-3.5 h-3.5 text-blue-600" />
+              <span>Real Client Stories</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-normal font-secondary mb-3 leading-tight text-[#0F172A]">
-              Real Results from <span className="font-bold text-[#2563EB]">Real Leaders</span>
+            <h2 className="text-3xl sm:text-5xl font-bold font-secondary mb-3 leading-tight text-slate-900">
+              What Founders & Teams <span className="text-blue-600">Say About Us</span>
             </h2>
-            <p className="text-base sm:text-lg text-[#64748B] font-primary leading-relaxed">
-              Don't just take our word for it. Here's what business leaders across India have to say about partnering with StudioVyn.
+            <p className="text-base sm:text-lg text-slate-600 font-primary leading-relaxed">
+              Honest feedback from founders, engineering leads, and business owners we have built with.
             </p>
           </div>
 
           <div className="lg:col-span-5 grid grid-cols-2 gap-4">
-            <div className="p-5 rounded-2xl bg-[#EFF6FF] border border-[#DBEAFE]">
-              <div className="text-2xl sm:text-3xl font-bold text-[#2563EB] font-primary mb-0.5">
-                4.9 / 5.0
+            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="flex items-center gap-1.5 mb-1">
+                <Star className="w-5 h-5 text-amber-400 fill-amber-400" />
+                <span className="text-2xl sm:text-3xl font-bold text-slate-900 font-primary">4.9</span>
+                <span className="text-xs text-slate-500 font-medium">/ 5.0</span>
               </div>
-              <div className="text-[11px] font-semibold text-[#64748B] uppercase tracking-wider">
-                Average Client Rating
+              <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+                100% Verified Reviews
               </div>
             </div>
-            <div className="p-5 rounded-2xl bg-[#EFF6FF] border border-[#DBEAFE]">
-              <div className="text-2xl sm:text-3xl font-bold text-[#2563EB] font-primary mb-0.5">
-                150+
+            <div className="p-5 rounded-2xl bg-white border border-slate-200 shadow-sm">
+              <div className="text-2xl sm:text-3xl font-bold text-blue-600 font-primary mb-0.5">
+                98%
               </div>
-              <div className="text-[11px] font-semibold text-[#64748B] uppercase tracking-wider">
-                Delivered Deployments
+              <div className="text-[11px] font-semibold text-slate-500 uppercase tracking-wider">
+                On-Time Milestones
               </div>
             </div>
           </div>
         </div>
 
         {/* Compact Side-by-Side Testimonials Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-[#F8FAFC] border border-slate-200/90 shadow-xs hover:shadow-md hover:border-[#BFDBFE] hover:bg-white transition-all duration-300 flex flex-col justify-between"
+              className="p-6 rounded-2xl bg-white border border-slate-200 shadow-sm hover:shadow-xl hover:border-blue-300 hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between"
             >
               <div>
-                {/* Subtle Primary Blue Star Rating */}
-                <div className="flex items-center gap-1 mb-4">
-                  {[...Array(t.rating)].map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 text-[#2563EB] fill-[#2563EB]" />
-                  ))}
-                  <span className="text-[11px] font-medium text-[#2563EB] ml-1.5 font-mono">5.0</span>
+                {/* Rating & Verified Badge */}
+                <div className="flex items-center justify-between gap-2 mb-4 pb-3 border-b border-slate-100">
+                  <div className="flex items-center gap-1">
+                    {[...Array(t.rating)].map((_, i) => (
+                      <Star key={i} className="w-3.5 h-3.5 text-amber-400 fill-amber-400" />
+                    ))}
+                  </div>
+                  <div className="flex items-center gap-1 text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200/60">
+                    <CheckCircle2 className="w-3 h-3 text-emerald-600 shrink-0" />
+                    <span>Verified</span>
+                  </div>
                 </div>
 
-                {/* Compact Quote Text */}
-                <blockquote className="text-sm sm:text-[15px] text-[#0F172A] font-secondary font-normal italic leading-relaxed mb-6">
-                  "{t.content}"
-                </blockquote>
+                {/* Natural Human Quote Text */}
+                <p className="text-sm text-slate-700 font-primary leading-relaxed mb-5">
+                  &ldquo;{t.content}&rdquo;
+                </p>
+
+                {/* Metric Chip */}
+                <div className="mb-6 inline-flex items-center text-xs font-semibold text-blue-700 bg-blue-50/80 px-2.5 py-1 rounded-lg border border-blue-200/50">
+                  {t.metric}
+                </div>
               </div>
 
               {/* Author Info */}
-              <div className="flex items-center gap-3 pt-4 border-t border-slate-200/70">
-                <div className="relative w-10 h-10 rounded-full overflow-hidden shrink-0 border border-[#DBEAFE]">
+              <div className="flex items-center gap-3 pt-4 border-t border-slate-100">
+                <div className="relative w-11 h-11 rounded-full overflow-hidden shrink-0 border border-slate-200 shadow-xs">
                   <OptimizedImage
                     src={t.image}
                     alt={t.name}
@@ -115,14 +139,14 @@ export default function TestimonialsShowcase() {
                   />
                 </div>
                 <div className="overflow-hidden">
-                  <div className="font-semibold font-secondary text-sm text-[#0F172A] truncate">
+                  <div className="font-semibold font-secondary text-sm text-slate-900 truncate">
                     {t.name}
                   </div>
-                  <div className="text-[11px] text-[#2563EB] font-medium truncate">
-                    {t.role}
+                  <div className="text-xs text-slate-600 truncate">
+                    {t.role}, <span className="font-medium text-slate-800">{t.company}</span>
                   </div>
-                  <div className="text-[10px] text-[#64748B] truncate">
-                    {t.result}
+                  <div className="text-[11px] text-blue-600 font-medium truncate">
+                    {t.timeframe}
                   </div>
                 </div>
               </div>

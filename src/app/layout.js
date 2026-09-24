@@ -3,7 +3,6 @@ import Script from "next/script";
 import Footer from "./Footer";
 import "./globals.css";
 import Header from "./Header";
-import RequestProjectModal from "./request-modal";
 
 const sans = Plus_Jakarta_Sans({
   variable: "--font-inter",
@@ -383,13 +382,6 @@ export default function RootLayout({ children }) {
                 },
                 {
                   '@type': 'SiteNavigationElement',
-                  '@id': 'https://studiovyn.in/#nav-webdev',
-                  name: 'Web Development in Patna',
-                  description: 'StudioVyn. Professional web development and digital solutions for businesses in Patna, Bihar.',
-                  url: 'https://studiovyn.in/locations/patna'
-                },
-                {
-                  '@type': 'SiteNavigationElement',
                   '@id': 'https://studiovyn.in/#nav-about',
                   name: 'About Us',
                   description: 'About StudioVyn. We are a results-driven web and software studio.',
@@ -397,31 +389,10 @@ export default function RootLayout({ children }) {
                 },
                 {
                   '@type': 'SiteNavigationElement',
-                  '@id': 'https://studiovyn.in/#nav-digital',
-                  name: 'Digital Marketing Services',
-                  description: 'Why StudioVyn - 5+ years experience across industries.',
-                  url: 'https://studiovyn.in/services/digital-marketing'
-                },
-                {
-                  '@type': 'SiteNavigationElement',
-                  '@id': 'https://studiovyn.in/#nav-ecommerce',
-                  name: 'E-Commerce Solutions',
-                  description: 'Why StudioVyn - 5+ years experience across industries.',
-                  url: 'https://studiovyn.in/services/e-commerce'
-                },
-                {
-                  '@type': 'SiteNavigationElement',
                   '@id': 'https://studiovyn.in/#nav-portfolio',
                   name: 'Portfolio',
                   description: 'View our recent projects and case studies.',
                   url: 'https://studiovyn.in/portfolio'
-                },
-                {
-                  '@type': 'SiteNavigationElement',
-                  '@id': 'https://studiovyn.in/#nav-blog',
-                  name: 'Blog',
-                  description: 'Latest insights on web development, SEO, and digital marketing.',
-                  url: 'https://studiovyn.in/blog'
                 }
               ]
             }),
@@ -444,7 +415,6 @@ export default function RootLayout({ children }) {
         </Script>
         <Header />
         {children}
-        <RequestProjectModal />
         <Footer />
       </body>
     </html>

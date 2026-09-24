@@ -78,7 +78,7 @@ export default function SEOGrowth() {
             </div>
 
             <Link
-              href="/services/digital-marketing"
+              href="/services"
               className="inline-flex items-center gap-2 text-sm font-secondary font-bold text-white bg-[#10b981] hover:bg-[#0d9e6e] px-6 py-3.5 rounded-xl shadow-lg shadow-emerald-500/20 transition-all"
             >
               <span>Explore SEO & Growth Services</span>
